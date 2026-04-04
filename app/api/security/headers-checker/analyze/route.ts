@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { collectHeadersFromResponse } from "@/lib/collect-http-response-headers";
+import { analyzeSecurityHeaders } from "@/lib/security-headers-checker-core";
 import {
   PublicUrlError,
   assertPublicHttpUrl,
@@ -45,7 +46,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: msg }, { status: 403 });
   }
 
-  const ua = "Mozilla/5.0 (compatible; DevTool-HttpHeaderChecker/1.0)";
+  const ua = "Mozilla/5.0 (compatible; DevTool-SecurityHeadersChecker/1.0)";
 
   let res: Response;
   let probeMethod: "HEAD" | "GET" = "HEAD";
@@ -78,6 +79,11 @@ export async function POST(req: Request) {
 
   const finalUrl = new URL(res.url);
   const headers = collectHeadersFromResponse(res);
+  const analysis = analyzeSecurityHeaders({
+    headers,
+    finalUrl: finalUrl.href,
+    status: res.status,
+  });
 
   return NextResponse.json({
     urlRequested: target.href,
@@ -88,5 +94,6 @@ export async function POST(req: Request) {
     probeMethod,
     headerCount: headers.length,
     headers,
+    analysis,
   });
 }
