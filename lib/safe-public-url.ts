@@ -77,6 +77,34 @@ export async function assertPublicHttpUrl(url: URL): Promise<void> {
   }
 }
 
+/** DNS-based SSRF guard for bare hostnames (e.g. RDAP / WHOIS style lookups). */
+export async function assertPublicHostname(host: string): Promise<void> {
+  const hostname = host.toLowerCase().replace(/\.$/, "");
+  if (
+    hostname === "localhost" ||
+    hostname.endsWith(".localhost") ||
+    hostname.endsWith(".internal")
+  ) {
+    throw new PublicUrlError("That hostname is not allowed.");
+  }
+  if (net.isIP(hostname)) {
+    if (isBlockedIpLiteral(hostname)) {
+      throw new PublicUrlError("Private or local addresses are not allowed.");
+    }
+    return;
+  }
+  let address: string;
+  try {
+    const lookup = await dns.lookup(hostname, { family: 0, verbatim: true });
+    address = lookup.address;
+  } catch {
+    throw new PublicUrlError("Could not resolve hostname.");
+  }
+  if (isBlockedIpLiteral(address)) {
+    throw new PublicUrlError("Hostname resolves to a non-public address.");
+  }
+}
+
 export async function fetchWithPublicRedirects(
   input: string,
   init: RequestInit & { method?: string } = {},
@@ -114,4 +142,110 @@ export async function fetchWithPublicRedirects(
   }
 
   throw new PublicUrlError("Too many redirects.");
+}
+
+export type RedirectChainHop = {
+  url: string;
+  status: number;
+  location: string | null;
+};
+
+export type RedirectChainTraceResult = {
+  hops: RedirectChainHop[];
+  error?: string;
+};
+
+/**
+ * Follows redirects manually and records each HTTP response (URL, status, Location).
+ * Stops at the first non-redirect status or when limits / safety checks fail.
+ */
+export async function tracePublicRedirectChain(
+  input: string,
+  init: RequestInit & { method?: string } = {},
+): Promise<RedirectChainTraceResult> {
+  let url = new URL(input);
+  await assertPublicHttpUrl(url);
+
+  const headers = new Headers(init.headers);
+  if (!headers.has("user-agent")) {
+    headers.set(
+      "user-agent",
+      "Mozilla/5.0 (compatible; DevTool-RedirectChainChecker/1.0)",
+    );
+  }
+
+  const hops: RedirectChainHop[] = [];
+  const seen = new Set<string>();
+
+  for (let hop = 0; hop <= MAX_REDIRECTS; hop++) {
+    const urlStr = url.toString();
+    if (seen.has(urlStr)) {
+      return { hops, error: "Redirect loop detected (repeated URL)." };
+    }
+    seen.add(urlStr);
+
+    const res = await fetch(urlStr, {
+      ...init,
+      method: init.method ?? "GET",
+      headers,
+      redirect: "manual",
+      signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
+    });
+
+    const location = res.headers.get("location");
+    hops.push({ url: urlStr, status: res.status, location });
+
+    if ([301, 302, 303, 307, 308].includes(res.status)) {
+      if (!location) {
+        try {
+          await res.arrayBuffer();
+        } catch {
+          /* ignore */
+        }
+        return {
+          hops,
+          error: "Redirect response without a Location header.",
+        };
+      }
+      let next: URL;
+      try {
+        next = new URL(location, url);
+      } catch {
+        try {
+          await res.arrayBuffer();
+        } catch {
+          /* ignore */
+        }
+        return { hops, error: "Invalid Location URL." };
+      }
+      try {
+        await assertPublicHttpUrl(next);
+      } catch (e) {
+        try {
+          await res.arrayBuffer();
+        } catch {
+          /* ignore */
+        }
+        const msg =
+          e instanceof PublicUrlError ? e.message : "URL not allowed.";
+        return { hops, error: msg };
+      }
+      try {
+        await res.arrayBuffer();
+      } catch {
+        /* ignore */
+      }
+      url = next;
+      continue;
+    }
+
+    try {
+      await res.arrayBuffer();
+    } catch {
+      /* ignore */
+    }
+    return { hops };
+  }
+
+  return { hops, error: "Too many redirects." };
 }
