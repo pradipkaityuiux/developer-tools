@@ -277,6 +277,8 @@ export function HtmlEntitiesTool() {
             type="button"
             onClick={copyOutput}
             disabled={!output}
+            title={copyDone ? "Copied" : "Copy output"}
+            aria-label={copyDone ? "Copied to clipboard" : "Copy output"}
             className="inline-flex items-center gap-1.5 rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-zinc-50 disabled:cursor-not-allowed disabled:opacity-50 dark:border-zinc-600 dark:bg-zinc-900 dark:hover:bg-zinc-800"
           >
             {copyDone ? (
@@ -287,7 +289,6 @@ export function HtmlEntitiesTool() {
             ) : (
               <Copy className="size-4" aria-hidden />
             )}
-            Copy output
           </button>
           <button
             type="button"

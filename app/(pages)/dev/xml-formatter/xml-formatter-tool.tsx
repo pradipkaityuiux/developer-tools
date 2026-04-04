@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useMemo, useState } from "react";
+import { CopyIconButton } from "@/components/copy-icon-button";
 
 const SAMPLE_XML = `<?xml version="1.0" encoding="UTF-8"?>
 <!-- Sample RSS-style fragment -->
@@ -298,34 +299,42 @@ export function XmlFormatterTool() {
             />
           </div>
           <div className="min-w-0">
-            <div className="flex items-center justify-between gap-2">
-              <label
-                htmlFor="xml-output"
-                className="block text-sm font-medium text-foreground"
-              >
-                Output
-              </label>
-              <button
-                type="button"
+            <label
+              htmlFor="xml-output"
+              className="block text-sm font-medium text-foreground"
+            >
+              Output
+            </label>
+            <div className="relative mt-1.5">
+              <textarea
+                id="xml-output"
+                readOnly
+                value={output}
+                spellCheck={false}
+                className="h-64 w-full resize-y rounded-lg border border-zinc-200 bg-zinc-50 py-2 pr-12 pl-3 font-mono text-xs leading-relaxed text-foreground dark:border-zinc-800 dark:bg-zinc-900/80 sm:text-sm"
+                placeholder="Formatted or minified XML appears here…"
+              />
+              <CopyIconButton
+                placement="corner"
+                copied={copyState === "ok"}
                 disabled={!output}
                 onClick={copyOutput}
-                className="text-sm font-medium text-zinc-600 underline decoration-zinc-400 underline-offset-2 hover:text-foreground disabled:pointer-events-none disabled:opacity-40 dark:text-zinc-400"
-              >
-                {copyState === "ok"
-                  ? "Copied"
-                  : copyState === "err"
-                    ? "Copy failed"
-                    : "Copy"}
-              </button>
+                title={
+                  copyState === "ok"
+                    ? "Copied"
+                    : copyState === "err"
+                      ? "Copy failed"
+                      : "Copy output"
+                }
+                aria-label={
+                  copyState === "ok"
+                    ? "Copied to clipboard"
+                    : copyState === "err"
+                      ? "Copy failed"
+                      : "Copy output"
+                }
+              />
             </div>
-            <textarea
-              id="xml-output"
-              readOnly
-              value={output}
-              spellCheck={false}
-              className="mt-1.5 h-64 w-full resize-y rounded-lg border border-zinc-200 bg-zinc-50 px-3 py-2 font-mono text-xs leading-relaxed text-foreground dark:border-zinc-800 dark:bg-zinc-900/80 sm:text-sm"
-              placeholder="Formatted or minified XML appears here…"
-            />
           </div>
         </div>
 

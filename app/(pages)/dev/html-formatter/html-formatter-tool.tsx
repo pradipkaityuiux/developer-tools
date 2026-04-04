@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useMemo, useState } from "react";
+import { CopyIconButton } from "@/components/copy-icon-button";
 
 /** Empty value on these attributes is emitted without ="", per common HTML style. */
 const BOOLEAN_LIKE_ATTRS = new Set([
@@ -311,13 +312,15 @@ export function HtmlFormatterTool() {
             >
               Minify
             </button>
-            <button
-              type="button"
+            <CopyIconButton
+              placement="inline"
+              copied={copied}
               onClick={copyOutput}
-              className="rounded-lg border border-zinc-300 bg-white px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-zinc-50 dark:border-zinc-600 dark:bg-zinc-900 dark:hover:bg-zinc-800"
-            >
-              {copied ? "Copied" : "Copy output"}
-            </button>
+              disabled={!input.trim() && !output.trim()}
+              title={copied ? "Copied" : "Copy output"}
+              aria-label={copied ? "Copied to clipboard" : "Copy output"}
+              className="rounded-lg p-2.5"
+            />
           </div>
           <div className="flex flex-wrap items-center gap-3">
             <label className="flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
@@ -378,15 +381,25 @@ export function HtmlFormatterTool() {
             >
               Output {output ? "" : "(run Beautify or Minify)"}
             </label>
-            <textarea
-              id="html-output"
-              readOnly
-              value={output}
-              spellCheck={false}
-              rows={14}
-              className="mt-1.5 w-full resize-y rounded-lg border border-zinc-200 bg-zinc-50 px-3 py-2 font-mono text-sm leading-relaxed text-foreground outline-none dark:border-zinc-800 dark:bg-zinc-900/60"
-              placeholder="Result appears here…"
-            />
+            <div className="relative mt-1.5">
+              <textarea
+                id="html-output"
+                readOnly
+                value={output}
+                spellCheck={false}
+                rows={14}
+                className="w-full resize-y rounded-lg border border-zinc-200 bg-zinc-50 py-2 pr-12 pl-3 font-mono text-sm leading-relaxed text-foreground outline-none dark:border-zinc-800 dark:bg-zinc-900/60"
+                placeholder="Result appears here…"
+              />
+              <CopyIconButton
+                placement="corner"
+                copied={copied}
+                onClick={copyOutput}
+                disabled={!input.trim() && !output.trim()}
+                title={copied ? "Copied" : "Copy output"}
+                aria-label={copied ? "Copied to clipboard" : "Copy output"}
+              />
+            </div>
           </div>
         </div>
       </div>

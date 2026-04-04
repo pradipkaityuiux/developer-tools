@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Dev Tool",
-    template: "%s | Dev Tool",
+    default: "Zero Snippet",
+    template: "%s | Zero Snippet",
   },
   description:
     "Free online developer and marketer utilities: code formatters, SEO, security, design, text, and file tools.",

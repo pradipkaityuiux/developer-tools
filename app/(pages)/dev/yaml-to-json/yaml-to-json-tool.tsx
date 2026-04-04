@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useState } from "react";
+import { CopyIconButton } from "@/components/copy-icon-button";
 import yaml, { YAMLException } from "js-yaml";
 
 const SAMPLE_YAML = `# GitHub Actions-style fragment (example)
@@ -113,13 +114,23 @@ export function YamlToJsonTool() {
           <span className="block text-sm font-medium text-foreground">
             JSON output
           </span>
-          <textarea
-            readOnly
-            value={jsonOutput}
-            aria-label="Converted JSON"
-            className="mt-1.5 h-64 w-full resize-y rounded-lg border border-zinc-200 bg-zinc-50 px-3 py-2 font-mono text-sm text-foreground dark:border-zinc-800 dark:bg-zinc-900/80 lg:h-80"
-            placeholder="Click Convert to JSON to see output."
-          />
+          <div className="relative mt-1.5">
+            <textarea
+              readOnly
+              value={jsonOutput}
+              aria-label="Converted JSON"
+              className="h-64 w-full resize-y rounded-lg border border-zinc-200 bg-zinc-50 py-2 pr-12 pl-3 font-mono text-sm text-foreground dark:border-zinc-800 dark:bg-zinc-900/80 lg:h-80"
+              placeholder="Click Convert to JSON to see output."
+            />
+            <CopyIconButton
+              placement="corner"
+              copied={copyDone}
+              onClick={copyJson}
+              disabled={!jsonOutput}
+              title="Copy JSON"
+              aria-label="Copy JSON output"
+            />
+          </div>
         </div>
       </div>
 
@@ -148,14 +159,6 @@ export function YamlToJsonTool() {
           className="rounded-lg border border-zinc-300 bg-white px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-zinc-50 dark:border-zinc-600 dark:bg-zinc-900 dark:hover:bg-zinc-800"
         >
           Clear
-        </button>
-        <button
-          type="button"
-          disabled={!jsonOutput}
-          onClick={copyJson}
-          className="rounded-lg border border-zinc-300 bg-white px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-zinc-50 disabled:opacity-50 dark:border-zinc-600 dark:bg-zinc-900 dark:hover:bg-zinc-800"
-        >
-          {copyDone ? "Copied" : "Copy JSON"}
         </button>
         <button
           type="button"

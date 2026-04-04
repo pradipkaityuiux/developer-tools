@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { CopyIconButton } from "@/components/copy-icon-button";
 import TurndownService from "turndown";
 import { gfm } from "turndown-plugin-gfm";
 
@@ -137,15 +138,25 @@ export function HtmlToMarkdownTool() {
             >
               Markdown output
             </label>
-            <textarea
-              id="html-to-md-output"
-              value={markdown}
-              readOnly
-              spellCheck={false}
-              rows={14}
-              className="mt-1.5 w-full resize-y rounded-lg border border-zinc-200 bg-zinc-50 px-3 py-2 font-mono text-sm leading-relaxed text-foreground outline-none dark:border-zinc-800 dark:bg-zinc-900/80"
-              placeholder="Click Convert to generate Markdown…"
-            />
+            <div className="relative mt-1.5">
+              <textarea
+                id="html-to-md-output"
+                value={markdown}
+                readOnly
+                spellCheck={false}
+                rows={14}
+                className="w-full resize-y rounded-lg border border-zinc-200 bg-zinc-50 py-2 pr-12 pl-3 font-mono text-sm leading-relaxed text-foreground outline-none dark:border-zinc-800 dark:bg-zinc-900/80"
+                placeholder="Click Convert to generate Markdown…"
+              />
+              <CopyIconButton
+                placement="corner"
+                copied={copyHint === "Markdown copied"}
+                onClick={copyOutput}
+                disabled={!markdown}
+                title="Copy Markdown"
+                aria-label="Copy Markdown output"
+              />
+            </div>
           </div>
         </div>
 
@@ -207,14 +218,6 @@ export function HtmlToMarkdownTool() {
             className="rounded-lg bg-zinc-900 px-3 py-2 text-sm font-medium text-white transition-colors hover:bg-zinc-800 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200"
           >
             Convert to Markdown
-          </button>
-          <button
-            type="button"
-            onClick={copyOutput}
-            disabled={!markdown}
-            className="rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-zinc-50 disabled:cursor-not-allowed disabled:opacity-50 dark:border-zinc-600 dark:bg-zinc-900 dark:hover:bg-zinc-800"
-          >
-            Copy Markdown
           </button>
           <button
             type="button"

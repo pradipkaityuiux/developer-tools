@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useId, useMemo, useRef, useState } from "react";
+import { CopyIconButton } from "@/components/copy-icon-button";
 import {
   detectDelimiter,
   parseDelimitedText,
@@ -268,14 +269,6 @@ export function CsvToJsonTool() {
             ) : null}
             <button
               type="button"
-              onClick={copyJson}
-              disabled={!jsonText}
-              className="rounded-lg bg-zinc-900 px-3 py-2 text-sm font-medium text-white transition-colors hover:bg-zinc-800 disabled:opacity-50 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200"
-            >
-              Copy JSON
-            </button>
-            <button
-              type="button"
               onClick={downloadJson}
               disabled={!jsonText}
               className="rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-zinc-50 disabled:opacity-50 dark:border-zinc-600 dark:bg-zinc-900 dark:hover:bg-zinc-800"
@@ -284,13 +277,23 @@ export function CsvToJsonTool() {
             </button>
           </div>
         </div>
-        <textarea
-          readOnly
-          value={jsonText}
-          rows={14}
-          className="mt-3 w-full rounded-lg border border-zinc-200 bg-zinc-50 px-3 py-2 font-mono text-sm text-foreground dark:border-zinc-800 dark:bg-zinc-900/50"
-          placeholder="Parsed JSON appears here…"
-        />
+        <div className="relative mt-3">
+          <textarea
+            readOnly
+            value={jsonText}
+            rows={14}
+            className="w-full rounded-lg border border-zinc-200 bg-zinc-50 py-2 pr-12 pl-3 font-mono text-sm text-foreground dark:border-zinc-800 dark:bg-zinc-900/50"
+            placeholder="Parsed JSON appears here…"
+          />
+          <CopyIconButton
+            placement="corner"
+            copied={copyHint === "Copied to clipboard."}
+            onClick={copyJson}
+            disabled={!jsonText}
+            title="Copy JSON"
+            aria-label="Copy JSON output"
+          />
+        </div>
       </div>
     </div>
   );

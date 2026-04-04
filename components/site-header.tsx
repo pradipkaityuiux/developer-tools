@@ -9,7 +9,7 @@ export function SiteHeader() {
           href="/"
           className="text-lg font-semibold tracking-tight text-foreground hover:opacity-80"
         >
-          Dev Tool
+          Zero Snippet
         </Link>
         <ThemeSelect />
       </div>

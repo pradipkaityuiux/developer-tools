@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { Check, Copy } from "lucide-react";
 import {
   type CronFields,
   CRON_PRESETS,
@@ -220,9 +221,18 @@ export function CronGeneratorTool() {
             <button
               type="button"
               onClick={copyCron}
-              className="shrink-0 rounded-lg bg-zinc-900 px-3 py-2 text-sm font-medium text-white transition-colors hover:bg-zinc-800 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200"
+              title="Copy cron expression"
+              aria-label="Copy cron expression"
+              className="inline-flex shrink-0 items-center justify-center rounded-lg bg-zinc-900 p-2 text-white transition-colors hover:bg-zinc-800 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200"
             >
-              Copy expression
+              {copyHint === "Cron copied to clipboard" ? (
+                <Check
+                  className="size-4 text-emerald-400 dark:text-emerald-700"
+                  aria-hidden
+                />
+              ) : (
+                <Copy className="size-4 shrink-0" aria-hidden />
+              )}
             </button>
           </div>
           {copyHint ? (

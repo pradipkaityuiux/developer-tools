@@ -73,7 +73,7 @@ export function buildHtaccessContent(
 ): string {
   const blocks: string[] = [];
   const header = [
-    "# Generated with Dev Tool — review before production.",
+    "# Generated with Zero Snippet — review before production.",
     "# Apache 2.4+; requires AllowOverride for relevant directives.",
     "",
   ];

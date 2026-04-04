@@ -10,7 +10,7 @@ export const fileHashFaqItems: { question: string; answer: string }[] = [
       "No. The File API reads bytes into an ArrayBuffer inside your browser tab. MD5 runs locally via a small library; SHA-1 and SHA-256 use the Web Crypto API. Nothing is sent to our backend for hashing.",
   },
   {
-    question: "How is this different from the text hash generator on the dev tools page?",
+    question: "How is this different from the text hash generator on the site page?",
     answer:
       "The hash generator hashes UTF-8 text you type or paste. This page hashes raw file bytes exactly as stored on disk—ideal for installers, disk images, CSV exports, and firmware. For string payloads and API examples, use the text-based hash generator instead.",
   },

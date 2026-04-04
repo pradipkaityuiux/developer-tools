@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { CopyIconButton } from "@/components/copy-icon-button";
 import { markdownToHtml } from "@/lib/markdown-to-html-core";
 
 const SAMPLE = `# Markdown → HTML sample
@@ -105,14 +106,6 @@ export function MarkdownToHtmlTool() {
           <div className="flex flex-wrap items-center gap-2">
             <button
               type="button"
-              onClick={() => copyToClipboard(htmlOut)}
-              disabled={!htmlOut}
-              className="rounded-lg bg-zinc-900 px-3 py-2 text-sm font-medium text-white transition-colors hover:bg-zinc-800 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200"
-            >
-              Copy HTML
-            </button>
-            <button
-              type="button"
               onClick={() => setMarkdown("")}
               className="rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-zinc-50 dark:border-zinc-600 dark:bg-zinc-900 dark:hover:bg-zinc-800"
             >
@@ -159,10 +152,6 @@ export function MarkdownToHtmlTool() {
             </p>
           )}
 
-          {copyHint ? (
-            <p className="text-sm text-zinc-600 dark:text-zinc-400">{copyHint}</p>
-          ) : null}
-
           <div className="grid gap-4 lg:grid-cols-2">
             <div>
               <label
@@ -188,15 +177,25 @@ export function MarkdownToHtmlTool() {
               >
                 HTML output
               </label>
-              <textarea
-                id="html-output"
-                readOnly
-                value={htmlOut}
-                spellCheck={false}
-                rows={16}
-                className="mt-1.5 w-full resize-y rounded-lg border border-zinc-200 bg-zinc-50 px-3 py-2 font-mono text-sm leading-relaxed text-foreground outline-none dark:border-zinc-800 dark:bg-zinc-900/60"
-                placeholder="HTML appears here…"
-              />
+              <div className="relative mt-1.5">
+                <textarea
+                  id="html-output"
+                  readOnly
+                  value={htmlOut}
+                  spellCheck={false}
+                  rows={16}
+                  className="w-full resize-y rounded-lg border border-zinc-200 bg-zinc-50 py-2 pr-12 pl-3 font-mono text-sm leading-relaxed text-foreground outline-none dark:border-zinc-800 dark:bg-zinc-900/60"
+                  placeholder="HTML appears here…"
+                />
+                <CopyIconButton
+                  placement="corner"
+                  copied={copyHint === "Copied to clipboard"}
+                  onClick={() => copyToClipboard(htmlOut)}
+                  disabled={!htmlOut}
+                  title="Copy HTML"
+                  aria-label="Copy HTML output"
+                />
+              </div>
             </div>
           </div>
 

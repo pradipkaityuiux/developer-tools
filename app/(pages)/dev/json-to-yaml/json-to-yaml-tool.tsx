@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useId, useState } from "react";
+import { CopyIconButton } from "@/components/copy-icon-button";
 import yaml from "js-yaml";
 
 const SAMPLE_JSON = `{
@@ -153,14 +154,24 @@ export function JsonToYamlTool() {
           >
             YAML output
           </label>
-          <textarea
-            id={yamlId}
-            readOnly
-            value={yamlOutput}
-            placeholder="Click “Convert to YAML” to generate output…"
-            spellCheck={false}
-            className="mt-2 h-64 w-full resize-y rounded-xl border border-zinc-200 bg-zinc-50/80 p-3 font-mono text-sm leading-relaxed text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 dark:border-zinc-800 dark:bg-zinc-900/60 dark:focus-visible:outline-zinc-200"
-          />
+          <div className="relative mt-2">
+            <textarea
+              id={yamlId}
+              readOnly
+              value={yamlOutput}
+              placeholder="Click “Convert to YAML” to generate output…"
+              spellCheck={false}
+              className="h-64 w-full resize-y rounded-xl border border-zinc-200 bg-zinc-50/80 py-3 pr-12 pl-3 font-mono text-sm leading-relaxed text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 dark:border-zinc-800 dark:bg-zinc-900/60 dark:focus-visible:outline-zinc-200"
+            />
+            <CopyIconButton
+              placement="corner"
+              copied={copied}
+              onClick={copyYaml}
+              disabled={!yamlOutput}
+              title="Copy YAML"
+              aria-label="Copy YAML output"
+            />
+          </div>
         </div>
       </div>
 
@@ -180,14 +191,6 @@ export function JsonToYamlTool() {
           className="rounded-lg bg-zinc-900 px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-zinc-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white dark:focus-visible:outline-zinc-100"
         >
           Convert to YAML
-        </button>
-        <button
-          type="button"
-          onClick={copyYaml}
-          disabled={!yamlOutput}
-          className="rounded-lg border border-zinc-300 bg-white px-4 py-2 text-sm font-medium text-foreground shadow-sm transition-colors hover:bg-zinc-50 disabled:pointer-events-none disabled:opacity-40 dark:border-zinc-600 dark:bg-zinc-900 dark:hover:bg-zinc-800"
-        >
-          {copied ? "Copied" : "Copy YAML"}
         </button>
         <button
           type="button"

@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Copy } from "lucide-react";
+import { CopyIconButton } from "@/components/copy-icon-button";
 import {
   computeAllHashes,
   type HashAlgorithmId,
@@ -121,9 +123,11 @@ export function HashGeneratorTool() {
             type="button"
             onClick={copyAll}
             disabled={!rows}
-            className="rounded-lg bg-zinc-900 px-3 py-2 text-sm font-medium text-white transition-colors hover:bg-zinc-800 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200"
+            title="Copy all digests"
+            aria-label="Copy all digests"
+            className="inline-flex items-center justify-center rounded-lg bg-zinc-900 p-2 text-white transition-colors hover:bg-zinc-800 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200"
           >
-            Copy all digests
+            <Copy className="size-4 shrink-0" aria-hidden />
           </button>
         </div>
 
@@ -137,8 +141,8 @@ export function HashGeneratorTool() {
                 <th className="px-3 py-2 font-medium text-foreground">
                   Hex digest
                 </th>
-                <th className="w-24 px-3 py-2 font-medium text-foreground">
-                  Copy
+                <th className="w-14 px-3 py-2 font-medium text-foreground">
+                  <span className="sr-only">Copy digest</span>
                 </th>
               </tr>
             </thead>
@@ -168,15 +172,15 @@ export function HashGeneratorTool() {
                         <span className="text-zinc-400">—</span>
                       )}
                     </td>
-                    <td className="px-3 py-2">
-                      <button
-                        type="button"
+                    <td className="px-3 py-2 align-middle">
+                      <CopyIconButton
+                        placement="inline"
+                        copied={false}
                         disabled={!value}
                         onClick={() => value && void copyToClipboard(value)}
-                        className="rounded-md border border-zinc-300 px-2 py-1 text-xs font-medium text-foreground hover:bg-zinc-50 disabled:cursor-not-allowed disabled:opacity-40 dark:border-zinc-600 dark:hover:bg-zinc-800"
-                      >
-                        Copy
-                      </button>
+                        title={`Copy ${algo} digest`}
+                        aria-label={`Copy ${algo} digest`}
+                      />
                     </td>
                   </tr>
                 );

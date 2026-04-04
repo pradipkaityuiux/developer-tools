@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { CopyIconButton } from "@/components/copy-icon-button";
 
 type ParseOk = { ok: true; value: unknown };
 type ParseErr = {
@@ -240,15 +241,25 @@ export function JsonFormatterTool() {
           >
             JSON input
           </label>
-          <textarea
-            id="json-input"
-            value={text}
-            onChange={(e) => setText(e.target.value)}
-            spellCheck={false}
-            rows={14}
-            className="mt-1.5 w-full resize-y rounded-lg border border-zinc-300 bg-white px-3 py-2 font-mono text-sm leading-relaxed text-foreground outline-none ring-zinc-400 placeholder:text-zinc-400 focus:border-zinc-500 focus:ring-2 dark:border-zinc-700 dark:bg-zinc-900 dark:ring-zinc-600"
-            placeholder='{"hello": "world"}'
-          />
+          <div className="relative mt-1.5">
+            <textarea
+              id="json-input"
+              value={text}
+              onChange={(e) => setText(e.target.value)}
+              spellCheck={false}
+              rows={14}
+              className="w-full resize-y rounded-lg border border-zinc-300 bg-white py-2 pr-12 pl-3 font-mono text-sm leading-relaxed text-foreground outline-none ring-zinc-400 placeholder:text-zinc-400 focus:border-zinc-500 focus:ring-2 dark:border-zinc-700 dark:bg-zinc-900 dark:ring-zinc-600"
+              placeholder='{"hello": "world"}'
+            />
+            <CopyIconButton
+              placement="corner"
+              copied={copyHint === "Copied JSON"}
+              onClick={() => copyToClipboard(text, "JSON")}
+              disabled={!text}
+              title="Copy JSON"
+              aria-label="Copy JSON"
+            />
+          </div>
         </div>
 
         <div className="flex flex-wrap gap-2">
@@ -272,13 +283,6 @@ export function JsonFormatterTool() {
             className="rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-zinc-50 dark:border-zinc-600 dark:bg-zinc-900 dark:hover:bg-zinc-800"
           >
             Clear
-          </button>
-          <button
-            type="button"
-            onClick={() => copyToClipboard(text, "JSON")}
-            className="rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-zinc-50 dark:border-zinc-600 dark:bg-zinc-900 dark:hover:bg-zinc-800"
-          >
-            Copy
           </button>
           <button
             type="button"

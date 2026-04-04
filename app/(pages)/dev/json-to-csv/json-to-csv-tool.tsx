@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useId, useMemo, useState } from "react";
+import { CopyIconButton } from "@/components/copy-icon-button";
 import {
   type JsonToCsvDelimiter,
   jsonTextToCsv,
@@ -169,14 +170,15 @@ export function JsonToCsvTool() {
           >
             Convert to CSV
           </button>
-          <button
-            type="button"
+          <CopyIconButton
+            placement="inline"
+            copied={copied}
             disabled={!csvOut}
             onClick={copyCsv}
-            className="rounded-lg border border-zinc-300 bg-white px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-zinc-50 disabled:opacity-50 dark:border-zinc-600 dark:bg-zinc-900 dark:hover:bg-zinc-800"
-          >
-            {copied ? "Copied" : "Copy CSV"}
-          </button>
+            title="Copy CSV"
+            aria-label="Copy CSV output"
+            className="rounded-lg p-2.5"
+          />
           <button
             type="button"
             disabled={!csvOut}

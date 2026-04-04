@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { CopyIconButton } from "@/components/copy-icon-button";
 import {
   decodeJwt,
   jwtExpiryStatus,
@@ -13,6 +14,8 @@ const SAMPLE =
 export function JwtDecoderTool() {
   const [input, setInput] = useState(SAMPLE);
   const [copyHint, setCopyHint] = useState<string | null>(null);
+  const [headerCopied, setHeaderCopied] = useState(false);
+  const [payloadCopied, setPayloadCopied] = useState(false);
   const [nowMs, setNowMs] = useState(() => Date.now());
 
   useEffect(() => {
@@ -33,10 +36,20 @@ export function JwtDecoderTool() {
     return jwtExpiryStatus(nowMs, result.expiry, result.notBefore);
   }, [result, nowMs]);
 
-  async function copyToClipboard(value: string) {
+  async function copyToClipboard(
+    value: string,
+    which: "header" | "payload",
+  ) {
     try {
       await navigator.clipboard.writeText(value);
       setCopyHint("Copied to clipboard");
+      if (which === "header") {
+        setHeaderCopied(true);
+        window.setTimeout(() => setHeaderCopied(false), 2000);
+      } else if (which === "payload") {
+        setPayloadCopied(true);
+        window.setTimeout(() => setPayloadCopied(false), 2000);
+      }
     } catch {
       setCopyHint("Copy blocked — select text manually");
     }
@@ -181,36 +194,40 @@ export function JwtDecoderTool() {
 
             <div className="grid gap-4 lg:grid-cols-2">
               <div>
-                <div className="flex items-center justify-between gap-2">
-                  <h3 className="text-sm font-medium text-foreground">Header</h3>
-                  <button
-                    type="button"
-                    onClick={() => copyToClipboard(result.headerJson)}
-                    className="shrink-0 rounded-md border border-zinc-300 bg-white px-2 py-1 text-xs font-medium text-foreground hover:bg-zinc-50 dark:border-zinc-600 dark:bg-zinc-900 dark:hover:bg-zinc-800"
-                  >
-                    Copy
-                  </button>
+                <h3 className="text-sm font-medium text-foreground">Header</h3>
+                <div className="relative mt-1.5">
+                  <pre className="max-h-64 overflow-auto rounded-lg border border-zinc-200 bg-zinc-50 py-2 pr-12 pl-3 font-mono text-xs leading-relaxed text-foreground dark:border-zinc-800 dark:bg-zinc-900/80 sm:text-sm">
+                    {result.headerJson}
+                  </pre>
+                  <CopyIconButton
+                    placement="corner"
+                    copied={headerCopied}
+                    onClick={() => copyToClipboard(result.headerJson, "header")}
+                    title={headerCopied ? "Copied" : "Copy header JSON"}
+                    aria-label={
+                      headerCopied ? "Copied to clipboard" : "Copy header JSON"
+                    }
+                  />
                 </div>
-                <pre className="mt-1.5 max-h-64 overflow-auto rounded-lg border border-zinc-200 bg-zinc-50 p-3 font-mono text-xs leading-relaxed text-foreground dark:border-zinc-800 dark:bg-zinc-900/80 sm:text-sm">
-                  {result.headerJson}
-                </pre>
               </div>
               <div>
-                <div className="flex items-center justify-between gap-2">
-                  <h3 className="text-sm font-medium text-foreground">
-                    Payload
-                  </h3>
-                  <button
-                    type="button"
-                    onClick={() => copyToClipboard(result.payloadJson)}
-                    className="shrink-0 rounded-md border border-zinc-300 bg-white px-2 py-1 text-xs font-medium text-foreground hover:bg-zinc-50 dark:border-zinc-600 dark:bg-zinc-900 dark:hover:bg-zinc-800"
-                  >
-                    Copy
-                  </button>
+                <h3 className="text-sm font-medium text-foreground">Payload</h3>
+                <div className="relative mt-1.5">
+                  <pre className="max-h-64 overflow-auto rounded-lg border border-zinc-200 bg-zinc-50 py-2 pr-12 pl-3 font-mono text-xs leading-relaxed text-foreground dark:border-zinc-800 dark:bg-zinc-900/80 sm:text-sm">
+                    {result.payloadJson}
+                  </pre>
+                  <CopyIconButton
+                    placement="corner"
+                    copied={payloadCopied}
+                    onClick={() =>
+                      copyToClipboard(result.payloadJson, "payload")
+                    }
+                    title={payloadCopied ? "Copied" : "Copy payload JSON"}
+                    aria-label={
+                      payloadCopied ? "Copied to clipboard" : "Copy payload JSON"
+                    }
+                  />
                 </div>
-                <pre className="mt-1.5 max-h-64 overflow-auto rounded-lg border border-zinc-200 bg-zinc-50 p-3 font-mono text-xs leading-relaxed text-foreground dark:border-zinc-800 dark:bg-zinc-900/80 sm:text-sm">
-                  {result.payloadJson}
-                </pre>
               </div>
             </div>
           </>

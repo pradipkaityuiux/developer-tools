@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { CopyIconButton } from "@/components/copy-icon-button";
 
 type ToolMode = "encode-component" | "encode-uri" | "decode";
 
@@ -178,15 +179,25 @@ export function UrlEncoderTool() {
             >
               Output
             </label>
-            <textarea
-              id="url-output"
-              value={output}
-              readOnly
-              spellCheck={false}
-              rows={10}
-              className="mt-1.5 w-full resize-y rounded-lg border border-zinc-200 bg-zinc-50 px-3 py-2 font-mono text-sm leading-relaxed text-foreground outline-none dark:border-zinc-800 dark:bg-zinc-900/60"
-              placeholder="Run Encode or Decode to see the result here."
-            />
+            <div className="relative mt-1.5">
+              <textarea
+                id="url-output"
+                value={output}
+                readOnly
+                spellCheck={false}
+                rows={10}
+                className="w-full resize-y rounded-lg border border-zinc-200 bg-zinc-50 py-2 pr-12 pl-3 font-mono text-sm leading-relaxed text-foreground outline-none dark:border-zinc-800 dark:bg-zinc-900/60"
+                placeholder="Run Encode or Decode to see the result here."
+              />
+              <CopyIconButton
+                placement="corner"
+                copied={copyHint === "Copied to clipboard"}
+                onClick={() => copyToClipboard(output)}
+                disabled={!output}
+                title="Copy output"
+                aria-label="Copy output"
+              />
+            </div>
           </div>
         </div>
 
@@ -209,14 +220,6 @@ export function UrlEncoderTool() {
             className="rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-zinc-50 disabled:cursor-not-allowed disabled:opacity-50 dark:border-zinc-600 dark:bg-zinc-900 dark:hover:bg-zinc-800"
           >
             Swap to input
-          </button>
-          <button
-            type="button"
-            onClick={() => copyToClipboard(output)}
-            disabled={!output}
-            className="rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-zinc-50 disabled:cursor-not-allowed disabled:opacity-50 dark:border-zinc-600 dark:bg-zinc-900 dark:hover:bg-zinc-800"
-          >
-            Copy output
           </button>
           <button
             type="button"

@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { CopyIconButton } from "@/components/copy-icon-button";
 
 const MAX_COUNT = 500;
 
@@ -134,13 +135,6 @@ export function UuidGeneratorTool() {
           >
             Generate new UUIDs
           </button>
-          <button
-            type="button"
-            onClick={() => copyToClipboard(outputText)}
-            className="rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-zinc-50 dark:border-zinc-600 dark:bg-zinc-900 dark:hover:bg-zinc-800"
-          >
-            Copy all
-          </button>
         </div>
 
         <div>
@@ -150,14 +144,24 @@ export function UuidGeneratorTool() {
           >
             UUID v4 output (one per line)
           </label>
-          <textarea
-            id="uuid-output"
-            readOnly
-            value={outputText}
-            spellCheck={false}
-            rows={textareaRows}
-            className="mt-1.5 w-full resize-y rounded-lg border border-zinc-300 bg-zinc-50 px-3 py-2 font-mono text-sm leading-relaxed text-foreground outline-none dark:border-zinc-700 dark:bg-zinc-900/80"
-          />
+          <div className="relative mt-1.5">
+            <textarea
+              id="uuid-output"
+              readOnly
+              value={outputText}
+              spellCheck={false}
+              rows={textareaRows}
+              className="w-full resize-y rounded-lg border border-zinc-300 bg-zinc-50 py-2 pr-12 pl-3 font-mono text-sm leading-relaxed text-foreground outline-none dark:border-zinc-700 dark:bg-zinc-900/80"
+            />
+            <CopyIconButton
+              placement="corner"
+              copied={copyHint === "Copied to clipboard"}
+              onClick={() => copyToClipboard(outputText)}
+              disabled={!outputText}
+              title="Copy all UUIDs"
+              aria-label="Copy all UUIDs"
+            />
+          </div>
         </div>
 
         <p className="text-sm text-zinc-600 dark:text-zinc-400" role="status">

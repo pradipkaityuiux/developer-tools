@@ -328,7 +328,7 @@ export default function KeywordDensityPage() {
           </p>
 
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
-            Related SEO tools on Dev Tool
+            Related SEO tools on Zero Snippet
           </h2>
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
             Explore utilities under{" "}

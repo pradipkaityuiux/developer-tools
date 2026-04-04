@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { CopyIconButton } from "@/components/copy-icon-button";
 
 type UnitMode = "auto" | "seconds" | "milliseconds";
 
@@ -248,13 +249,13 @@ export function UnixTimestampTool() {
                     </dt>
                     <dd className="flex min-w-0 flex-1 items-center justify-end gap-2">
                       <span className="break-all font-mono text-foreground">{val}</span>
-                      <button
-                        type="button"
+                      <CopyIconButton
+                        placement="inline"
+                        copied={false}
                         onClick={() => copyFeedback(setCopyHint, val)}
-                        className="shrink-0 rounded border border-zinc-300 bg-white px-2 py-1 text-xs font-medium text-foreground hover:bg-zinc-50 dark:border-zinc-600 dark:bg-zinc-950 dark:hover:bg-zinc-800"
-                      >
-                        Copy
-                      </button>
+                        title="Copy value"
+                        aria-label="Copy value"
+                      />
                     </dd>
                   </div>
                 ))}
@@ -331,13 +332,13 @@ export function UnixTimestampTool() {
                     </dt>
                     <dd className="flex min-w-0 flex-1 items-center justify-end gap-2">
                       <span className="break-all font-mono text-foreground">{val}</span>
-                      <button
-                        type="button"
+                      <CopyIconButton
+                        placement="inline"
+                        copied={false}
                         onClick={() => copyFeedback(setCopyHint, val)}
-                        className="shrink-0 rounded border border-zinc-300 bg-white px-2 py-1 text-xs font-medium text-foreground hover:bg-zinc-50 dark:border-zinc-600 dark:bg-zinc-950 dark:hover:bg-zinc-800"
-                      >
-                        Copy
-                      </button>
+                        title="Copy value"
+                        aria-label="Copy value"
+                      />
                     </dd>
                   </div>
                 ))}

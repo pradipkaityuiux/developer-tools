@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { CopyIconButton } from "@/components/copy-icon-button";
 import {
   CODE_DIFF_MAX_LINES,
   computeLineDiff,
@@ -198,14 +199,15 @@ export function CodeDiffTool() {
         >
           Load sample
         </button>
-        <button
-          type="button"
+        <CopyIconButton
+          placement="inline"
+          copied={copyHint === "Unified diff copied"}
           disabled={!result.ok}
           onClick={() => void copyUnified()}
-          className="rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-zinc-50 disabled:cursor-not-allowed disabled:opacity-50 dark:border-zinc-600 dark:bg-zinc-900 dark:hover:bg-zinc-800"
-        >
-          Copy unified diff
-        </button>
+          title="Copy unified diff"
+          aria-label="Copy unified diff"
+          className="rounded-lg p-2"
+        />
         {copyHint ? (
           <span className="text-sm text-zinc-600 dark:text-zinc-400">
             {copyHint}

@@ -483,10 +483,15 @@ export function PasswordGeneratorTool() {
             type="button"
             onClick={() => copyToClipboard(outputText)}
             disabled={!outputText}
+            title={copyHint === "Copied to clipboard" ? "Copied" : "Copy all passwords"}
+            aria-label={
+              copyHint === "Copied to clipboard"
+                ? "Copied to clipboard"
+                : "Copy all passwords"
+            }
             className="inline-flex items-center gap-1.5 rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-zinc-50 disabled:pointer-events-none disabled:opacity-40 dark:border-zinc-600 dark:bg-zinc-900 dark:hover:bg-zinc-800"
           >
             <Copy className="size-4 shrink-0" aria-hidden />
-            Copy all
           </button>
         </div>
 
