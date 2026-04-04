@@ -1,22 +1,24 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 type Hop = {
   url: string;
   status: number;
   location: string | null;
-  statusText?: string;
+  statusText: string;
 };
 
-type TraceResponse = {
+type CheckResponse = {
   inputUrl: string;
   hops: Hop[];
   hopCount: number;
   redirectCount: number;
   finalUrl: string;
   finalStatus: number;
-  error: string | null;
+  finalStatusText: string;
+  chainError: string | null;
 };
 
 function statusLabel(status: number): string {
@@ -27,11 +29,33 @@ function statusLabel(status: number): string {
   return "Response";
 }
 
-export function RedirectChainCheckerTool() {
+function finalSummary(status: number): string {
+  if (status === 200)
+    return "200 OK — the URL resolved successfully after any redirects.";
+  if (status === 301 || status === 308)
+    return "Permanent redirect — crawlers usually consolidate to the Location target.";
+  if (status === 302 || status === 307)
+    return "Temporary redirect — the original URL may return; equity may not fully consolidate.";
+  if (status === 404)
+    return "Not found — fix the link, restore content, or return 410 if intentionally removed.";
+  if (status === 403)
+    return "Forbidden — check WAF, IP allowlists, and auth rules if users should reach this URL.";
+  if (status === 500 || status === 502 || status === 503 || status === 504)
+    return "Server or gateway error — inspect origin health, upstreams, and deployment logs.";
+  if (status >= 200 && status < 300)
+    return "Success range — request completed; confirm caching and canonical behavior separately.";
+  if (status >= 400 && status < 500)
+    return "Client error — the server refused or could not satisfy the request as sent.";
+  if (status >= 500)
+    return "Server error — the origin reported a failure processing the request.";
+  return "Review the status class and your hosting or CDN configuration.";
+}
+
+export function ResponseCodeCheckerTool() {
   const [url, setUrl] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [result, setResult] = useState<TraceResponse | null>(null);
+  const [result, setResult] = useState<CheckResponse | null>(null);
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -39,17 +63,17 @@ export function RedirectChainCheckerTool() {
     setResult(null);
     const trimmed = url.trim();
     if (!trimmed) {
-      setError("Enter a URL to trace.");
+      setError("Enter a URL to check.");
       return;
     }
     setLoading(true);
     try {
-      const res = await fetch("/api/website/redirect-chain/trace", {
+      const res = await fetch("/api/website/response-code/check", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ url: trimmed }),
       });
-      const data: TraceResponse & { error?: string } = await res.json();
+      const data: CheckResponse & { error?: string } = await res.json();
       if (!res.ok) {
         setError(data.error ?? `Request failed (${res.status}).`);
         return;
@@ -62,10 +86,9 @@ export function RedirectChainCheckerTool() {
     }
   }
 
-  const chainHealthy =
+  const ok =
     result &&
-    !result.error &&
-    result.redirectCount <= 1 &&
+    !result.chainError &&
     result.finalStatus >= 200 &&
     result.finalStatus < 400;
 
@@ -77,17 +100,17 @@ export function RedirectChainCheckerTool() {
       >
         <div className="min-w-0 flex-1">
           <label
-            htmlFor="redirect-chain-url"
+            htmlFor="response-code-url"
             className="block text-sm font-medium text-foreground"
           >
-            URL to trace
+            URL to check
           </label>
           <input
-            id="redirect-chain-url"
+            id="response-code-url"
             type="url"
             name="url"
             inputMode="url"
-            placeholder="https://example.com/old-path"
+            placeholder="https://example.com/pricing"
             autoComplete="url"
             value={url}
             onChange={(e) => setUrl(e.target.value)}
@@ -99,7 +122,7 @@ export function RedirectChainCheckerTool() {
           disabled={loading}
           className="shrink-0 rounded-lg bg-zinc-900 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-zinc-800 disabled:opacity-50 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200"
         >
-          {loading ? "Tracing…" : "Trace redirects"}
+          {loading ? "Checking…" : "Check status"}
         </button>
       </form>
 
@@ -114,9 +137,53 @@ export function RedirectChainCheckerTool() {
 
       {result ? (
         <div className="mt-6 space-y-4">
+          <div className="rounded-lg border border-zinc-200 bg-zinc-50/80 p-4 dark:border-zinc-800 dark:bg-zinc-900/40">
+            <p className="text-xs font-medium uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+              Final HTTP status
+            </p>
+            <div className="mt-2 flex flex-wrap items-baseline gap-3">
+              <span
+                className={`text-3xl font-semibold tabular-nums ${
+                  result.finalStatus >= 200 && result.finalStatus < 300
+                    ? "text-emerald-700 dark:text-emerald-400"
+                    : result.finalStatus >= 400
+                      ? "text-red-700 dark:text-red-400"
+                      : "text-sky-800 dark:text-sky-300"
+                }`}
+              >
+                {result.finalStatus}
+              </span>
+              {result.finalStatusText ? (
+                <span className="text-sm text-zinc-600 dark:text-zinc-400">
+                  {result.finalStatusText}
+                </span>
+              ) : null}
+              <span className="text-sm text-zinc-600 dark:text-zinc-400">
+                · {statusLabel(result.finalStatus)}
+              </span>
+            </div>
+            <p className="mt-3 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+              {finalSummary(result.finalStatus)}
+            </p>
+            <p className="mt-3 break-all font-mono text-xs text-zinc-800 dark:text-zinc-200">
+              <span className="font-sans font-medium text-foreground">
+                Final URL:{" "}
+              </span>
+              {result.finalUrl}
+            </p>
+            {result.inputUrl !== result.finalUrl ? (
+              <p className="mt-2 break-all font-mono text-xs text-zinc-600 dark:text-zinc-400">
+                <span className="font-sans font-medium text-foreground">
+                  Requested:{" "}
+                </span>
+                {result.inputUrl}
+              </p>
+            ) : null}
+          </div>
+
           <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-zinc-600 dark:text-zinc-400">
             <span>
-              Hops recorded:{" "}
+              Hops:{" "}
               <span className="font-medium text-foreground">
                 {result.hopCount}
               </span>
@@ -127,40 +194,27 @@ export function RedirectChainCheckerTool() {
                 {result.redirectCount}
               </span>
             </span>
-            <span>
-              Final status:{" "}
-              <span
-                className={
-                  result.finalStatus >= 200 && result.finalStatus < 400
-                    ? "font-medium text-emerald-600 dark:text-emerald-400"
-                    : "font-medium text-amber-700 dark:text-amber-400"
-                }
-              >
-                {result.finalStatus}
-              </span>
-            </span>
           </div>
 
-          {result.error ? (
+          {result.chainError ? (
             <p className="text-sm text-amber-800 dark:text-amber-300">
-              {result.error} Intermediate steps are shown below so you can see
-              where the chain stopped.
+              {result.chainError} Intermediate steps are shown below.
             </p>
-          ) : chainHealthy ? (
+          ) : ok && result.redirectCount <= 1 ? (
             <p className="text-sm text-emerald-700 dark:text-emerald-400">
-              Short path: zero or one redirect before a successful response—good
-              for SEO crawl efficiency and perceived performance.
+              Healthy path: success status with at most one redirect—good for
+              crawl efficiency and latency.
             </p>
-          ) : !result.error && result.redirectCount > 1 ? (
+          ) : !result.chainError && result.redirectCount > 1 ? (
             <p className="text-sm text-amber-800 dark:text-amber-300">
-              Multiple redirects add latency. Point marketing links and{" "}
-              <a
-                href="/website/canonical-tag-checker"
+              Multiple redirects add round trips. Use the{" "}
+              <Link
+                href="/website/redirect-chain-checker"
                 className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
               >
-                canonical tags
-              </a>{" "}
-              at the final URL when you can.
+                redirect chain checker
+              </Link>{" "}
+              to inspect every hop and shorten rules where possible.
             </p>
           ) : null}
 
@@ -186,6 +240,11 @@ export function RedirectChainCheckerTool() {
                     >
                       {hop.status} · {statusLabel(hop.status)}
                     </span>
+                    {isLast && hop.statusText ? (
+                      <span className="text-xs text-zinc-500 dark:text-zinc-400">
+                        {hop.statusText}
+                      </span>
+                    ) : null}
                   </div>
                   <p className="mt-1.5 break-all font-mono text-xs text-zinc-800 dark:text-zinc-200">
                     {hop.url}
@@ -212,20 +271,20 @@ export function RedirectChainCheckerTool() {
           </ol>
 
           <p className="text-sm text-zinc-600 dark:text-zinc-400">
-            Cross-check headers on the final URL with our{" "}
-            <a
+            Inspect response headers on the final URL with our{" "}
+            <Link
               href="/website/http-header-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
               HTTP header checker
-            </a>{" "}
-            and raw status with the{" "}
-            <a
-              href="/website/response-code-checker"
+            </Link>{" "}
+            or scan on-page links with the{" "}
+            <Link
+              href="/website/broken-link-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
-              response code checker
-            </a>
+              broken link checker
+            </Link>
             .
           </p>
         </div>

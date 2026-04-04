@@ -148,6 +148,8 @@ export type RedirectChainHop = {
   url: string;
   status: number;
   location: string | null;
+  /** Phrase from the final response line when available (often empty over HTTP/2). */
+  statusText: string;
 };
 
 export type RedirectChainTraceResult = {
@@ -193,7 +195,12 @@ export async function tracePublicRedirectChain(
     });
 
     const location = res.headers.get("location");
-    hops.push({ url: urlStr, status: res.status, location });
+    hops.push({
+      url: urlStr,
+      status: res.status,
+      location,
+      statusText: res.statusText ?? "",
+    });
 
     if ([301, 302, 303, 307, 308].includes(res.status)) {
       if (!location) {
