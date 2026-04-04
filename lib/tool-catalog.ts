@@ -653,6 +653,60 @@ export const toolSections: ToolSection[] = [
       },
     ],
   },
+  {
+    id: "api-developer-toolbox",
+    title: "API Developer Toolbox",
+    tools: [
+      {
+        name: "HTTP Request Builder",
+        href: "/api-toolbox/http-request-builder",
+        description:
+          "Test, document, and debug APIs without leaving the browser—pick method, headers, and body, then send with fetch.",
+      },
+      {
+        name: "API Response Formatter",
+        href: "/api-toolbox/api-response-formatter",
+        description:
+          "Paste any JSON or XML API response: pretty-print, validate, and explore a collapsible tree view.",
+      },
+      {
+        name: "OpenAPI / Swagger Viewer",
+        href: "/api-toolbox/openapi-viewer",
+        description:
+          "Paste OpenAPI in YAML or JSON and browse interactive docs—paths, schemas, and examples in one place.",
+      },
+      {
+        name: "Webhook Payload Tester",
+        href: "/api-toolbox/webhook-payload-tester",
+        description:
+          "Practice webhook debugging client-side: log sample POST bodies locally (e.g. localStorage) when a public capture URL is not available.",
+      },
+      {
+        name: "HTTP Status Code Reference",
+        href: "/api-toolbox/http-status-codes",
+        description:
+          "Search HTTP status codes with plain-English meanings, typical causes, and what to do next.",
+      },
+      {
+        name: "MIME Type Lookup",
+        href: "/api-toolbox/mime-type-lookup",
+        description:
+          "Map filenames or extensions to MIME types for Content-Type headers, uploads, and API contracts.",
+      },
+      {
+        name: "OAuth 2.0 Flow Visualizer",
+        href: "/api-toolbox/oauth2-flow-visualizer",
+        description:
+          "Walk through the authorization code flow step by step with interactive fields and diagrams.",
+      },
+      {
+        name: "API Rate Limit Calculator",
+        href: "/api-toolbox/rate-limit-calculator",
+        description:
+          "Given X requests per minute and a daily budget of Y calls, see pacing and when you hit the wall.",
+      },
+    ],
+  },
 ];
 
 export const allTools: ToolEntry[] = toolSections.flatMap(

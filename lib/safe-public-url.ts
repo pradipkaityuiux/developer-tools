@@ -150,6 +150,8 @@ export type RedirectChainHop = {
   location: string | null;
   /** Phrase from the final response line when available (often empty over HTTP/2). */
   statusText: string;
+  /** Milliseconds until response headers were received for this hop (excludes body read). */
+  durationMs: number;
 };
 
 export type RedirectChainTraceResult = {
@@ -186,6 +188,7 @@ export async function tracePublicRedirectChain(
     }
     seen.add(urlStr);
 
+    const t0 = Date.now();
     const res = await fetch(urlStr, {
       ...init,
       method: init.method ?? "GET",
@@ -193,6 +196,7 @@ export async function tracePublicRedirectChain(
       redirect: "manual",
       signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
     });
+    const durationMs = Date.now() - t0;
 
     const location = res.headers.get("location");
     hops.push({
@@ -200,6 +204,7 @@ export async function tracePublicRedirectChain(
       status: res.status,
       location,
       statusText: res.statusText ?? "",
+      durationMs,
     });
 
     if ([301, 302, 303, 307, 308].includes(res.status)) {
