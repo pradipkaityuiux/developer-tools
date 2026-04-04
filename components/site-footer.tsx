@@ -1,0 +1,36 @@
+import Link from "next/link";
+
+const footerLinks = [
+  { href: "/about", label: "About Us" },
+  { href: "/privacy-policy", label: "Privacy Policy" },
+  { href: "/terms", label: "Terms & Conditions" },
+  { href: "/cookie-policy", label: "Cookie Policy" },
+  { href: "/disclaimer", label: "Disclaimer" },
+] as const;
+
+export function SiteFooter() {
+  return (
+    <footer className="mt-auto border-t border-zinc-200/90 bg-zinc-50/80 dark:border-zinc-800/90 dark:bg-zinc-950/50">
+      <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-4 pb-24 pt-10 sm:flex-row sm:justify-between sm:px-6 sm:pb-20">
+        <p className="text-center text-sm text-zinc-600 dark:text-zinc-400">
+          © {new Date().getFullYear()} Zero Snippet. Free tools for developers
+          and marketers.
+        </p>
+        <nav
+          className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm"
+          aria-label="Legal and info"
+        >
+          {footerLinks.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              className="text-zinc-600 underline-offset-4 transition-colors hover:text-foreground hover:underline dark:text-zinc-400 dark:hover:text-foreground"
+            >
+              {label}
+            </Link>
+          ))}
+        </nav>
+      </div>
+    </footer>
+  );
+}

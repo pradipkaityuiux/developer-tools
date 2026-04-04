@@ -1,15 +1,16 @@
 "use client";
 
+import { Monitor, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
-const options = [
-  { value: "light", label: "Light" },
-  { value: "dark", label: "Dark" },
-  { value: "system", label: "System" },
-] as const;
+const themes = [
+  { value: "light" as const, label: "Light", Icon: Sun },
+  { value: "dark" as const, label: "Dark", Icon: Moon },
+  { value: "system" as const, label: "System", Icon: Monitor },
+];
 
-export function ThemeSelect() {
+export function ThemeFloatingToggle() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -20,30 +21,41 @@ export function ThemeSelect() {
 
   if (!mounted) {
     return (
-      <span
-        className="inline-block h-9 min-w-[8.5rem] rounded-md border border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900"
+      <div
+        className="fixed bottom-4 right-4 z-[90] flex h-11 w-[7.25rem] rounded-full border border-zinc-200 bg-white/90 shadow-lg backdrop-blur-md dark:border-zinc-700 dark:bg-zinc-900/90"
         aria-hidden
       />
     );
   }
 
+  const active = theme ?? "light";
+
   return (
-    <div className="flex items-center gap-2">
-      <label htmlFor="theme-select" className="sr-only">
-        Theme
-      </label>
-      <select
-        id="theme-select"
-        value={theme ?? "light"}
-        onChange={(e) => setTheme(e.target.value)}
-        className="h-9 min-w-[8.5rem] cursor-pointer rounded-md border border-zinc-200 bg-white px-2.5 text-sm text-foreground shadow-sm outline-none transition-colors hover:border-zinc-300 focus-visible:ring-2 focus-visible:ring-zinc-400 dark:border-zinc-700 dark:bg-zinc-900 dark:hover:border-zinc-600 dark:focus-visible:ring-zinc-500"
-      >
-        {options.map((opt) => (
-          <option key={opt.value} value={opt.value}>
-            {opt.label}
-          </option>
-        ))}
-      </select>
+    <div
+      className="fixed bottom-4 right-4 z-[90] flex items-center gap-0.5 rounded-full border border-zinc-200 bg-white/95 p-1 shadow-lg backdrop-blur-md dark:border-zinc-700 dark:bg-zinc-900/95"
+      role="group"
+      aria-label="Theme"
+    >
+      {themes.map(({ value, label, Icon }) => {
+        const isOn = active === value;
+        return (
+          <button
+            key={value}
+            type="button"
+            onClick={() => setTheme(value)}
+            className={`flex h-9 w-9 items-center justify-center rounded-full transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 dark:focus-visible:outline-zinc-100 ${
+              isOn
+                ? "bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900"
+                : "text-zinc-500 hover:bg-zinc-100 hover:text-foreground dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-foreground"
+            }`}
+            aria-pressed={isOn}
+            aria-label={label}
+            title={label}
+          >
+            <Icon className="h-4 w-4 shrink-0" aria-hidden />
+          </button>
+        );
+      })}
     </div>
   );
 }

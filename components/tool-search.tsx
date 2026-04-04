@@ -13,18 +13,29 @@ function matchesQuery(tool: ToolEntry, raw: string): boolean {
   return tokens.every((t) => haystack.includes(t));
 }
 
-type ToolSearchProps = {
+type ToolSearchPanelProps = {
   tools: ToolEntry[];
+  className?: string;
+  /** Focus the input when mounted (e.g. global search dialog). */
+  autoFocus?: boolean;
+  /** Called after navigating to a tool (e.g. close overlay). */
+  onNavigate?: () => void;
 };
 
 const MAX_RESULTS = 20;
 
-export function ToolSearch({ tools }: ToolSearchProps) {
+export function ToolSearchPanel({
+  tools,
+  className = "",
+  autoFocus = false,
+  onNavigate,
+}: ToolSearchPanelProps) {
   const router = useRouter();
   const uid = useId();
   const inputId = `tool-search-input${uid}`;
   const listboxId = `tool-search-results${uid}`;
   const containerRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -38,10 +49,17 @@ export function ToolSearch({ tools }: ToolSearchProps) {
     (href: string) => {
       setOpen(false);
       setQuery("");
+      onNavigate?.();
       router.push(href);
     },
-    [router],
+    [router, onNavigate],
   );
+
+  useEffect(() => {
+    if (!autoFocus) return;
+    const id = requestAnimationFrame(() => inputRef.current?.focus());
+    return () => cancelAnimationFrame(id);
+  }, [autoFocus]);
 
   useEffect(() => {
     function onPointerDown(e: MouseEvent) {
@@ -56,11 +74,12 @@ export function ToolSearch({ tools }: ToolSearchProps) {
   const showList = open && query.trim().length > 0 && results.length > 0;
 
   return (
-    <div ref={containerRef} className="relative mt-6 max-w-xl">
+    <div ref={containerRef} className={`relative max-w-xl ${className}`}>
       <label htmlFor={inputId} className="sr-only">
         Search tools by name or keyword
       </label>
       <input
+        ref={inputRef}
         id={inputId}
         type="search"
         autoComplete="off"
@@ -121,6 +140,7 @@ export function ToolSearch({ tools }: ToolSearchProps) {
                 onClick={() => {
                   setOpen(false);
                   setQuery("");
+                  onNavigate?.();
                 }}
               >
                 <span className="font-medium text-foreground">{tool.name}</span>
@@ -134,4 +154,13 @@ export function ToolSearch({ tools }: ToolSearchProps) {
       ) : null}
     </div>
   );
+}
+
+type ToolSearchProps = {
+  tools: ToolEntry[];
+};
+
+/** Home hero search: full width with top margin. */
+export function ToolSearch({ tools }: ToolSearchProps) {
+  return <ToolSearchPanel tools={tools} className="mt-6" />;
 }
