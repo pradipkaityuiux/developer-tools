@@ -109,7 +109,8 @@ export function detectDelimiter(sample: string): string {
   return best;
 }
 
-function tryCoerce(value: string): string | number | boolean | null {
+/** Coerce a single CSV cell for typed JSON/SQL output (numbers, booleans, empty → null). */
+export function coerceCsvCell(value: string): string | number | boolean | null {
   const t = value.trim();
   if (t === "") return null;
   if (/^(true|false)$/i.test(t)) return t.toLowerCase() === "true";
@@ -134,7 +135,7 @@ export function rowsToJsonObjects(
       const obj: Record<string, string | number | boolean | null> = {};
       for (let c = 0; c < width; c++) {
         const raw = r[c] ?? "";
-        obj[`column_${c + 1}`] = typed ? tryCoerce(raw) : raw;
+        obj[`column_${c + 1}`] = typed ? coerceCsvCell(raw) : raw;
       }
       return obj;
     });
@@ -157,7 +158,7 @@ export function rowsToJsonObjects(
     const obj: Record<string, string | number | boolean | null> = {};
     for (let c = 0; c < uniqueHeaders.length; c++) {
       const raw = line[c] ?? "";
-      obj[uniqueHeaders[c]!] = typed ? tryCoerce(raw) : raw;
+      obj[uniqueHeaders[c]!] = typed ? coerceCsvCell(raw) : raw;
     }
     out.push(obj);
   }
@@ -166,6 +167,40 @@ export function rowsToJsonObjects(
 
 export function rowsToJsonArrays(rows: string[][], typed: boolean): unknown[][] {
   return rows.map((r) =>
-    r.map((cell) => (typed ? tryCoerce(cell) : cell)),
+    r.map((cell) => (typed ? coerceCsvCell(cell) : cell)),
   );
+}
+
+/** RFC 4180-style field serialization for one delimiter (comma, tab, etc.). */
+function formatDelimitedField(field: string, delimiter: string): string {
+  const needsQuote =
+    field.includes('"') ||
+    field.includes(delimiter) ||
+    field.includes("\n") ||
+    field.includes("\r");
+  if (!needsQuote) return field;
+  return `"${field.replace(/"/g, '""')}"`;
+}
+
+/** Turn a 2D grid back into delimited text (e.g. CSV export). */
+export function serializeDelimitedRows(
+  rows: string[][],
+  delimiter: string,
+): string {
+  if (rows.length === 0) return "";
+  return rows
+    .map((row) =>
+      row.map((cell) => formatDelimitedField(cell, delimiter)).join(delimiter),
+    )
+    .join("\n");
+}
+
+/** Pad ragged rows so every row has the same number of columns. */
+export function padRowsToUniformWidth(rows: string[][]): string[][] {
+  if (rows.length === 0) return [];
+  const maxCols = Math.max(0, ...rows.map((r) => r.length));
+  return rows.map((r) => {
+    if (r.length >= maxCols) return [...r];
+    return [...r, ...Array(maxCols - r.length).fill("")];
+  });
 }
