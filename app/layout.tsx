@@ -4,7 +4,10 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { ThemeFloatingToggle } from "@/components/theme-select";
 import { ThemeProvider } from "@/components/theme-provider";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
+
+const GA_MEASUREMENT_ID = "G-NV55ED50ZQ";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -39,7 +42,10 @@ export default function RootLayout({
       <body className="flex min-h-full flex-col bg-background text-foreground">
         <ThemeProvider>
           <SiteHeader />
-          <div className="flex flex-1 flex-col">{children}</div>
+            <div className="flex flex-1 flex-col">
+              {children}
+              <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />
+            </div>
           <SiteFooter />
           <ThemeFloatingToggle />
         </ThemeProvider>
