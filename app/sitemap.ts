@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { allTools } from "@/lib/tool-catalog";
+import { getPublishedPosts } from "@/lib/blog";
 
 function siteOrigin(): string {
   const fromEnv = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");
@@ -12,6 +13,7 @@ function siteOrigin(): string {
 
 const STATIC_PATHS = [
   "/",
+  "/blog",
   "/about",
   "/privacy-policy",
   "/disclaimer",
@@ -19,14 +21,15 @@ const STATIC_PATHS = [
   "/terms",
 ] as const;
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = siteOrigin();
 
   const staticEntries: MetadataRoute.Sitemap = STATIC_PATHS.map((path) => ({
     url: path === "/" ? base : `${base}${path}`,
     lastModified: new Date(),
     changeFrequency: path === "/" ? ("weekly" as const) : ("monthly" as const),
-    priority: path === "/" ? 1 : path === "/about" ? 0.7 : 0.4,
+    priority:
+      path === "/" ? 1 : path === "/about" ? 0.7 : path === "/blog" ? 0.6 : 0.4,
   }));
 
   const toolEntries: MetadataRoute.Sitemap = allTools.map((tool) => ({
@@ -36,5 +39,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticEntries, ...toolEntries];
+  const posts = await getPublishedPosts();
+  const blogEntries: MetadataRoute.Sitemap = posts.map((post) => ({
+    url: `${base}${post.url}`,
+    lastModified: new Date(post.date),
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  return [...staticEntries, ...toolEntries, ...blogEntries];
 }

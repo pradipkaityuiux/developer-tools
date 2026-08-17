@@ -88,7 +88,11 @@ export function SiteHeaderClient({ tools, sections }: SiteHeaderClientProps) {
             </Link>
           </div>
 
-          <div className="flex flex-1 justify-end">
+          <div className="flex flex-1 gap-3 justify-end">
+            <Link
+              href="/blog"
+              className="hidden md:inline-flex items-center gap-2 text-md font-normal tracking-tight text-foreground hover:opacity-80"
+            >Blogs</Link>
             <button
               type="button"
               onClick={() => {

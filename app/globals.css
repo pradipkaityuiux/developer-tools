@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 /* Class-based dark only — overrides Tailwind’s default prefers-color-scheme dark. */
 @custom-variant dark {
