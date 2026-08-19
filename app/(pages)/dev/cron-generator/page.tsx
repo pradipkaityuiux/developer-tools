@@ -3,6 +3,7 @@ import Link from "next/link";
 import { CronGeneratorTool } from "./cron-generator-tool";
 import { cronGeneratorFaqItems } from "@/lib/cron-generator-faq";
 import { toolSections } from "@/lib/tool-catalog";
+import { BlogCard } from "@/components/blog-card";
 
 const devTools =
   toolSections.find((s) => s.id === "code-developer-tools")?.tools ?? [];
@@ -216,6 +217,11 @@ export default function CronGeneratorPage() {
             </li>
           </ol>
 
+          <BlogCard
+            title="Cron Job Syntax Explained: A Beginner-Friendly Guide"
+            description="This guide walks through exactly how cron syntax works, field by field, with real examples you can copy and adapt."
+            href="/blog/cron-job-syntax-explained"
+          />
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Cron field cheat sheet (minute through weekday)
           </h2>
