@@ -1,0 +1,138 @@
+---
+title: "Cron Job Syntax Explained: A Beginner-Friendly Guide"
+description: "A clear, no-jargon explanation of cron syntax, with real examples for scheduling daily, weekly, and monthly jobs, plus the mistakes beginners make most often."
+slug: "cron-job-syntax-explained"
+date: "2026-08-19"
+tags: ["cron", "linux", "scheduling", "devops", "developer-tools"]
+---
+
+If you've ever opened a crontab file and seen something like `0 3 * * 1-5` staring back at you, you know the feeling. Five fields, a bunch of asterisks, no labels, no hints. It looks like a puzzle, but once you understand the pattern, it's honestly one of the simplest scheduling systems out there.
+
+This guide walks through exactly how cron syntax works, field by field, with real examples you can copy and adapt.
+
+## What is cron, actually?
+
+Cron is a time-based job scheduler built into Linux and Unix-like systems. It's been around since the 1970s, and despite its age, it's still the backbone of scheduled tasks on most servers today: backups, log rotation, sending reports, clearing caches, running maintenance scripts, you name it.
+
+You define a job with a **cron expression** (that string of numbers and symbols) plus the command you want to run, and the cron daemon checks every minute whether it's time to fire that job.
+
+## The five fields, broken down
+
+Every standard cron expression has five fields, always in this order:
+
+```
+* * * * *
+| | | | |
+| | | | +---- Day of week (0-6, Sunday to Saturday)
+| | | +------ Month (1-12)
+| | +-------- Day of month (1-31)
+| +---------- Hour (0-23)
++------------ Minute (0-59)
+```
+
+That's it. Five fields, five different units of time. The trick is just remembering the order, and the easiest way to do that is to read it as smallest-to-largest until you hit day of week, which breaks the pattern and sits at the end.
+
+A quick way to memorize it: **"minute, hour, day, month, weekday."**
+
+## What each symbol means
+
+Beyond plain numbers, cron uses a handful of special characters that make expressions more flexible:
+
+- **`*` (asterisk)** — means "every." `* * * * *` runs every single minute.
+- **`,` (comma)** — lets you list multiple values. `0,30 * * * *` runs at the top and bottom of every hour.
+- **`-` (hyphen)** — defines a range. `1-5` in the day-of-week field means Monday through Friday.
+- **`/` (slash)** — defines a step value. `*/15` in the minute field means every 15 minutes.
+
+You can combine these. `0 9-17/2 * * 1-5` would run at 9am, 11am, 1pm, 3pm, and 5pm, Monday through Friday. Once you see a few combos like that, the pattern clicks fast.
+
+## Real examples, explained line by line
+
+Reading examples is honestly the fastest way to get comfortable with cron. Here are the ones you'll actually use.
+
+**Every day at midnight**
+```
+0 0 * * *
+```
+Minute 0, hour 0, every day, every month, every weekday. This is one of the most common patterns for nightly jobs like backups or log cleanup.
+
+**Every hour, on the hour**
+```
+0 * * * *
+```
+Minute 0 of every hour. Good for things like syncing data or checking a queue regularly without hammering the system every minute.
+
+**Every 15 minutes**
+```
+*/15 * * * *
+```
+The step value here means "every 15th minute," so it fires at :00, :15, :30, and :45.
+
+**Every weekday at 9am**
+```
+0 9 * * 1-5
+```
+Minute 0, hour 9, any day of month, any month, but only Monday through Friday. Common for business-hours reports or notifications that shouldn't fire on weekends.
+
+**Every Sunday at 3am**
+```
+0 3 * * 0
+```
+A classic weekly maintenance window, timed for when traffic is lowest.
+
+**The first day of every month at midnight**
+```
+0 0 1 * *
+```
+Day-of-month is set to 1, so this only fires once a month, right at the start.
+
+**Twice a day, at 6am and 6pm**
+```
+0 6,18 * * *
+```
+Using a comma to list two specific hours instead of a range.
+
+
+<BlogCard
+  title="Cron expression generator"
+  description="Create a valid five-field cron schedule (minute, hour, day of month, month, day of week) without memorizing every special character."
+  href="/dev/cron-generator"
+/>
+
+## Common mistakes beginners make
+
+A few things trip people up almost every time, so it's worth calling them out directly.
+
+**Mixing up hour and minute order.** The fields go minute first, then hour. So `30 14 * * *` means 2:30pm, not 30 minutes past 2pm read as `14:30`. It's the same thing, but if you're used to reading `HH:MM`, cron's `MM HH` order can throw you off at first.
+
+**Forgetting the day-of-week quirk.** Both `0` and `7` mean Sunday in most cron implementations, which trips people up when they assume Sunday is only `0`. If you're combining day-of-month and day-of-week, some cron implementations treat it as an "or" (either condition matches) rather than "and," which surprises a lot of people the first time they hit it.
+
+**Assuming cron uses your local timezone.** Cron typically runs on the server's system time, which is often UTC. If your job fires at what feels like the wrong hour, check the server's timezone before you assume your expression is wrong.
+
+**Not accounting for daylight saving time.** If your server clock shifts for DST, jobs scheduled around the transition hours (like 1am-3am) can run twice or get skipped entirely. This is more of an edge case, but worth knowing about if you're scheduling anything time-sensitive overnight.
+
+**Typos in ranges and steps.** `1-5` and `1,5` look similar but mean very different things (a range vs. two specific values). A single wrong character changes your job from running five days a week to running on exactly two of them.
+
+## Beyond the five fields: special strings
+
+Some cron implementations (including most modern ones) support shorthand strings instead of writing out the full expression:
+
+- `@daily` (or `@midnight`) — equivalent to `0 0 * * *`
+- `@hourly` — equivalent to `0 * * * *`
+- `@weekly` — equivalent to `0 0 * * 0`
+- `@monthly` — equivalent to `0 0 1 * *`
+- `@yearly` (or `@annually`) — equivalent to `0 0 1 1 *`
+- `@reboot` — runs once, at system startup
+
+These aren't part of the strict five-field standard, so support varies depending on which cron implementation you're using (cron, systemd timers, or a scheduler built into a specific platform like GitHub Actions or a hosting provider). Worth double checking your environment's docs if you plan on using them.
+
+## Testing your cron expression before you deploy it
+
+The biggest risk with cron isn't writing bad syntax, it's writing syntax that's technically valid but doesn't do what you think it does. A misplaced range or the wrong day-of-week value can mean your backup job silently runs at 3pm instead of 3am, or doesn't run at all.
+
+Rather than guessing and waiting for the next scheduled run to see if it worked, it's worth reading the expression back in plain English before you commit it. Our [cron explainer](https://zerosnippet.com/dev/cron-explainer) translates any cron expression into a human-readable sentence, so you can double-check "every weekday at 9am" actually says what your expression means before it goes live.
+
+If you're starting from scratch and building the expression from a schedule you already know (like "every Monday, Wednesday, and Friday at 6pm"), our [cron generator](https://zerosnippet.com/dev/cron-generator) builds the correct syntax for you, so you're not counting fields by hand.
+
+## Wrapping up
+
+Cron syntax looks intimidating because it's dense, five fields packed into a single line with no labels. But once you internalize the order (minute, hour, day, month, weekday) and get comfortable with the four special characters, you can read and write almost any schedule you need. Start with the common patterns above, adapt them to your use case, and always verify the expression before you deploy it to production.
