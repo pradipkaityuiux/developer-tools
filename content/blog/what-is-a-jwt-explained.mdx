@@ -1,0 +1,136 @@
+---
+title: "What Is a JWT and How Does It Actually Work? (Plain English Breakdown)"
+description: "A clear, jargon-free explanation of JSON Web Tokens: what they are, how they're structured, and how authentication actually works under the hood."
+date: "2026-08-20"
+tags:
+    - jwt
+    - authentication
+    - security
+    - developer-tools
+---
+
+If you've worked on anything involving login systems or APIs, you've almost certainly run into JWTs, even if nobody ever properly explained what they are. You just saw a long, weird-looking string in a request header and moved on. That's fine for a while, but understanding what's actually happening inside that string makes debugging auth issues a lot less frustrating.
+
+Here's what a JWT actually is, how it's built, and why it works the way it does.
+
+## What is a JWT?
+
+JWT stands for JSON Web Token, and it's a compact way to represent a set of claims (basically, pieces of information) about a user or a session, in a format that can be verified and trusted.
+
+The most common use case is authentication. When you log into a website, the server can issue you a JWT instead of creating a traditional session stored in a database. You hold onto that token, and every time you make a request, you send it along. The server checks the token, confirms it's valid, and knows who you are without having to look anything up.
+
+That's the whole idea in one sentence: **a JWT lets a server trust who you are without checking a database every single time.**
+
+## What a JWT actually looks like
+
+A JWT looks like a long string of random characters split into three parts by periods:
+
+```
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+```
+
+That's not random noise. It's three separate pieces, each base64-encoded, joined by dots:
+
+```
+HEADER.PAYLOAD.SIGNATURE
+```
+
+Let's break down each one.
+
+## Part 1: The header
+
+The header describes the token itself, mainly what algorithm was used to sign it. It's a [small JSON object](https://zerosnippet.com/blog/how-to-format-and-validate-json) that looks like this before encoding:
+
+```json
+{
+  "alg": "HS256",
+  "typ": "JWT"
+}
+```
+
+`alg` tells the receiving server which signing algorithm to use when verifying the token (HS256 and RS256 are the two you'll see most often). `typ` just confirms it's a JWT. This part gets base64-encoded to form the first segment of the token.
+
+## Part 2: The payload
+
+This is the actual data, the claims about the user or session. A typical payload might look like:
+
+```json
+{
+  "sub": "1234567890",
+  "name": "John Doe",
+  "role": "admin",
+  "iat": 1516239022,
+  "exp": 1516242622
+}
+```
+
+A few of these fields are standardized:
+
+- **`sub`** (subject) — usually the user ID
+- **`iat`** (issued at) — when the token was created
+- **`exp`** (expiration) — when the token becomes invalid
+
+Everything else, like `name` or `role`, is custom data you decide to include. This is also base64-encoded to form the second segment.
+
+Here's the part that trips people up the first time they learn it: **base64 encoding is not encryption.** Anyone who has your token can decode the payload and read it, no secret key required. That's an important distinction that we'll come back to.
+
+## Part 3: The signature
+
+This is where the actual security comes in. The signature is created by taking the encoded header, the encoded payload, a secret key that only the server knows, and running them through the signing algorithm specified in the header.
+
+```
+HMACSHA256(
+  base64UrlEncode(header) + "." + base64UrlEncode(payload),
+  secret_key
+)
+```
+
+The result is the third segment of the token. This signature is what makes the token trustworthy. If anyone tampers with the header or payload, even changing a single character, the signature won't match anymore when the server checks it. That mismatch tells the server the token has been altered, and it rejects it.
+
+## So how does authentication actually work with a JWT?
+
+Here's the full flow, from login to an authenticated request:
+
+1. **You log in** with your username and password, sent to the server as usual.
+2. **The server verifies your credentials** against the database, same as any login system.
+3. **The server creates a JWT**, packing in your user ID and any relevant claims, then signs it with a secret key only the server knows.
+4. **The server sends the token back to you**, usually in the response body or as a cookie.
+5. **You store the token** (commonly in local storage, session storage, or an HTTP-only cookie) and attach it to future requests, typically in an `Authorization: Bearer <token>` header.
+6. **On each request, the server verifies the signature** using its secret key. If the signature checks out, the server trusts the claims inside the payload without needing to query the database again.
+7. **The token eventually expires**, based on the `exp` claim, and you'll need to log in again or use a refresh token to get a new one.
+
+The key insight here is step 6. Once the server issues the token, it doesn't need to store anything about your session. It just verifies the signature and trusts the payload. This is why JWTs are described as **stateless**, and it's the main reason they became so popular for APIs and distributed systems where checking a central session store on every request would be slow or complicated.
+
+<BlogCard
+    title="JWT decoder online"
+    description="Decode JSON Web Tokens in the common JWS compact shape (three dot-separated parts)"
+    href="/dev/jwt-decoder"
+/>
+
+## JWT vs. traditional sessions
+
+With a traditional session-based system, the server generates a session ID, stores session data in a database or in-memory store, and sends the ID to the client as a cookie. Every request means a lookup against that store.
+
+With JWTs, the token itself carries the data. No lookup needed, no shared session store required, which makes JWTs a natural fit for microservices or APIs where multiple servers need to verify a user without sharing a database.
+
+The tradeoff is that JWTs are harder to revoke. With a session, you can delete the session record from the database and the user is instantly logged out. With a JWT, the token stays valid until it expires, because the server isn't tracking it anywhere. This is usually solved with short expiration times plus refresh tokens, but it's a real architectural tradeoff worth understanding before you pick one approach over the other.
+
+## Common misconceptions
+
+**"JWTs are encrypted."** They're not, by default. The payload is just base64-encoded, which anyone can decode in two seconds. Never put sensitive data like passwords or credit card numbers in a JWT payload. If you genuinely need to encrypt the contents, that's a separate standard called JWE (JSON Web Encryption), and it's a different thing entirely.
+
+**"A valid signature means the data is safe to trust blindly."** A valid signature just proves the token wasn't tampered with since your server issued it. It doesn't protect against a stolen token being replayed by someone else, which is why storage location (avoiding local storage in favor of HTTP-only cookies, for example) and short expiration times matter.
+
+**"Longer expiration is always better for user experience."** It reduces how often users have to log in again, sure, but it also increases the window during which a stolen token stays valid. Most systems balance this with a short-lived access token plus a longer-lived refresh token that can be revoked server-side.
+
+## Wrapping up
+
+A JWT is really just three pieces of base64-encoded JSON glued together with a cryptographic signature: a header describing the algorithm, a payload carrying the actual claims, and a signature proving nothing's been tampered with. That signature, verified with a secret key the server controls, is what lets a server trust a token without checking a database on every request.
+
+If you're working with tokens directly and need to inspect what's actually inside one, whether to debug an expired session or check what claims are packed into the payload, our [JWT decoder](https://zerosnippet.com/dev/jwt-decoder) breaks a token down into its header, payload, and signature instantly, no backend required.
+
+<BlogCard
+    title="Free JWT encoder"
+    description="Create HS256-signed JSON Web Tokens from editable header and payload JSON."
+    href="/security/jwt-encoder"
+/>

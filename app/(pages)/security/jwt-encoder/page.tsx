@@ -3,6 +3,7 @@ import Link from "next/link";
 import { JwtEncoderTool } from "./jwt-encoder-tool";
 import { jwtEncoderFaqItems } from "@/lib/jwt-encoder-faq";
 import { toolSections } from "@/lib/tool-catalog";
+import { BlogCard } from "@/components/blog-card";
 
 const securityTools =
   toolSections.find((s) => s.id === "security-encryption-tools")?.tools ?? [];
@@ -256,6 +257,12 @@ export default function JwtEncoderPage() {
             </Link>
             .
           </p>
+
+          <BlogCard
+            title="What Is a JWT and How Does It Actually Work?"
+            description="If you've worked on anything involving login systems or APIs, you've almost certainly run into JWTs, even if nobody ever properly explained what they are."
+            href="/blog/what-is-a-jwt-explained"
+          />
 
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Security and limitations

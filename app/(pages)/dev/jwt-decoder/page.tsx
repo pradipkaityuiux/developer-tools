@@ -3,6 +3,7 @@ import Link from "next/link";
 import { JwtDecoderTool } from "./jwt-decoder-tool";
 import { jwtDecoderFaqItems } from "@/lib/jwt-decoder-faq";
 import { toolSections } from "@/lib/tool-catalog";
+import { BlogCard } from "@/components/blog-card";
 
 const devTools =
   toolSections.find((s) => s.id === "code-developer-tools")?.tools ?? [];
@@ -330,6 +331,12 @@ export default function JwtDecoderPage() {
             </Link>{" "}
             to validate shape before deployment.
           </p>
+
+          <BlogCard
+            title="What Is a JWT and How Does It Actually Work?"
+            description="If you've worked on anything involving login systems or APIs, you've almost certainly run into JWTs, even if nobody ever properly explained what they are."
+            href="/blog/what-is-a-jwt-explained"
+          />
 
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Limitations: no JWE, no signature or encryption verification
