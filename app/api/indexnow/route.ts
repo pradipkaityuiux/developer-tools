@@ -6,8 +6,8 @@ export async function POST(req: Request) {
     headers: { 'Content-Type': 'application/json; charset=utf-8' },
     body: JSON.stringify({
       host: 'zerosnippet.com',
-      key: 'a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6',
-      keyLocation: 'https://zerosnippet.com/a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6.txt',
+      key: '584c657be35b4962ab0ff0c515b00d4d',
+      keyLocation: 'https://zerosnippet.com/584c657be35b4962ab0ff0c515b00d4d.txt',
       urlList: urls,
     }),
   });
