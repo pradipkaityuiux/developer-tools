@@ -1,0 +1,116 @@
+---
+title: "What Is a Content Security Policy (CSP) and How to Set One Up"
+description: "A clear, no-jargon explanation of Content Security Policy: what it protects against, how the syntax works, and how to build one without breaking your site."
+date: "2026-08-21"
+tags:
+    - csp
+    - web-security
+    - http-headers
+    - xss
+    - developer-tools
+---
+
+If you've ever run a security audit on your site and seen "Missing Content-Security-Policy header" flagged as a warning, you've probably wondered what that actually means and whether it's worth the effort to fix. It is, and it's less complicated than it looks once you understand what problem it's actually solving.
+
+Here's what CSP is, why it exists, and how to build one without accidentally breaking your own site.
+
+## What is a Content Security Policy?
+
+A Content Security Policy is an HTTP header that tells the browser exactly which sources of content are allowed to load and run on your page. Scripts, stylesheets, images, fonts, frames, all of it. If a resource tries to load from somewhere not on that approved list, the browser blocks it before it ever runs.
+
+The main reason CSP exists is to stop **cross-site scripting (XSS)** attacks. XSS happens when an attacker manages to inject malicious JavaScript into your page, usually through a comment field, a search box, or any other place that takes user input and displays it back without properly sanitizing it. If that injected script runs, it can steal cookies, hijack sessions, or redirect users to a phishing page.
+
+CSP acts as a safety net. Even if malicious code somehow makes it into your page's HTML, a properly configured CSP will stop the browser from executing it, because the script isn't coming from an approved source.
+
+## How CSP actually works
+
+You set CSP through an HTTP response header called `Content-Security-Policy`, or alternatively through a `<meta>` tag in your HTML (the header approach is generally preferred, since it can't be stripped out by an injected script the way a meta tag theoretically could be).
+
+A basic policy looks like this:
+
+```
+Content-Security-Policy: default-src 'self'
+```
+
+That single line tells the browser: only load resources (scripts, styles, images, everything) from the same origin as the page itself. Anything from a third-party domain gets blocked by default.
+
+Most real-world sites need to load fonts from Google Fonts, scripts from analytics providers, or images from a CDN, so a policy this strict usually needs refinement. That's where **directives** come in.
+
+## The directives you'll actually use
+
+CSP is built from a list of directives, each one controlling a specific type of resource. You don't need to memorize all of them, but these are the ones that come up constantly:
+
+- **`default-src`** — the fallback rule for any directive you don't explicitly set
+- **`script-src`** — controls where JavaScript can load from
+- **`style-src`** — controls where CSS can load from
+- **`img-src`** — controls where images can load from
+- **`font-src`** — controls where fonts can load from
+- **`connect-src`** — controls what URLs scripts can connect to (fetch, XHR, WebSockets)
+- **`frame-src`** — controls what can be embedded in an iframe
+- **`object-src`** — controls plugins like Flash or Java applets (usually set to `'none'` since nobody needs these anymore)
+
+Each directive takes a list of allowed sources. A more realistic policy for a typical site might look like this:
+
+```
+Content-Security-Policy: 
+  default-src 'self';
+  script-src 'self' https://www.googletagmanager.com;
+  style-src 'self' https://fonts.googleapis.com;
+  font-src 'self' https://fonts.gstatic.com;
+  img-src 'self' data: https://images.example.com;
+  connect-src 'self' https://api.example.com;
+  object-src 'none';
+```
+
+Read line by line, this says: load everything from your own domain by default, allow Google Tag Manager scripts, allow Google Fonts stylesheets and font files, allow images from your own domain plus a specific image CDN (and inline data URIs), allow API calls to your own backend, and block plugins entirely.
+
+<BlogCard
+    title="Content Security Policy builder"
+    description="Assemble a valid Content-Security-Policy (or Content-Security-Policy-Report-Only) value without memorizing every directive name."
+    href="/security/csp-builder"
+/>
+
+## Understanding the special keywords
+
+A few values you'll see constantly, and what they actually mean:
+
+- **`'self'`** — same origin as the page (same scheme, domain, and port)
+- **`'none'`** — block everything for that directive
+- **`'unsafe-inline'`** — allow inline scripts or styles (the ones written directly in `<script>` or `style=""` attributes). This weakens your protection significantly, since it's exactly the kind of thing XSS attacks rely on, so avoid it if you can.
+- **`'unsafe-eval'`** — allow `eval()` and similar dynamic code execution. Also weakens protection, and also worth avoiding.
+- **`data:`** — allow data URIs (commonly needed for inline base64 images or fonts)
+
+The `'unsafe-` prefixed values exist because plenty of older codebases rely on inline scripts and `eval()`, but every time you add one, you're punching a hole in the exact protection CSP is meant to provide. If you're building something new, it's worth the extra effort to move inline scripts into external files instead of reaching for `'unsafe-inline'` as a shortcut.
+
+## How to actually set one up
+
+**Step 1: Audit what your site actually loads.** Open your browser's dev tools, check the Network tab, and note every domain your page pulls scripts, styles, fonts, and images from. Analytics tools, ad networks, CDNs, embedded widgets, all of it.
+
+**Step 2: Start in report-only mode.** Before you enforce anything, use the `Content-Security-Policy-Report-Only` header instead of `Content-Security-Policy`. This logs violations to the browser console (or to a reporting endpoint, if you set one up) without actually blocking anything. It's the safest way to see what would break before you commit to enforcing the policy.
+
+```
+Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' https://www.googletagmanager.com
+```
+
+**Step 3: Review the violations and adjust.** You'll likely find sources you forgot about. Add them to the relevant directive one at a time rather than loosening the policy broadly.
+
+**Step 4: Switch to enforcing mode.** Once report-only mode shows no unexpected violations for a few days of real traffic, swap the header from `Content-Security-Policy-Report-Only` to `Content-Security-Policy`. Now the browser actually blocks anything not on the list.
+
+**Step 5: Keep monitoring.** Any time you add a new third-party script, embed, or widget, you'll need to update your policy or it'll get silently blocked. This is the most common reason a CSP "breaks" a site after it's been working fine for months, someone added a new tool without updating the header.
+
+## Common mistakes
+
+**Setting `default-src *` and calling it done.** This technically adds the header, which might satisfy an automated scanner, but allows everything from everywhere and provides essentially no protection. A CSP is only as good as how restrictive it actually is.
+
+**Reaching for `'unsafe-inline'` immediately.** It's tempting because it's the fastest way to stop violations from inline scripts, but it undoes most of the XSS protection CSP is meant to provide. Worth fixing the underlying inline scripts instead where you can.
+
+**Forgetting `report-only` mode exists.** Jumping straight to enforcement on a live site is how CSP earns a bad reputation for "breaking everything." Testing in report-only mode first avoids that entirely.
+
+**Not accounting for third-party embeds.** YouTube embeds, payment widgets, chat tools, social share buttons, these all load resources from their own domains and need explicit entries in your policy, usually across multiple directives (`script-src`, `frame-src`, `connect-src`).
+
+## Wrapping up
+
+A Content Security Policy is essentially an allowlist for your page's resources, and its main job is closing off the damage an XSS attack could otherwise do. It looks intimidating as a single dense header line, but it breaks down into simple, readable directives once you separate it out. Start with `default-src 'self'`, test in report-only mode, add sources as you find real violations, and avoid `'unsafe-inline'` where you reasonably can.
+
+If you'd rather not hand-write the header and track every directive yourself, our [CSP builder](https://zerosnippet.com/security/csp-builder) walks you through the common directives and generates the correct syntax for you. And once you've deployed a policy, our [security headers checker](https://zerosnippet.com/security/headers-checker) confirms it's actually being sent and picks up other missing headers while it's at it.
+

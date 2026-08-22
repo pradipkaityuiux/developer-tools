@@ -43,7 +43,7 @@ export function BlogCard({ title, description, href, image }: BlogCardProps) {
 
           {/* Arrow indicator */}
           <div className="mt-4 inline-flex items-center text-xs font-medium text-zinc-500 transition-colors group-hover:text-blue-600 dark:text-zinc-400 dark:group-hover:text-blue-400">
-            Open tool
+            Open
             <svg
               className="ml-1.5 h-3.5 w-3.5 transition-transform group-hover:translate-x-1"
               fill="none"

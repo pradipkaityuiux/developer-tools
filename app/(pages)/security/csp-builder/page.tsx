@@ -3,6 +3,7 @@ import Link from "next/link";
 import { CspBuilderTool } from "./csp-builder-tool";
 import { cspBuilderFaqItems } from "@/lib/csp-builder-faq";
 import { toolSections } from "@/lib/tool-catalog";
+import { BlogCard } from "@/components/blog-card";
 
 const securityTools =
   toolSections.find((s) => s.id === "security-encryption-tools")?.tools ?? [];
@@ -222,6 +223,12 @@ export default function CspBuilderPage() {
             can help compute SHA-256 hashes for small static snippets in
             controlled setups.
           </p>
+
+          <BlogCard
+            title="What Is a Content Security Policy (CSP) and How to Set One Up"
+            description="Here's what CSP is, why it exists, and how to build one without accidentally breaking your own site."
+            href="/blog/what-is-a-content-security-policy-csp"
+          />
 
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Deploying CSP on nginx, Apache, CDNs, and application frameworks

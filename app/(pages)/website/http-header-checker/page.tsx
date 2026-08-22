@@ -3,6 +3,7 @@ import Link from "next/link";
 import { HttpHeaderCheckerTool } from "./http-header-checker-tool";
 import { httpHeaderCheckerFaqItems } from "@/lib/http-header-checker-faq";
 import { toolSections } from "@/lib/tool-catalog";
+import { BlogCard } from "@/components/blog-card";
 
 export const dynamic = "force-static";
 
@@ -155,6 +156,12 @@ export default function HttpHeaderCheckerPage() {
             </Link>{" "}
             when customers report browser warnings.
           </p>
+
+          <BlogCard
+            title="What Is a Content Security Policy (CSP) and How to Set One Up"
+            description="Here's what CSP is, why it exists, and how to build one without accidentally breaking your own site."
+            href="/blog/what-is-a-content-security-policy-csp"
+          />
 
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Debugging CORS and API responses
