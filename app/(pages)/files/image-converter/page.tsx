@@ -113,7 +113,7 @@ export default function ImageConverterPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why teams convert image formats (JPG vs PNG vs WebP)
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">JPEG</strong> is the
             default for photographs and many email templates because files stay
             small and every client renders it. It does not store transparency,
@@ -233,7 +233,7 @@ export default function ImageConverterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Transparency, email HTML, and CMS uploads
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             When you{" "}
             <strong className="font-medium text-foreground">
               convert PNG to JPG
@@ -260,7 +260,7 @@ export default function ImageConverterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Privacy and performance notes
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Images never leave your tab, which matters for screenshots of staging
             environments or pre-release marketing assets. Very large bitmaps can
             stress memory; if the tab feels slow, use the{" "}
@@ -284,7 +284,7 @@ export default function ImageConverterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related file and developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
               href="/#file-data-tools"

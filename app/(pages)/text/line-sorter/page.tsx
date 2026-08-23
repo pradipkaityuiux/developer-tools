@@ -104,7 +104,7 @@ export default function LineSorterPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why use a dedicated text line sorter?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Editors and terminals can sort, but a focused{" "}
             <strong className="font-medium text-foreground">
               sort lines online
@@ -221,7 +221,7 @@ export default function LineSorterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords and workflows this page supports
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             People search for an{" "}
             <strong className="font-medium text-foreground">
               alphabetical line sorter
@@ -254,7 +254,7 @@ export default function LineSorterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Sorting rules, stability, and empty lines
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Alphabetical modes use Unicode-aware{" "}
             <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-sm dark:bg-zinc-900">
               localeCompare
@@ -282,7 +282,7 @@ export default function LineSorterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Privacy and practical limits
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Sorting runs locally in your browser. Very large pastes may feel
             slower on older devices; for multi-megabyte logs, prefer streaming
             CLI tools. This UI targets chat-sized text, query results, and
@@ -299,7 +299,7 @@ export default function LineSorterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related text and string tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
               href="/#text-string-tools"

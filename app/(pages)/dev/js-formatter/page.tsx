@@ -87,7 +87,7 @@ export default function JsFormatterPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why format or minify JavaScript?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Readable code speeds up debugging: a{" "}
             <strong className="font-medium text-foreground">
               JS beautifier
@@ -167,7 +167,7 @@ export default function JsFormatterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords teams search for
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Engineers often look for an{" "}
             <strong className="font-medium text-foreground">
               online JS prettifier
@@ -195,7 +195,7 @@ export default function JsFormatterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Minify vs format: bundles, Core Web Vitals, and SEO
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">
               Minified JavaScript
             </strong>{" "}
@@ -223,7 +223,7 @@ export default function JsFormatterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Security, privacy, and obfuscated code
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Processing stays in your browser, which helps when scripts contain
             secrets, unreleased features, or customer data in string literals.
             Be cautious pasting untrusted obfuscated code: formatting does not
@@ -241,7 +241,7 @@ export default function JsFormatterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Limitations vs Prettier CLI and your bundler
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Your repository should still define Prettier, ESLint, and build
             targets so CI matches local editors. This page uses sensible
             defaults (two-space indent, trailing commas where safe) and does
@@ -263,7 +263,7 @@ export default function JsFormatterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
               href="/#code-developer-tools"

@@ -97,7 +97,7 @@ export default function CronExplainerPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why use a cron schedule explainer?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Operations and platform engineers constantly ask{" "}
             <strong className="font-medium text-foreground">
               what does this cron expression mean
@@ -140,7 +140,7 @@ export default function CronExplainerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             How the five cron fields work (quick guide)
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Standard{" "}
             <strong className="font-medium text-foreground">
               Unix crontab format
@@ -190,7 +190,7 @@ export default function CronExplainerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             The day-of-month vs day-of-week OR rule
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             The most common misunderstanding in{" "}
             <strong className="font-medium text-foreground">
               cron expression meaning
@@ -295,7 +295,7 @@ export default function CronExplainerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords teams search for (and how this page maps to them)
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             People look for a{" "}
             <strong className="font-medium text-foreground">
               crontab explainer
@@ -336,7 +336,7 @@ export default function CronExplainerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Timezones, DST, and production checklists
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             A{" "}
             <strong className="font-medium text-foreground">
               cron expression checker
@@ -363,7 +363,7 @@ export default function CronExplainerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Limitations vs full orchestrators
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Kubernetes, AWS EventBridge, and managed cron products sometimes
             extend or subset classic syntax. This tool implements the widespread
             five-field rules plus month and weekday names—enough for many{" "}
@@ -381,7 +381,7 @@ export default function CronExplainerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
               href="/#code-developer-tools"

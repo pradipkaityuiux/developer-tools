@@ -98,7 +98,7 @@ export default function UnixTimestampPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why developers still live in Unix time
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             The{" "}
             <strong className="font-medium text-foreground">Unix epoch</strong>{" "}
             is the instant 1970-01-01T00:00:00Z. Storing instants as integers
@@ -229,7 +229,7 @@ export default function UnixTimestampPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Seconds vs milliseconds: quick reference
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">
               Unix seconds
             </strong>{" "}
@@ -254,7 +254,7 @@ export default function UnixTimestampPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             ISO 8601, time zones, and daylight saving
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Strings such as{" "}
             <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-sm dark:bg-zinc-900">
               2026-04-04T14:30:00Z
@@ -286,7 +286,7 @@ export default function UnixTimestampPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             SEO, analytics, and event pipelines
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Marketing engineers comparing{" "}
             <strong className="font-medium text-foreground">
               Google Analytics
@@ -316,7 +316,7 @@ export default function UnixTimestampPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
               href="/#code-developer-tools"

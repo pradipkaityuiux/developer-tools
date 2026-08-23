@@ -99,7 +99,7 @@ export default function CsvToSqlPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why generate SQL INSERT statements from CSV?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Teams still ship a lot of truth in{" "}
             <strong className="font-medium text-foreground">CSV</strong>:
             product catalogs, referral codes, locale strings, and QA fixtures.
@@ -237,7 +237,7 @@ export default function CsvToSqlPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             CSV tooling workflow: view, dedupe, then SQL
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Before you freeze rows into SQL, it helps to inspect the grid. Our{" "}
             <Link
               href="/files/csv-viewer"
@@ -260,7 +260,7 @@ export default function CsvToSqlPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             SEO, content, and structured data pipelines
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Marketing and SEO teams often maintain{" "}
             <strong className="font-medium text-foreground">
               keyword matrices
@@ -283,7 +283,7 @@ export default function CsvToSqlPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Safety, review, and production imports
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             This page generates text only—it does not execute SQL against a
             database. Always run generated scripts on a staging copy first,
             watch for type mismatches (especially dates and booleans), and
@@ -295,7 +295,7 @@ export default function CsvToSqlPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Privacy and performance
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Parsing and string building happen client-side in JavaScript, which
             suits PII-heavy customer lists and unreleased catalog data.
             Extremely large pastes may stress the tab; split files or raise{" "}
@@ -308,7 +308,7 @@ export default function CsvToSqlPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related file and data tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse every utility in{" "}
             <Link
               href="/#file-data-tools"

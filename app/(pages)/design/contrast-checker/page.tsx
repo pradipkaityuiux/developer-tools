@@ -109,7 +109,7 @@ export default function ContrastCheckerPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why contrast ratio matters for accessibility, SEO, and brand trust
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Search engines increasingly reward pages that work well for real
             users, and readable text is a core part of that story.{" "}
             <strong className="font-medium text-foreground">
@@ -206,7 +206,7 @@ export default function ContrastCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Normal text vs large text thresholds (quick reference)
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             For standard body copy and most UI labels, aim for at least{" "}
             <strong className="font-medium text-foreground">4.5:1</strong> for
             WCAG AA and{" "}
@@ -224,7 +224,7 @@ export default function ContrastCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Gradients, shadows, and dark mode
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             This tool measures two solid sRGB colors. For{" "}
             <strong className="font-medium text-foreground">
               linear and radial gradients
@@ -252,7 +252,7 @@ export default function ContrastCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related design and color tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
               href="/#design-color-tools"

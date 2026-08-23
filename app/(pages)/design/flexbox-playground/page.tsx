@@ -110,7 +110,7 @@ export default function FlexboxPlaygroundPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why developers use a flexbox playground for real UI work
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Searchers look for a{" "}
             <strong className="font-medium text-foreground">
               flexbox visualizer
@@ -176,7 +176,7 @@ export default function FlexboxPlaygroundPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Flexbox guide: main axis, cross axis, and when wrapping matters
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             In{" "}
             <strong className="font-medium text-foreground">
               flex-direction: row
@@ -290,7 +290,7 @@ export default function FlexboxPlaygroundPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Flexbox vs CSS Grid for page layout
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Flexbox excels at distributing items in a single row or column and
             handling variable content (think form fields that grow, icons that
             stay fixed). Grid excels at two-dimensional areas and explicit tracks.
@@ -316,7 +316,7 @@ export default function FlexboxPlaygroundPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related design and developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             More utilities from our catalog:
           </p>
           <ul className="mt-4 list-disc space-y-2 pl-5 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">

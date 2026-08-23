@@ -109,7 +109,7 @@ export default function ImageResizerPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why resize images in the browser for SEO, email, and social assets
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Page speed signals and{" "}
             <strong className="font-medium text-foreground">
               Core Web Vitals
@@ -228,7 +228,7 @@ export default function ImageResizerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Pixel math, aspect ratio, and quality trade-offs
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Uniform scaling multiplies both axes by the same factor, preserving
             geometry. When you unlock aspect ratio and set different width and
             height multipliers, the canvas stretches content—useful for rare
@@ -248,7 +248,7 @@ export default function ImageResizerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Privacy, GIF animation, and SVG
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Because decoding and drawing happen locally, you can resize internal
             UI captures without exposing them to a third-party API. Animated GIFs
             decode to a single raster frame on canvas, so motion is not preserved;
@@ -270,7 +270,7 @@ export default function ImageResizerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related file and data tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
               href="/#file-data-tools"

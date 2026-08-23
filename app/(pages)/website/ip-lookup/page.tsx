@@ -77,7 +77,7 @@ export default function IpLookupPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             What is an IP address lookup?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             An{" "}
             <strong className="font-medium text-foreground">
               IP address lookup
@@ -205,7 +205,7 @@ export default function IpLookupPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             IPv4 vs IPv6 lookups
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">IPv4</strong>{" "}
             addresses are 32-bit values shown as four octets.{" "}
             <strong className="font-medium text-foreground">IPv6</strong>{" "}
@@ -224,7 +224,7 @@ export default function IpLookupPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             ASN, ISP, and organization fields explained
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             The{" "}
             <strong className="font-medium text-foreground">
               Autonomous System Number (ASN)
@@ -249,7 +249,7 @@ export default function IpLookupPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Reverse DNS (PTR) and why it is often blank
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             A{" "}
             <strong className="font-medium text-foreground">PTR record</strong>{" "}
             maps an IP back to a hostname. Many providers omit PTR for client
@@ -262,7 +262,7 @@ export default function IpLookupPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             IP lookup for SEO, marketing, and compliance
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Search-engine and analytics teams sometimes sample visitor IPs
             (where privacy law permits) to understand{" "}
             <strong className="font-medium text-foreground">
@@ -290,7 +290,7 @@ export default function IpLookupPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related free tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
               href="/#website-url-tools"

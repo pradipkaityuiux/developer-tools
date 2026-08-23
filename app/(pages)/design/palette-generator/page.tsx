@@ -122,7 +122,7 @@ export default function PaletteGeneratorPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why harmony palettes matter for branding and UI systems
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Random HEX values are hard to defend in design reviews. A{" "}
             <strong className="font-medium text-foreground">
               structured color palette
@@ -244,7 +244,7 @@ export default function PaletteGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             HSL, HEX, and why we rotate hue for harmonies
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             This tool computes harmonies in{" "}
             <strong className="font-medium text-foreground">HSL space</strong>{" "}
             and converts to{" "}
@@ -263,7 +263,7 @@ export default function PaletteGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Internal tools that complete a color workflow
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             After you export HEX codes, convert them to other formats with the{" "}
             <Link
               href="/design/color-picker"
@@ -320,7 +320,7 @@ export default function PaletteGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related design and color tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Highlights from the{" "}
             <Link
               href="/#design-color-tools"

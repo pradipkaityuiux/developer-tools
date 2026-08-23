@@ -98,7 +98,7 @@ export default function DuplicateLineRemoverPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why remove duplicate lines?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Duplicates inflate counts, break one-row-per-entity assumptions in
             spreadsheets, and waste time in QA when the same error line appears
             many times in a log tail. A dedicated{" "}
@@ -173,7 +173,7 @@ export default function DuplicateLineRemoverPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords and workflows teams search for
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Teams search for an online uniq for text, remove duplicate rows from
             paste, or dedupe email lists without Excel macros. This page supports
             those intents with case and trim controls. For delimited files, try{" "}
@@ -196,7 +196,7 @@ export default function DuplicateLineRemoverPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Case sensitivity, trimming, and empty lines
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Case-sensitive mode treats characters literally. Case-insensitive
             mode lowercases the comparison key only; the first line stays as
             typed. Trimming before compare fixes invisible duplicates from
@@ -214,7 +214,7 @@ export default function DuplicateLineRemoverPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Privacy and limits
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Deduplication runs locally in your browser. Very large pastes may feel
             slower on old hardware; for multi-gigabyte logs, prefer a streaming
             CLI. This UI targets exports, query results, and chat-sized text.
@@ -223,7 +223,7 @@ export default function DuplicateLineRemoverPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related text and string tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
               href="/#text-string-tools"

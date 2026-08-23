@@ -77,7 +77,7 @@ export default function MetaTagsExtractorPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             What is a meta tags extractor?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             A{" "}
             <strong className="font-medium text-foreground">
               meta tags extractor
@@ -119,7 +119,7 @@ export default function MetaTagsExtractorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Why meta tags matter for SEO and social sharing
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">
               Search engines
             </strong>{" "}
@@ -156,7 +156,7 @@ export default function MetaTagsExtractorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Open Graph vs classic meta tags
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Classic{" "}
             <strong className="font-medium text-foreground">SEO meta tags</strong>{" "}
             such as{" "}
@@ -198,7 +198,7 @@ export default function MetaTagsExtractorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Twitter Cards and fallback behavior
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">Twitter Card</strong>{" "}
             meta tags (for example{" "}
             <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-sm dark:bg-zinc-900">
@@ -354,7 +354,7 @@ export default function MetaTagsExtractorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Limitations every meta tag tool shares
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Pages that render critical tags only in the browser after JavaScript
             executes may show incomplete results in any server-side extractor.
             Paywalled, geo-blocked, or bot-challenged sites can return different
@@ -381,7 +381,7 @@ export default function MetaTagsExtractorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related free tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore more utilities in the{" "}
             <Link
               href="/#website-url-tools"

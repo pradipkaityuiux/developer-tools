@@ -69,7 +69,7 @@ export default function RedirectChainCheckerPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             How to use this redirect chain analyzer
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Paste a link you care about—an old blog path, a tracked campaign URL,
             a short domain, or a bare apex host. Submit to run a server-side{" "}
             <strong>GET</strong> with manual redirect handling so every hop is
@@ -107,7 +107,7 @@ export default function RedirectChainCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Why redirect chains matter for SEO
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Search engines follow redirects, but each extra hop consumes crawl
             budget and time. A clean information architecture uses{" "}
             <strong>one canonical HTTPS URL</strong>,{" "}
@@ -205,7 +205,7 @@ export default function RedirectChainCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related free tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
               href="/#website-url-tools"

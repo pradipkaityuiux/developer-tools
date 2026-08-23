@@ -90,7 +90,7 @@ export default function TechnologyDetectorPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             What is a website technology detector?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             A{" "}
             <strong className="font-medium text-foreground">
               website technology detector
@@ -244,7 +244,7 @@ export default function TechnologyDetectorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             CMS detection: WordPress, Shopify, Webflow, and beyond
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Content systems leave durable clues:{" "}
             <strong className="font-medium text-foreground">
               <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-sm dark:bg-zinc-900">
@@ -276,7 +276,7 @@ export default function TechnologyDetectorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Framework fingerprints: Next.js, Nuxt, Gatsby, and SPAs
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Modern frameworks often embed recognizable markers—
             <strong className="font-medium text-foreground">Next.js</strong>{" "}
             may ship{" "}
@@ -308,7 +308,7 @@ export default function TechnologyDetectorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Analytics, tags, and third-party risk
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Marketing stacks are easiest to spot because vendors want stable
             endpoints—think{" "}
             <strong className="font-medium text-foreground">
@@ -342,7 +342,7 @@ export default function TechnologyDetectorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             CDN and edge detection (Cloudflare, Fastly, Vercel, Netlify)
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Infrastructure often announces itself in headers—
             <strong className="font-medium text-foreground">CF-Ray</strong> for{" "}
             <strong className="font-medium text-foreground">Cloudflare</strong>,{" "}
@@ -372,7 +372,7 @@ export default function TechnologyDetectorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Limitations every stack checker shares
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             No remote scanner can see inside private networks, execute arbitrary
             JavaScript, or bypass bot challenges meant for humans. Hosts that
             throttle datacenter IPs may return sparse HTML; sites that split
@@ -388,7 +388,7 @@ export default function TechnologyDetectorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related free tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
               href="/#website-url-tools"

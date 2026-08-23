@@ -102,7 +102,7 @@ export default function ColorPickerPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why designers and developers use a HEX, RGB, HSL, and CMYK converter
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Product teams juggle{" "}
             <strong className="font-medium text-foreground">
               design tokens
@@ -221,7 +221,7 @@ export default function ColorPickerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             CMYK vs screen color: what to tell your print vendor
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Monitors emit light (RGB); ink on paper absorbs it (CMYK). Any{" "}
             <strong className="font-medium text-foreground">
               RGB to CMYK conversion
@@ -240,7 +240,7 @@ export default function ColorPickerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related design tools on this site
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
               href="/#design-color-tools"

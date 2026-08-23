@@ -87,7 +87,7 @@ export default function CsvToJsonPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why convert CSV to JSON?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">CSV</strong> is
             ideal for sharing tables between Excel, Google Sheets, and BI tools,
             but most web APIs and JavaScript apps expect{" "}
@@ -194,7 +194,7 @@ export default function CsvToJsonPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             CSV vs JSON for developers and SEO-related data work
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Content and growth teams often maintain{" "}
             <strong className="font-medium text-foreground">
               keyword lists
@@ -216,7 +216,7 @@ export default function CsvToJsonPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Delimiters, locales, and quoted fields
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Excel in some regions saves CSV with{" "}
             <strong className="font-medium text-foreground">semicolons</strong>{" "}
             because commas are decimal separators. Tab files (
@@ -233,7 +233,7 @@ export default function CsvToJsonPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Privacy and performance
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Parsing happens in the browser: your CSV never has to leave your machine
             for this conversion step, which matters for PII, unreleased metrics, or
             large extracts. Very large pastes may feel slower simply because the
@@ -243,7 +243,7 @@ export default function CsvToJsonPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
               href="/#code-developer-tools"

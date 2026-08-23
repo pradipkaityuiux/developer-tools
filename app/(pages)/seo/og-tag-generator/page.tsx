@@ -3,6 +3,7 @@ import Link from "next/link";
 import { OgTagGeneratorTool } from "./og-tag-generator-tool";
 import { ogTagGeneratorFaqItems } from "@/lib/og-tag-generator-faq";
 import { toolSections } from "@/lib/tool-catalog";
+import { BlogCard } from "@/components/blog-card";
 
 export const dynamic = "force-static";
 
@@ -105,7 +106,7 @@ export default function OgTagGeneratorPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             How to use this Open Graph meta tag generator
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Start with the headline and supporting copy you want people to see
             when your link is shared—usually aligned with your{" "}
             <strong className="font-medium text-foreground">H1</strong> and{" "}
@@ -137,7 +138,7 @@ export default function OgTagGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Open Graph protocol: fields that matter for link previews
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             The{" "}
             <strong className="font-medium text-foreground">
               Open Graph protocol
@@ -171,7 +172,7 @@ export default function OgTagGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Twitter Cards and mirroring Open Graph
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Many clients read{" "}
             <code className="font-mono text-sm">twitter:card</code> and related
             namespaced tags. This generator can emit{" "}
@@ -200,10 +201,16 @@ export default function OgTagGeneratorPage() {
             .
           </p>
 
+          <BlogCard
+            title="How to Write an OG Tag So Your Links Look Good on Social Media"
+            description="Someone shares a link on X or Slack, and instead of a nice preview card with an image, title, and description, you get a bare gray box with just the URL."
+            href="/blog/how-to-write-og-tags-social-media"
+          />
+
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             SEO, CTR, and social metadata together
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Strong Open Graph tags do not replace technical SEO, but they align
             how your story appears in feeds with how you want the page to rank
             and convert. Keep canonical URLs, redirects, and HTTPS consistent:
@@ -243,7 +250,7 @@ export default function OgTagGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Privacy and where your data goes
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Tag generation and HTML upload run in your browser: we do not store
             your copy or uploaded files on a server for this tool. Clipboard copy
             uses the browser clipboard API. When you later test a live URL in our
@@ -254,7 +261,7 @@ export default function OgTagGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             More SEO tools on this site
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
               href="/#seo-tools"

@@ -78,7 +78,7 @@ export default function UtmBuilderPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             How to use this UTM link builder
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Start with the page people should land on: product detail, signup flow, or
             article. Enter <strong className="font-medium text-foreground">UTM source</strong>{" "}
             to identify the partner or system sending traffic (for example{" "}
@@ -116,7 +116,7 @@ export default function UtmBuilderPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             UTM naming conventions: readable reports in Google Analytics 4
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Consistency beats cleverness: pick lowercase, underscore-separated tokens your
             whole team can reuse. Align{" "}
             <strong className="font-medium text-foreground">utm_medium</strong> values with
@@ -140,7 +140,7 @@ export default function UtmBuilderPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             UTM parameters and SEO: avoiding duplicate URLs and redirect noise
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Tracking parameters append to the canonical content URL; they should not change
             the HTML body. If marketing links hop through multiple redirects, attribution
             and crawl budget can suffer—verify chains with the{" "}
@@ -193,7 +193,7 @@ export default function UtmBuilderPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             When to use utm_term and utm_content
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">utm_term</strong> is optional in
             many channels but valuable when keyword-level reporting matters—often auto-tagged
             in Google Ads when you enable URL templates.{" "}
@@ -207,7 +207,7 @@ export default function UtmBuilderPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related SEO &amp; marketing tools on this site
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
               href="/#seo-tools"

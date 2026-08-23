@@ -101,7 +101,7 @@ export default function YamlToJsonPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             What is YAML to JSON conversion?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">YAML</strong>{" "}
             (YAML Ain&apos;t Markup Language) is a human-friendly data format
             common in{" "}
@@ -176,7 +176,7 @@ export default function YamlToJsonPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             How YAML and JSON differ (quick guide)
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             YAML uses indentation for nesting; JSON uses braces and brackets.
             YAML allows comments (
             <code className="rounded bg-zinc-100 px-1 font-mono text-sm dark:bg-zinc-900">
@@ -254,7 +254,7 @@ export default function YamlToJsonPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Multi-document YAML and JSON output shape
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Files that contain several documents separated by{" "}
             <code className="rounded bg-zinc-100 px-1 font-mono text-sm dark:bg-zinc-900">
               ---
@@ -269,7 +269,7 @@ export default function YamlToJsonPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Privacy and security notes
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Conversion is performed locally in the browser; your YAML is not
             sent to our servers for this feature. Still, follow your
             organization&apos;s rules: if a file contains secrets, tokens, or
@@ -280,7 +280,7 @@ export default function YamlToJsonPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
               href="/#code-developer-tools"

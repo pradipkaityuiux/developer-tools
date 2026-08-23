@@ -76,7 +76,7 @@ export default function HttpHeaderCheckerPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             How to use this HTTP response header inspector
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Paste a fully qualified URL (we automatically prepend https:// when
             you omit the scheme). Submit the form to run a server-side fetch that
             respects our public-URL safety rules. You will see the{" "}
@@ -106,7 +106,7 @@ export default function HttpHeaderCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Why HTTP headers matter for performance and SEO
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Response headers tell browsers and bots how to cache HTML and assets,
             when to revalidate, and how to interpret bytes. A thoughtful{" "}
             <strong className="text-foreground">Cache-Control</strong> strategy
@@ -134,7 +134,7 @@ export default function HttpHeaderCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Security headers worth verifying on every launch
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Modern deployments lean on headers to reduce XSS, clickjacking, and
             MIME confusion. Look for{" "}
             <strong className="text-foreground">
@@ -166,7 +166,7 @@ export default function HttpHeaderCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Debugging CORS and API responses
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Cross-origin failures usually surface as missing or overly strict{" "}
             <span className="font-mono text-sm">Access-Control-Allow-*</span>{" "}
             values. This tool shows the headers your origin returns to an
@@ -189,7 +189,7 @@ export default function HttpHeaderCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Crawling, robots, and header-level indexing hints
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Search engines may honor robots directives delivered as headers, not
             just meta tags. If you recently migrated hosts or added edge
             middleware, double-check that you are not accidentally emitting{" "}
@@ -211,7 +211,7 @@ export default function HttpHeaderCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related free website and URL tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full collection from our{" "}
             <Link
               href="/#website-url-tools"

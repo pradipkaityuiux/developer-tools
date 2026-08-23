@@ -91,7 +91,7 @@ export default function HreflangGeneratorPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why hreflang matters for multilingual SEO
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Search engines use{" "}
             <strong className="font-medium text-foreground">hreflang annotations</strong> to
             understand which URL targets which audience. That reduces mixed signals when the same
@@ -167,7 +167,7 @@ export default function HreflangGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords and topics covered here
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             The generator normalizes tags (for example <strong className="font-medium text-foreground">en-gb</strong>{" "}
             to <strong className="font-medium text-foreground">en-GB</strong>), sorts{" "}
             <strong className="font-medium text-foreground">x-default</strong> last for readability,
@@ -206,7 +206,7 @@ export default function HreflangGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Technical checklist after you add hreflang
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Confirm each URL returns <strong className="font-medium text-foreground">200 OK</strong> for
             the intended locale, that <strong className="font-medium text-foreground">canonical</strong>{" "}
             tags self-reference, and that temporary marketing redirects do not strip parameters your
@@ -225,7 +225,7 @@ export default function HreflangGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             More SEO tools in this collection
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
               href="/#seo-tools"

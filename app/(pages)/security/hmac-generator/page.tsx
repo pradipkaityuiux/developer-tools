@@ -101,7 +101,7 @@ export default function HmacGeneratorPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             What is HMAC and why do developers search for an HMAC calculator?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">HMAC</strong> (Hash-based
             Message Authentication Code) combines a{" "}
             <strong className="font-medium text-foreground">secret key</strong> with
@@ -219,7 +219,7 @@ export default function HmacGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             HMAC vs plain hashing: when to use each
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Use{" "}
             <strong className="font-medium text-foreground">HMAC</strong> when two
             parties share a secret and need to prove authenticity of a message. Use a
@@ -245,7 +245,7 @@ export default function HmacGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Encoding pitfalls: why verification fails even with the “same” JSON
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             HMAC is computed over{" "}
             <strong className="font-medium text-foreground">bytes</strong>. A
             trailing newline, different Unicode normalization, or re-serialized JSON
@@ -264,7 +264,7 @@ export default function HmacGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Privacy and security notes
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Signing runs locally; we do not receive your secret or message. For
             production keys, prefer dedicated secret managers and never paste live
             credentials into shared screens. For asymmetric signing and key pairs,
@@ -281,7 +281,7 @@ export default function HmacGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related security and encryption tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
               href="/#security-encryption-tools"

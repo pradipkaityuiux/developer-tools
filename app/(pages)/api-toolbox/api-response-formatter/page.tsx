@@ -105,7 +105,7 @@ export default function ApiResponseFormatterPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why use a dedicated API response formatter?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Modern integrations return large nested graphs: pagination wrappers,
             error envelopes, and vendor-specific extensions. A focused{" "}
             <strong className="font-medium text-foreground">
@@ -213,7 +213,7 @@ export default function ApiResponseFormatterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             JSON vs XML in real API workflows
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">JSON</strong>{" "}
             dominates public REST and GraphQL transports: strict parsing,
             predictable types, and easy mapping to JavaScript and mobile
@@ -245,7 +245,7 @@ export default function ApiResponseFormatterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Webhooks, retries, and SEO-adjacent payloads
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Operations teams often inspect{" "}
             <strong className="font-medium text-foreground">
               webhook JSON bodies
@@ -276,7 +276,7 @@ export default function ApiResponseFormatterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related API and developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
               href="/#api-developer-toolbox"

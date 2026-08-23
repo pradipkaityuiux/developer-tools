@@ -106,7 +106,7 @@ export default function HtaccessGeneratorPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why use an .htaccess file for Apache hosting?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             On Apache,{" "}
             <strong className="font-medium text-foreground">.htaccess</strong>{" "}
             lets you override server behavior per directory when{" "}
@@ -219,7 +219,7 @@ export default function HtaccessGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords and topics this generator covers
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             The output touches{" "}
             <strong className="font-medium text-foreground">mod_rewrite</strong>,{" "}
             <strong className="font-medium text-foreground">mod_alias</strong>{" "}
@@ -249,7 +249,7 @@ export default function HtaccessGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Migrations, SEO, and redirect testing
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             When you move content, search engines care that{" "}
             <strong className="font-medium text-foreground">301 redirects</strong>{" "}
             point to the canonical URL and that HTTPS and host variants converge.
@@ -275,7 +275,7 @@ export default function HtaccessGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related security and encryption tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
               href="/#security-encryption-tools"

@@ -113,7 +113,7 @@ export default function OpenapiViewerPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why use an OpenAPI or Swagger viewer?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">OpenAPI</strong> is
             the industry-standard way to describe HTTP APIs: resources, methods,
             media types, security schemes, and examples in one machine-readable
@@ -163,7 +163,7 @@ export default function OpenapiViewerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             OpenAPI 3.x vs Swagger 2.0 (quick guide)
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">Swagger 2.0</strong>{" "}
             uses a top-level{" "}
             <code className="rounded bg-zinc-100 px-1 font-mono text-sm dark:bg-zinc-900">
@@ -268,7 +268,7 @@ export default function OpenapiViewerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             API design, QA, and cross-team workflows
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Product and platform teams often circulate an{" "}
             <strong className="font-medium text-foreground">
               OpenAPI contract
@@ -304,7 +304,7 @@ export default function OpenapiViewerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related API and developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
               href="/#api-developer-toolbox"

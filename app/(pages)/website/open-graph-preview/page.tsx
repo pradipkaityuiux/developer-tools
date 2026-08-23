@@ -80,7 +80,7 @@ export default function OpenGraphPreviewPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             How to use this Open Graph checker
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Enter a full URL or a hostname; if you skip{" "}
             <span className="font-mono text-sm">https://</span> we assume HTTPS.
             Click{" "}
@@ -113,7 +113,7 @@ export default function OpenGraphPreviewPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Open Graph tags: a practical guide for marketers and developers
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             At minimum, most teams implement{" "}
             <strong className="font-medium text-foreground">og:title</strong>{" "}
             and{" "}
@@ -155,7 +155,7 @@ export default function OpenGraphPreviewPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Twitter Cards, Slack, and other unfurl engines
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Many products read Twitter&apos;s{" "}
             <span className="font-mono text-sm">twitter:*</span> namespace first,
             then fall back to Open Graph. We surface{" "}
@@ -198,7 +198,7 @@ export default function OpenGraphPreviewPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             SEO, CTR, and when Open Graph still matters
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Open Graph metadata is not a replacement for on-page SEO, but it
             aligns how your story appears in organic snippets and social feeds.
             A strong{" "}
@@ -238,7 +238,7 @@ export default function OpenGraphPreviewPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Limitations and honest expectations
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             We parse the initial server HTML up to a size limit—pages that
             inject Open Graph only after heavy client-side JavaScript may look
             empty here and to crawlers. Image previews in your browser depend on
@@ -255,7 +255,7 @@ export default function OpenGraphPreviewPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related free website tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore every utility in the{" "}
             <Link
               href="/#website-url-tools"

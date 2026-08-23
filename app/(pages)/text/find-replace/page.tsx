@@ -93,7 +93,7 @@ export default function FindReplacePage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why use a browser-based find and replace?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Editors like VS Code excel at project-wide refactors, but many tasks
             are single-buffer: a CSV snippet from a ticket, a log excerpt, a
             markdown draft, or SQL copied from a monitoring UI. A dedicated{" "}
@@ -170,7 +170,7 @@ export default function FindReplacePage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Plain text vs regex: quick guide
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">Plain text</strong>{" "}
             escapes regex metacharacters for you, so searching for{" "}
             <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-sm dark:bg-zinc-900">
@@ -216,7 +216,7 @@ export default function FindReplacePage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords and workflows people search for
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Common intents include replace text in document online, bulk
             rename in a paste, fix double spaces, swap delimiters, strip HTML
             entities from a fragment, or rehearse a{" "}
@@ -238,7 +238,7 @@ export default function FindReplacePage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Privacy and limits
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Find and replace runs locally; large documents may feel slower on
             older hardware. For multi-gigabyte logs, prefer streaming CLI tools.
             This interface targets articles, configs, tickets, and
@@ -248,7 +248,7 @@ export default function FindReplacePage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related text and string tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
               href="/#text-string-tools"

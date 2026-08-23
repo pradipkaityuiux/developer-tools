@@ -66,7 +66,7 @@ export default function DomainAgeCheckerPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             How to use this domain age lookup
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Paste a bare hostname such as{" "}
             <span className="font-mono text-sm text-foreground">example.com</span>{" "}
             or a full{" "}
@@ -113,7 +113,7 @@ export default function DomainAgeCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Domain age and SEO: what practitioners actually measure
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             SEO discussions often mention <strong>domain age</strong> as a proxy
             for stability. Publicly visible registration timestamps can align
             with long-running brands, but they do not replace on-page quality,
@@ -146,7 +146,7 @@ export default function DomainAgeCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             WHOIS vs RDAP: why we prefer RDAP for age checks
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             RDAP delivers structured JSON over HTTPS, which scales better for
             lightweight tools than parsing legacy WHOIS text. When you need a
             complementary registrar-oriented view, open our{" "}
@@ -180,7 +180,7 @@ export default function DomainAgeCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related free website and URL tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
               href="/#website-url-tools"

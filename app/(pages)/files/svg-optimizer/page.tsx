@@ -93,7 +93,7 @@ export default function SvgOptimizerPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why teams minify SVG for production websites and apps
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">Scalable Vector
             Graphics</strong> stay crisp at any resolution, which makes them
             ideal for icons, logos, charts, and illustrations. Exported files
@@ -206,7 +206,7 @@ export default function SvgOptimizerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             SVG optimization vs accessibility and SEO
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Removing metadata rarely affects visuals. If you rely on{" "}
             <strong className="font-medium text-foreground">
               title or desc
@@ -223,7 +223,7 @@ export default function SvgOptimizerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Security notes for SVG you did not author
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             SVG is XML. Malicious files may embed scripts or external references.
             This tool removes{" "}
             <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-sm dark:bg-zinc-900">
@@ -241,7 +241,7 @@ export default function SvgOptimizerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related file and developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
               href="/#file-data-tools"

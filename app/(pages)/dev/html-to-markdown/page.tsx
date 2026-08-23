@@ -73,7 +73,7 @@ export default function HtmlToMarkdownPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why convert HTML to Markdown?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Teams move to Markdown because it diffs cleanly in Git, reads well
             in code review, and powers static site generators (Hugo, Eleventy,
             Astro), GitHub wikis, and many headless CMS workflows. When your
@@ -108,7 +108,7 @@ export default function HtmlToMarkdownPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             HTML to Markdown for SEO and content operations
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Search engines consume rendered HTML, not your authoring format—but
             Markdown-first workflows often produce tighter, reviewable content
             and faster iteration in Git. After you convert, paste final HTML
@@ -202,7 +202,7 @@ export default function HtmlToMarkdownPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Preparing HTML for a cleaner Markdown result
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Messy or deeply nested HTML can produce noisy Markdown. Run
             important templates through our{" "}
             <Link
@@ -225,7 +225,7 @@ export default function HtmlToMarkdownPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Limitations and when to keep HTML
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Markdown is not a drop-in replacement for every HTML pattern:
             arbitrary{" "}
             <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-sm dark:bg-zinc-900">
@@ -247,7 +247,7 @@ export default function HtmlToMarkdownPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Reverse direction: Markdown to HTML
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Authors who write in Markdown but need raw markup for email or CMS
             fields can use the{" "}
             <Link
@@ -263,7 +263,7 @@ export default function HtmlToMarkdownPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
               href="/#code-developer-tools"

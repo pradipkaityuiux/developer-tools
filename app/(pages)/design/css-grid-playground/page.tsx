@@ -111,7 +111,7 @@ export default function CssGridPlaygroundPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why use a CSS Grid playground for real interface work?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Teams search for a{" "}
             <strong className="font-medium text-foreground">
               CSS Grid generator
@@ -183,7 +183,7 @@ export default function CssGridPlaygroundPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             CSS Grid guide: tracks, lines, gaps, and alignment
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">
               grid-template-columns
             </strong>{" "}
@@ -311,7 +311,7 @@ export default function CssGridPlaygroundPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             CSS Grid vs Flexbox: practical split for production apps
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Grid is the default choice for{" "}
             <strong className="font-medium text-foreground">
               page-level layout
@@ -340,7 +340,7 @@ export default function CssGridPlaygroundPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related design and developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             More utilities from our catalog:
           </p>
           <ul className="mt-4 list-disc space-y-2 pl-5 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">

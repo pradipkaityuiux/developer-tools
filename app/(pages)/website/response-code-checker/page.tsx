@@ -71,7 +71,7 @@ export default function ResponseCodeCheckerPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             How to use this HTTP response code checker
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Paste a page, asset, or API path you care about. You may omit{" "}
             <code className="text-sm text-foreground">https://</code>; we normalize
             to a valid URL before fetching. Click{" "}
@@ -162,7 +162,7 @@ export default function ResponseCodeCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             When to pair this tool with DNS, TLS, and WHOIS checks
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Status codes describe the HTTP layer only. If you see unexpected
             redirects or TLS errors in the browser, validate hostname resolution
             with the{" "}
@@ -199,7 +199,7 @@ export default function ResponseCodeCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Crawler and bot considerations
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Automated probes may receive different responses than logged-in users
             or certain geographic regions. Always reconcile this checker with your
             CDN analytics, origin access logs, and{" "}
@@ -216,7 +216,7 @@ export default function ResponseCodeCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related free tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
               href="/#website-url-tools"

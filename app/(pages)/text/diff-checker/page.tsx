@@ -108,7 +108,7 @@ export default function TextDiffCheckerPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why use a browser-based text comparison tool?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Editors, paralegals, and growth teams constantly juggle{" "}
             <strong className="font-medium text-foreground">
               before and after text
@@ -222,7 +222,7 @@ export default function TextDiffCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords and workflows people search for
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Teams look for an{" "}
             <strong className="font-medium text-foreground">
               online text compare
@@ -262,7 +262,7 @@ export default function TextDiffCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Line-based diffing vs word processors and Git
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             This checker aligns{" "}
             <strong className="font-medium text-foreground">whole lines</strong>{" "}
             using a classic{" "}
@@ -280,7 +280,7 @@ export default function TextDiffCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Privacy, limits, and best practices
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Nothing leaves your tab during comparison. Each side caps at a few
             thousand lines to protect browser memory—slice chapters or sections
             for book-length material. Prefer redacted excerpts when sharing
@@ -299,7 +299,7 @@ export default function TextDiffCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related text &amp; string tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
               href="/#text-string-tools"

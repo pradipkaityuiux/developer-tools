@@ -106,7 +106,7 @@ export default function ColorBlindnessSimulatorPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why teams use a CVD simulator before shipping UI and data graphics
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Roughly{" "}
             <strong className="font-medium text-foreground">
               one in twelve men
@@ -213,7 +213,7 @@ export default function ColorBlindnessSimulatorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Models, monitors, and limitations
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             The transforms use published{" "}
             <strong className="font-medium text-foreground">
               Machado-style matrices
@@ -233,7 +233,7 @@ export default function ColorBlindnessSimulatorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related design and accessibility tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
               href="/#design-color-tools"

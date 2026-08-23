@@ -105,7 +105,7 @@ export default function JwtDecoderPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why decode JWTs during development?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             A{" "}
             <strong className="font-medium text-foreground">
               JSON Web Token
@@ -240,7 +240,7 @@ export default function JwtDecoderPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             JWT decoder keywords teams search for
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Engineers often look for an{" "}
             <strong className="font-medium text-foreground">
               online JWT parser
@@ -274,7 +274,7 @@ export default function JwtDecoderPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Header claims: alg, typ, kid, and why they matter
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             The header tells verifiers which algorithm and key material to use.
             Libraries must reject unexpected{" "}
             <strong className="font-medium text-foreground">alg</strong> values
@@ -301,7 +301,7 @@ export default function JwtDecoderPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Payload claims: registered, public, and private names
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             JWT payloads combine{" "}
             <strong className="font-medium text-foreground">
               registered claim names
@@ -341,7 +341,7 @@ export default function JwtDecoderPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Limitations: no JWE, no signature or encryption verification
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">
               Encrypted JWTs (JWE)
             </strong>{" "}
@@ -363,7 +363,7 @@ export default function JwtDecoderPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
               href="/#code-developer-tools"

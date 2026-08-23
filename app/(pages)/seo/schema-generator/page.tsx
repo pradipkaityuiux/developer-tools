@@ -95,7 +95,7 @@ export default function SchemaGeneratorPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why structured data matters for SEO
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Search engines use{" "}
             <strong className="font-medium text-foreground">
               structured data
@@ -208,7 +208,7 @@ export default function SchemaGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords and topics covered by each preset
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">Article</strong>{" "}
             covers headline, description, image, author, publisher, and modified
             dates—aligned with editorial SEO for blogs and guides.{" "}
@@ -231,7 +231,7 @@ export default function SchemaGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Internal tools that complement schema markup
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Structured data works best when titles, descriptions, and URLs are
             consistent. Before launch, verify snippet lengths with the{" "}
             <Link
@@ -267,7 +267,7 @@ export default function SchemaGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related SEO tools in this catalog
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
               href="/#seo-tools"

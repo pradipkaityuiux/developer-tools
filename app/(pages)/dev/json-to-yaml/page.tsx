@@ -82,7 +82,7 @@ export default function JsonToYamlPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why convert JSON to YAML?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">JSON</strong> is
             the lingua franca of REST APIs, browser storage, and many build
             pipelines.{" "}
@@ -184,7 +184,7 @@ export default function JsonToYamlPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             JSON vs YAML: what changes in the output?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Structurally, the{" "}
             <strong className="font-medium text-foreground">data model</strong>{" "}
             stays the same: strings, numbers, booleans, null, objects, and
@@ -199,7 +199,7 @@ export default function JsonToYamlPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Kubernetes, Helm, and cloud-native workflows
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Platform teams often sketch resources in YAML, but automation and
             APIs emit JSON—for example when you export an object from a control
             plane or transform OpenAPI examples. Converting those blobs into YAML
@@ -216,7 +216,7 @@ export default function JsonToYamlPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Tabular and API data: JSON to CSV
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             When your JSON is primarily a list of records for spreadsheets or
             BI tools rather than nested config, the{" "}
             <Link
@@ -232,7 +232,7 @@ export default function JsonToYamlPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Privacy and security notes
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Because conversion executes locally in the browser, you reduce the
             risk of leaking tokens compared to sending config to a third-party
             API. You should still treat any textarea as sensitive: clear it when
@@ -243,7 +243,7 @@ export default function JsonToYamlPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
               href="/#code-developer-tools"

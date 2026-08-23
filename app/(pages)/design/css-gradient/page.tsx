@@ -104,7 +104,7 @@ export default function CssGradientPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             What is a multi-stop CSS gradient and when to use one
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             A{" "}
             <strong className="font-medium text-foreground">
               multi-stop gradient
@@ -152,7 +152,7 @@ export default function CssGradientPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Angles versus direction keywords in linear-gradient
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             The CSS Images specification allows either a{" "}
             <strong className="font-medium text-foreground">
               bearing in degrees
@@ -177,7 +177,7 @@ export default function CssGradientPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Repeating gradients for stripes, textures, and rhythm
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">
               repeating-linear-gradient
             </strong>{" "}
@@ -272,7 +272,7 @@ export default function CssGradientPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             CSS formatting and maintenance in larger codebases
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Long gradient strings are easier to maintain when you align stops with
             design tokens or run the output through the{" "}
             <Link
@@ -289,7 +289,7 @@ export default function CssGradientPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related design and developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             More from the{" "}
             <Link
               href="/#design-color-tools"

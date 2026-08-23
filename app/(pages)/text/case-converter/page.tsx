@@ -99,7 +99,7 @@ export default function CaseConverterPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why teams use a string case converter
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Copywriters and SEO editors often need a fast{" "}
             <strong className="font-medium text-foreground">
               title case generator
@@ -214,7 +214,7 @@ export default function CaseConverterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords and workflows this page supports
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             People search for an{" "}
             <strong className="font-medium text-foreground">
               online case changer
@@ -281,7 +281,7 @@ export default function CaseConverterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Limitations and safety tips
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             This is a{" "}
             <strong className="font-medium text-foreground">
               text transform scratchpad
@@ -302,7 +302,7 @@ export default function CaseConverterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related text &amp; string tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
               href="/#text-string-tools"

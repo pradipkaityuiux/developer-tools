@@ -101,7 +101,7 @@ export default function HttpRequestBuilderPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why use a browser-based HTTP request builder?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Modern backends expose{" "}
             <strong className="font-medium text-foreground">
               REST and HTTP APIs
@@ -268,7 +268,7 @@ export default function HttpRequestBuilderPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             CORS, preflight, and when “Failed to fetch” appears
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browsers enforce the{" "}
             <strong className="font-medium text-foreground">
               same-origin policy
@@ -311,7 +311,7 @@ export default function HttpRequestBuilderPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Security and privacy notes
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Requests are issued from your machine to the destination you
             specify. Do not paste production secrets into shared screen
             recordings. Prefer short-lived tokens, rotate keys if you suspect
@@ -340,7 +340,7 @@ export default function HttpRequestBuilderPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related API developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
               href="/#api-developer-toolbox"

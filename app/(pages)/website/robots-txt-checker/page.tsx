@@ -71,7 +71,7 @@ export default function RobotsTxtCheckerPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             How to use this robots.txt analyzer
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Paste a{" "}
             <strong>canonical homepage URL</strong> (with https://), a bare
             domain such as <code className="text-sm">example.com</code>, or a
@@ -113,7 +113,7 @@ export default function RobotsTxtCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Guide: reading Allow, Disallow, and Sitemap lines
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Modern crawlers follow{" "}
             <strong>RFC 9309</strong>-style matching: rules use URL path
             prefixes, <strong>Allow</strong> can carve exceptions out of a broad{" "}
@@ -173,7 +173,7 @@ export default function RobotsTxtCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Infrastructure checks that complement robots.txt
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Crawlers need resolvable DNS, valid TLS, and consistent hostnames.
             Use the{" "}
             <Link
@@ -203,7 +203,7 @@ export default function RobotsTxtCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related free tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
               href="/#website-url-tools"

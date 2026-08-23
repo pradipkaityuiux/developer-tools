@@ -101,7 +101,7 @@ export default function CsvViewerPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why use a browser-based CSV viewer instead of a desktop spreadsheet?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Lightweight{" "}
             <strong className="font-medium text-foreground">
               CSV table viewers
@@ -204,7 +204,7 @@ export default function CsvViewerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords and workflows this page matches
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Teams search for an{" "}
             <strong className="font-medium text-foreground">
               online CSV viewer
@@ -261,7 +261,7 @@ export default function CsvViewerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             CSV quirks: quoting, locales, and line endings
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             European Excel versions often emit{" "}
             <strong className="font-medium text-foreground">
               semicolon-separated
@@ -294,7 +294,7 @@ export default function CsvViewerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Privacy and limits
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Nothing is transmitted to our servers for parsing or export: it is the
             same client-side model as the rest of the{" "}
             <Link
@@ -312,7 +312,7 @@ export default function CsvViewerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related file and data tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full catalog section for more utilities:
           </p>
           <ul className="mt-4 list-disc space-y-2 pl-5 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">

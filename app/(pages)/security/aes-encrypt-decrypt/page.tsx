@@ -112,7 +112,7 @@ export default function AesEncryptDecryptPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             What is AES-256-GCM and why use it for text encryption?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">AES</strong>{" "}
             (Advanced Encryption Standard) with a 256-bit key is the symmetric
             algorithm most production systems rely on for bulk data protection.
@@ -246,7 +246,7 @@ export default function AesEncryptDecryptPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Security notes for developers and students
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Treat this page as a{" "}
             <strong className="font-medium text-foreground">
               learning and testing utility
@@ -273,7 +273,7 @@ export default function AesEncryptDecryptPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related security and developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             More from the{" "}
             <Link
               href="/#security-encryption-tools"

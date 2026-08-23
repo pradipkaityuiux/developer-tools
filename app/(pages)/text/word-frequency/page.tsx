@@ -100,7 +100,7 @@ export default function WordFrequencyPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why word frequency still matters for SEO and editing
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Modern search engines use semantic models, but writers still benefit
             from a plain{" "}
             <strong className="font-medium text-foreground">
@@ -197,7 +197,7 @@ export default function WordFrequencyPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords and workflows this tool supports
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             People often search for an{" "}
             <strong className="font-medium text-foreground">
               online word frequency counter
@@ -233,7 +233,7 @@ export default function WordFrequencyPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Token rules, stop words, and what this is not
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Tokens are split on whitespace; punctuation attached to the edges of
             a token is stripped so plural and comma forms usually aggregate.
             This is not lemmatization: “run” and “running” remain distinct.
@@ -254,7 +254,7 @@ export default function WordFrequencyPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related text and string tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full list under{" "}
             <Link
               href="/#text-string-tools"

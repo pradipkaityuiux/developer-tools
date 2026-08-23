@@ -103,7 +103,7 @@ export default function LoremIpsumPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why Lorem Ipsum still matters in product and web workflows
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Placeholder text keeps reviews focused on{" "}
             <strong className="font-medium text-foreground">
               layout density
@@ -228,7 +228,7 @@ export default function LoremIpsumPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords and search intents this tool covers
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Teams often search for a{" "}
             <strong className="font-medium text-foreground">
               Lorem Ipsum generator online
@@ -271,7 +271,7 @@ export default function LoremIpsumPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Accessibility, localization, and inclusive content notes
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Screen reader users can hear long filler as meaningless syllables, so
             mark prototype regions with clear{" "}
             <strong className="font-medium text-foreground">
@@ -286,7 +286,7 @@ export default function LoremIpsumPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Privacy and HTML safety
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Random selection uses{" "}
             <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-sm dark:bg-zinc-900">
               crypto.getRandomValues
@@ -304,7 +304,7 @@ export default function LoremIpsumPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
               href="/#code-developer-tools"

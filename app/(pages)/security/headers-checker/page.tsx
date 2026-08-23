@@ -85,7 +85,7 @@ export default function SecurityHeadersCheckerPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             How to use this security headers analyzer
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Choose <strong className="text-foreground">Live URL</strong> and enter
             a fully qualified address (we prepend https:// when you omit the
             scheme). Submit to run a server-side fetch with our public-URL safety
@@ -110,7 +110,7 @@ export default function SecurityHeadersCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Security headers checklist (what we look for)
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="text-foreground">Transport:</strong> live scans
             expect HTTPS end-to-end.{" "}
             <strong className="text-foreground">HSTS</strong> should use a
@@ -139,7 +139,7 @@ export default function SecurityHeadersCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Why security headers matter for web apps and APIs
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browsers enforce headers to constrain scripts, framing, and cross-origin
             interactions. A missing or overly permissive CSP can leave room for
             XSS payloads; weak frame controls expose clickjacking; missing
@@ -166,7 +166,7 @@ export default function SecurityHeadersCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Interpreting scores and grades
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             The score weights presence and quality of common headers; it is not a
             penetration test or compliance certification. A high grade means the
             response aligns with common baseline hardening guidance—still review
@@ -180,7 +180,7 @@ export default function SecurityHeadersCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related security and website tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
               href="/#security-encryption-tools"

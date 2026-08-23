@@ -112,7 +112,7 @@ export default function NumberConverterPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why binary, octal, decimal, and hex still matter in 2026
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">
               Binary representation
             </strong>{" "}
@@ -227,7 +227,7 @@ export default function NumberConverterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             BigInt accuracy vs double-precision shortcuts
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Many “online calculator” widgets coerce inputs through IEEE-754
             doubles. That breaks past{" "}
             <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-sm dark:bg-zinc-900">
@@ -249,7 +249,7 @@ export default function NumberConverterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Radix conversion in real workflows
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">
               Front-end developers
             </strong>{" "}
@@ -280,7 +280,7 @@ export default function NumberConverterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Prefixes, literals, and language quirks
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             JavaScript uses{" "}
             <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-sm dark:bg-zinc-900">
               0x
@@ -313,7 +313,7 @@ export default function NumberConverterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             When Base64 is the right tool instead
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">Base64</strong>{" "}
             encodes arbitrary bytes into a text alphabet; it is not another
             integer radix. If you need to ship binary blobs through JSON or
@@ -344,7 +344,7 @@ export default function NumberConverterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Testing digit patterns and parsers
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             When you build lexers or CLI flags that accept multiple bases,
             golden tests often need both valid and invalid strings. After you
             sketch a regex, exercise it in the{" "}
@@ -361,7 +361,7 @@ export default function NumberConverterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Privacy and classroom use
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Because conversion happens locally, students can work through{" "}
             <strong className="font-medium text-foreground">
               CS101 radix homework
@@ -375,7 +375,7 @@ export default function NumberConverterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
               href="/#code-developer-tools"

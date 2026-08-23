@@ -92,7 +92,7 @@ export default function MetaLengthCheckerPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why meta title and meta description length still matter
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Search engines do not publish fixed{" "}
             <strong className="font-medium text-foreground">
               character limits
@@ -120,7 +120,7 @@ export default function MetaLengthCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             How we interpret “ideal” bands in this checker
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             For{" "}
             <strong className="font-medium text-foreground">page titles</strong>, we
             highlight a band around{" "}
@@ -148,7 +148,7 @@ export default function MetaLengthCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Title tag vs meta description: different jobs
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             The{" "}
             <strong className="font-medium text-foreground">HTML title</strong>{" "}
             competes for attention in the search results list; it should align with
@@ -179,7 +179,7 @@ export default function MetaLengthCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             HTML import: when paste or upload saves time
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             If you already have a static HTML file, a component render, or a saved
             crawl, drop it into the HTML panel or use{" "}
             <strong className="font-medium text-foreground">Upload HTML file</strong>.
@@ -290,7 +290,7 @@ export default function MetaLengthCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Multilingual and campaign landing pages
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             When you localize pages, title and description lengths change with
             language and script. Re-run this checker per locale, then wire hreflang
             clusters with the{" "}
@@ -313,7 +313,7 @@ export default function MetaLengthCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related SEO tools on this site
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
               href="/#seo-tools"

@@ -91,7 +91,7 @@ export default function WordCounterPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why teams still use a dedicated word and character counter
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Word processors bundle counts with layout, styles, and revision
             metadata, which can diverge from what a CMS textarea or social
             composer actually accepts. A focused{" "}
@@ -187,7 +187,7 @@ export default function WordCounterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords and workflows this page supports
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Editors often search for an{" "}
             <strong className="font-medium text-foreground">
               essay word counter
@@ -218,7 +218,7 @@ export default function WordCounterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Reading time, accessibility, and editorial policy
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Estimated minutes use simple division by WPM; they do not replace
             usability testing or screen-reader audits. If you publish long-form
             guides, disclose assumptions (for example, 200 WPM baseline) next
@@ -243,7 +243,7 @@ export default function WordCounterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Limitations compared with NLP pipelines
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             This utility tokenizes on whitespace and uses punctuation heuristics
             for sentences. It will not lemmatize vocabulary, detect language
             codes, or respect publisher-specific footnote rules. For production
@@ -263,7 +263,7 @@ export default function WordCounterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related text and string tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full catalog under{" "}
             <Link
               href="/#text-string-tools"

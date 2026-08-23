@@ -100,7 +100,7 @@ export default function MimeTypeLookupPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             What is MIME type lookup and why do developers need it?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">MIME types</strong>{" "}
             (also called{" "}
             <strong className="font-medium text-foreground">media types</strong>
@@ -247,7 +247,7 @@ export default function MimeTypeLookupPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Content-Type headers, uploads, and API contracts
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             HTTP uses{" "}
             <strong className="font-medium text-foreground">Content-Type</strong>{" "}
             to describe request and response bodies. For{" "}
@@ -271,7 +271,7 @@ export default function MimeTypeLookupPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Privacy
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Lookup runs in your browser. The upload button reads{" "}
             <strong className="font-medium text-foreground">metadata</strong>{" "}
             (name, size, reported type) only; file contents are not sent to our
@@ -281,7 +281,7 @@ export default function MimeTypeLookupPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related API developer toolbox tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
               href="/#api-developer-toolbox"

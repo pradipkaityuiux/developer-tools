@@ -91,7 +91,7 @@ export default function RobotsTxtGeneratorPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why robots.txt matters for SEO and crawling
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Search engines and other bots read{" "}
             <strong className="font-medium text-foreground">/robots.txt</strong>{" "}
             before fetching large portions of your site. A clear file reduces
@@ -217,7 +217,7 @@ export default function RobotsTxtGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Guides: Allow vs Disallow, specificity, and sitemaps
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Modern crawlers follow{" "}
             <strong className="font-medium text-foreground">
               longest match / most specific rule
@@ -249,7 +249,7 @@ export default function RobotsTxtGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Internal linking: SEO tools that pair with robots.txt
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Use the{" "}
             <Link
               href="/website/robots-txt-checker"
@@ -292,7 +292,7 @@ export default function RobotsTxtGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related SEO tools in this catalog
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
               href="/#seo-tools"

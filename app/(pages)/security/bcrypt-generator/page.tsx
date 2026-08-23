@@ -113,7 +113,7 @@ export default function BcryptGeneratorPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             What is bcrypt and how does this generator help?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">bcrypt</strong> is a
             password-hashing function that combines a{" "}
             <strong className="font-medium text-foreground">work factor</strong>{" "}
@@ -192,7 +192,7 @@ export default function BcryptGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             bcrypt vs SHA-256: when to use which tool
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">SHA-256</strong> and{" "}
             <strong className="font-medium text-foreground">SHA-512</strong> are
             fast cryptographic hashes for integrity, release artifacts, and
@@ -216,7 +216,7 @@ export default function BcryptGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords and common search intents
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Teams search for a{" "}
             <strong className="font-medium text-foreground">
               bcrypt hash generator with rounds
@@ -258,7 +258,7 @@ export default function BcryptGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Privacy and threat model
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Hashing executes in your browser tab; we do not receive your plaintext
             or hashes. Treat shared workstations like any other sensitive surface:
             avoid pasting production credentials, and clear clipboards when
@@ -270,7 +270,7 @@ export default function BcryptGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related security and developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Highlights from our catalog (each opens in place):
           </p>
           <ul className="mt-4 list-disc space-y-2 pl-5 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">

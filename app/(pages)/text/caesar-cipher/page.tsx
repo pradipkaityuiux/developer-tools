@@ -99,7 +99,7 @@ export default function CaesarCipherPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             What is a Caesar cipher (and when to use this page)
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Named after Julius Caesar, who reportedly used a shift of three on
             military dispatches, the{" "}
             <strong className="font-medium text-foreground">
@@ -214,7 +214,7 @@ export default function CaesarCipherPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords and search intents this guide covers
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Readers look for a{" "}
             <strong className="font-medium text-foreground">
               Caesar cipher online
@@ -247,7 +247,7 @@ export default function CaesarCipherPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             ROT13, Affine ciphers, and what this tool does not do
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">ROT13</strong> is a
             fixed Caesar shift of 13: applying it twice returns the original
             text. Our catalog also lists a dedicated{" "}
@@ -271,7 +271,7 @@ export default function CaesarCipherPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Privacy, limits, and responsible use
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             The Caesar cipher calculator runs locally in your tab: no ciphertext
             upload is required for the transform itself. Extremely large pasted
             buffers may make the browser sluggish; for multi-megabyte logs, use a
@@ -285,7 +285,7 @@ export default function CaesarCipherPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related text &amp; string tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
               href="/#text-string-tools"

@@ -72,7 +72,7 @@ export default function WhoisLookupPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             How to use this WHOIS lookup tool
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Paste a{" "}
             <strong className="text-foreground">registered domain</strong> like{" "}
             <code className="rounded bg-zinc-100 px-1 py-0.5 text-sm dark:bg-zinc-900">
@@ -107,7 +107,7 @@ export default function WhoisLookupPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             WHOIS vs RDAP: what you are seeing
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Classic{" "}
             <strong className="text-foreground">WHOIS</strong> often meant a
             line-oriented response on TCP port 43.{" "}
@@ -129,7 +129,7 @@ export default function WhoisLookupPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Practical guide: domain status and SEO trust signals
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Search engines and users indirectly care about registration hygiene:
             long-lived domains with stable DNS and clean transfer policies can
             correlate with trust, while frequent registrar churn or odd
@@ -157,7 +157,7 @@ export default function WhoisLookupPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Security, phishing, and vendor due diligence
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Security teams use{" "}
             <strong className="text-foreground">domain registration lookups</strong>{" "}
             to compare a suspicious hostname against known corporate registrars,
@@ -174,7 +174,7 @@ export default function WhoisLookupPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords and concepts this page covers
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Throughout this guide we reference common searches such as{" "}
             <strong className="text-foreground">WHOIS lookup</strong>,{" "}
             <strong className="text-foreground">domain registration search</strong>
@@ -194,7 +194,7 @@ export default function WhoisLookupPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related free tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
               href="/#website-url-tools"

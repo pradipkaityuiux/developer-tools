@@ -104,7 +104,7 @@ export default function DummyDataGeneratorPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why developers still reach for a fake data generator in 2026
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Modern stacks ship faster when every layer has believable payloads:
             design systems need populated tables, integration tests need unique
             rows, and sales demos need charts that do not leak customer{" "}
@@ -206,7 +206,7 @@ export default function DummyDataGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords and search intents this page covers
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Teams search for a{" "}
             <strong className="font-medium text-foreground">
               fake name generator for testing
@@ -238,7 +238,7 @@ export default function DummyDataGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Privacy, compliance, and realistic expectations
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Because randomness and formatting happen in the browser, you can
             draft datasets on a VPN or offline tab without uploading proprietary
             schemas. Still, synthetic rows can occasionally resemble real
@@ -269,7 +269,7 @@ export default function DummyDataGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
               href="/#code-developer-tools"

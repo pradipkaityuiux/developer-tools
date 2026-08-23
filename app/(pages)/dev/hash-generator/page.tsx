@@ -88,7 +88,7 @@ export default function HashGeneratorPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             What is a cryptographic hash and when do developers use one?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             A{" "}
             <strong className="font-medium text-foreground">
               cryptographic hash function
@@ -191,7 +191,7 @@ export default function HashGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             MD5 vs SHA-1 vs SHA-256 vs SHA-512 (quick guide)
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">MD5</strong> produces
             a 128-bit digest and is extremely fast. It is broken for collision
             attacks, so treat it as a convenience checksum, not a security
@@ -213,7 +213,7 @@ export default function HashGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords teams search for (and how this page maps to them)
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             People look for an{" "}
             <strong className="font-medium text-foreground">
               MD5 hash calculator
@@ -246,7 +246,7 @@ export default function HashGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Encoding pitfalls: why two “identical” strings hash differently
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Hashing operates on{" "}
             <strong className="font-medium text-foreground">bytes</strong>, not
             abstract Unicode characters. The same emoji or accented letter can be
@@ -268,7 +268,7 @@ export default function HashGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Privacy, security, and what this tool does not do
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Nothing leaves your tab for hashing. That makes the page safe for
             proprietary strings, but remember that{" "}
             <strong className="font-medium text-foreground">
@@ -287,7 +287,7 @@ export default function HashGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
               href="/#code-developer-tools"

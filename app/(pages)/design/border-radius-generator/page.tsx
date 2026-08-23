@@ -125,7 +125,7 @@ export default function BorderRadiusGeneratorPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why a dedicated border-radius tool helps design systems and handoff
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Product teams express{" "}
             <strong className="font-medium text-foreground">radius scales</strong>{" "}
             in design tokens—often 2, 4, 8, 12, 16 px or rem equivalents. Engineers
@@ -221,7 +221,7 @@ export default function BorderRadiusGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Border radius vs layout: Flexbox, Grid, and shadows
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Rounding affects paint, not document flow. Structure content first in
             the{" "}
             <Link
@@ -255,7 +255,7 @@ export default function BorderRadiusGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             SEO and performance: CSS radii instead of bitmap corners
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Vector-friendly{" "}
             <strong className="font-medium text-foreground">
               rounded corners
@@ -285,7 +285,7 @@ export default function BorderRadiusGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related design and developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             More from the{" "}
             <Link
               href="/#design-color-tools"

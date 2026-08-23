@@ -79,7 +79,7 @@ export default function SslCertificateCheckerPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             How to use this SSL checker
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Type a bare domain (for example{" "}
             <span className="font-mono text-sm text-foreground">
               api.example.com
@@ -103,7 +103,7 @@ export default function SslCertificateCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Why SSL certificate monitoring matters for sites and SEO
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             An expired or mismatched certificate breaks HTTPS, triggers browser
             interstitials, and can interrupt crawlers and analytics. Regular{" "}
             <strong className="font-medium text-foreground">
@@ -149,7 +149,7 @@ export default function SslCertificateCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Reading certificate results: SANs, chain, and fingerprints
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Modern clients validate hostnames against{" "}
             <strong className="font-medium text-foreground">SAN entries</strong>
             , not only the legacy Common Name. When you migrate to a new CDN or
@@ -184,7 +184,7 @@ export default function SslCertificateCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Security notes and limitations
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             This tool connects from our infrastructure, not your laptop, so
             results reflect what our servers see—useful for public internet
             properties. We block private IP literals and hostnames that resolve
@@ -204,7 +204,7 @@ export default function SslCertificateCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related free website tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
               href="/#website-url-tools"

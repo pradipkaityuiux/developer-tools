@@ -1,0 +1,100 @@
+---
+title: "How to Write an OG Tag So Your Links Look Good on Social Media"
+description: "A clear, no-jargon guide to Open Graph tags: what they do, which ones actually matter, and how to make sure your links show a proper preview instead of a blank card."
+date: "2026-08-22"
+tags:
+    - open-graph
+    - seo
+    - social-media
+    - meta-tags
+    - developer-tools
+---
+
+
+You've seen it happen. Someone shares a link on X or Slack, and instead of a nice preview card with an image, title, and description, you get a bare gray box with just the URL. Or worse, the wrong image shows up entirely. That's almost always a missing or broken Open Graph tag, and it's a fixable five-minute problem once you know what these tags actually do.
+
+Here's exactly how they work and how to set them up properly.
+
+## What is an Open Graph tag?
+
+Open Graph (OG) tags are a set of meta tags you add to the `<head>` of your HTML that tell social platforms and messaging apps how to display your page when someone shares the link. The standard was originally created by Facebook, but it's now used across nearly every platform that generates link previews: X, LinkedIn, Slack, Discord, WhatsApp, iMessage, and more.
+
+Without OG tags, these platforms fall back to guessing. They'll scrape your page for a title, maybe grab the first image they find, and hope for the best. The results are inconsistent at best and broken at worst. With OG tags, you're explicitly telling the platform: here's the title, here's the description, here's the exact image to use.
+
+This matters more than it might seem. A clean, well-formatted preview card gets noticeably more clicks than a bare link or a broken image, simply because it looks trustworthy and gives people a reason to click before they even read the surrounding text.
+
+## The core OG tags you actually need
+
+There are dozens of OG properties in the full spec, but in practice, four of them cover almost every use case:
+
+```html
+<meta property="og:title" content="Your Page Title Here" />
+<meta property="og:description" content="A short, compelling description of the page." />
+<meta property="og:image" content="https://example.com/preview-image.jpg" />
+<meta property="og:url" content="https://example.com/your-page" />
+```
+
+Let's go through each one.
+
+**`og:title`** — The headline shown in the preview card. Keep it close to your actual page title, but you can adjust it slightly to be more compelling for social contexts if needed. Aim for under 60 characters so it doesn't get cut off on most platforms.
+
+**`og:description`** — A short summary shown below the title. Most platforms truncate this somewhere between 100 and 200 characters, so front-load the important part. Think of it like a mini pitch for why someone should click.
+
+**`og:image`** — The preview image. This is the single highest-impact tag on the list, since the image is what actually catches someone's eye while scrolling. It needs to be an absolute URL (not a relative path), and most platforms recommend at least 1200x630 pixels for a sharp, properly cropped preview.
+
+**`og:url`** — The canonical URL for the page. This matters when a page is accessible through multiple URLs (with tracking parameters, trailing slashes, and so on), so the platform knows which one to treat as the "real" one.
+
+## A few more worth adding
+
+Beyond the core four, these come up often enough to be worth including:
+
+```html
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Your Site Name" />
+```
+
+**`og:type`** — Tells the platform what kind of content this is. `website` is the safe default for most pages. Other values like `article` unlock additional properties (like `article:published_time`), which is worth using for blog posts specifically.
+
+**`og:site_name`** — The name of your overall site, shown in smaller text alongside the title on some platforms. Helps with brand recognition when someone shares a specific post rather than your homepage.
+
+## Don't forget Twitter/X's own tags
+
+X (formerly Twitter) supports Open Graph tags as a fallback, but it has its own tag set that takes priority when present, using the `twitter:` prefix instead of `og:`. If you want full control over how your links look specifically on X, add these alongside your OG tags:
+
+```html
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Your Page Title Here" />
+<meta name="twitter:description" content="A short, compelling description." />
+<meta name="twitter:image" content="https://example.com/preview-image.jpg" />
+```
+
+`twitter:card` is the important one here. Setting it to `summary_large_image` gives you the big, prominent image preview instead of a small thumbnail crammed next to the text. Without it, X may default to a much less eye-catching layout even if your other tags are correct.
+
+## Common mistakes that break previews
+
+**Using a relative image path.** `og:image` needs to be a full, absolute URL starting with `https://`. A relative path like `/images/preview.jpg` won't resolve correctly when a platform's crawler fetches it, and you'll end up with a blank image slot.
+
+**Image too small or wrong aspect ratio.** If your image is under the recommended 1200x630, platforms may reject it entirely or display it awkwardly cropped. Stick to that size (or the same 1.91:1 ratio scaled up) to avoid surprises across different platforms.
+
+**Forgetting the image needs to be publicly accessible.** If your image is behind authentication, blocked by robots.txt, or sitting on a staging server that isn't publicly reachable, the crawler can't fetch it and the preview will fail silently.
+
+**Not testing after deployment.** Social platforms cache link previews aggressively. If you fix a broken tag but the old broken preview keeps showing up when you share the link, it's very likely a caching issue on the platform's end, not your code. Most platforms have a debugging/cache-refresh tool for this (Facebook's Sharing Debugger and X's Card Validator are the two most commonly used).
+
+**Missing tags entirely on dynamic pages.** This is common with single-page apps and client-side rendered sites. If your OG tags are injected by JavaScript after the page loads, some crawlers (which often don't execute JavaScript) will never see them. For dynamic content, you generally need server-side rendering or pre-rendering to make sure the tags are present in the initial HTML response.
+
+## How to check your tags before sharing
+
+Rather than posting a link and hoping it looks right, or worse, finding out it's broken after it's already been shared around, it's worth checking your OG tags directly. Our [OG tag generator](https://zerosnippet.com/seo/og-tag-generator) lets you build the correct tag set from your title, description, and image URL, so you're not hand-writing the syntax and risking a typo in a property name.
+
+<BlogCard
+    title="Open Graph tag generator"
+    description="Build production-ready Open Graph meta tags plus optional Twitter Card tags in one place."
+    href="/seo/og-tag-generator"
+/>
+
+And once your tags are live, our [Open Graph preview](https://zerosnippet.com/website/open-graph-preview) tool lets you paste in your URL and see exactly how the card will render, catching missing images or truncated descriptions before anyone else does.
+
+## Wrapping up
+
+Open Graph tags are a small addition to your page's `<head>`, but they have an outsized effect on how your links perform once they're shared. Four tags cover almost every situation: title, description, image, and URL, with a couple of X-specific tags layered on top if you care about how links look there specifically. Get the image sized correctly, make sure the URL is absolute, and always check the actual rendered preview before assuming it works.
+

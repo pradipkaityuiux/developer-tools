@@ -96,7 +96,7 @@ export default function ReadabilityCheckerPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why readability matters for SEO and UX
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Search engines surface content that satisfies intent; readability is
             not a direct ranking knob, but it shapes{" "}
             <strong className="font-medium text-foreground">
@@ -198,7 +198,7 @@ export default function ReadabilityCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords and workflows this page supports
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Teams search for a{" "}
             <strong className="font-medium text-foreground">
               Flesch Reading Ease calculator
@@ -230,7 +230,7 @@ export default function ReadabilityCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Limitations and honest expectations
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Syllables are{" "}
             <strong className="font-medium text-foreground">estimated</strong>{" "}
             with English heuristics; brand names, code snippets, and mixed
@@ -250,7 +250,7 @@ export default function ReadabilityCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             More SEO and content tools in this catalog
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             The home page lists the full{" "}
             <Link
               href="/#seo-tools"

@@ -105,7 +105,7 @@ export default function SslDecoderPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why decode TLS certificates from PEM text?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Operations and engineering teams constantly exchange{" "}
             <strong className="font-medium text-foreground">
               PEM-encoded X.509 certificates
@@ -217,7 +217,7 @@ export default function SslDecoderPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords: PEM decoder, X.509 inspection, SAN viewer
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Teams search for an{" "}
             <strong className="font-medium text-foreground">
               X.509 certificate decoder
@@ -260,7 +260,7 @@ export default function SslDecoderPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Understanding subject, issuer, and the certificate chain
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             The{" "}
             <strong className="font-medium text-foreground">subject</strong> names
             the entity the certificate belongs to; the{" "}
@@ -276,7 +276,7 @@ export default function SslDecoderPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Subject Alternative Name (SAN) and hostname matching
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             For HTTPS, clients typically evaluate allowed hostnames from{" "}
             <strong className="font-medium text-foreground">SAN</strong> entries
             (often <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-sm dark:bg-zinc-900">dns</code>{" "}
@@ -291,7 +291,7 @@ export default function SslDecoderPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Limitations and safe use
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Decoding never replaces{" "}
             <strong className="font-medium text-foreground">revocation checks</strong>{" "}
             (CRL/OCSP),{" "}
@@ -313,7 +313,7 @@ export default function SslDecoderPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related security and encryption tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
               href="/#security-encryption-tools"

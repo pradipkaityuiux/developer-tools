@@ -73,7 +73,7 @@ export default function XmlFormatterPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             How to use this XML formatter and validator
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Paste any UTF-8 XML document into the input panel, then choose an
             action.{" "}
             <strong className="font-medium text-foreground">
@@ -102,7 +102,7 @@ export default function XmlFormatterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             When to format XML versus JSON or YAML
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Many teams still exchange{" "}
             <strong className="font-medium text-foreground">enterprise XML</strong>{" "}
             for invoices, identity protocols, and feed syndication, while newer
@@ -142,7 +142,7 @@ export default function XmlFormatterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             XML best practices for feeds, APIs, and configs
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Declare encoding when files leave your editor (
             <span className="font-mono text-sm text-foreground">
               UTF-8
@@ -176,7 +176,7 @@ export default function XmlFormatterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Privacy and limitations
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Formatting and validation execute locally with the same XML parser
             your browser uses for{" "}
             <strong className="font-medium text-foreground">text/xml</strong>{" "}
@@ -196,7 +196,7 @@ export default function XmlFormatterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
               href="/#code-developer-tools"

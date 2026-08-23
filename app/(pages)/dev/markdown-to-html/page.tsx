@@ -90,7 +90,7 @@ export default function MarkdownToHtmlPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why convert Markdown to HTML?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Markdown stays readable in Git, tickets, and plain-text editors, but
             many publishing surfaces still expect{" "}
             <strong className="font-medium text-foreground">HTML fragments</strong>
@@ -192,7 +192,7 @@ export default function MarkdownToHtmlPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords and workflows teams search for
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             People often look for a{" "}
             <strong className="font-medium text-foreground">
               Markdown preview HTML
@@ -229,7 +229,7 @@ export default function MarkdownToHtmlPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Markdown vs HTML for SEO and performance
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Search engines consume rendered HTML, not your Markdown source.
             Converting to clean{" "}
             <strong className="font-medium text-foreground">
@@ -260,7 +260,7 @@ export default function MarkdownToHtmlPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Security: previews, iframes, and production binding
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Markdown can embed raw HTML blocks; parsers may pass them through.
             This tool{" "}
             <strong className="font-medium text-foreground">
@@ -286,7 +286,7 @@ export default function MarkdownToHtmlPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Limitations compared with MDX, remark, or static generators
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Full site builds add imports, shortcodes, math, and component
             slots—this page targets{" "}
             <strong className="font-medium text-foreground">
@@ -315,7 +315,7 @@ export default function MarkdownToHtmlPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
               href="/#code-developer-tools"

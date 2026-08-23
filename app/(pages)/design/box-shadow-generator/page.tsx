@@ -113,7 +113,7 @@ export default function BoxShadowGeneratorPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why use a dedicated box shadow generator for CSS?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             The{" "}
             <strong className="font-medium text-foreground">
               box-shadow
@@ -153,7 +153,7 @@ export default function BoxShadowGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             How blur, spread, and opacity interact
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">Blur</strong>{" "}
             softens the shadow—high blur with small offset yields a diffuse
             ambient lift.{" "}
@@ -237,7 +237,7 @@ export default function BoxShadowGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Layering shadows with gradients and radius
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Production UIs often combine{" "}
             <strong className="font-medium text-foreground">
               box-shadow
@@ -287,7 +287,7 @@ export default function BoxShadowGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords and workflows this tool supports
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Teams search for{" "}
             <strong className="font-medium text-foreground">
               material elevation CSS
@@ -313,7 +313,7 @@ export default function BoxShadowGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related design tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             More from the{" "}
             <Link
               href="/#design-color-tools"

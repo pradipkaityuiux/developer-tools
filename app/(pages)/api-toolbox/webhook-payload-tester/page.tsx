@@ -92,7 +92,7 @@ export default function WebhookPayloadTesterPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why webhook payload testing matters for integrations
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Product and platform webhooks are{" "}
             <strong className="font-medium text-foreground">
               asynchronous HTTP POST callbacks
@@ -237,7 +237,7 @@ export default function WebhookPayloadTesterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Internal links and companion tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Cryptographic signing for webhook verification often reuses patterns
             from general{" "}
             <strong className="font-medium text-foreground">HMAC</strong> utilities.

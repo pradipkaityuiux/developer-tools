@@ -87,7 +87,7 @@ export default function CronGeneratorPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             What is a cron expression generator?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             A{" "}
             <strong className="font-medium text-foreground">
               cron expression generator
@@ -225,7 +225,7 @@ export default function CronGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Cron field cheat sheet (minute through weekday)
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">Minute</strong>{" "}
             (0–59): use{" "}
             <code className="font-mono text-sm">*</code> for every minute,{" "}
@@ -259,7 +259,7 @@ export default function CronGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Where generated cron expressions are used
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">
               Infrastructure and apps
             </strong>{" "}
@@ -300,7 +300,7 @@ export default function CronGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords and search intent this page covers
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Teams look for a{" "}
             <strong className="font-medium text-foreground">
               crontab generator
@@ -337,7 +337,7 @@ export default function CronGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related free developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
               href="/#code-developer-tools"

@@ -115,7 +115,7 @@ export default function FaviconGeneratorPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why favicons still matter for brand, UX, and SEO hygiene
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Searchers and power users still scan tab strips and bookmark bars for
             recognizable{" "}
             <strong className="font-medium text-foreground">site icons</strong>.
@@ -232,7 +232,7 @@ export default function FaviconGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             ICO vs PNG: what this tool emits and how to reference it
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             The downloaded{" "}
             <strong className="font-medium text-foreground">favicon.ico</strong>{" "}
             bundles multiple resolutions so older desktop browsers and shortcuts can
@@ -256,7 +256,7 @@ export default function FaviconGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Internal tools that pair with a new favicon rollout
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Once your tab icon is set, you may still tune the rest of the visual
             system: export harmonious colors with the{" "}
             <Link
@@ -307,7 +307,7 @@ export default function FaviconGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related design and color tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             More from the{" "}
             <Link
               href="/#design-color-tools"

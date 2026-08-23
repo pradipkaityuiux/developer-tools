@@ -109,7 +109,7 @@ export default function ImageCompressorPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why compress images for the web, email, and product uploads
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Large photos and retina screenshots inflate page weight, slow{" "}
             <strong className="font-medium text-foreground">
               Largest Contentful Paint (LCP)
@@ -224,7 +224,7 @@ export default function ImageCompressorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             JPEG quality, transparency, and when PNG still wins
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">JPEG</strong> uses
             lossy compression: lowering quality removes high-frequency detail.
             That is ideal for camera photos and noisy screenshots.{" "}
@@ -247,7 +247,7 @@ export default function ImageCompressorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             SEO, Core Web Vitals, and caching keywords teams search for
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Publishing blogs, landing pages, and docs with unoptimized hero images
             hurts{" "}
             <strong className="font-medium text-foreground">
@@ -276,7 +276,7 @@ export default function ImageCompressorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Integrity, SVG, and vector workflows
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             After you download compressed binaries, verify checksums with the{" "}
             <Link
               href="/files/file-hash"
@@ -298,7 +298,7 @@ export default function ImageCompressorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related file and media tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
               href="/#file-data-tools"

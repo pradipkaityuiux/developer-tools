@@ -77,7 +77,7 @@ export default function HttpStatusCodesPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             How to use this HTTP status code reference
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Start with the{" "}
             <strong className="text-foreground">search field</strong> when you
             remember a symptom (“gateway timeout”, “rate limit”) but not the exact
@@ -138,7 +138,7 @@ export default function HttpStatusCodesPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             SEO, redirects, and crawlers
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Search engines use HTTP status codes together with headers and body
             content to decide whether to index a URL, follow a redirect, or drop a
             page from the index. Permanent redirects consolidate signals toward
@@ -170,7 +170,7 @@ export default function HttpStatusCodesPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             APIs, JSON payloads, and documentation
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             REST and GraphQL gateways often return 4xx for caller mistakes and 5xx
             when dependencies fail—pair status codes with structured error bodies so
             clients can act. When you document APIs, align status codes with{" "}
@@ -200,7 +200,7 @@ export default function HttpStatusCodesPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Headers, TLS, and “why doesn’t this match curl?”
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Status codes describe the HTTP layer only. If you need{" "}
             <strong className="text-foreground">Cache-Control</strong>,{" "}
             <strong className="text-foreground">Set-Cookie</strong>, or security
@@ -225,7 +225,7 @@ export default function HttpStatusCodesPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related tools in the API developer toolbox
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
               href="/#api-developer-toolbox"

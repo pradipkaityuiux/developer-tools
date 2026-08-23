@@ -85,7 +85,7 @@ export default function HtmlEntitiesPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why HTML entity encoding matters for developers, content teams, and SEO
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browsers treat angle brackets as tag delimiters. A literal less-than in copy must become
             an entity inside HTML text nodes and most attribute values so it renders as text instead
             of breaking the DOM tree. Unescaped ampersands can prematurely start an entity reference
@@ -111,7 +111,7 @@ export default function HtmlEntitiesPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Named entities, decimal, and hexadecimal numeric character references
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             The five characters that most often need escaping in HTML text and attributes map to
             well-known names: amp, lt, gt, quot, and the apostrophe as a numeric reference for broad
             compatibility. Numeric forms such as decimal 233 or hex E9 reference Unicode code points
@@ -165,7 +165,7 @@ export default function HtmlEntitiesPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Workflows: Markdown, JSON, APIs, and email HTML
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             When you convert prose with the{" "}
             <Link
               href="/dev/markdown-to-html"
@@ -196,7 +196,7 @@ export default function HtmlEntitiesPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Common pitfalls: double encoding, attribute context, and URL text
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">Double encoding</strong> turns a visible
             ampersand into multiple amp layers after a second pass—decode once, verify the plain
             text, then encode exactly once before publishing. In attribute context, always wrap
@@ -208,7 +208,7 @@ export default function HtmlEntitiesPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
               href="/#code-developer-tools"

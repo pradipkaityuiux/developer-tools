@@ -69,7 +69,7 @@ export default function CanonicalTagCheckerPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             How to use this canonical URL checker
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Paste the{" "}
             <strong>page URL</strong> you care about—category pages, product
             detail URLs, blog posts with query parameters, or landing pages from
@@ -114,7 +114,7 @@ export default function CanonicalTagCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Why canonical tags matter for technical SEO
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Search engines discover many URLs that render similar content:
             tracking IDs (<code className="text-sm">utm_</code>, session keys),
             printable paths, faceted navigation, HTTP and HTTPS pairs, and
@@ -238,7 +238,7 @@ export default function CanonicalTagCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords and concepts this tool helps you audit
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Teams search for phrases like{" "}
             <em>canonical tag checker</em>, <em>rel canonical validator</em>, and{" "}
             <em>duplicate canonical SEO</em> when preparing migrations, fixing
@@ -251,7 +251,7 @@ export default function CanonicalTagCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related free tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
               href="/#website-url-tools"

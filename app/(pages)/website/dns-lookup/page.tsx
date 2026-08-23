@@ -72,7 +72,7 @@ export default function DnsLookupPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             How to use this DNS lookup tool
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Type the hostname your users type in the browser (for example{" "}
             <code className="rounded bg-zinc-100 px-1 py-0.5 text-sm dark:bg-zinc-900">
               www.example.com
@@ -138,7 +138,7 @@ export default function DnsLookupPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             When to pair DNS lookup with other checks
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             DNS tells you <em>where</em> traffic should go; transport security tells
             you <em>how safely</em> it arrives. After MX or A records change, verify
             TLS with our{" "}
@@ -189,7 +189,7 @@ export default function DnsLookupPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Practical DNS troubleshooting guide
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Start by confirming the <strong>exact hostname</strong> users hit—apex
             versus <code className="text-sm">www</code> versus a regional subdomain.
             Run <strong>ALL</strong> lookups after any DNS edit, then narrow to the
@@ -200,7 +200,7 @@ export default function DnsLookupPage() {
             decay or flush local caches only as a diagnostic step—end users still
             depend on global resolver behavior.
           </p>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Email authentication stacks almost always require coherent{" "}
             <strong>TXT</strong> publishing: one SPF policy per aligned domain,
             selector-based DKIM records from your ESP, and a DMARC policy hosted on{" "}
@@ -213,7 +213,7 @@ export default function DnsLookupPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related free tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
               href="/#website-url-tools"

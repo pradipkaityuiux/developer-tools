@@ -71,7 +71,7 @@ export default function HtmlFormatterPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why use an online HTML formatter?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Messy markup slows down reviews: inconsistent indentation hides
             nesting mistakes, duplicate wrappers, and forgotten closing tags.
             An{" "}
@@ -111,7 +111,7 @@ export default function HtmlFormatterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             HTML minifier vs beautifier — when to use each
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">Beautify</strong>{" "}
             (pretty-print) is for humans: code review, teaching, and debugging
             nested components.{" "}
@@ -199,7 +199,7 @@ export default function HtmlFormatterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             HTML formatting for SEO-friendly templates
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Search engines care about discoverable content, fast loads, and
             valid signals—not tab width—but clean markup makes it easier to
             audit heading hierarchy, canonical links, and structured data blocks
@@ -224,7 +224,7 @@ export default function HtmlFormatterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Converting between HTML and Markdown
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Documentation and README files often live in Markdown while sites
             consume HTML. When you need to migrate prose, use the{" "}
             <Link
@@ -248,7 +248,7 @@ export default function HtmlFormatterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Limitations to keep in mind
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browsers follow the HTML parsing algorithm: they repair broken tags
             and may reorder elements compared with your original bytes. That is
             expected and matches what visitors experience. The preview iframe
@@ -260,7 +260,7 @@ export default function HtmlFormatterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
               href="/#code-developer-tools"

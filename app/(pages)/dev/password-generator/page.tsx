@@ -105,7 +105,7 @@ export default function PasswordGeneratorPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why developers still need a dedicated password generator
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Product and QA workflows constantly require fresh credentials:
             disposable admin logins, per-environment service accounts, OAuth
             client secrets in .env samples, and CSVs full of users for
@@ -227,7 +227,7 @@ export default function PasswordGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords and search intents this page covers
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Teams search for a{" "}
             <strong className="font-medium text-foreground">
               secure random password generator
@@ -259,7 +259,7 @@ export default function PasswordGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Entropy, length, and password policy (practical notes)
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             The UI shows an{" "}
             <strong className="font-medium text-foreground">
               approximate entropy estimate
@@ -280,7 +280,7 @@ export default function PasswordGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Privacy and security boundaries
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Generated values never leave the tab unless you copy them
             elsewhere. Avoid pasting production secrets into shared screen-share
             sessions or ticket systems that retain history. For structured test
@@ -304,7 +304,7 @@ export default function PasswordGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
               href="/#code-developer-tools"

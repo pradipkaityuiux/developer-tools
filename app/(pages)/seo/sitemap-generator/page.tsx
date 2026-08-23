@@ -94,7 +94,7 @@ export default function SitemapGeneratorPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             What is an XML sitemap and why do SEO teams use it?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             An{" "}
             <strong className="font-medium text-foreground">XML sitemap</strong>{" "}
             is a machine-readable inventory of important pages on your site.
@@ -198,7 +198,7 @@ export default function SitemapGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords and topics this sitemap tool supports
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Content and growth teams often search for an{" "}
             <strong className="font-medium text-foreground">
               XML sitemap generator
@@ -249,7 +249,7 @@ export default function SitemapGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Limits, best practices, and migration audits
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Each sitemap may contain up to{" "}
             <strong className="font-medium text-foreground">
               50,000 URLs
@@ -283,7 +283,7 @@ export default function SitemapGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related SEO and site utilities
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
               href="/#seo-tools"

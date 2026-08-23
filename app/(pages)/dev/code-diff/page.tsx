@@ -95,7 +95,7 @@ export default function CodeDiffPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why use a browser-based code diff checker?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Engineers and technical writers constantly juggle{" "}
             <strong className="font-medium text-foreground">
               before/after snippets
@@ -223,7 +223,7 @@ export default function CodeDiffPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords and workflows teams search for
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             People look for an{" "}
             <strong className="font-medium text-foreground">
               online text diff
@@ -266,7 +266,7 @@ export default function CodeDiffPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Line-based diffing vs character-level and semantic tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             This checker aligns{" "}
             <strong className="font-medium text-foreground">whole lines</strong>{" "}
             using a classic{" "}
@@ -294,7 +294,7 @@ export default function CodeDiffPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Privacy, limits, and when to stay in Git
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Nothing leaves your tab during comparison, which helps regulated
             teams and consultants working on NDA code. Each side caps at a few
             thousand lines to protect memory—slice functions or modules for
@@ -323,7 +323,7 @@ export default function CodeDiffPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
               href="/#code-developer-tools"

@@ -98,7 +98,7 @@ export default function WhitespaceRemoverPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why normalize whitespace?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Extra whitespace is a common source of validation errors, fuzzy
             duplicate detection, and broken CSV columns. Marketing and support
             teams paste from documents that use non-breaking spaces; engineers
@@ -182,7 +182,7 @@ export default function WhitespaceRemoverPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords and intents this page supports
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             People search for remove extra spaces online, trim pasted text,
             strip leading and trailing whitespace, collapse tabs, delete blank
             lines, and fix PDF copy spacing. The controls map directly to those
@@ -207,7 +207,7 @@ export default function WhitespaceRemoverPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Collapse spaces versus code and markup
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Collapsing horizontal whitespace treats runs of spaces, tabs, and
             common non-breaking spaces on each line; it does not parse JSON,
             HTML, or CSS trees. For syntax-aware formatting, run the{" "}
@@ -237,7 +237,7 @@ export default function WhitespaceRemoverPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Privacy and performance
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Text never leaves your tab: processing is synchronous JavaScript
             suitable for articles, exports, and chat logs. Extremely large files
             may feel slower on low-memory devices; for multi-gigabyte logs,
@@ -247,7 +247,7 @@ export default function WhitespaceRemoverPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related text and string tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
               href="/#text-string-tools"

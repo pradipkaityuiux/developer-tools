@@ -99,7 +99,7 @@ export default function RateLimitCalculatorPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why model RPM together with a daily quota?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Many SaaS and cloud APIs expose{" "}
             <strong className="font-medium text-foreground">
               multiple independent limits
@@ -214,7 +214,7 @@ export default function RateLimitCalculatorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Rate limiting, throttling, and HTTP semantics
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             When a client exceeds a limit, servers often return{" "}
             <strong className="font-medium text-foreground">
               HTTP 429 Too Many Requests
@@ -241,7 +241,7 @@ export default function RateLimitCalculatorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords and search intent this page covers
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Teams search for an{" "}
             <strong className="font-medium text-foreground">
               API rate limit calculator
@@ -284,7 +284,7 @@ export default function RateLimitCalculatorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related free API developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
               href="/#api-developer-toolbox"

@@ -105,7 +105,7 @@ export default function ImageToBase64Page() {
           <h2 className="text-xl font-semibold tracking-tight">
             What is Base64 image encoding and when teams use data URIs
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">Base64</strong> maps
             binary bytes to ASCII text (RFC 4648). For images, wrapping that
             string in{" "}
@@ -232,7 +232,7 @@ export default function ImageToBase64Page() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Performance, SEO, and email: when inlining helps or hurts
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Data URIs remove extra HTTP requests for tiny assets, which can help
             simple landing experiments and{" "}
             <strong className="font-medium text-foreground">
@@ -256,7 +256,7 @@ export default function ImageToBase64Page() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Privacy and security reminders for screenshots
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Base64 does not encrypt—anyone with the string can decode the image.
             Because conversion happens locally, you reduce exposure compared to
             uploading sensitive UI captures to random cloud converters. Still,
@@ -275,7 +275,7 @@ export default function ImageToBase64Page() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related file and developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
               href="/#file-data-tools"

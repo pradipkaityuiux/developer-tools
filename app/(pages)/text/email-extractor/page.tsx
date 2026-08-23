@@ -96,7 +96,7 @@ export default function EmailExtractorPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why a dedicated email address extractor still matters
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Spreadsheets and IDEs can search for an{" "}
             <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-sm dark:bg-zinc-900">
               @
@@ -198,7 +198,7 @@ export default function EmailExtractorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords and workflows this page supports
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             People search for an{" "}
             <strong className="font-medium text-foreground">
               email scraper from text
@@ -231,7 +231,7 @@ export default function EmailExtractorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             HTML, mailto links, and extraction limits
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Script and style blocks are discarded before the text pass so inline
             JavaScript is less likely to pollute results.{" "}
             <strong className="font-medium text-foreground">mailto:</strong>{" "}
@@ -245,7 +245,7 @@ export default function EmailExtractorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Compliance, consent, and responsible outreach
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Extracting addresses is only the technical step. Sending bulk mail
             requires appropriate consent, accurate unsubscribe handling, and
             respect for regional rules such as CAN-SPAM, GDPR, and CASL. Use
@@ -257,7 +257,7 @@ export default function EmailExtractorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related text, file, and data tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Continue in{" "}
             <Link
               href="/#text-string-tools"

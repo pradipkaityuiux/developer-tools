@@ -115,7 +115,7 @@ export default function KeywordDensityPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why keyword density and prominence still matter for editorial QA
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Modern ranking systems emphasize intent, links, and content quality,
             but content teams still run{" "}
             <strong className="font-medium text-foreground">
@@ -245,7 +245,7 @@ export default function KeywordDensityPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keyword density formulas and what we display
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Many SEO checklists use{" "}
             <strong className="font-medium text-foreground">
               (occurrences × words in phrase) ÷ total words × 100
@@ -287,7 +287,7 @@ export default function KeywordDensityPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Internal links: structured data, hreflang, and technical SEO
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Keyword placement is only one layer of on-page work. When you expand
             to multi-language sites, build correct clusters with the{" "}
             <Link
@@ -330,7 +330,7 @@ export default function KeywordDensityPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related SEO tools on Zero Snippet
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore utilities under{" "}
             <Link
               href="/#seo-tools"

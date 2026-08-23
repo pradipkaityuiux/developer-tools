@@ -87,7 +87,7 @@ export default function JsonFormatterPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why format and validate JSON?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">JSON</strong>{" "}
             (JavaScript Object Notation) is the lingua franca of modern APIs,
             browser storage, and infrastructure-as-code snippets. A dedicated{" "}
@@ -224,7 +224,7 @@ export default function JsonFormatterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             JSON formatting rules and common pitfalls
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Valid JSON requires{" "}
             <strong className="font-medium text-foreground">
               double-quoted strings
@@ -270,7 +270,7 @@ export default function JsonFormatterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Pretty-print vs minify: when to use each
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">
               Pretty-printed JSON
             </strong>{" "}
@@ -288,7 +288,7 @@ export default function JsonFormatterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             JSON in APIs, configs, and SEO-adjacent workflows
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Product and marketing engineers often touch JSON when wiring{" "}
             <strong className="font-medium text-foreground">
               analytics payloads
@@ -317,7 +317,7 @@ export default function JsonFormatterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
               href="/#code-developer-tools"

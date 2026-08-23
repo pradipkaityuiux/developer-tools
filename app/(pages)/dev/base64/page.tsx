@@ -96,7 +96,7 @@ export default function Base64Page() {
           <h2 className="text-xl font-semibold tracking-tight">
             What is Base64 and why teams still rely on it
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">Base64</strong> is
             a binary-to-text encoding defined in{" "}
             <strong className="font-medium text-foreground">RFC 4648</strong>.
@@ -206,7 +206,7 @@ export default function Base64Page() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             UTF-8 vs raw btoa — keywords that explain the difference
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Searchers often look for{" "}
             <strong className="font-medium text-foreground">
               Base64 encode Unicode
@@ -232,7 +232,7 @@ export default function Base64Page() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Standard Base64 vs Base64URL in JWTs and APIs
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">JSON Web Tokens</strong>{" "}
             use Base64URL for the header and payload segments: no padding{" "}
             <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-sm dark:bg-zinc-900">
@@ -268,7 +268,7 @@ export default function Base64Page() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Data URIs, HTML, and performance-minded embedding
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             A{" "}
             <strong className="font-medium text-foreground">data URI</strong>{" "}
             combines a MIME type with inline Base64, for example{" "}
@@ -291,7 +291,7 @@ export default function Base64Page() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Security, privacy, and compliance notes
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Because encoding is reversible, never treat Base64 as protection for
             personal data in logs or URLs. Prefer redaction and access controls.
             This tool keeps processing client-side, which helps when you handle
@@ -317,7 +317,7 @@ export default function Base64Page() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
               href="/#code-developer-tools"

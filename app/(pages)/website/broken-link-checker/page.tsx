@@ -63,7 +63,7 @@ export default function BrokenLinkCheckerPage() {
             <h2 className="text-xl font-semibold tracking-tight">
               How to use this link scanner
             </h2>
-            <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+            <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
               Paste the full address of a page you control or want to audit—
               for example a blog article, documentation page, or marketing URL.
               Submit the form to fetch that page and enumerate links. Each row
@@ -90,7 +90,7 @@ export default function BrokenLinkCheckerPage() {
             <h2 className="mt-10 text-xl font-semibold tracking-tight">
               Why run outbound link checks?
             </h2>
-            <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+            <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
               Outbound references rot when partners rename paths, CDNs change, or
               old campaigns expire. A dedicated{" "}
               <strong>website link scanner</strong> surfaces those regressions
@@ -114,7 +114,7 @@ export default function BrokenLinkCheckerPage() {
             <h2 className="mt-10 text-xl font-semibold tracking-tight">
               Related free tools
             </h2>
-            <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+            <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
               Explore more utilities from the same category on our{" "}
               <Link
                 href="/#website-url-tools"

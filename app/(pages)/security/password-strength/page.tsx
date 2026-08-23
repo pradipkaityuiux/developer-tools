@@ -94,7 +94,7 @@ export default function PasswordStrengthPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why measure password strength with entropy and crack-time brackets?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Developers and security teams still need a quick way to explain why
             “P@ssw0rd!” is weaker than it looks. This page targets searches like{" "}
             <strong className="font-medium text-foreground">
@@ -193,7 +193,7 @@ export default function PasswordStrengthPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Entropy, patterns, and what this meter does not do
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             High charset diversity and length drive raw entropy; predictable
             structure reduces effective strength. We apply modest penalties for
             long keyboard runs, sequential digits, heavy character repetition, and
@@ -206,7 +206,7 @@ export default function PasswordStrengthPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Internal tools that pair with stronger passwords
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             After you pick a strong login secret, you might still validate transport
             and metadata: inspect responses with the{" "}
             <Link
@@ -242,7 +242,7 @@ export default function PasswordStrengthPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related security and encryption tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             More from the{" "}
             <Link
               href="/#security-encryption-tools"

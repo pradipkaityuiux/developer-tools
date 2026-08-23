@@ -110,7 +110,7 @@ export default function ImageMetadataPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             What is EXIF metadata and why teams inspect it
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">EXIF</strong> is a
             common way cameras and phones store technical metadata inside image
             files: manufacturer, model, lens identifiers, exposure triangle
@@ -216,7 +216,7 @@ export default function ImageMetadataPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             GPS, privacy, and social exports
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             When GPS IFD data exists, this tool shows coordinates and related
             fields so you can decide whether to strip them. Many mobile apps now
             remove{" "}
@@ -244,7 +244,7 @@ export default function ImageMetadataPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Limitations: stripped files, screenshots, and RAW containers
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             If platforms removed EXIF, you will see dimensions but few tags.
             Screenshots and synthetic graphics typically lack camera exposure
             blocks. Some proprietary RAW bundles are not fully decodable in the
@@ -264,7 +264,7 @@ export default function ImageMetadataPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related file and developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
               href="/#file-data-tools"

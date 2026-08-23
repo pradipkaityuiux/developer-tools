@@ -107,7 +107,7 @@ export default function JwtEncoderPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why teams need a JWT encoder during development
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Microservices and SPAs increasingly rely on{" "}
             <strong className="font-medium text-foreground">JSON Web Tokens</strong>{" "}
             for{" "}
@@ -150,7 +150,7 @@ export default function JwtEncoderPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             How HS256 signing works (short guide)
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             HS256 uses a shared secret: the same key material signs the token and
             verifies it on the resource server. The JWT header normally declares{" "}
             <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-sm dark:bg-zinc-900">
@@ -237,7 +237,7 @@ export default function JwtEncoderPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords and search intents this page covers
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Developers often search for an{" "}
             <strong className="font-medium text-foreground">online JWT maker</strong>,{" "}
             <strong className="font-medium text-foreground">HS256 token generator</strong>,{" "}
@@ -267,7 +267,7 @@ export default function JwtEncoderPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Security and limitations
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             This utility only implements{" "}
             <strong className="font-medium text-foreground">HS256</strong>. It does not
             issue refresh tokens, manage JWKS rotation, or validate{" "}
@@ -289,7 +289,7 @@ export default function JwtEncoderPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related security &amp; encryption tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Highlights from the catalog (also listed on the{" "}
             <Link
               href="/#security-encryption-tools"

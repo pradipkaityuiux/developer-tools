@@ -96,7 +96,7 @@ export default function UuidGeneratorPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why teams use UUID v4 instead of auto-increment integers
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             A{" "}
             <strong className="font-medium text-foreground">
               UUID (Universally Unique Identifier)
@@ -189,7 +189,7 @@ export default function UuidGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords and search intents this tool covers
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Engineers often search for a{" "}
             <strong className="font-medium text-foreground">
               GUID generator online
@@ -228,7 +228,7 @@ export default function UuidGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Privacy, security, and when not to use UUID v4
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Random UUIDs are excellent for uniqueness and safe exposure in many
             APIs, but they are{" "}
             <strong className="font-medium text-foreground">
@@ -251,7 +251,7 @@ export default function UuidGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             UUID v4 in databases and ORMs (quick reference)
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             PostgreSQL offers{" "}
             <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-sm dark:bg-zinc-900">
               gen_random_uuid()
@@ -273,7 +273,7 @@ export default function UuidGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
               href="/#code-developer-tools"

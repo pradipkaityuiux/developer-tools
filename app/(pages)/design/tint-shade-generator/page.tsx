@@ -105,7 +105,7 @@ export default function TintShadeGeneratorPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why tints and shades matter for design systems and product UI
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             A single brand hex is rarely enough for production interfaces. You
             need{" "}
             <strong className="font-medium text-foreground">
@@ -238,7 +238,7 @@ export default function TintShadeGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords and workflows this page supports
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Teams search for{" "}
             <strong className="font-medium text-foreground">
               make color lighter online
@@ -263,7 +263,7 @@ export default function TintShadeGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Privacy and accessibility notes
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Image sampling uses the Canvas API inside your browser; images are not
             sent to our servers for color extraction. The base contrast numbers
             shown are simplified references against pure white and black—always
@@ -280,7 +280,7 @@ export default function TintShadeGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related design and color tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore more from the{" "}
             <Link
               href="/#design-color-tools"

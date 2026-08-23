@@ -93,7 +93,7 @@ export default function UrlEncoderPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why URL encoding matters for developers and SEO
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">
               Percent-encoding
             </strong>{" "}
@@ -148,7 +148,7 @@ export default function UrlEncoderPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             encodeURIComponent vs encodeURI (quick reference)
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">
               encodeURIComponent
             </strong>{" "}
@@ -212,7 +212,7 @@ export default function UrlEncoderPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Common pitfalls: double encoding, raw ampersands, and UTF-8
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">Double encoding</strong>{" "}
             happens when a framework already encodes a value and you encode again
             before concatenating—servers see <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-sm dark:bg-zinc-900">%2520</code>{" "}
@@ -229,7 +229,7 @@ export default function UrlEncoderPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             JSON, APIs, and structured data workflows
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             REST and GraphQL gateways often log percent-encoded URLs inside JSON.
             When you need to inspect payloads before encoding URL fields, run them
             through the{" "}
@@ -248,7 +248,7 @@ export default function UrlEncoderPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
               href="/#code-developer-tools"

@@ -119,7 +119,7 @@ export default function OAuth2FlowVisualizerPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why visualize OAuth 2.0 flows?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Teams implementing{" "}
             <strong className="font-medium text-foreground">login</strong>,{" "}
             <strong className="font-medium text-foreground">SSO</strong>, or{" "}
@@ -249,7 +249,7 @@ export default function OAuth2FlowVisualizerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords: OAuth 2.0 authorization code, PKCE, and OpenID Connect
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Engineers search for{" "}
             <strong className="font-medium text-foreground">
               OAuth 2.0 authorization code flow explained
@@ -300,7 +300,7 @@ export default function OAuth2FlowVisualizerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Security notes for production OAuth deployments
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Treat this page as a{" "}
             <strong className="font-medium text-foreground">
               teaching and debugging aid
@@ -323,7 +323,7 @@ export default function OAuth2FlowVisualizerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related API and developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
               href="/#api-developer-toolbox"

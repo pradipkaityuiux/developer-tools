@@ -83,7 +83,7 @@ export default function TextToBinaryPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why a dedicated binary string converter still matters
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Compilers and runtimes already speak binary, but humans learn faster
             when they can see each byte spelled out as{" "}
             <strong className="font-medium text-foreground">
@@ -179,7 +179,7 @@ export default function TextToBinaryPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords and learning paths this page supports
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             People often search for a{" "}
             <strong className="font-medium text-foreground">
               binary translator for text
@@ -213,7 +213,7 @@ export default function TextToBinaryPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             UTF-8, security, and when not to use binary obfuscation
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Binary encoding is reversible by anyone who copies the string—it is
             not encryption. For classroom Caesar shifts or ROT13 demos, use the{" "}
             <Link
@@ -244,7 +244,7 @@ export default function TextToBinaryPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Limitations compared with hex editors and protocol analyzers
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             This utility targets human-readable Unicode text, not arbitrary file
             contents. Large binaries, images, or compressed blobs should be opened
             in a hex editor or analyzed with packet tools; decoding random bytes
@@ -263,7 +263,7 @@ export default function TextToBinaryPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related text and string tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore more utilities under{" "}
             <Link
               href="/#text-string-tools"

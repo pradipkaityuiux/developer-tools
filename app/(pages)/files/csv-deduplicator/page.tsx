@@ -91,7 +91,7 @@ export default function CsvDeduplicatorPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why deduplicate CSV files before imports?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Duplicate rows inflate bounce risk in email campaigns, skew analytics
             in ad audiences, and break uniqueness constraints in databases.
             Marketing automation platforms often charge by contact count, so a
@@ -227,7 +227,7 @@ export default function CsvDeduplicatorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Column keys vs full-row deduplication
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">
               Selective column deduplication
             </strong>{" "}
@@ -250,7 +250,7 @@ export default function CsvDeduplicatorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Delimiters, locales, and data hygiene
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Excel and Google Sheets often export{" "}
             <strong className="font-medium text-foreground">
               locale-specific CSV
@@ -272,7 +272,7 @@ export default function CsvDeduplicatorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Privacy and performance
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Parsing and duplicate detection run locally in your browser—useful for
             GDPR-sensitive lists, unreleased catalog updates, and large
             spreadsheets you do not want to upload to third-party SaaS. Very large
@@ -284,7 +284,7 @@ export default function CsvDeduplicatorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related file and data tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
               href="/#file-data-tools"

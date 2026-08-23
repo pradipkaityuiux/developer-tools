@@ -98,7 +98,7 @@ export default function FileHashPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             What is a file checksum and when teams verify MD5 or SHA-256
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             A{" "}
             <strong className="font-medium text-foreground">
               cryptographic hash
@@ -196,7 +196,7 @@ export default function FileHashPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Integrity vs. authenticity: what hashing proves
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Matching a checksum proves your bits equal the reference bits at the
             time someone generated that reference—it does not prove the file is
             safe, licensed, or unmodified by an attacker who also controls the
@@ -212,7 +212,7 @@ export default function FileHashPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Privacy and limits for sensitive exports
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Because processing stays in-tab, you avoid sending proprietary CSV
             or database dumps to random cloud converters. Very large files can
             still stress RAM; prefer command-line{" "}
@@ -248,7 +248,7 @@ export default function FileHashPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related file and developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
               href="/#file-data-tools"

@@ -83,7 +83,7 @@ export default function RegexTesterPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             What is a JavaScript regex tester?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             A{" "}
             <strong className="font-medium text-foreground">
               JavaScript regex tester
@@ -195,7 +195,7 @@ export default function RegexTesterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Regex flags cheat sheet (g, i, m, s, u, y, d)
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">g (global)</strong>{" "}
             keeps searching after the first success; without it, only the first
             match is reported—mirroring how{" "}
@@ -231,7 +231,7 @@ export default function RegexTesterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Capture groups, backreferences, and named groups
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Each pair of unescaped parentheses creates a{" "}
             <strong className="font-medium text-foreground">
               numbered capture
@@ -254,7 +254,7 @@ export default function RegexTesterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             When to pair regex with text and SEO utilities
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Regular expressions shine for{" "}
             <strong className="font-medium text-foreground">
               structured-but-noisy text
@@ -291,7 +291,7 @@ export default function RegexTesterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related free developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
               href="/#code-developer-tools"

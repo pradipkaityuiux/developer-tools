@@ -115,7 +115,7 @@ export default function Rot13Page() {
           <h2 className="text-xl font-semibold tracking-tight">
             What ROT13 is (and when to use an online ROT13 tool)
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Searchers look for an{" "}
             <strong className="font-medium text-foreground">
               ROT13 translator
@@ -222,7 +222,7 @@ export default function Rot13Page() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords and workflows: ROT13 vs Caesar, security, and UTF-8
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             People often ask how{" "}
             <strong className="font-medium text-foreground">
               ROT13 differs from a general Caesar cipher
@@ -264,7 +264,7 @@ export default function Rot13Page() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Limitations and honest expectations
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             This page implements classic ASCII-range ROT13: accented Latin
             letters and other Unicode scripts are not rotated, which matches how
             most historical ROT13 examples behave. Extremely large pastes may
@@ -279,7 +279,7 @@ export default function Rot13Page() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related text &amp; string tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
               href="/#text-string-tools"

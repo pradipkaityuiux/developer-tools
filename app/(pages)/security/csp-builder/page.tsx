@@ -97,7 +97,7 @@ export default function CspBuilderPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             What is a Content Security Policy (CSP) header?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             A{" "}
             <strong className="font-medium text-foreground">
               Content Security Policy
@@ -194,7 +194,7 @@ export default function CspBuilderPage() {
             Directive guide: default-src, script-src, frame-ancestors, and
             reporting
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">default-src</strong>{" "}
             is the usual starting point: it applies when a more specific
             directive is absent. Most teams combine it with explicit{" "}
@@ -233,7 +233,7 @@ export default function CspBuilderPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Deploying CSP on nginx, Apache, CDNs, and application frameworks
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             After you copy the header, attach it at the edge or origin:{" "}
             <strong className="font-medium text-foreground">nginx</strong> uses{" "}
             <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-sm dark:bg-zinc-900">
@@ -258,7 +258,7 @@ export default function CspBuilderPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords and topics this CSP tool supports
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Teams search for{" "}
             <strong className="font-medium text-foreground">
               CSP unsafe-inline alternative
@@ -298,7 +298,7 @@ export default function CspBuilderPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related security utilities on this site
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
               href="/#security-encryption-tools"

@@ -82,7 +82,7 @@ export default function JsonToCsvPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why convert JSON to CSV?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">JSON</strong> is the
             lingua franca of modern APIs and document stores: nested, flexible,
             and easy for programs to consume.{" "}
@@ -107,7 +107,7 @@ export default function JsonToCsvPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             JSON shapes this tool handles
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             The most common pattern is a top-level{" "}
             <strong className="font-medium text-foreground">
               array of objects
@@ -204,7 +204,7 @@ export default function JsonToCsvPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Automatic column detection and ordering
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Headers are built by scanning objects in array order. The first time
             a key appears, it claims its column position; new keys discovered on
             later rows extend the table to the right. Empty cells mean that row
@@ -219,7 +219,7 @@ export default function JsonToCsvPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Escaping, delimiters, and Excel compatibility
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Fields that contain quotes, line breaks, or the active delimiter are
             wrapped in double quotes, with internal quotes doubled, matching
             common{" "}
@@ -234,7 +234,7 @@ export default function JsonToCsvPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             When to use YAML or keep JSON
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             CSV is not a substitute for hierarchical config. If you are editing
             Kubernetes or CI configs, a dedicated{" "}
             <Link
@@ -258,7 +258,7 @@ export default function JsonToCsvPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related free developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
               href="/#code-developer-tools"

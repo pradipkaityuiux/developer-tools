@@ -86,7 +86,7 @@ export default function SlugGeneratorPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why URL slugs still matter for SEO and product UX
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Search engines and humans both scan URLs in SERPs, analytics, and
             shared links. A predictable{" "}
             <strong className="font-medium text-foreground">
@@ -194,7 +194,7 @@ export default function SlugGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords and workflows this slugify tool supports
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Content editors search for a{" "}
             <strong className="font-medium text-foreground">
               blog slug generator
@@ -225,7 +225,7 @@ export default function SlugGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Rules, edge cases, and CMS checks
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             This utility removes combining marks after NFD normalization, which
             covers many Western accents but is not a full transliteration table
             for every script. Emoji and pure punctuation lines may yield empty
@@ -246,7 +246,7 @@ export default function SlugGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Limitations compared with server-side slug pipelines
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Production systems often append collision-safe suffixes, consult a
             database for uniqueness, or map locale-specific transliterations.
             This page focuses on fast, private preview generation in the tab—not
@@ -266,7 +266,7 @@ export default function SlugGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related text and string tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full catalog under{" "}
             <Link
               href="/#text-string-tools"

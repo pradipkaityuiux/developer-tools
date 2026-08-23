@@ -84,7 +84,7 @@ export default function SqlFormatterPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why use a SQL pretty printer?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Readable{" "}
             <strong className="font-medium text-foreground">
               SQL formatting
@@ -188,7 +188,7 @@ export default function SqlFormatterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Dialect-aware formatting vs generic pretty print
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Generic text wrap breaks as soon as a dialect uses unusual quoting
             rules—think PostgreSQL dollar-quoted strings, SQL Server bracketed
             identifiers, or BigQuery backticks. A{" "}
@@ -203,7 +203,7 @@ export default function SqlFormatterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             SQL style guides: keywords, identifiers, and joins
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Many teams standardize on{" "}
             <strong className="font-medium text-foreground">
               uppercase SQL keywords
@@ -224,7 +224,7 @@ export default function SqlFormatterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Security and privacy when formatting SQL
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Even though formatting is{" "}
             <strong className="font-medium text-foreground">client-side</strong>,
             pasted SQL may still contain PII in literals or comments. Treat the
@@ -249,7 +249,7 @@ export default function SqlFormatterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related free developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
               href="/#code-developer-tools"

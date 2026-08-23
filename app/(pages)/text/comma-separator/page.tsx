@@ -90,7 +90,7 @@ export default function CommaSeparatorPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why use a comma separator for lists and CSV snippets?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Copy-paste between apps rarely preserves the shape you need. CRM and
             analytics exports often arrive as one column per line, while forms
             and databases want a single{" "}
@@ -199,7 +199,7 @@ export default function CommaSeparatorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Join mode: from newline list to CSV-style line
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Each non-skipped line becomes one field. Minimal quoting wraps only
             values that contain the delimiter, double quotes, or line breaks—so
             addresses, product titles, and JSON fragments survive intact. If you
@@ -217,7 +217,7 @@ export default function CommaSeparatorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Split mode: from delimited text to one value per line
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             The splitter understands quoted segments, so commas inside{" "}
             <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-sm dark:bg-zinc-900">
               &quot;like this, with commas&quot;
@@ -239,7 +239,7 @@ export default function CommaSeparatorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Privacy, limits, and when to use heavier tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Conversion runs entirely client-side. Very large files may feel slow
             on older devices; for huge datasets prefer command-line tools or the
             streaming workflows in your database. This UI targets clipboard-sized
@@ -258,7 +258,7 @@ export default function CommaSeparatorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related text and file tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
               href="/#text-string-tools"

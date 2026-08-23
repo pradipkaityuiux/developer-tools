@@ -90,7 +90,7 @@ export default function TextReverserPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             When a dedicated string reverser beats your editor
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Most IDEs can reverse a selection with macros or extensions, but
             sharing that trick across a team is awkward—and multi-line rules
             differ. A focused{" "}
@@ -186,7 +186,7 @@ export default function TextReverserPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords and workflows this page supports
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             People often search for an{" "}
             <strong className="font-medium text-foreground">
               online backwards text maker
@@ -229,7 +229,7 @@ export default function TextReverserPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Unicode, emoji, and accessibility notes
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Reversal walks Unicode scalar values in order, which covers most
             emoji and accented letters you will paste from the web. Screen
             readers may announce reversed words oddly—that is expected when you
@@ -249,7 +249,7 @@ export default function TextReverserPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Limitations compared with custom scripts
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             This utility does not implement grapheme cluster rules for every
             language, regex-powered tokenizers, or reversible escaping for code.
             Developers who need language-aware segmentation should export text
@@ -281,7 +281,7 @@ export default function TextReverserPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related text and string tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full catalog under{" "}
             <Link
               href="/#text-string-tools"

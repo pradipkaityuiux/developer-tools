@@ -96,7 +96,7 @@ export default function RsaKeyGeneratorPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why generate RSA keys in the browser instead of OpenSSL?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Many developers still run{" "}
             <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-sm dark:bg-zinc-900">
               openssl genrsa
@@ -201,7 +201,7 @@ export default function RsaKeyGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords and search intents this tool covers
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             People often search for an{" "}
             <strong className="font-medium text-foreground">
               RSA key generator online
@@ -233,7 +233,7 @@ export default function RsaKeyGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             PEM format, PKCS#8, and certificates (quick guide)
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             A{" "}
             <strong className="font-medium text-foreground">PEM file</strong> is
             Base64-encoded DER with header lines such as{" "}
@@ -265,7 +265,7 @@ export default function RsaKeyGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Security notes and responsible use
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Treat generated{" "}
             <strong className="font-medium text-foreground">
               RSA private keys
@@ -293,7 +293,7 @@ export default function RsaKeyGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related security and encryption tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
               href="/#security-encryption-tools"

@@ -91,7 +91,7 @@ export default function RedirectCheckerPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why redirect types matter for SEO and analytics
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Search engines treat{" "}
             <strong className="font-medium text-foreground">
               permanent redirects
@@ -225,7 +225,7 @@ export default function RedirectCheckerPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Internal links and companion tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             When campaigns need consistent measurement, build tracked URLs with
             the{" "}
             <Link

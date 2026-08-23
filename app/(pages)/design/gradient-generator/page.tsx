@@ -101,7 +101,7 @@ export default function GradientGeneratorPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why use a gradient generator for web UI and marketing pages
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Gradients add depth and hierarchy without extra image requests when
             you implement them with CSS{" "}
             <strong className="font-medium text-foreground">
@@ -214,7 +214,7 @@ export default function GradientGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Linear vs radial gradients in production CSS
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">
               Linear gradients
             </strong>{" "}
@@ -245,7 +245,7 @@ export default function GradientGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Performance and SEO notes for gradient-heavy pages
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Pure CSS gradients avoid extra HTTP requests compared to large
             background PNGs or JPEGs, which supports{" "}
             <strong className="font-medium text-foreground">
@@ -268,7 +268,7 @@ export default function GradientGeneratorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related design and developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             More from the{" "}
             <Link
               href="/#design-color-tools"

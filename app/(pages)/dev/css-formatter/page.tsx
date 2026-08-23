@@ -92,7 +92,7 @@ export default function CssFormatterPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why format or minify CSS?
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Stylesheets power layout, typography, motion, and responsive
             behavior. A dedicated{" "}
             <strong className="font-medium text-foreground">
@@ -191,7 +191,7 @@ export default function CssFormatterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             CSS formatting keywords teams search for
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Designers and engineers often look for an{" "}
             <strong className="font-medium text-foreground">
               online CSS prettifier
@@ -227,7 +227,7 @@ export default function CssFormatterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Minify vs format: performance and SEO context
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">
               Minified CSS
             </strong>{" "}
@@ -249,7 +249,7 @@ export default function CssFormatterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Design tokens, variables, and modern syntax
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             <strong className="font-medium text-foreground">
               Custom properties
             </strong>{" "}
@@ -273,7 +273,7 @@ export default function CssFormatterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Limitations compared with PostCSS or Prettier
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             IDE formatters add opinionated rules: sort properties, wrap lines at
             column 80, or integrate with Stylelint. This page focuses on fast,
             private{" "}
@@ -295,7 +295,7 @@ export default function CssFormatterPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related developer tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
               href="/#code-developer-tools"

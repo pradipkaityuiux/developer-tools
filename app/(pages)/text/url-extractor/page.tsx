@@ -98,7 +98,7 @@ export default function UrlExtractorPage() {
           <h2 className="text-xl font-semibold tracking-tight">
             Why a dedicated URL extractor still matters for SEO and migrations
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Search audits, content migrations, and backlink reconciliations all
             start with reliable lists of destinations. Spreadsheets and docs
             bury links inside prose, while HTML exports interleave anchors with
@@ -214,7 +214,7 @@ export default function UrlExtractorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Keywords and workflows this page supports
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Teams search for an{" "}
             <strong className="font-medium text-foreground">
               extract URLs from HTML
@@ -242,7 +242,7 @@ export default function UrlExtractorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Privacy, accuracy, and when to escalate to a crawler
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Because processing stays client-side, you can paste regulated or
             NDA-covered snippets without uploading them. Regex-style detection
             intentionally skips non-http schemes and relative paths unless they
@@ -255,7 +255,7 @@ export default function UrlExtractorPage() {
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Related text and string tools
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full catalog under{" "}
             <Link
               href="/#text-string-tools"
