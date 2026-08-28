@@ -33,11 +33,10 @@ export function SiteFooter() {
             ))}
           </nav>
         </div>
-        <div className="flex shrink-0 items-center justify-center">
+        <div className="flex flex-wrap items-center justify-center gap-3">
           <a
             href="https://firstlook.tools"
             target="_blank"
-            rel="noopener noreferrer"
             className="inline-flex transition-opacity hover:opacity-80"
           >
             {/* Light mode badge */}
@@ -47,7 +46,7 @@ export function SiteFooter() {
               alt="Featured on First Look"
               width={160}
               height={44}
-              className="h-[44px] w-auto dark:hidden"
+              className="h-[40px] w-auto dark:hidden"
             />
             {/* Dark mode badge */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -56,7 +55,32 @@ export function SiteFooter() {
               alt="Featured on First Look"
               width={160}
               height={44}
-              className="hidden h-[44px] w-auto dark:block"
+              className="hidden h-[40px] w-auto dark:block"
+            />
+          </a>
+
+          <a
+            href="https://www.freeai.run"
+            target="_blank"
+            className="inline-flex transition-opacity hover:opacity-80"
+          >
+            {/* Light mode badge */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://www.freeai.run/badge/badge_light.svg"
+              alt="Featured on FreeAI"
+              width={153}
+              height={44}
+              className="h-[40px] w-auto dark:hidden"
+            />
+            {/* Dark mode badge */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://www.freeai.run/badge/badge_dark.svg"
+              alt="Featured on FreeAI"
+              width={153}
+              height={44}
+              className="hidden h-[40px] w-auto dark:block"
             />
           </a>
         </div>
