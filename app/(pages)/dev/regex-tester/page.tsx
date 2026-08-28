@@ -3,6 +3,7 @@ import Link from "next/link";
 import { RegexTesterTool } from "./regex-tester-tool";
 import { regexTesterFaqItems } from "@/lib/regex-tester-faq";
 import { toolSections } from "@/lib/tool-catalog";
+import { BlogCard } from "@/components/blog-card";
 
 const devTools =
   toolSections.find((s) => s.id === "code-developer-tools")?.tools ?? [];
@@ -191,6 +192,12 @@ export default function RegexTesterPage() {
               </span>
             </li>
           </ol>
+
+          <BlogCard
+            title="Regex Cheat Sheet: The 20 Patterns Developers Use Most"
+            description="Regex has a reputation for looking like someone fell asleep on a keyboard. ^(?=.*[A-Z])(?=.*\d).{8,}$ doesn't exactly explain itself. But most developers don't actually need to master the entire regex spec, they need a handful of patterns they reach for constantly: validating an email, matching a phone number, stripping whitespace, that kind of thing."
+            href="/blog/regex-cheat-sheet-common-patterns"
+          />
 
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             Regex flags cheat sheet (g, i, m, s, u, y, d)

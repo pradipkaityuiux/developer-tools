@@ -1,0 +1,176 @@
+---
+title: "Regex Cheat Sheet: The 20 Patterns Developers Use Most"
+description: "A practical regex cheat sheet covering the 20 patterns developers reach for most often, explained in plain English with real examples you can copy and use."
+date: "2026-08-23"
+tags:
+    - regex
+    - developer-tools
+    - regex cheat sheet
+    - regex generator
+    - regex builder
+---
+
+Regex has a reputation for looking like someone fell asleep on a keyboard. `^(?=.*[A-Z])(?=.*\d).{8,}$` doesn't exactly explain itself. But most developers don't actually need to master the entire regex spec, they need a handful of patterns they reach for constantly: validating an email, matching a phone number, stripping whitespace, that kind of thing.
+
+This is that list. Twenty patterns you'll actually use, explained in plain English, ready to copy.
+
+## Quick refresher: the building blocks
+
+Before the list, a fast reminder of the core symbols, since almost every pattern below is built from these:
+
+- **`.`** — matches any single character
+- **`*`** — zero or more of the previous character
+- **`+`** — one or more of the previous character
+- **`?`** — zero or one of the previous character (makes it optional)
+- **`\d`** — any digit (0-9)
+- **`\w`** — any word character (letters, digits, underscore)
+- **`\s`** — any whitespace character
+- **`^`** — start of the string
+- **`$`** — end of the string
+- **`[]`** — a character set, matches any one character inside it
+- **`{}`** — a specific count or range, like `{3}` or `{2,4}`
+- **`()`** — a capture group, for grabbing part of a match
+
+With those in your head, most of the patterns below will actually read like sentences.
+
+## The 20 patterns
+
+**1. Email address**
+```
+^[\w.-]+@[\w.-]+\.\w+$
+```
+One or more word characters, dots, or hyphens, an `@`, more of the same for the domain, a dot, then the extension. This is a "good enough" pattern for most forms. True full RFC-compliant email validation is far more complex than anyone actually needs in practice.
+
+**2. Phone number (US format)**
+```
+^\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$
+```
+Handles `(123) 456-7890`, `123-456-7890`, `123.456.7890`, and `1234567890`, all in one pattern.
+
+**3. URL**
+```
+^https?:\/\/[\w.-]+\.\w+(\/\S*)?$
+```
+Matches `http://` or `https://`, a domain, and an optional path after it.
+
+**4. Hex color code**
+```
+^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$
+```
+Matches both the 6-character (`#1a2b3c`) and shorthand 3-character (`#abc`) formats.
+
+**5. Digits only**
+```
+^\d+$
+```
+The whole string is one or more digits, nothing else. Useful for validating a numeric-only input field.
+
+**6. Letters only**
+```
+^[A-Za-z]+$
+```
+Same idea, but for alphabetic characters only, no numbers or symbols.
+
+**7. Alphanumeric only**
+```
+^[A-Za-z0-9]+$
+```
+Combines the last two. Common for usernames or slugs where you want to block symbols and spaces.
+
+**8. Whitespace trimming**
+```
+^\s+|\s+$
+```
+Matches leading or trailing whitespace so you can strip it. Most languages have a built-in `.trim()` method these days, but this is handy when you need it inside a larger regex operation.
+
+**9. Multiple spaces**
+```
+\s{2,}
+```
+Catches two or more consecutive spaces, useful for cleaning up messy text input before replacing them with a single space.
+
+**10. IPv4 address**
+```
+^(\d{1,3}\.){3}\d{1,3}$
+```
+Matches the basic shape of an IPv4 address (four number groups separated by dots). Note this checks the *format*, not whether each number is actually 0-255, which needs extra logic if you want fully strict validation.
+
+**11. Date (YYYY-MM-DD)**
+```
+^\d{4}-\d{2}-\d{2}$
+```
+Matches the ISO 8601 date format. Like the IP pattern above, it checks shape, not whether the month is actually between 01 and 12.
+
+**12. Time (HH:MM, 24-hour)**
+```
+^([01]\d|2[0-3]):[0-5]\d$
+```
+This one's stricter: hours from 00-23, minutes from 00-59. A good example of how character ranges and alternation (`|`) combine to enforce real constraints instead of just shape.
+
+**13. Password strength (min 8 chars, one uppercase, one number)**
+```
+^(?=.*[A-Z])(?=.*\d).{8,}$
+```
+This uses lookaheads (`(?=...)`), which check for a condition without consuming characters. It reads as: "somewhere in this string there's an uppercase letter, somewhere there's a digit, and the total length is at least 8."
+
+**14. Username (letters, numbers, underscores, 3-16 chars)**
+```
+^[A-Za-z0-9_]{3,16}$
+```
+A common pattern for signup forms, restricting both the allowed characters and the length range.
+
+**15. Slug (URL-friendly string)**
+```
+^[a-z0-9]+(-[a-z0-9]+)*$
+```
+Matches lowercase, hyphen-separated strings like `my-blog-post-title`, while rejecting double hyphens or leading/trailing ones.
+
+**16. HTML tag**
+```
+<\/?[\w\s="/.':;#-\/\?]+>
+```
+A loose pattern for matching HTML tags, generally used for quick stripping or detection. Worth noting: parsing real HTML with regex gets unreliable fast for anything nested or malformed. A proper HTML parser is the better tool once you're doing more than a simple strip.
+
+**17. File extension**
+```
+\.([a-zA-Z0-9]+)$
+```
+Captures everything after the last dot in a filename. The parentheses create a capture group so you can pull just the extension out of the match.
+
+**18. Comma-separated numbers (like 1,234,567)**
+```
+^\d{1,3}(,\d{3})*$
+```
+Matches numbers formatted with thousands separators, one to three digits, followed by zero or more groups of exactly three digits after a comma.
+
+**19. Non-empty string (ignoring whitespace)**
+```
+^(?!\s*$).+
+```
+A negative lookahead (`(?!...)`) that rejects strings which are empty or contain only whitespace. Handy for form validation where a few spaces shouldn't count as valid input.
+
+**20. Extracting hashtags from text**
+```
+#\w+
+```
+Matches any `#` followed by word characters, useful for pulling hashtags out of a block of social media text.
+
+## A note on lookaheads and capture groups
+
+A few of these patterns (13, 19, and the capture group in 17) use features that go beyond simple character matching. **Lookaheads** check that something exists ahead in the string without actually consuming it as part of the match, which is why you can stack multiple conditions like "contains an uppercase letter AND contains a digit" without them interfering with each other. **Capture groups** let you pull out just the part of a match you care about, rather than the whole matched string, which matters a lot once you're extracting data instead of just validating it.
+
+You don't need to fully internalize these to use the patterns above, but recognizing `(?=...)` as "check this exists" and `(...)` as "grab this part" will make a lot of regex you encounter elsewhere much less mysterious.
+
+## Testing before you ship
+
+The fastest way to get burned by regex is assuming a pattern works because it looks right, then discovering in production that it rejects valid input or, worse, lets bad input through. Edge cases (empty strings, unicode characters, unexpected whitespace) are where most regex bugs actually live.
+
+Rather than testing against live form submissions, run your pattern against a batch of real and edge-case inputs first. Our [regex tester](https://zerosnippet.com/dev/regex-tester) lets you paste in a pattern and test it against multiple strings at once, highlighting exactly what matches and what doesn't, so you catch the edge cases before your users do.
+
+## Wrapping up
+
+These twenty patterns cover the vast majority of what comes up in everyday development: validating input, extracting data, and cleaning up text. Keep this list bookmarked rather than trying to memorize regex syntax from scratch every time you need it. And when a pattern needs to handle something more specific than what's here, building it incrementally and testing against real examples beats trying to write the perfect expression in one shot.
+
+---
+
+*Need to test or build a pattern? Try our free [regex tester](https://zerosnippet.com/dev/regex-tester) — no signup required.*

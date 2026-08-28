@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FindReplaceTool } from "./find-replace-tool";
 import { findReplaceFaqItems } from "@/lib/find-replace-faq";
 import { toolSections } from "@/lib/tool-catalog";
+import { BlogCard } from "@/components/blog-card";
 
 const textTools =
   toolSections.find((s) => s.id === "text-string-tools")?.tools ?? [];
@@ -194,6 +195,11 @@ export default function FindReplacePage() {
             same shape appears with different values. Invalid patterns surface a
             clear error without mutating your text.
           </p>
+          <BlogCard
+            title="Regex Cheat Sheet: The 20 Patterns Developers Use Most"
+            description="Regex has a reputation for looking like someone fell asleep on a keyboard. ^(?=.*[A-Z])(?=.*\d).{8,}$ doesn't exactly explain itself. But most developers don't actually need to master the entire regex spec, they need a handful of patterns they reach for constantly: validating an email, matching a phone number, stripping whitespace, that kind of thing."
+            href="/blog/regex-cheat-sheet-common-patterns"
+          />
           <p className="mt-4 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
             When you only need to collapse repeated rows instead of in-line
             edits, use the{" "}

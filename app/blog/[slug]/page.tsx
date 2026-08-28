@@ -136,8 +136,9 @@ export default async function PostPage({ params }: Props) {
             prose-h3:mb-3 prose-h3:mt-8 prose-h3:text-lg
             prose-p:leading-relaxed
             prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline dark:prose-a:text-blue-400
-            prose-code:rounded prose-code:bg-zinc-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:text-blue-700 dark:prose-code:bg-zinc-800 dark:prose-code:text-blue-300
-            prose-pre:border prose-pre:border-zinc-200 dark:prose-pre:border-zinc-800
+            prose-code:rounded prose-code:bg-zinc-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:text-blue-700 prose-code:before:content-none prose-code:after:content-none dark:prose-code:bg-zinc-800 dark:prose-code:text-blue-300
+            prose-pre:rounded-xl prose-pre:border prose-pre:border-zinc-200 prose-pre:bg-zinc-50 prose-pre:text-zinc-800 dark:prose-pre:border-zinc-800 dark:prose-pre:bg-zinc-900 dark:prose-pre:text-zinc-200
+            [&_pre_code]:bg-transparent [&_pre_code]:p-0 [&_pre_code]:text-inherit [&_pre_code]:rounded-none dark:[&_pre_code]:bg-transparent dark:[&_pre_code]:text-inherit
             prose-hr:border-zinc-200 dark:prose-hr:border-zinc-800
             prose-table:text-sm"
         >
