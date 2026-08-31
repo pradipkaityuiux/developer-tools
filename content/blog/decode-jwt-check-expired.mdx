@@ -1,0 +1,139 @@
+---
+title: "How to Decode a JWT Token and Check If It's Expired (Plain English Breakdown)"
+description: "A practical, step-by-step guide to decoding a JWT by hand, understanding the exp claim, and figuring out why your token is being rejected as expired."
+date: "2026-08-26"
+tags:
+    - jwt
+    - jwt decoder
+    - authentication
+    - web-security
+    - developer-tools
+---
+
+"Token expired" is one of those errors that shows up in a log file and immediately makes you want to know two things: when did it expire, and why. The good news is you don't need a library or a debugger session to answer either question. A JWT carries that information right inside itself, in plain text, once you know how to pull it apart.
+
+Here's exactly how to decode a token by hand and read its expiration.
+
+## First, a quick reminder of what a JWT looks like
+
+A JWT is three base64-encoded segments joined by periods:
+
+```
+HEADER.PAYLOAD.SIGNATURE
+```
+
+For example:
+
+```
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiZXhwIjoxNzE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+```
+
+The part we care about for checking expiration is the middle segment, the payload. That's where the `exp` claim lives.
+
+## Decoding the payload by hand
+
+Here's the thing that surprises a lot of people the first time they learn it: **you don't need the secret key to read a JWT's payload.** The signature (the third segment) is what requires the secret key to verify. But the payload itself is just base64-encoded JSON, which anyone can decode without any special access.
+
+To decode it manually:
+
+**Step 1: Split the token by its periods.** You'll get three pieces, header, payload, and signature.
+
+**Step 2: Take the middle piece (the payload).** Using the example above, that's:
+```
+eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiZXhwIjoxNzE2MjM5MDIyfQ
+```
+
+**Step 3: Base64-decode it.** In a terminal, you can do this with:
+```bash
+echo "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiZXhwIjoxNzE2MjM5MDIyfQ" | base64 -d
+```
+
+That gives you back plain, readable JSON:
+```json
+{"sub":"1234567890","name":"John Doe","exp":1716239022}
+```
+
+A small technical note: JWTs use a variant called base64url encoding, which swaps a couple of characters (`+` becomes `-`, `/` becomes `_`) so the token is safe to use in URLs. Standard base64 decoders sometimes choke on this, and padding characters (`=`) are often stripped from JWTs entirely, which can also trip up a strict decoder. If your decode command throws an error, this is usually why. Most JWT-specific libraries and tools handle this automatically, but it's worth knowing if you're decoding by hand and hitting errors.
+
+## Reading the `exp` claim
+
+Once you've decoded the payload, look for the `exp` field. That's the expiration claim, and it's a number, not a readable date. Specifically, it's a **Unix timestamp**: the number of seconds since January 1, 1970.
+
+`1716239022` isn't something you can read at a glance, so you'll need to convert it. In JavaScript:
+
+```javascript
+const expiration = new Date(1716239022 * 1000);
+console.log(expiration.toISOString());
+```
+
+Note the `* 1000`. JavaScript's `Date` object expects milliseconds, but JWT timestamps are in seconds, so multiplying is required or you'll get a date decades off from what you expect.
+
+In Python:
+
+```python
+from datetime import datetime
+print(datetime.fromtimestamp(1716239022))
+```
+
+Either way, once converted, compare that date against the current time. If it's in the past, the token is expired.
+
+## Checking expiration programmatically
+
+If you're doing this inside an application rather than debugging by hand, the check is simple once you have the decoded payload:
+
+```javascript
+function isExpired(payload) {
+  if (!payload.exp) return false; // no exp claim means it doesn't expire
+  const now = Math.floor(Date.now() / 1000); // current time in seconds
+  return payload.exp < now;
+}
+```
+
+The key detail here: compare in the same unit. `Date.now()` returns milliseconds, `exp` is in seconds, so dividing by 1000 (and flooring to get a whole number) keeps the comparison accurate.
+
+Also worth noting: not every JWT includes an `exp` claim at all. It's a standard claim, but it's technically optional. If your token doesn't have one, it doesn't expire based on time, which is either intentional (some internal service tokens work this way) or a configuration mistake worth double-checking with whoever issued it.
+
+## Other timestamp claims worth knowing
+
+`exp` isn't the only time-related field you'll run into. A few others show up regularly:
+
+- **`iat`** (issued at) — when the token was created. Useful for figuring out how old a token is, even before checking if it's expired.
+- **`nbf`** (not before) — the token isn't valid until this time. Less common, but shows up in systems that issue tokens in advance for future use.
+
+If you're debugging an "invalid token" error that isn't specifically about expiration, checking `nbf` is worth a look, a token used too early will get rejected just like one used too late.
+
+## Why "just decode it" isn't the same as "it's valid"
+
+This is worth being clear about: decoding a JWT's payload tells you what the token claims, not whether those claims are trustworthy. Anyone can decode a token's payload, and anyone with a text editor and a base64 encoder could construct a fake payload claiming to be an admin with no expiration at all.
+
+What actually makes a JWT trustworthy is the signature, verified against the secret key (or public key, for asymmetric algorithms) that only the issuing server controls. If you're building an authentication system, checking `exp` is necessary, but it's not sufficient on its own. Your server-side code needs to verify the signature first, using a proper JWT library, before it trusts anything in the payload, including whether it's expired.
+
+Manually decoding a token to inspect its claims is genuinely useful for debugging, understanding what's inside a token you were handed, or checking why a request is failing. It's not a substitute for actual signature verification in your authentication logic.
+
+<BlogCard
+    title="JWT decoder online"
+    description="Use this free JWT decoder online to Base64URL-decode JSON Web Tokens in the common JWS compact shape (three dot-separated parts)"
+    href="/dev/jwt-decoder"
+/>
+
+## Common reasons a token gets rejected as expired
+
+A few things worth checking if you're seeing unexpected expiration errors:
+
+**Clock drift between systems.** If the server issuing the token and the server verifying it have clocks that are out of sync, even by a minute or two, tokens can appear expired earlier than expected. This is more common than people assume, especially across different cloud regions or containers.
+
+**Confusing seconds and milliseconds somewhere in your code.** This is an extremely common bug. If a token seems to expire almost immediately after being issued, or seems to last for what looks like thousands of years, a seconds/milliseconds mixup is usually the culprit.
+
+**Short-lived access tokens by design.** Some systems intentionally set very short expiration windows (minutes, not hours) and rely on a separate refresh token to issue new access tokens behind the scenes. If you're seeing frequent expiration and that seems unusual, check whether refresh logic is supposed to be running and isn't.
+
+## A faster way to check
+
+Manually decoding tokens with a terminal command works, but it's slow when you're debugging something quickly or checking a token someone just sent you. Our [JWT decoder](https://zerosnippet.com/dev/jwt-decoder) does the base64 decoding for you instantly, splitting the token into its header and payload and converting the `exp` timestamp into a readable date, so you can see at a glance whether a token has expired without writing a script for it.
+
+## Wrapping up
+
+Decoding a JWT is genuinely simple once you know the payload is just base64-encoded JSON sitting in plain sight. Pull out the middle segment, decode it, find the `exp` field, and convert that Unix timestamp into a real date to compare against right now. Just remember that decoding tells you what a token claims, not whether it's genuine, that part still depends on signature verification happening correctly on your server.
+
+---
+
+*Need to check a token quickly? Try our free [JWT decoder](https://zerosnippet.com/dev/jwt-decoder) — no signup required.*

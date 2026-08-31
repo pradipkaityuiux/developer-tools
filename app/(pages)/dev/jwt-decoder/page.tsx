@@ -237,6 +237,12 @@ export default function JwtDecoderPage() {
             </li>
           </ol>
 
+          <BlogCard
+            title="How to Decode a JWT Token and Check If It's Expired"
+            description="You don't need the secret key to read a JWT's payload. The signature (the third segment) is what requires the secret key to verify. But the payload itself is just base64-encoded JSON, which anyone can decode without any special access."
+            href="/blog/decode-jwt-check-expired"
+          />
+
           <h2 className="mt-10 text-xl font-semibold tracking-tight">
             JWT decoder keywords teams search for
           </h2>
@@ -333,7 +339,7 @@ export default function JwtDecoderPage() {
           </p>
 
           <BlogCard
-            title="What Is a JWT and How Does It Actually Work?"
+            title="What is a JWT and How Does It Actually Work?"
             description="If you've worked on anything involving login systems or APIs, you've almost certainly run into JWTs, even if nobody ever properly explained what they are."
             href="/blog/what-is-a-jwt-explained"
           />
