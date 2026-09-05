@@ -5,6 +5,7 @@ import { Menu, Search, X } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 import type { ToolEntry, ToolSection } from "@/lib/tool-catalog";
 import { GlobalToolSearchOverlay } from "@/components/global-tool-search-overlay";
+import { ToolIcon } from "@/components/tool-icon";
 import Image from "next/image";
 
 type SiteHeaderClientProps = {
@@ -92,7 +93,9 @@ export function SiteHeaderClient({ tools, sections }: SiteHeaderClientProps) {
             <Link
               href="/blog"
               className="inline-flex items-center gap-2 text-base font-normal tracking-tight text-foreground hover:opacity-80"
-            >Blogs</Link>
+            >
+              Blogs
+            </Link>
             <button
               type="button"
               onClick={() => {
@@ -139,15 +142,20 @@ export function SiteHeaderClient({ tools, sections }: SiteHeaderClientProps) {
                     >
                       {section.title}
                     </h2>
-                    <ul className="mt-3 grid list-none gap-1 sm:grid-cols-2 lg:grid-cols-3">
+                    <ul className="mt-3 grid list-none gap-2 sm:grid-cols-2 lg:grid-cols-3">
                       {section.tools.map((tool) => (
                         <li key={tool.href}>
                           <Link
                             href={tool.href}
                             onClick={closeMega}
-                            className="block rounded-lg px-2 py-2 text-sm text-foreground transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-900"
+                            className="group relative flex items-center justify-between rounded-lg border border-zinc-200/80 bg-zinc-50/50 p-2.5 transition-all duration-200 hover:border-orange-500 hover:bg-zinc-100/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 dark:border-zinc-800/80 dark:bg-zinc-900/40 dark:hover:border-orange-500 dark:hover:bg-zinc-900 dark:focus-visible:outline-zinc-100"
                           >
-                            <span className="font-medium">{tool.name}</span>
+                            <span className="text-sm font-medium text-foreground pr-2 leading-snug">
+                              {tool.name}
+                            </span>
+                            <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-orange-500/20 text-orange-500 transition-transform duration-200 group-hover:scale-110 dark:bg-orange-500/20 dark:text-orange-400">
+                              <ToolIcon name={tool.icon} className="h-3.5 w-3.5" />
+                            </div>
                           </Link>
                         </li>
                       ))}

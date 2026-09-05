@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ToolSearch } from "@/components/tool-search";
+import { ToolIcon } from "@/components/tool-icon";
+import { HeroCommitGrid } from "@/components/hero-commit-grid";
 import { allTools, toolSections, totalToolCount } from "@/lib/tool-catalog";
 
 export const metadata: Metadata = {
@@ -17,8 +19,10 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="flex flex-1 flex-col">
-      <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
-        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
+      <div className="relative border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950">
+        <HeroCommitGrid />
+
+        <div className="relative z-10 mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
           <h1 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
             Online tools for building, shipping, and optimizing the web
           </h1>
@@ -56,12 +60,17 @@ export default function Home() {
                   <li key={tool.href}>
                     <Link
                       href={tool.href}
-                      className="block h-full rounded-xl border border-zinc-200 bg-white p-4 shadow-sm transition-colors hover:border-zinc-300 hover:bg-zinc-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 dark:border-zinc-800 dark:bg-zinc-950 dark:hover:border-zinc-700 dark:hover:bg-zinc-900/80 dark:focus-visible:outline-zinc-100"
+                      className="group relative flex h-full flex-col justify-between rounded-xl border border-zinc-200 bg-white p-4 shadow-sm transition-all duration-200 hover:border-orange-500 hover:bg-zinc-50/50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 dark:border-zinc-800 dark:bg-zinc-950 dark:hover:border-orange-500 dark:hover:bg-zinc-900/80 dark:focus-visible:outline-zinc-100"
                     >
-                      <span className="block font-medium text-foreground">
-                        {tool.name}
-                      </span>
-                      <span className="mt-2 block text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+                      <div className="flex items-start justify-between gap-3">
+                        <span className="font-medium text-foreground">
+                          {tool.name}
+                        </span>
+                        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-orange-500/20 text-orange-500 transition-transform duration-200 group-hover:scale-110 dark:bg-orange-500/20 dark:text-orange-400">
+                          <ToolIcon name={tool.icon} className="h-4 w-4" />
+                        </div>
+                      </div>
+                      <span className="mt-3 block text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
                         {tool.description}
                       </span>
                     </Link>
