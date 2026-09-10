@@ -24,6 +24,7 @@ export function SiteFooter() {
           >
             {footerLinks.map(({ href, label }) => (
               <Link
+                prefetch={false}
                 key={href}
                 href={href}
                 className="text-zinc-600 underline-offset-4 transition-colors hover:text-foreground hover:underline dark:text-zinc-400 dark:hover:text-foreground"

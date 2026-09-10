@@ -24,13 +24,14 @@ export default function KeywordDensityPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
               /
             </span>
             <Link
+              prefetch={false}
               href="/#seo-tools"
               className="hover:text-foreground"
             >
@@ -84,6 +85,7 @@ export default function KeywordDensityPage() {
             </strong>
             , so confidential drafts stay on your device. Pair with our{" "}
             <Link
+              prefetch={false}
               href="/text/word-frequency"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -91,6 +93,7 @@ export default function KeywordDensityPage() {
             </Link>{" "}
             for whole-vocabulary repetition, and the{" "}
             <Link
+              prefetch={false}
               href="/seo/meta-length-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -98,6 +101,7 @@ export default function KeywordDensityPage() {
             </Link>{" "}
             when you tune title tags and snippets. Browse the full{" "}
             <Link
+              prefetch={false}
               href="/#seo-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -135,6 +139,7 @@ export default function KeywordDensityPage() {
             : counts, density, and first-match placement. After you adjust
             wording, verify snippet lengths with the{" "}
             <Link
+              prefetch={false}
               href="/seo/meta-length-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -142,6 +147,7 @@ export default function KeywordDensityPage() {
             </Link>{" "}
             and inspect live HTML fields with the{" "}
             <Link
+              prefetch={false}
               href="/website/meta-tags-extractor"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -218,6 +224,7 @@ export default function KeywordDensityPage() {
               <span className="text-foreground">
                 For vocabulary-wide repetition—not just one phrase—run the{" "}
                 <Link
+                  prefetch={false}
                   href="/text/word-frequency"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -225,6 +232,7 @@ export default function KeywordDensityPage() {
                 </Link>
                 , then use the{" "}
                 <Link
+                  prefetch={false}
                   href="/text/find-replace"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -232,6 +240,7 @@ export default function KeywordDensityPage() {
                 </Link>{" "}
                 for bulk rewrites. Confirm total length with the{" "}
                 <Link
+                  prefetch={false}
                   href="/text/word-counter"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -260,6 +269,7 @@ export default function KeywordDensityPage() {
             whitespace tokenization with punctuation trimmed from token edges—the
             same practical approach as our{" "}
             <Link
+              prefetch={false}
               href="/text/word-frequency"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -269,6 +279,7 @@ export default function KeywordDensityPage() {
             substitute for corpus linguistics or crawler data. For social
             previews, follow up with the{" "}
             <Link
+              prefetch={false}
               href="/website/open-graph-preview"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -276,6 +287,7 @@ export default function KeywordDensityPage() {
             </Link>{" "}
             and{" "}
             <Link
+              prefetch={false}
               href="/seo/og-tag-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -291,6 +303,7 @@ export default function KeywordDensityPage() {
             Keyword placement is only one layer of on-page work. When you expand
             to multi-language sites, build correct clusters with the{" "}
             <Link
+              prefetch={false}
               href="/seo/hreflang-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -298,6 +311,7 @@ export default function KeywordDensityPage() {
             </Link>
             . For rich results testing, draft JSON-LD with the{" "}
             <Link
+              prefetch={false}
               href="/seo/schema-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -305,6 +319,7 @@ export default function KeywordDensityPage() {
             </Link>
             . Control crawling with the{" "}
             <Link
+              prefetch={false}
               href="/seo/robots-txt-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -312,6 +327,7 @@ export default function KeywordDensityPage() {
             </Link>{" "}
             and{" "}
             <Link
+              prefetch={false}
               href="/seo/sitemap-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -319,6 +335,7 @@ export default function KeywordDensityPage() {
             </Link>
             , then validate redirects using the{" "}
             <Link
+              prefetch={false}
               href="/seo/redirect-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -333,6 +350,7 @@ export default function KeywordDensityPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore utilities under{" "}
             <Link
+              prefetch={false}
               href="/#seo-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -344,6 +362,7 @@ export default function KeywordDensityPage() {
             {relatedTools.map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

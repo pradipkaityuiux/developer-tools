@@ -24,7 +24,7 @@ export default function DuplicateLineRemoverPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -74,6 +74,7 @@ export default function DuplicateLineRemoverPage() {
             or paste directly, then copy the cleaned result. Pair deduping with
             our{" "}
             <Link
+              prefetch={false}
               href="/text/line-sorter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -81,6 +82,7 @@ export default function DuplicateLineRemoverPage() {
             </Link>{" "}
             when you also need alphabetical order, or{" "}
             <Link
+              prefetch={false}
               href="/text/whitespace-remover"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -120,6 +122,7 @@ export default function DuplicateLineRemoverPage() {
           <p className="mt-4 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
             When two documents disagree, use the{" "}
             <Link
+              prefetch={false}
               href="/text/diff-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -129,6 +132,7 @@ export default function DuplicateLineRemoverPage() {
             only need the union of unique statements. For prose length limits,
             the{" "}
             <Link
+              prefetch={false}
               href="/text/word-counter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -178,6 +182,7 @@ export default function DuplicateLineRemoverPage() {
             paste, or dedupe email lists without Excel macros. This page supports
             those intents with case and trim controls. For delimited files, try{" "}
             <Link
+              prefetch={false}
               href="/dev/csv-to-json"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -185,6 +190,7 @@ export default function DuplicateLineRemoverPage() {
             </Link>{" "}
             when you need structured fields first. Normalizing identifiers? The{" "}
             <Link
+              prefetch={false}
               href="/text/case-converter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -203,6 +209,7 @@ export default function DuplicateLineRemoverPage() {
             trailing spaces. Blank lines dedupe like any other line; for empty
             rows, combine with{" "}
             <Link
+              prefetch={false}
               href="/text/find-replace"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -226,6 +233,7 @@ export default function DuplicateLineRemoverPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
+              prefetch={false}
               href="/#text-string-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -237,6 +245,7 @@ export default function DuplicateLineRemoverPage() {
             {relatedTools.slice(0, 14).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

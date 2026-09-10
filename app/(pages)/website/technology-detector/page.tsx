@@ -24,7 +24,7 @@ export default function TechnologyDetectorPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -140,6 +140,7 @@ export default function TechnologyDetectorPage() {
             when you need to know whether a prospect is already on Shopify,
             Webflow, or a headless React stack. Pair this page with our{" "}
             <Link
+              prefetch={false}
               href="/website/http-header-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -147,6 +148,7 @@ export default function TechnologyDetectorPage() {
             </Link>{" "}
             for raw cache, security, and CORS values, the{" "}
             <Link
+              prefetch={false}
               href="/website/meta-tags-extractor"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -154,6 +156,7 @@ export default function TechnologyDetectorPage() {
             </Link>{" "}
             when you care about title tags and Open Graph, and the{" "}
             <Link
+              prefetch={false}
               href="/website/ssl-certificate-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -217,6 +220,7 @@ export default function TechnologyDetectorPage() {
               <span className="text-foreground">
                 Follow up with specialized tools. Use the{" "}
                 <Link
+                  prefetch={false}
                   href="/website/redirect-chain-checker"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -224,6 +228,7 @@ export default function TechnologyDetectorPage() {
                 </Link>{" "}
                 if marketing domains bounce through country or device rules, the{" "}
                 <Link
+                  prefetch={false}
                   href="/website/response-code-checker"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -231,6 +236,7 @@ export default function TechnologyDetectorPage() {
                 </Link>{" "}
                 for quick status validation, and the{" "}
                 <Link
+                  prefetch={false}
                   href="/website/dns-lookup"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -258,6 +264,7 @@ export default function TechnologyDetectorPage() {
             you see fewer noisy matches. When you need registration timelines to
             complement stack research, open the{" "}
             <Link
+              prefetch={false}
               href="/website/domain-age-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -265,6 +272,7 @@ export default function TechnologyDetectorPage() {
             </Link>{" "}
             and{" "}
             <Link
+              prefetch={false}
               href="/website/whois-lookup"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -289,6 +297,7 @@ export default function TechnologyDetectorPage() {
             single fetch; that absence is itself a clue to try a different route
             or inspect network waterfalls locally. Combine this scan with our{" "}
             <Link
+              prefetch={false}
               href="/website/open-graph-preview"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -296,6 +305,7 @@ export default function TechnologyDetectorPage() {
             </Link>{" "}
             and{" "}
             <Link
+              prefetch={false}
               href="/website/canonical-tag-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -324,6 +334,7 @@ export default function TechnologyDetectorPage() {
             confirms the snippet is present in the HTML we retrieved. For
             crawlability side effects, also run the{" "}
             <Link
+              prefetch={false}
               href="/website/robots-txt-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -331,6 +342,7 @@ export default function TechnologyDetectorPage() {
             </Link>{" "}
             and{" "}
             <Link
+              prefetch={false}
               href="/website/broken-link-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -361,6 +373,7 @@ export default function TechnologyDetectorPage() {
             under cache busting, bot management, or regional routing. When you
             also need IP-level context for an origin you discover, use our{" "}
             <Link
+              prefetch={false}
               href="/website/ip-lookup"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -391,6 +404,7 @@ export default function TechnologyDetectorPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
+              prefetch={false}
               href="/#website-url-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -402,6 +416,7 @@ export default function TechnologyDetectorPage() {
             {relatedTools.slice(0, 12).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

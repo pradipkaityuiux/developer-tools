@@ -22,7 +22,7 @@ export default function SslDecoderPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -81,6 +81,7 @@ export default function SslDecoderPage() {
             </strong>
             , pair this page with the{" "}
             <Link
+              prefetch={false}
               href="/website/ssl-certificate-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -88,6 +89,7 @@ export default function SslDecoderPage() {
             </Link>{" "}
             that fetches the chain from a URL, and use the{" "}
             <Link
+              prefetch={false}
               href="/security/rsa-key-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -127,6 +129,7 @@ export default function SslDecoderPage() {
             trust requires chain building, signature verification, and revocation
             checks—work your platform or the{" "}
             <Link
+              prefetch={false}
               href="/website/ssl-certificate-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -144,6 +147,7 @@ export default function SslDecoderPage() {
             , and copy summaries into runbooks. If you are hardening HTTP
             responses, continue with the{" "}
             <Link
+              prefetch={false}
               href="/security/headers-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -151,6 +155,7 @@ export default function SslDecoderPage() {
             </Link>{" "}
             and{" "}
             <Link
+              prefetch={false}
               href="/security/csp-builder"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -204,6 +209,7 @@ export default function SslDecoderPage() {
                 (with the copy icon) to attach details to issues or chat. For
                 arbitrary hex or Base64 digests of other material, the{" "}
                 <Link
+                  prefetch={false}
                   href="/dev/hash-generator"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -242,6 +248,7 @@ export default function SslDecoderPage() {
             processing, and clear limitations (no chain validation). For token-style
             debugging in APIs, the{" "}
             <Link
+              prefetch={false}
               href="/security/jwt-encoder"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -249,6 +256,7 @@ export default function SslDecoderPage() {
             </Link>{" "}
             and{" "}
             <Link
+              prefetch={false}
               href="/dev/jwt-decoder"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -302,6 +310,7 @@ export default function SslDecoderPage() {
             credentials: avoid pasting them on untrusted shared machines. When you
             only need password or passphrase strength feedback, use the{" "}
             <Link
+              prefetch={false}
               href="/security/password-strength"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -316,6 +325,7 @@ export default function SslDecoderPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
+              prefetch={false}
               href="/#security-encryption-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -327,6 +337,7 @@ export default function SslDecoderPage() {
             {relatedTools.slice(0, 14).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

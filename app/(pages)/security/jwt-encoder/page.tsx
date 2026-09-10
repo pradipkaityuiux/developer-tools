@@ -23,7 +23,7 @@ export default function JwtEncoderPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -76,6 +76,7 @@ export default function JwtEncoderPage() {
             <strong className="font-medium text-foreground">Copy</strong> control on
             the result to move tokens into clients. Cross-check issued tokens with our{" "}
             <Link
+              prefetch={false}
               href="/dev/jwt-decoder"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -83,6 +84,7 @@ export default function JwtEncoderPage() {
             </Link>
             , tighten JSON with the{" "}
             <Link
+              prefetch={false}
               href="/dev/json-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -90,6 +92,7 @@ export default function JwtEncoderPage() {
             </Link>
             , and browse every{" "}
             <Link
+              prefetch={false}
               href="/#security-encryption-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -162,6 +165,7 @@ export default function JwtEncoderPage() {
             segment. If you need raw HMAC digests outside the JWT layout, compare
             results with the{" "}
             <Link
+              prefetch={false}
               href="/security/hmac-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -224,6 +228,7 @@ export default function JwtEncoderPage() {
                 button (copy icon) and attach it to HTTP requests. Decode the same
                 string with the{" "}
                 <Link
+                  prefetch={false}
                   href="/dev/jwt-decoder"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -250,6 +255,7 @@ export default function JwtEncoderPage() {
             smoke tests, and teaching the difference between symmetric and asymmetric
             signing. For Base64URL building blocks outside the JWT wrapper, use the{" "}
             <Link
+              prefetch={false}
               href="/dev/base64"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -278,6 +284,7 @@ export default function JwtEncoderPage() {
             machines; prefer CI secrets stores and short-lived test keys. When
             evaluating password strength for human-chosen shared secrets, use the{" "}
             <Link
+              prefetch={false}
               href="/security/password-strength"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -292,6 +299,7 @@ export default function JwtEncoderPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Highlights from the catalog (also listed on the{" "}
             <Link
+              prefetch={false}
               href="/#security-encryption-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -303,6 +311,7 @@ export default function JwtEncoderPage() {
             {relatedTools.slice(0, 14).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

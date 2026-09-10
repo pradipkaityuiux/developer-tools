@@ -35,6 +35,7 @@ export default async function BlogPage() {
           <div className="divide-y divide-zinc-200 dark:divide-zinc-800">
             {posts.map((post) => (
               <Link
+                prefetch={false}
                 key={post.slug}
                 href={post.url}
                 className="group block py-6 first:pt-0"

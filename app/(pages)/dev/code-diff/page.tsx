@@ -22,7 +22,7 @@ export default function CodeDiffPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -64,6 +64,7 @@ export default function CodeDiffPage() {
             , so drafts and proprietary snippets stay in your browser. When you
             need readable inputs first, normalize JSON with our{" "}
             <Link
+              prefetch={false}
               href="/dev/json-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -71,6 +72,7 @@ export default function CodeDiffPage() {
             </Link>
             , markup with the{" "}
             <Link
+              prefetch={false}
               href="/dev/html-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -78,6 +80,7 @@ export default function CodeDiffPage() {
             </Link>
             , or queries with the{" "}
             <Link
+              prefetch={false}
               href="/dev/sql-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -121,6 +124,7 @@ export default function CodeDiffPage() {
             often pair a diff view with encoders and parsers: validate tokens
             using the{" "}
             <Link
+              prefetch={false}
               href="/dev/jwt-decoder"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -128,6 +132,7 @@ export default function CodeDiffPage() {
             </Link>
             , normalize YAML via{" "}
             <Link
+              prefetch={false}
               href="/dev/yaml-to-json"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -135,6 +140,7 @@ export default function CodeDiffPage() {
             </Link>
             , and keep CSV-shaped samples consistent through{" "}
             <Link
+              prefetch={false}
               href="/dev/csv-to-json"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -170,6 +176,7 @@ export default function CodeDiffPage() {
                 text into the right editor. The tool splits on line breaks, so
                 one long minified line will diff as a single row; run the{" "}
                 <Link
+                  prefetch={false}
                   href="/dev/js-formatter"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -177,6 +184,7 @@ export default function CodeDiffPage() {
                 </Link>{" "}
                 or{" "}
                 <Link
+                  prefetch={false}
                   href="/dev/css-formatter"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -247,6 +255,7 @@ export default function CodeDiffPage() {
             </strong>{" "}
             after edits—cross-check live pages with the{" "}
             <Link
+              prefetch={false}
               href="/website/meta-tags-extractor"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -255,6 +264,7 @@ export default function CodeDiffPage() {
             once structural tags change. Security reviewers compare redacted
             headers or payloads alongside the{" "}
             <Link
+              prefetch={false}
               href="/website/http-header-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -283,6 +293,7 @@ export default function CodeDiffPage() {
             matters more than structure. When you debug extraction or rewrite
             rules, the{" "}
             <Link
+              prefetch={false}
               href="/dev/regex-tester"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -305,6 +316,7 @@ export default function CodeDiffPage() {
             , continue using Git; for binary assets, use dedicated viewers. If you
             need structured document conversion before diffing, try{" "}
             <Link
+              prefetch={false}
               href="/dev/html-to-markdown"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -312,6 +324,7 @@ export default function CodeDiffPage() {
             </Link>{" "}
             or{" "}
             <Link
+              prefetch={false}
               href="/dev/markdown-to-html"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -326,6 +339,7 @@ export default function CodeDiffPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
+              prefetch={false}
               href="/#code-developer-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -337,6 +351,7 @@ export default function CodeDiffPage() {
             {relatedTools.slice(0, 14).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

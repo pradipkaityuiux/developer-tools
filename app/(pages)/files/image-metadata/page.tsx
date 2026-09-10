@@ -22,7 +22,7 @@ export default function ImageMetadataPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -71,6 +71,7 @@ export default function ImageMetadataPage() {
             (with Lucide copy icons) for tickets, CMS notes, or evidence logs.
             Pair this workflow with the{" "}
             <Link
+              prefetch={false}
               href="/files/image-to-base64"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -78,6 +79,7 @@ export default function ImageMetadataPage() {
             </Link>{" "}
             when you need a data URI after inspection, the{" "}
             <Link
+              prefetch={false}
               href="/files/file-hash"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -85,6 +87,7 @@ export default function ImageMetadataPage() {
             </Link>{" "}
             for integrity fingerprints, and the{" "}
             <Link
+              prefetch={false}
               href="/files/image-compressor"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -93,6 +96,7 @@ export default function ImageMetadataPage() {
             when you must shrink assets before delivery. Browse every utility in
             our{" "}
             <Link
+              prefetch={false}
               href="/#file-data-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -225,6 +229,7 @@ export default function ImageMetadataPage() {
             you need to share pixels without metadata, re-export through an
             editor that strips EXIF or use a dedicated scrubbing workflow; our{" "}
             <Link
+              prefetch={false}
               href="/files/image-resizer"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -232,6 +237,7 @@ export default function ImageMetadataPage() {
             </Link>{" "}
             and{" "}
             <Link
+              prefetch={false}
               href="/files/image-converter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -252,6 +258,7 @@ export default function ImageMetadataPage() {
             formats. When you only need tabular data from a CSV export alongside
             filenames, the{" "}
             <Link
+              prefetch={false}
               href="/files/csv-viewer"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -267,6 +274,7 @@ export default function ImageMetadataPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
+              prefetch={false}
               href="/#file-data-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -278,6 +286,7 @@ export default function ImageMetadataPage() {
             {relatedTools.map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -291,6 +300,7 @@ export default function ImageMetadataPage() {
             ))}
             <li>
               <Link
+                prefetch={false}
                 href="/dev/base64"
                 className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
               >

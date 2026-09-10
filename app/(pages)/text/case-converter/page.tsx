@@ -22,13 +22,14 @@ export default function CaseConverterPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
               /
             </span>
             <Link
+              prefetch={false}
               href="/#text-string-tools"
               className="hover:text-foreground"
             >
@@ -75,6 +76,7 @@ export default function CaseConverterPage() {
             one click. When you need pattern-based edits across long documents,
             pair this page with our{" "}
             <Link
+              prefetch={false}
               href="/dev/regex-tester"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -82,6 +84,7 @@ export default function CaseConverterPage() {
             </Link>{" "}
             and the{" "}
             <Link
+              prefetch={false}
               href="/dev/html-entities"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -127,6 +130,7 @@ export default function CaseConverterPage() {
             is a common convention; combine it with thoughtful keywords in your
             CMS. When you audit live pages, our{" "}
             <Link
+              prefetch={false}
               href="/website/canonical-tag-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -134,6 +138,7 @@ export default function CaseConverterPage() {
             </Link>{" "}
             and{" "}
             <Link
+              prefetch={false}
               href="/website/meta-tags-extractor"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -201,6 +206,7 @@ export default function CaseConverterPage() {
               <span className="text-foreground">
                 For structured payloads, validate JSON separately with the{" "}
                 <Link
+                  prefetch={false}
                   href="/dev/json-formatter"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -291,6 +297,7 @@ export default function CaseConverterPage() {
             you are converting labels or short lists—not entire minified files.
             For percent-encoded strings, use the{" "}
             <Link
+              prefetch={false}
               href="/dev/url-encoder"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -305,6 +312,7 @@ export default function CaseConverterPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
+              prefetch={false}
               href="/#text-string-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >

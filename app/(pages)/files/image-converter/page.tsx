@@ -24,7 +24,7 @@ export default function ImageConverterPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -75,6 +75,7 @@ export default function ImageConverterPage() {
             </strong>{" "}
             without a build pipeline. Combine this page with the{" "}
             <Link
+              prefetch={false}
               href="/files/image-compressor"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -82,6 +83,7 @@ export default function ImageConverterPage() {
             </Link>
             ,{" "}
             <Link
+              prefetch={false}
               href="/files/image-resizer"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -89,6 +91,7 @@ export default function ImageConverterPage() {
             </Link>
             , and{" "}
             <Link
+              prefetch={false}
               href="/files/image-to-base64"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -96,6 +99,7 @@ export default function ImageConverterPage() {
             </Link>{" "}
             tools from our{" "}
             <Link
+              prefetch={false}
               href="/#file-data-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -149,6 +153,7 @@ export default function ImageConverterPage() {
             MIME type, and download. When you only need to inspect dimensions or
             EXIF before converting, open the{" "}
             <Link
+              prefetch={false}
               href="/files/image-metadata"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -248,6 +253,7 @@ export default function ImageConverterPage() {
             </strong>
             , the{" "}
             <Link
+              prefetch={false}
               href="/files/svg-optimizer"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -265,6 +271,7 @@ export default function ImageConverterPage() {
             environments or pre-release marketing assets. Very large bitmaps can
             stress memory; if the tab feels slow, use the{" "}
             <Link
+              prefetch={false}
               href="/files/image-resizer"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -273,6 +280,7 @@ export default function ImageConverterPage() {
             to reduce dimensions before format conversion. To verify a downloaded
             file after handoff, the{" "}
             <Link
+              prefetch={false}
               href="/files/file-hash"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -287,6 +295,7 @@ export default function ImageConverterPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
+              prefetch={false}
               href="/#file-data-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -298,6 +307,7 @@ export default function ImageConverterPage() {
             {relatedTools.map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -311,6 +321,7 @@ export default function ImageConverterPage() {
             ))}
             <li>
               <Link
+                prefetch={false}
                 href="/dev/base64"
                 className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
               >

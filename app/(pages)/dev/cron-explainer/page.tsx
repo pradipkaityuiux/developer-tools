@@ -23,7 +23,7 @@ export default function CronExplainerPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -73,6 +73,7 @@ export default function CronExplainerPage() {
             </strong>{" "}
             without uploading secrets. Pair decoding with our{" "}
             <Link
+              prefetch={false}
               href="/dev/json-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -80,6 +81,7 @@ export default function CronExplainerPage() {
             </Link>{" "}
             for pipeline configs and the{" "}
             <Link
+              prefetch={false}
               href="/dev/regex-tester"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -122,6 +124,7 @@ export default function CronExplainerPage() {
           <p className="mt-4 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
             If you also validate deployment artifacts, keep{" "}
             <Link
+              prefetch={false}
               href="/dev/yaml-to-json"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -129,6 +132,7 @@ export default function CronExplainerPage() {
             </Link>{" "}
             consistent across environments, and use our{" "}
             <Link
+              prefetch={false}
               href="/dev/sql-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -275,6 +279,7 @@ export default function CronExplainerPage() {
               <span className="text-foreground">
                 When you need to inspect URLs your batch jobs call, use the{" "}
                 <Link
+                  prefetch={false}
                   href="/website/http-header-checker"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -282,6 +287,7 @@ export default function CronExplainerPage() {
                 </Link>{" "}
                 or{" "}
                 <Link
+                  prefetch={false}
                   href="/website/redirect-chain-checker"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -318,6 +324,7 @@ export default function CronExplainerPage() {
             runs without sign-up. For structured data work adjacent to batch
             jobs, the{" "}
             <Link
+              prefetch={false}
               href="/dev/csv-to-json"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -325,6 +332,7 @@ export default function CronExplainerPage() {
             </Link>{" "}
             and{" "}
             <Link
+              prefetch={false}
               href="/dev/json-to-csv"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -352,6 +360,7 @@ export default function CronExplainerPage() {
             trigger. For external reachability checks tied to maintenance
             windows, our{" "}
             <Link
+              prefetch={false}
               href="/website/response-code-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -384,6 +393,7 @@ export default function CronExplainerPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
+              prefetch={false}
               href="/#code-developer-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -395,6 +405,7 @@ export default function CronExplainerPage() {
             {relatedTools.slice(0, 14).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

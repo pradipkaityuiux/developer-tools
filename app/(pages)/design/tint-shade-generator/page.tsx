@@ -24,7 +24,7 @@ export default function TintShadeGeneratorPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -74,6 +74,7 @@ export default function TintShadeGeneratorPage() {
             </strong>
             . Pair the ramp with our{" "}
             <Link
+              prefetch={false}
               href="/design/contrast-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -81,6 +82,7 @@ export default function TintShadeGeneratorPage() {
             </Link>{" "}
             for WCAG text pairs, explore harmony with the{" "}
             <Link
+              prefetch={false}
               href="/design/palette-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -88,6 +90,7 @@ export default function TintShadeGeneratorPage() {
             </Link>
             , and browse the full{" "}
             <Link
+              prefetch={false}
               href="/#design-color-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -139,6 +142,7 @@ export default function TintShadeGeneratorPage() {
             </strong>
             , start the base hue here, then open the{" "}
             <Link
+              prefetch={false}
               href="/design/palette-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -146,6 +150,7 @@ export default function TintShadeGeneratorPage() {
             </Link>{" "}
             for multi-hue exploration. For gradients between two stops, use the{" "}
             <Link
+              prefetch={false}
               href="/design/gradient-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -153,6 +158,7 @@ export default function TintShadeGeneratorPage() {
             </Link>{" "}
             or{" "}
             <Link
+              prefetch={false}
               href="/design/css-gradient"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -160,6 +166,7 @@ export default function TintShadeGeneratorPage() {
             </Link>{" "}
             tool. When you need raw channel conversions (HEX, RGB, HSL), the{" "}
             <Link
+              prefetch={false}
               href="/design/color-picker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -225,6 +232,7 @@ export default function TintShadeGeneratorPage() {
                 Before shipping text on colored surfaces, run candidate pairs
                 through the{" "}
                 <Link
+                  prefetch={false}
                   href="/design/contrast-checker"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -269,6 +277,7 @@ export default function TintShadeGeneratorPage() {
             shown are simplified references against pure white and black—always
             validate real UI pairs. For inclusive visuals beyond contrast, the{" "}
             <Link
+              prefetch={false}
               href="/design/color-blindness-simulator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -283,6 +292,7 @@ export default function TintShadeGeneratorPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore more from the{" "}
             <Link
+              prefetch={false}
               href="/#design-color-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -294,6 +304,7 @@ export default function TintShadeGeneratorPage() {
             {relatedTools.map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

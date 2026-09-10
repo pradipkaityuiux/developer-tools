@@ -24,7 +24,7 @@ export default function HtaccessGeneratorPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -75,6 +75,7 @@ export default function HtaccessGeneratorPage() {
             <strong className="font-medium text-foreground">upload</strong> an
             existing file to edit. After deployment, validate behavior with the{" "}
             <Link
+              prefetch={false}
               href="/website/redirect-chain-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -82,6 +83,7 @@ export default function HtaccessGeneratorPage() {
             </Link>{" "}
             and{" "}
             <Link
+              prefetch={false}
               href="/website/http-header-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -89,6 +91,7 @@ export default function HtaccessGeneratorPage() {
             </Link>
             , and review TLS with the{" "}
             <Link
+              prefetch={false}
               href="/website/ssl-certificate-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -146,6 +149,7 @@ export default function HtaccessGeneratorPage() {
             <strong className="font-medium text-foreground">CSP</strong> or CDN
             dashboard—the{" "}
             <Link
+              prefetch={false}
               href="/dev/url-encoder"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -231,6 +235,7 @@ export default function HtaccessGeneratorPage() {
             guards so missing modules do not always fatal-error. For PEM inspection
             unrelated to Apache but common in the same workflows, use the{" "}
             <Link
+              prefetch={false}
               href="/security/ssl-decoder"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -238,6 +243,7 @@ export default function HtaccessGeneratorPage() {
             </Link>{" "}
             and for signing experiments the{" "}
             <Link
+              prefetch={false}
               href="/security/rsa-key-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -256,6 +262,7 @@ export default function HtaccessGeneratorPage() {
             After you ship an .htaccess, re-check status codes from both HTTP and
             HTTPS, and from www and non-www variants. Our{" "}
             <Link
+              prefetch={false}
               href="/website/redirect-chain-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -264,6 +271,7 @@ export default function HtaccessGeneratorPage() {
             surfaces hop counts—long chains dilute PageRank and slow navigation.
             Pair with the{" "}
             <Link
+              prefetch={false}
               href="/website/canonical-tag-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -278,6 +286,7 @@ export default function HtaccessGeneratorPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
+              prefetch={false}
               href="/#security-encryption-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -289,6 +298,7 @@ export default function HtaccessGeneratorPage() {
             {relatedTools.slice(0, 14).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

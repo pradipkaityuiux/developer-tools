@@ -24,7 +24,7 @@ export default function WhitespaceRemoverPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -74,6 +74,7 @@ export default function WhitespaceRemoverPage() {
             <strong className="font-medium text-foreground">.txt</strong> file
             or paste directly, then copy the cleaned string. After cleanup,{" "}
             <Link
+              prefetch={false}
               href="/text/duplicate-line-remover"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -81,6 +82,7 @@ export default function WhitespaceRemoverPage() {
             </Link>{" "}
             when lists still contain repeated rows, or open the{" "}
             <Link
+              prefetch={false}
               href="/text/diff-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -119,6 +121,7 @@ export default function WhitespaceRemoverPage() {
             If you are preparing slugs or identifiers, follow normalization
             with the{" "}
             <Link
+              prefetch={false}
               href="/text/slug-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -126,6 +129,7 @@ export default function WhitespaceRemoverPage() {
             </Link>{" "}
             or{" "}
             <Link
+              prefetch={false}
               href="/text/case-converter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -133,6 +137,7 @@ export default function WhitespaceRemoverPage() {
             </Link>
             . For prose limits and SEO snippets, pair cleanup with the{" "}
             <Link
+              prefetch={false}
               href="/text/word-counter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -189,6 +194,7 @@ export default function WhitespaceRemoverPage() {
             tasks. For delimiter-specific work—turning newline lists into
             comma-separated values—use the{" "}
             <Link
+              prefetch={false}
               href="/text/comma-separator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -196,6 +202,7 @@ export default function WhitespaceRemoverPage() {
             </Link>{" "}
             after you normalize spacing here. For structured tables, the{" "}
             <Link
+              prefetch={false}
               href="/files/csv-viewer"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -212,6 +219,7 @@ export default function WhitespaceRemoverPage() {
             common non-breaking spaces on each line; it does not parse JSON,
             HTML, or CSS trees. For syntax-aware formatting, run the{" "}
             <Link
+              prefetch={false}
               href="/dev/json-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -219,6 +227,7 @@ export default function WhitespaceRemoverPage() {
             </Link>
             ,{" "}
             <Link
+              prefetch={false}
               href="/dev/html-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -226,6 +235,7 @@ export default function WhitespaceRemoverPage() {
             </Link>
             , or{" "}
             <Link
+              prefetch={false}
               href="/dev/css-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -250,6 +260,7 @@ export default function WhitespaceRemoverPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
+              prefetch={false}
               href="/#text-string-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -261,6 +272,7 @@ export default function WhitespaceRemoverPage() {
             {relatedTools.slice(0, 14).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

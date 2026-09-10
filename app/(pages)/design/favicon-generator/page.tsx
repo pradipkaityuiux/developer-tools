@@ -24,7 +24,7 @@ export default function FaviconGeneratorPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -83,6 +83,7 @@ export default function FaviconGeneratorPage() {
             </strong>
             . Pair icons with our{" "}
             <Link
+              prefetch={false}
               href="/website/open-graph-preview"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -90,6 +91,7 @@ export default function FaviconGeneratorPage() {
             </Link>{" "}
             and{" "}
             <Link
+              prefetch={false}
               href="/website/meta-tags-extractor"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -98,6 +100,7 @@ export default function FaviconGeneratorPage() {
             when you polish how your site looks in search and social shares.
             Browse every{" "}
             <Link
+              prefetch={false}
               href="/#design-color-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -212,6 +215,7 @@ export default function FaviconGeneratorPage() {
                 After deploy, hard-refresh or clear site data to bypass aggressive
                 favicon caching. When tuning page metadata, use the{" "}
                 <Link
+                  prefetch={false}
                   href="/website/meta-tags-extractor"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -219,6 +223,7 @@ export default function FaviconGeneratorPage() {
                 </Link>{" "}
                 on a staging URL and preview social cards with the{" "}
                 <Link
+                  prefetch={false}
                   href="/website/open-graph-preview"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -260,6 +265,7 @@ export default function FaviconGeneratorPage() {
             Once your tab icon is set, you may still tune the rest of the visual
             system: export harmonious colors with the{" "}
             <Link
+              prefetch={false}
               href="/design/palette-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -267,6 +273,7 @@ export default function FaviconGeneratorPage() {
             </Link>
             , check contrast with the{" "}
             <Link
+              prefetch={false}
               href="/design/contrast-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -274,6 +281,7 @@ export default function FaviconGeneratorPage() {
             </Link>
             , and prepare hero backgrounds using the{" "}
             <Link
+              prefetch={false}
               href="/design/gradient-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -281,6 +289,7 @@ export default function FaviconGeneratorPage() {
             </Link>{" "}
             or{" "}
             <Link
+              prefetch={false}
               href="/design/css-gradient"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -288,6 +297,7 @@ export default function FaviconGeneratorPage() {
             </Link>{" "}
             tools. For production assets, the{" "}
             <Link
+              prefetch={false}
               href="/files/image-compressor"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -295,6 +305,7 @@ export default function FaviconGeneratorPage() {
             </Link>{" "}
             and{" "}
             <Link
+              prefetch={false}
               href="/files/image-resizer"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -310,6 +321,7 @@ export default function FaviconGeneratorPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             More from the{" "}
             <Link
+              prefetch={false}
               href="/#design-color-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -321,6 +333,7 @@ export default function FaviconGeneratorPage() {
             {relatedTools.map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

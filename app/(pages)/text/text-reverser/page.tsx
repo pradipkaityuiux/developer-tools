@@ -22,7 +22,7 @@ export default function TextReverserPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -73,6 +73,7 @@ export default function TextReverserPage() {
             , so drafts and proprietary strings stay local. Explore sibling
             utilities in the{" "}
             <Link
+              prefetch={false}
               href="/#text-string-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -105,6 +106,7 @@ export default function TextReverserPage() {
             <strong className="font-medium text-foreground">mirror text</strong>{" "}
             effects. After transforming copy, measure length shifts with our{" "}
             <Link
+              prefetch={false}
               href="/text/word-counter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -165,6 +167,7 @@ export default function TextReverserPage() {
               <span className="text-foreground">
                 For casing experiments after reversal, open the{" "}
                 <Link
+                  prefetch={false}
                   href="/text/case-converter"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -173,6 +176,7 @@ export default function TextReverserPage() {
                 . For comparing original versus reversed drafts side by side,
                 use the{" "}
                 <Link
+                  prefetch={false}
                   href="/text/diff-checker"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -203,6 +207,7 @@ export default function TextReverserPage() {
             (palindrome checks, bidi UI stress tests). Content teams pair it
             with the{" "}
             <Link
+              prefetch={false}
               href="/dev/lorem-ipsum"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -211,6 +216,7 @@ export default function TextReverserPage() {
             when they need filler that still looks unusual after transforms.
             Educators reference it next to{" "}
             <Link
+              prefetch={false}
               href="/text/rot13"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -218,6 +224,7 @@ export default function TextReverserPage() {
             </Link>{" "}
             or{" "}
             <Link
+              prefetch={false}
               href="/text/caesar-cipher"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -238,6 +245,7 @@ export default function TextReverserPage() {
             to strip invisible characters before reversing, chain this tool
             with the{" "}
             <Link
+              prefetch={false}
               href="/text/whitespace-remover"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -256,6 +264,7 @@ export default function TextReverserPage() {
             into their stack. For bulk line operations—sorting, deduping,
             finding patterns—use the{" "}
             <Link
+              prefetch={false}
               href="/text/line-sorter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -263,6 +272,7 @@ export default function TextReverserPage() {
             </Link>
             ,{" "}
             <Link
+              prefetch={false}
               href="/text/duplicate-line-remover"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -270,6 +280,7 @@ export default function TextReverserPage() {
             </Link>
             , or{" "}
             <Link
+              prefetch={false}
               href="/text/find-replace"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -284,6 +295,7 @@ export default function TextReverserPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full catalog under{" "}
             <Link
+              prefetch={false}
               href="/#text-string-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -295,6 +307,7 @@ export default function TextReverserPage() {
             {relatedTools.slice(0, 14).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

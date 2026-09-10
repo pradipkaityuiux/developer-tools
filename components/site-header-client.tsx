@@ -66,6 +66,7 @@ export function SiteHeaderClient({ tools, sections }: SiteHeaderClientProps) {
 
           <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
             <Link
+              prefetch={false}
               href="/"
               className="pointer-events-auto inline-flex items-center gap-2 text-lg font-semibold tracking-tight text-foreground hover:opacity-80"
             >
@@ -91,6 +92,7 @@ export function SiteHeaderClient({ tools, sections }: SiteHeaderClientProps) {
 
           <div className="flex flex-1 gap-3 justify-end">
             <Link
+              prefetch={false}
               href="/blog"
               className="inline-flex items-center gap-2 text-base font-normal tracking-tight text-foreground hover:opacity-80"
             >
@@ -146,6 +148,7 @@ export function SiteHeaderClient({ tools, sections }: SiteHeaderClientProps) {
                       {section.tools.map((tool) => (
                         <li key={tool.href}>
                           <Link
+                            prefetch={false}
                             href={tool.href}
                             onClick={closeMega}
                             className="group relative flex items-center justify-between rounded-lg border border-zinc-200/80 bg-zinc-50/50 p-2.5 transition-all duration-200 hover:border-orange-500 hover:bg-zinc-100/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 dark:border-zinc-800/80 dark:bg-zinc-900/40 dark:hover:border-orange-500 dark:hover:bg-zinc-900 dark:focus-visible:outline-zinc-100"

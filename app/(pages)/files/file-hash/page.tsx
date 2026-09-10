@@ -22,7 +22,7 @@ export default function FileHashPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -59,6 +59,7 @@ export default function FileHashPage() {
             <strong className="font-medium text-foreground">Web Crypto</strong>,
             and MD5 uses the same vetted library as our{" "}
             <Link
+              prefetch={false}
               href="/dev/hash-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -67,6 +68,7 @@ export default function FileHashPage() {
             —so nothing is uploaded for hashing. When you need to embed small
             assets as strings instead of checksums, use the{" "}
             <Link
+              prefetch={false}
               href="/files/image-to-base64"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -74,6 +76,7 @@ export default function FileHashPage() {
             </Link>{" "}
             tool; when you only inspect photo metadata, open the{" "}
             <Link
+              prefetch={false}
               href="/files/image-metadata"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -81,6 +84,7 @@ export default function FileHashPage() {
             </Link>
             . More utilities live in our{" "}
             <Link
+              prefetch={false}
               href="/#file-data-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -140,6 +144,7 @@ export default function FileHashPage() {
             lowercase for consistency). For hashing UTF-8 strings instead of
             raw files—JWT fixtures, cache keys, or API samples—keep the{" "}
             <Link
+              prefetch={false}
               href="/dev/hash-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -230,6 +235,7 @@ export default function FileHashPage() {
             when hashing multi-gigabyte artifacts regularly. For tabular QA
             after hashing, pair with the{" "}
             <Link
+              prefetch={false}
               href="/files/csv-viewer"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -237,6 +243,7 @@ export default function FileHashPage() {
             </Link>{" "}
             or{" "}
             <Link
+              prefetch={false}
               href="/files/csv-deduplicator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -251,6 +258,7 @@ export default function FileHashPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
+              prefetch={false}
               href="/#file-data-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -262,6 +270,7 @@ export default function FileHashPage() {
             {relatedTools.map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -275,6 +284,7 @@ export default function FileHashPage() {
             ))}
             <li>
               <Link
+                prefetch={false}
                 href="/dev/hash-generator"
                 className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
               >
@@ -288,6 +298,7 @@ export default function FileHashPage() {
             </li>
             <li>
               <Link
+                prefetch={false}
                 href="/dev/base64"
                 className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
               >

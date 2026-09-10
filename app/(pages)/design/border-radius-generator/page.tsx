@@ -24,13 +24,14 @@ export default function BorderRadiusGeneratorPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
               /
             </span>
             <Link
+              prefetch={false}
               href="/#design-color-tools"
               className="hover:text-foreground"
             >
@@ -87,6 +88,7 @@ export default function BorderRadiusGeneratorPage() {
             (copy icon) for optimized shorthand. Everything runs locally in your
             browser. For shadows around the same component, pair output with the{" "}
             <Link
+              prefetch={false}
               href="/design/box-shadow-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -94,6 +96,7 @@ export default function BorderRadiusGeneratorPage() {
             </Link>
             ; for fills and gradients behind the radius, try the{" "}
             <Link
+              prefetch={false}
               href="/design/gradient-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -101,6 +104,7 @@ export default function BorderRadiusGeneratorPage() {
             </Link>{" "}
             or{" "}
             <Link
+              prefetch={false}
               href="/design/css-gradient"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -108,6 +112,7 @@ export default function BorderRadiusGeneratorPage() {
             </Link>{" "}
             tool. Explore the full{" "}
             <Link
+              prefetch={false}
               href="/#design-color-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -144,6 +149,7 @@ export default function BorderRadiusGeneratorPage() {
             searches resolve to a repeatable workflow. Combine radii with
             accessible color choices from the{" "}
             <Link
+              prefetch={false}
               href="/design/color-picker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -151,6 +157,7 @@ export default function BorderRadiusGeneratorPage() {
             </Link>{" "}
             and verify text contrast with the{" "}
             <Link
+              prefetch={false}
               href="/design/contrast-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -225,6 +232,7 @@ export default function BorderRadiusGeneratorPage() {
             Rounding affects paint, not document flow. Structure content first in
             the{" "}
             <Link
+              prefetch={false}
               href="/design/flexbox-playground"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -232,6 +240,7 @@ export default function BorderRadiusGeneratorPage() {
             </Link>{" "}
             or{" "}
             <Link
+              prefetch={false}
               href="/design/css-grid-playground"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -243,6 +252,7 @@ export default function BorderRadiusGeneratorPage() {
             </strong>{" "}
             on the container or image. Depth and elevation usually come from{" "}
             <Link
+              prefetch={false}
               href="/design/box-shadow-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -265,6 +275,7 @@ export default function BorderRadiusGeneratorPage() {
             for simple rounding. Keep decorative gradients in CSS when possible
             using the{" "}
             <Link
+              prefetch={false}
               href="/design/gradient-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -274,6 +285,7 @@ export default function BorderRadiusGeneratorPage() {
             color palettes before you lock radii globally, generate scales with
             the{" "}
             <Link
+              prefetch={false}
               href="/design/tint-shade-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -288,6 +300,7 @@ export default function BorderRadiusGeneratorPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             More from the{" "}
             <Link
+              prefetch={false}
               href="/#design-color-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -299,6 +312,7 @@ export default function BorderRadiusGeneratorPage() {
             {relatedTools.map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

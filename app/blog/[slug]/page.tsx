@@ -95,6 +95,7 @@ export default async function PostPage({ params }: Props) {
       <main className="mx-auto w-full max-w-2xl flex-1 px-4 py-12 sm:px-6 sm:py-16">
         {/* Back */}
         <Link
+          prefetch={false}
           href="/blog"
           className="mb-12 inline-flex items-center gap-2 text-sm text-zinc-500 transition-colors hover:text-foreground dark:text-zinc-400"
         >
@@ -153,6 +154,7 @@ export default async function PostPage({ params }: Props) {
             no signup required.
           </p>
           <Link
+            prefetch={false}
             href="/"
             className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-blue-700"
           >

@@ -18,6 +18,7 @@ export default function NotFound() {
       </p>
       <p className="mt-10">
         <Link
+          prefetch={false}
           href="/"
           className="underline decoration-zinc-400 underline-offset-4 hover:decoration-foreground"
         >

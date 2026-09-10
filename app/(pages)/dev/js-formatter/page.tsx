@@ -22,7 +22,7 @@ export default function JsFormatterPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -63,6 +63,7 @@ export default function JsFormatterPage() {
             </strong>
             . Pair it with our{" "}
             <Link
+              prefetch={false}
               href="/dev/css-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -70,6 +71,7 @@ export default function JsFormatterPage() {
             </Link>{" "}
             and{" "}
             <Link
+              prefetch={false}
               href="/dev/html-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -106,6 +108,7 @@ export default function JsFormatterPage() {
             When you work with APIs and config side by side, keep JSON legible
             with the{" "}
             <Link
+              prefetch={false}
               href="/dev/json-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -154,6 +157,7 @@ export default function JsFormatterPage() {
                 to move output into VS Code, a gist, or a ticket. For SQL-heavy
                 dashboards rendered by your app, also try the{" "}
                 <Link
+                  prefetch={false}
                   href="/dev/sql-formatter"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -184,6 +188,7 @@ export default function JsFormatterPage() {
             page supports those workflows without an account. For YAML-heavy
             pipelines, cross-check config with{" "}
             <Link
+              prefetch={false}
               href="/dev/yaml-to-json"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -212,6 +217,7 @@ export default function JsFormatterPage() {
           <p className="mt-4 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
             If you inspect live pages, validate head markup with the{" "}
             <Link
+              prefetch={false}
               href="/website/meta-tags-extractor"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -230,6 +236,7 @@ export default function JsFormatterPage() {
             sandbox execution. When you analyze suspicious patterns, combine this
             with the{" "}
             <Link
+              prefetch={false}
               href="/dev/regex-tester"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -252,6 +259,7 @@ export default function JsFormatterPage() {
             . Use it for ad-hoc snippets; use your toolchain for releases. For
             markup-heavy templates, the{" "}
             <Link
+              prefetch={false}
               href="/dev/xml-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -266,6 +274,7 @@ export default function JsFormatterPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
+              prefetch={false}
               href="/#code-developer-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -277,6 +286,7 @@ export default function JsFormatterPage() {
             {relatedTools.slice(0, 14).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

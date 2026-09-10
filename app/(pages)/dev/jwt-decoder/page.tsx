@@ -23,7 +23,7 @@ export default function JwtDecoderPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -81,6 +81,7 @@ export default function JwtDecoderPage() {
             —no upload—so staging tokens stay off shared backends. Pair it with
             our{" "}
             <Link
+              prefetch={false}
               href="/dev/json-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -88,6 +89,7 @@ export default function JwtDecoderPage() {
             </Link>{" "}
             after you copy decoded claims, and use the{" "}
             <Link
+              prefetch={false}
               href="/dev/unix-timestamp"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -141,6 +143,7 @@ export default function JwtDecoderPage() {
             <strong className="font-medium text-foreground">authZ</strong>{" "}
             checks. When you normalize other wire formats, open the{" "}
             <Link
+              prefetch={false}
               href="/dev/base64"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -148,6 +151,7 @@ export default function JwtDecoderPage() {
             </Link>{" "}
             for raw segments or the{" "}
             <Link
+              prefetch={false}
               href="/dev/url-encoder"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -220,6 +224,7 @@ export default function JwtDecoderPage() {
                 each panel to move JSON into VS Code, Postman, or tickets. For
                 large claim sets, continue editing with the{" "}
                 <Link
+                  prefetch={false}
                   href="/dev/json-formatter"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -227,6 +232,7 @@ export default function JwtDecoderPage() {
                 </Link>{" "}
                 or diff changes with the{" "}
                 <Link
+                  prefetch={false}
                   href="/dev/code-diff"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -296,6 +302,7 @@ export default function JwtDecoderPage() {
             multi-tenant setups. For hashing and fingerprint ideas outside JWT,
             see the{" "}
             <Link
+              prefetch={false}
               href="/dev/hash-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -330,6 +337,7 @@ export default function JwtDecoderPage() {
             with your identity provider and server-side policy. If you export
             claim snapshots to YAML configs, round-trip through{" "}
             <Link
+              prefetch={false}
               href="/dev/yaml-to-json"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -358,6 +366,7 @@ export default function JwtDecoderPage() {
             keys over TLS from a trusted JWKS endpoint. When you test cron-based
             token rotation jobs, schedule math belongs in the{" "}
             <Link
+              prefetch={false}
               href="/dev/cron-explainer"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -372,6 +381,7 @@ export default function JwtDecoderPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
+              prefetch={false}
               href="/#code-developer-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -383,6 +393,7 @@ export default function JwtDecoderPage() {
             {relatedTools.slice(0, 14).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

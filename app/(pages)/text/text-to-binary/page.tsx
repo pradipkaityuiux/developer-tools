@@ -22,7 +22,7 @@ export default function TextToBinaryPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -59,6 +59,7 @@ export default function TextToBinaryPage() {
             . When you are done experimenting with bits, compare other encodings
             with our{" "}
             <Link
+              prefetch={false}
               href="/dev/base64"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -66,6 +67,7 @@ export default function TextToBinaryPage() {
             </Link>{" "}
             and browse the full{" "}
             <Link
+              prefetch={false}
               href="/#text-string-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -166,6 +168,7 @@ export default function TextToBinaryPage() {
                 bits is divisible by eight and that bytes form valid UTF-8.
                 After fixing prose spacing issues, the{" "}
                 <Link
+                  prefetch={false}
                   href="/text/whitespace-remover"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -201,6 +204,7 @@ export default function TextToBinaryPage() {
             consume two or more bytes—exactly what modern apps store on disk. If
             you are chaining exercises, try the{" "}
             <Link
+              prefetch={false}
               href="/text/text-reverser"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -217,6 +221,7 @@ export default function TextToBinaryPage() {
             Binary encoding is reversible by anyone who copies the string—it is
             not encryption. For classroom Caesar shifts or ROT13 demos, use the{" "}
             <Link
+              prefetch={false}
               href="/text/caesar-cipher"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -224,6 +229,7 @@ export default function TextToBinaryPage() {
             </Link>{" "}
             or{" "}
             <Link
+              prefetch={false}
               href="/text/rot13"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -233,6 +239,7 @@ export default function TextToBinaryPage() {
             prefer established binary-to-text formats: compare this page’s output
             mentally with what you get from the{" "}
             <Link
+              prefetch={false}
               href="/dev/base64"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -251,6 +258,7 @@ export default function TextToBinaryPage() {
             as UTF-8 will often fail by design. For embedding small assets in
             markup, the{" "}
             <Link
+              prefetch={false}
               href="/files/image-to-base64"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -266,6 +274,7 @@ export default function TextToBinaryPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore more utilities under{" "}
             <Link
+              prefetch={false}
               href="/#text-string-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -277,6 +286,7 @@ export default function TextToBinaryPage() {
             {relatedTools.slice(0, 14).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

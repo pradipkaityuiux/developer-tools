@@ -24,7 +24,7 @@ export default function MetaTagsExtractorPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -145,6 +145,7 @@ export default function MetaTagsExtractorPage() {
             tags reduce ambiguity when the same content is reachable under
             multiple URLs—pair extraction with our{" "}
             <Link
+              prefetch={false}
               href="/website/canonical-tag-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -187,6 +188,7 @@ export default function MetaTagsExtractorPage() {
             matches your preferred sharing URL. After extraction, visualize how
             those fields might render with our{" "}
             <Link
+              prefetch={false}
               href="/website/open-graph-preview"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -234,6 +236,7 @@ export default function MetaTagsExtractorPage() {
                 </code>{" "}
                 when you omit the scheme, similar to our{" "}
                 <Link
+                  prefetch={false}
                   href="/website/http-header-checker"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -274,6 +277,7 @@ export default function MetaTagsExtractorPage() {
                 When previews still look wrong, broaden your audit: trace
                 redirects with the{" "}
                 <Link
+                  prefetch={false}
                   href="/website/redirect-chain-checker"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -281,6 +285,7 @@ export default function MetaTagsExtractorPage() {
                 </Link>
                 , confirm response headers with the{" "}
                 <Link
+                  prefetch={false}
                   href="/website/http-header-checker"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -292,6 +297,7 @@ export default function MetaTagsExtractorPage() {
                 </code>
                 ), and review crawl rules using the{" "}
                 <Link
+                  prefetch={false}
                   href="/website/robots-txt-checker"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -363,6 +369,7 @@ export default function MetaTagsExtractorPage() {
             still usually appear early. For TLS or hostname issues before HTML
             is reached, validate certificates with our{" "}
             <Link
+              prefetch={false}
               href="/website/ssl-certificate-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -370,6 +377,7 @@ export default function MetaTagsExtractorPage() {
             </Link>{" "}
             and status behavior with the{" "}
             <Link
+              prefetch={false}
               href="/website/response-code-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -384,6 +392,7 @@ export default function MetaTagsExtractorPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore more utilities in the{" "}
             <Link
+              prefetch={false}
               href="/#website-url-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -395,6 +404,7 @@ export default function MetaTagsExtractorPage() {
             {relatedTools.slice(0, 12).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

@@ -22,7 +22,7 @@ export default function ImageResizerPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -71,6 +71,7 @@ export default function ImageResizerPage() {
             HTML Canvas API—nothing is sent to our infrastructure. For smaller
             byte sizes after resizing, follow up with the{" "}
             <Link
+              prefetch={false}
               href="/files/image-compressor"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -78,6 +79,7 @@ export default function ImageResizerPage() {
             </Link>
             ; for format changes use the{" "}
             <Link
+              prefetch={false}
               href="/files/image-converter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -85,6 +87,7 @@ export default function ImageResizerPage() {
             </Link>
             ; for data URIs try the{" "}
             <Link
+              prefetch={false}
               href="/files/image-to-base64"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -92,6 +95,7 @@ export default function ImageResizerPage() {
             </Link>
             . Browse every utility in{" "}
             <Link
+              prefetch={false}
               href="/#file-data-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -148,6 +152,7 @@ export default function ImageResizerPage() {
             marketplace image slots. When you only need to inspect camera EXIF
             or GPS fields instead of changing pixels, open the{" "}
             <Link
+              prefetch={false}
               href="/files/image-metadata"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -237,6 +242,7 @@ export default function ImageResizerPage() {
             exporting JPEG from the original once when possible, or use PNG/WebP
             for intermediate steps. After resizing, run the{" "}
             <Link
+              prefetch={false}
               href="/files/image-compressor"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -259,6 +265,7 @@ export default function ImageResizerPage() {
             . SVG is vector markup—this workflow targets bitmaps. For SVG
             cleanup and size reduction, use the{" "}
             <Link
+              prefetch={false}
               href="/files/svg-optimizer"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -273,6 +280,7 @@ export default function ImageResizerPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
+              prefetch={false}
               href="/#file-data-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -284,6 +292,7 @@ export default function ImageResizerPage() {
             {relatedTools.map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -300,6 +309,7 @@ export default function ImageResizerPage() {
             Working with CSV exports or feeds after batch-processing images?
             Try the{" "}
             <Link
+              prefetch={false}
               href="/files/csv-viewer"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -307,6 +317,7 @@ export default function ImageResizerPage() {
             </Link>{" "}
             or{" "}
             <Link
+              prefetch={false}
               href="/files/csv-deduplicator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >

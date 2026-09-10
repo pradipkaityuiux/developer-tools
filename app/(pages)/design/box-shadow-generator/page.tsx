@@ -24,7 +24,7 @@ export default function BoxShadowGeneratorPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -75,6 +75,7 @@ export default function BoxShadowGeneratorPage() {
             (upload icon) to judge contrast on real photography or dashboards.
             Everything runs in your browser—no account. Pair shadows with the{" "}
             <Link
+              prefetch={false}
               href="/design/border-radius-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -82,6 +83,7 @@ export default function BoxShadowGeneratorPage() {
             </Link>
             ,{" "}
             <Link
+              prefetch={false}
               href="/design/gradient-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -89,6 +91,7 @@ export default function BoxShadowGeneratorPage() {
             </Link>
             , and{" "}
             <Link
+              prefetch={false}
               href="/design/color-picker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -96,6 +99,7 @@ export default function BoxShadowGeneratorPage() {
             </Link>{" "}
             for cohesive UI kits. Browse all{" "}
             <Link
+              prefetch={false}
               href="/#design-color-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -168,6 +172,7 @@ export default function BoxShadowGeneratorPage() {
             must work on both white cards and tinted surfaces. For accessible
             text on colored panels, validate contrast with the{" "}
             <Link
+              prefetch={false}
               href="/design/contrast-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -248,6 +253,7 @@ export default function BoxShadowGeneratorPage() {
             </strong>{" "}
             and soft gradients. After you lock a shadow, round corners with the{" "}
             <Link
+              prefetch={false}
               href="/design/border-radius-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -255,6 +261,7 @@ export default function BoxShadowGeneratorPage() {
             </Link>
             , build hero backgrounds using the{" "}
             <Link
+              prefetch={false}
               href="/design/css-gradient"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -262,6 +269,7 @@ export default function BoxShadowGeneratorPage() {
             </Link>{" "}
             or{" "}
             <Link
+              prefetch={false}
               href="/design/gradient-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -269,6 +277,7 @@ export default function BoxShadowGeneratorPage() {
             </Link>
             , and keep brand hues aligned with the{" "}
             <Link
+              prefetch={false}
               href="/design/palette-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -276,6 +285,7 @@ export default function BoxShadowGeneratorPage() {
             </Link>
             . For raw stylesheet cleanup, use the{" "}
             <Link
+              prefetch={false}
               href="/dev/css-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -316,6 +326,7 @@ export default function BoxShadowGeneratorPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             More from the{" "}
             <Link
+              prefetch={false}
               href="/#design-color-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -327,6 +338,7 @@ export default function BoxShadowGeneratorPage() {
             {relatedTools.slice(0, 14).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

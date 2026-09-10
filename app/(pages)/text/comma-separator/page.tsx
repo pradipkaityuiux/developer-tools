@@ -22,7 +22,7 @@ export default function CommaSeparatorPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -66,6 +66,7 @@ export default function CommaSeparatorPage() {
             or paste directly, then copy the result. For full tables, continue
             with our{" "}
             <Link
+              prefetch={false}
               href="/files/csv-viewer"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -73,6 +74,7 @@ export default function CommaSeparatorPage() {
             </Link>{" "}
             or{" "}
             <Link
+              prefetch={false}
               href="/dev/csv-to-json"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -105,6 +107,7 @@ export default function CommaSeparatorPage() {
             contain commas. The opposite task—turning a pasted CSV row into a
             newline list—helps before running the{" "}
             <Link
+              prefetch={false}
               href="/text/duplicate-line-remover"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -112,6 +115,7 @@ export default function CommaSeparatorPage() {
             </Link>{" "}
             or{" "}
             <Link
+              prefetch={false}
               href="/text/line-sorter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -140,6 +144,7 @@ export default function CommaSeparatorPage() {
             modes, delimiter detection for pasted samples, and copy-friendly
             output. Normalize messy spacing first with the{" "}
             <Link
+              prefetch={false}
               href="/text/whitespace-remover"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -206,6 +211,7 @@ export default function CommaSeparatorPage() {
             need every field wrapped for a strict importer, switch to always
             quote. After joining identifiers, you might lowercase them with the{" "}
             <Link
+              prefetch={false}
               href="/text/case-converter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -228,6 +234,7 @@ export default function CommaSeparatorPage() {
             still want visual grouping. For replacing tokens across the text,
             pair with{" "}
             <Link
+              prefetch={false}
               href="/text/find-replace"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -246,6 +253,7 @@ export default function CommaSeparatorPage() {
             lists, single-column exports, and modest CSV snippets—not multi-GB
             ETL. JSON-heavy pipelines may fit{" "}
             <Link
+              prefetch={false}
               href="/dev/json-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -261,6 +269,7 @@ export default function CommaSeparatorPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
+              prefetch={false}
               href="/#text-string-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -272,6 +281,7 @@ export default function CommaSeparatorPage() {
             {relatedTools.slice(0, 14).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

@@ -22,7 +22,7 @@ export default function Base64Page() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -65,6 +65,7 @@ export default function Base64Page() {
             </strong>
             . Pair it with the{" "}
             <Link
+              prefetch={false}
               href="/dev/url-encoder"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -72,6 +73,7 @@ export default function Base64Page() {
             </Link>{" "}
             for query strings, the{" "}
             <Link
+              prefetch={false}
               href="/dev/jwt-decoder"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -125,6 +127,7 @@ export default function Base64Page() {
             for prototypes. For structured API bodies that mix Base64 with JSON,
             validate and pretty-print with our{" "}
             <Link
+              prefetch={false}
               href="/dev/json-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -250,6 +253,7 @@ export default function Base64Page() {
             or documentation. To inspect decoded JSON inside a token without
             verifying signatures, open the{" "}
             <Link
+              prefetch={false}
               href="/dev/jwt-decoder"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -257,6 +261,7 @@ export default function Base64Page() {
             </Link>
             . For checksums and fingerprints of decoded bytes, use the{" "}
             <Link
+              prefetch={false}
               href="/dev/hash-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -280,6 +285,7 @@ export default function Base64Page() {
             URLs and CDNs for production media. When you work on page markup
             alongside assets, the{" "}
             <Link
+              prefetch={false}
               href="/dev/html-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -299,6 +305,7 @@ export default function Base64Page() {
             service. For public URL safety and crawler behavior, review headers
             and redirects with our{" "}
             <Link
+              prefetch={false}
               href="/website/http-header-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -306,6 +313,7 @@ export default function Base64Page() {
             </Link>{" "}
             and{" "}
             <Link
+              prefetch={false}
               href="/website/redirect-chain-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -320,6 +328,7 @@ export default function Base64Page() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
+              prefetch={false}
               href="/#code-developer-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -331,6 +340,7 @@ export default function Base64Page() {
             {relatedTools.slice(0, 14).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

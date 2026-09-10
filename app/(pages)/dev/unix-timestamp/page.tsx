@@ -22,7 +22,7 @@ export default function UnixTimestampPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -67,6 +67,7 @@ export default function UnixTimestampPage() {
             , which suits log triage, API payloads, and database columns without
             uploading sensitive data. For token timelines, continue with the{" "}
             <Link
+              prefetch={false}
               href="/dev/jwt-decoder"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -74,6 +75,7 @@ export default function UnixTimestampPage() {
             </Link>
             ; for recurring jobs, pair this page with the{" "}
             <Link
+              prefetch={false}
               href="/dev/cron-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -81,6 +83,7 @@ export default function UnixTimestampPage() {
             </Link>{" "}
             and{" "}
             <Link
+              prefetch={false}
               href="/dev/cron-explainer"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -125,6 +128,7 @@ export default function UnixTimestampPage() {
             contract in storage and transport, then render local time only in UIs.
             If you need to sanity-check headers or caching, our{" "}
             <Link
+              prefetch={false}
               href="/website/http-header-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -132,6 +136,7 @@ export default function UnixTimestampPage() {
             </Link>{" "}
             and{" "}
             <Link
+              prefetch={false}
               href="/website/redirect-chain-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -267,6 +272,7 @@ export default function UnixTimestampPage() {
             using a library like Temporal once widely adopted. When you serialize
             configuration, our{" "}
             <Link
+              prefetch={false}
               href="/dev/json-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -274,6 +280,7 @@ export default function UnixTimestampPage() {
             </Link>{" "}
             and{" "}
             <Link
+              prefetch={false}
               href="/dev/yaml-to-json"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -296,6 +303,7 @@ export default function UnixTimestampPage() {
             warehouse export timestamps can normalize on this page before joining
             to CRM data. If you are validating sitemap or indexing timing, the{" "}
             <Link
+              prefetch={false}
               href="/seo/sitemap-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -303,6 +311,7 @@ export default function UnixTimestampPage() {
             </Link>{" "}
             and{" "}
             <Link
+              prefetch={false}
               href="/seo/robots-txt-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -319,6 +328,7 @@ export default function UnixTimestampPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
+              prefetch={false}
               href="/#code-developer-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -330,6 +340,7 @@ export default function UnixTimestampPage() {
             {relatedTools.slice(0, 14).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

@@ -30,6 +30,7 @@ export default function AboutPage() {
       </p>
       <p>
         <Link
+          prefetch={false}
           href="/"
           className="font-medium text-foreground underline underline-offset-4"
         >

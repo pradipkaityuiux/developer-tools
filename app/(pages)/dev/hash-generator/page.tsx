@@ -22,7 +22,7 @@ export default function HashGeneratorPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -63,6 +63,7 @@ export default function HashGeneratorPage() {
             <strong className="font-medium text-foreground">file hashes</strong>
             . Pair it with our{" "}
             <Link
+              prefetch={false}
               href="/dev/base64"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -70,6 +71,7 @@ export default function HashGeneratorPage() {
             </Link>{" "}
             when you move binary through text transports, and with the{" "}
             <Link
+              prefetch={false}
               href="/dev/jwt-decoder"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -119,6 +121,7 @@ export default function HashGeneratorPage() {
             threat models today. When you verify TLS assets, cross-check
             certificate details with our{" "}
             <Link
+              prefetch={false}
               href="/website/ssl-certificate-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -170,6 +173,7 @@ export default function HashGeneratorPage() {
                 When you need identifiers instead of deterministic digests of
                 content, generate random{" "}
                 <Link
+                  prefetch={false}
                   href="/dev/uuid-generator"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -178,6 +182,7 @@ export default function HashGeneratorPage() {
                 . When you need safe transport of arbitrary bytes inside ASCII,
                 round-trip through the{" "}
                 <Link
+                  prefetch={false}
                   href="/dev/base64"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -235,6 +240,7 @@ export default function HashGeneratorPage() {
             with explicit UTF-8 behavior and visible byte length. If your
             workflow centers on URLs and query strings, normalize with the{" "}
             <Link
+              prefetch={false}
               href="/dev/url-encoder"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -257,6 +263,7 @@ export default function HashGeneratorPage() {
             dump hex bytes or use a structured format like JSON and hash the
             canonical serialized form both sides agree on. Our{" "}
             <Link
+              prefetch={false}
               href="/dev/json-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -290,6 +297,7 @@ export default function HashGeneratorPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
+              prefetch={false}
               href="/#code-developer-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -301,6 +309,7 @@ export default function HashGeneratorPage() {
             {relatedTools.slice(0, 14).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

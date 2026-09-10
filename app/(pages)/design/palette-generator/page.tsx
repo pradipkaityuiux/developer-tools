@@ -24,7 +24,7 @@ export default function PaletteGeneratorPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -84,6 +84,7 @@ export default function PaletteGeneratorPage() {
             —ideal for design systems, marketing sites, and SaaS dashboards.
             Pair results with the{" "}
             <Link
+              prefetch={false}
               href="/design/contrast-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -91,6 +92,7 @@ export default function PaletteGeneratorPage() {
             </Link>
             , the{" "}
             <Link
+              prefetch={false}
               href="/design/color-picker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -98,6 +100,7 @@ export default function PaletteGeneratorPage() {
             </Link>{" "}
             for RGB and HSL strings, and the{" "}
             <Link
+              prefetch={false}
               href="/design/tint-shade-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -105,6 +108,7 @@ export default function PaletteGeneratorPage() {
             </Link>{" "}
             when you need a fuller lightness scale. Explore all{" "}
             <Link
+              prefetch={false}
               href="/#design-color-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -224,6 +228,7 @@ export default function PaletteGeneratorPage() {
                 design tokens. Before finalizing UI text colors, run the same HEX
                 values through the{" "}
                 <Link
+                  prefetch={false}
                   href="/design/contrast-checker"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -231,6 +236,7 @@ export default function PaletteGeneratorPage() {
                 </Link>{" "}
                 and preview states with the{" "}
                 <Link
+                  prefetch={false}
                   href="/design/color-blindness-simulator"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -266,6 +272,7 @@ export default function PaletteGeneratorPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             After you export HEX codes, convert them to other formats with the{" "}
             <Link
+              prefetch={false}
               href="/design/color-picker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -273,6 +280,7 @@ export default function PaletteGeneratorPage() {
             </Link>
             , build gradients for hero sections with the{" "}
             <Link
+              prefetch={false}
               href="/design/gradient-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -280,6 +288,7 @@ export default function PaletteGeneratorPage() {
             </Link>{" "}
             or{" "}
             <Link
+              prefetch={false}
               href="/design/css-gradient"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -287,6 +296,7 @@ export default function PaletteGeneratorPage() {
             </Link>{" "}
             tools, and prototype shadows and radii with the{" "}
             <Link
+              prefetch={false}
               href="/design/box-shadow-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -294,6 +304,7 @@ export default function PaletteGeneratorPage() {
             </Link>{" "}
             and{" "}
             <Link
+              prefetch={false}
               href="/design/border-radius-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -302,6 +313,7 @@ export default function PaletteGeneratorPage() {
             generators. For web performance and SEO audits unrelated to color,
             browse{" "}
             <Link
+              prefetch={false}
               href="/website/http-header-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -309,6 +321,7 @@ export default function PaletteGeneratorPage() {
             </Link>{" "}
             and{" "}
             <Link
+              prefetch={false}
               href="/website/meta-tags-extractor"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -323,6 +336,7 @@ export default function PaletteGeneratorPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Highlights from the{" "}
             <Link
+              prefetch={false}
               href="/#design-color-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -334,6 +348,7 @@ export default function PaletteGeneratorPage() {
             {relatedTools.map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

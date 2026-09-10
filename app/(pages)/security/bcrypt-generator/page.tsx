@@ -24,7 +24,7 @@ export default function BcryptGeneratorPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -89,6 +89,7 @@ export default function BcryptGeneratorPage() {
             the page loads. When you need fast digests for checksums (not password
             storage), use our{" "}
             <Link
+              prefetch={false}
               href="/dev/hash-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -96,6 +97,7 @@ export default function BcryptGeneratorPage() {
             </Link>
             ; when you need random candidate passwords, pair this page with the{" "}
             <Link
+              prefetch={false}
               href="/dev/password-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -205,6 +207,7 @@ export default function BcryptGeneratorPage() {
             <strong className="font-medium text-foreground">string checksum</strong>
             , the{" "}
             <Link
+              prefetch={false}
               href="/dev/hash-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -240,6 +243,7 @@ export default function BcryptGeneratorPage() {
             bindings, with visible UTF-8 limits so encoding mistakes surface early.
             For webhook signatures and shared-secret MACs, use the{" "}
             <Link
+              prefetch={false}
               href="/security/hmac-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -247,6 +251,7 @@ export default function BcryptGeneratorPage() {
             </Link>
             . You can also browse the full{" "}
             <Link
+              prefetch={false}
               href="/#security-encryption-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -277,6 +282,7 @@ export default function BcryptGeneratorPage() {
             {relatedTools.slice(0, 14).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

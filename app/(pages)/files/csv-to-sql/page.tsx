@@ -22,13 +22,14 @@ export default function CsvToSqlPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
               /
             </span>
             <Link
+              prefetch={false}
               href="/#file-data-tools"
               className="hover:text-foreground"
             >
@@ -112,6 +113,7 @@ export default function CsvToSqlPage() {
             in CI against a disposable database, or email to a DBA for review.
             When you only need JSON for an API mock, our{" "}
             <Link
+              prefetch={false}
               href="/dev/csv-to-json"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -119,6 +121,7 @@ export default function CsvToSqlPage() {
             </Link>{" "}
             is the parallel path; when JSON already exists,{" "}
             <Link
+              prefetch={false}
               href="/dev/json-to-csv"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -224,6 +227,7 @@ export default function CsvToSqlPage() {
                 </strong>
                 , then optionally run the text through our{" "}
                 <Link
+                  prefetch={false}
                   href="/dev/sql-formatter"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -240,6 +244,7 @@ export default function CsvToSqlPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Before you freeze rows into SQL, it helps to inspect the grid. Our{" "}
             <Link
+              prefetch={false}
               href="/files/csv-viewer"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -248,6 +253,7 @@ export default function CsvToSqlPage() {
             lets you sort, filter, and fix cells in the browser. If duplicates
             would break unique constraints, clean the file with the{" "}
             <Link
+              prefetch={false}
               href="/files/csv-deduplicator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -272,6 +278,7 @@ export default function CsvToSqlPage() {
             and makes audits easier: you can diff SQL the same way you diff
             code. For line-oriented text transforms before CSV export, the{" "}
             <Link
+              prefetch={false}
               href="/text/comma-separator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -311,6 +318,7 @@ export default function CsvToSqlPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse every utility in{" "}
             <Link
+              prefetch={false}
               href="/#file-data-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -322,6 +330,7 @@ export default function CsvToSqlPage() {
             {relatedTools.slice(0, 12).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

@@ -21,7 +21,7 @@ export default function HreflangGeneratorPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -53,6 +53,7 @@ export default function HreflangGeneratorPage() {
             <strong className="font-medium text-foreground">canonicals</strong> and{" "}
             <strong className="font-medium text-foreground">redirects</strong> with the{" "}
             <Link
+              prefetch={false}
               href="/website/canonical-tag-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -60,6 +61,7 @@ export default function HreflangGeneratorPage() {
             </Link>{" "}
             and{" "}
             <Link
+              prefetch={false}
               href="/website/redirect-chain-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -67,6 +69,7 @@ export default function HreflangGeneratorPage() {
             </Link>
             , and keep crawl hints aligned using the{" "}
             <Link
+              prefetch={false}
               href="/seo/robots-txt-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -74,6 +77,7 @@ export default function HreflangGeneratorPage() {
             </Link>{" "}
             and{" "}
             <Link
+              prefetch={false}
               href="/seo/sitemap-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -114,6 +118,7 @@ export default function HreflangGeneratorPage() {
             can hand to engineering or paste into a CMS header field. For structured data in JSON-LD,
             pair with the{" "}
             <Link
+              prefetch={false}
               href="/seo/schema-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -174,6 +179,7 @@ export default function HreflangGeneratorPage() {
             and flags duplicate hreflang values. Related workflows include{" "}
             <strong className="font-medium text-foreground">Open Graph</strong> QA with the{" "}
             <Link
+              prefetch={false}
               href="/seo/og-tag-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -181,6 +187,7 @@ export default function HreflangGeneratorPage() {
             </Link>
             , campaign URLs via the{" "}
             <Link
+              prefetch={false}
               href="/seo/utm-builder"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -188,6 +195,7 @@ export default function HreflangGeneratorPage() {
             </Link>
             , and on-page copy tuning with the{" "}
             <Link
+              prefetch={false}
               href="/seo/keyword-density"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -195,6 +203,7 @@ export default function HreflangGeneratorPage() {
             </Link>{" "}
             and{" "}
             <Link
+              prefetch={false}
               href="/seo/readability-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -212,6 +221,7 @@ export default function HreflangGeneratorPage() {
             tags self-reference, and that temporary marketing redirects do not strip parameters your
             analytics rely on. For migration audits, the{" "}
             <Link
+              prefetch={false}
               href="/seo/redirect-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -228,6 +238,7 @@ export default function HreflangGeneratorPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
+              prefetch={false}
               href="/#seo-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -239,6 +250,7 @@ export default function HreflangGeneratorPage() {
             {relatedTools.slice(0, 14).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

@@ -24,13 +24,14 @@ export default function OAuth2FlowVisualizerPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
               /
             </span>
             <Link
+              prefetch={false}
               href="/#api-developer-toolbox"
               className="hover:text-foreground"
             >
@@ -91,6 +92,7 @@ export default function OAuth2FlowVisualizerPage() {
             for public clients and SPAs. Everything runs locally—pair it with
             our{" "}
             <Link
+              prefetch={false}
               href="/dev/jwt-decoder"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -102,6 +104,7 @@ export default function OAuth2FlowVisualizerPage() {
             </code>{" "}
             inspection and the{" "}
             <Link
+              prefetch={false}
               href="/dev/url-encoder"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -236,6 +239,7 @@ export default function OAuth2FlowVisualizerPage() {
                 <strong className="font-medium text-foreground">curl</strong>{" "}
                 example and run it from your machine or paste into the{" "}
                 <Link
+                  prefetch={false}
                   href="/api-toolbox/http-request-builder"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -282,6 +286,7 @@ export default function OAuth2FlowVisualizerPage() {
             </strong>
             . For JSON token responses, use the{" "}
             <Link
+              prefetch={false}
               href="/dev/json-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -289,6 +294,7 @@ export default function OAuth2FlowVisualizerPage() {
             </Link>{" "}
             and{" "}
             <Link
+              prefetch={false}
               href="/api-toolbox/api-response-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -312,6 +318,7 @@ export default function OAuth2FlowVisualizerPage() {
             issue or verify JWTs yourself, cross-check algorithms and signing
             keys with the{" "}
             <Link
+              prefetch={false}
               href="/security/jwt-encoder"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -326,6 +333,7 @@ export default function OAuth2FlowVisualizerPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
+              prefetch={false}
               href="/#api-developer-toolbox"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -337,6 +345,7 @@ export default function OAuth2FlowVisualizerPage() {
             {relatedTools.map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

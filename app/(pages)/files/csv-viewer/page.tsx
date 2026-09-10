@@ -22,13 +22,14 @@ export default function CsvViewerPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
               /
             </span>
             <Link
+              prefetch={false}
               href="/#file-data-tools"
               className="hover:text-foreground"
             >
@@ -77,6 +78,7 @@ export default function CsvViewerPage() {
             —ideal for quick QA on data feeds, CRM slices, and config tables
             before you push them to a database or API. Continue to our{" "}
             <Link
+              prefetch={false}
               href="/dev/csv-to-json"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -84,6 +86,7 @@ export default function CsvViewerPage() {
             </Link>{" "}
             when you need structured JSON, or the{" "}
             <Link
+              prefetch={false}
               href="/files/csv-deduplicator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -225,6 +228,7 @@ export default function CsvViewerPage() {
             delimiter control and a visible export buffer. When you only need to
             convert shape instead of editing cells, the{" "}
             <Link
+              prefetch={false}
               href="/dev/csv-to-json"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -232,6 +236,7 @@ export default function CsvViewerPage() {
             </Link>{" "}
             and{" "}
             <Link
+              prefetch={false}
               href="/dev/json-to-csv"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -243,6 +248,7 @@ export default function CsvViewerPage() {
             </code>{" "}
             statements, use the{" "}
             <Link
+              prefetch={false}
               href="/files/csv-to-sql"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -250,6 +256,7 @@ export default function CsvViewerPage() {
             </Link>
             . For newline lists that are not yet a table, normalize with the{" "}
             <Link
+              prefetch={false}
               href="/text/comma-separator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -283,6 +290,7 @@ export default function CsvViewerPage() {
             quoted fields are preserved. After edits, verify totals against the
             source system and consider hashing binaries with the{" "}
             <Link
+              prefetch={false}
               href="/files/file-hash"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -298,6 +306,7 @@ export default function CsvViewerPage() {
             Nothing is transmitted to our servers for parsing or export: it is the
             same client-side model as the rest of the{" "}
             <Link
+              prefetch={false}
               href="/#file-data-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -319,6 +328,7 @@ export default function CsvViewerPage() {
             {relatedTools.slice(0, 14).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

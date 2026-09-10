@@ -24,7 +24,7 @@ export default function ApiResponseFormatterPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -74,6 +74,7 @@ export default function ApiResponseFormatterPage() {
             browser—ideal when you debug staging tokens, compare vendor
             payloads, or document example responses next to our{" "}
             <Link
+              prefetch={false}
               href="/api-toolbox/http-request-builder"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -81,6 +82,7 @@ export default function ApiResponseFormatterPage() {
             </Link>{" "}
             and the dedicated{" "}
             <Link
+              prefetch={false}
               href="/dev/json-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -88,6 +90,7 @@ export default function ApiResponseFormatterPage() {
             </Link>{" "}
             or{" "}
             <Link
+              prefetch={false}
               href="/dev/xml-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -131,6 +134,7 @@ export default function ApiResponseFormatterPage() {
             redacted samples from production-like environments while pairing
             with our{" "}
             <Link
+              prefetch={false}
               href="/dev/jwt-decoder"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -227,6 +231,7 @@ export default function ApiResponseFormatterPage() {
             reduces tab churn when you switch between partners or versions.
             When you only need XML depth editing, the{" "}
             <Link
+              prefetch={false}
               href="/dev/xml-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -234,6 +239,7 @@ export default function ApiResponseFormatterPage() {
             </Link>{" "}
             offers paired input/output panes; when you only need JSON, the{" "}
             <Link
+              prefetch={false}
               href="/dev/json-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -258,6 +264,7 @@ export default function ApiResponseFormatterPage() {
             headless CMS sync—validate those snippets here, then validate live
             URLs with our{" "}
             <Link
+              prefetch={false}
               href="/website/meta-tags-extractor"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -265,6 +272,7 @@ export default function ApiResponseFormatterPage() {
             </Link>{" "}
             or{" "}
             <Link
+              prefetch={false}
               href="/seo/schema-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -279,6 +287,7 @@ export default function ApiResponseFormatterPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
+              prefetch={false}
               href="/#api-developer-toolbox"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -291,6 +300,7 @@ export default function ApiResponseFormatterPage() {
             {relatedTools.map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

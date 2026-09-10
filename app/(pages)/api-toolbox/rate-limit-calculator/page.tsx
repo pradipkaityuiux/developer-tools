@@ -24,7 +24,7 @@ export default function RateLimitCalculatorPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -71,6 +71,7 @@ export default function RateLimitCalculatorPage() {
             </strong>
             . When you need to debug live traffic, pair these numbers with our{" "}
             <Link
+              prefetch={false}
               href="/api-toolbox/http-request-builder"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -78,6 +79,7 @@ export default function RateLimitCalculatorPage() {
             </Link>{" "}
             and the{" "}
             <Link
+              prefetch={false}
               href="/api-toolbox/http-status-codes"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -136,6 +138,7 @@ export default function RateLimitCalculatorPage() {
             midnight reset—always confirm semantics in the provider&apos;s
             documentation. For contract design and error payloads, browsing an{" "}
             <Link
+              prefetch={false}
               href="/api-toolbox/openapi-viewer"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -230,6 +233,7 @@ export default function RateLimitCalculatorPage() {
             not model retry amplification—treat its output as a baseline for steady
             traffic. For header inspection on a live URL, the{" "}
             <Link
+              prefetch={false}
               href="/website/http-header-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -273,6 +277,7 @@ export default function RateLimitCalculatorPage() {
             </strong>{" "}
             for auth endpoints—see our{" "}
             <Link
+              prefetch={false}
               href="/api-toolbox/oauth2-flow-visualizer"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -287,6 +292,7 @@ export default function RateLimitCalculatorPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
+              prefetch={false}
               href="/#api-developer-toolbox"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -298,6 +304,7 @@ export default function RateLimitCalculatorPage() {
             {relatedTools.slice(0, 12).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

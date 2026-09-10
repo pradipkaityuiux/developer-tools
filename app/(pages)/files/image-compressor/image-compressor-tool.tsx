@@ -427,6 +427,7 @@ export function ImageCompressorTool() {
           Processing stays in your browser. JPEG export blends transparent pixels
           against white. For exact byte-level workflows, verify hashes with the{" "}
           <Link
+            prefetch={false}
             href="/files/file-hash"
             className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
           >

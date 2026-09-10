@@ -449,6 +449,7 @@ export function PaletteGeneratorTool() {
           Export HEX for Figma tokens or CSS. For RGB, HSL, and CMYK strings, use
           the{" "}
           <Link
+            prefetch={false}
             href="/design/color-picker"
             className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
           >
@@ -456,6 +457,7 @@ export function PaletteGeneratorTool() {
           </Link>
           . Check contrast with the{" "}
           <Link
+            prefetch={false}
             href="/design/contrast-checker"
             className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
           >

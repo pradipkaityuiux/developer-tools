@@ -24,7 +24,7 @@ export default function MimeTypeLookupPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -76,6 +76,7 @@ export default function MimeTypeLookupPage() {
             with the catalog. Everything runs in your browser—no server round
             trip for lookups. For raw HTTP testing, pair this with the{" "}
             <Link
+              prefetch={false}
               href="/api-toolbox/http-request-builder"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -83,6 +84,7 @@ export default function MimeTypeLookupPage() {
             </Link>{" "}
             and{" "}
             <Link
+              prefetch={false}
               href="/api-toolbox/http-status-codes"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -220,6 +222,7 @@ export default function MimeTypeLookupPage() {
                 When you need to inspect or format API payloads after choosing
                 types, use the{" "}
                 <Link
+                  prefetch={false}
                   href="/api-toolbox/api-response-formatter"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -227,6 +230,7 @@ export default function MimeTypeLookupPage() {
                 </Link>{" "}
                 or{" "}
                 <Link
+                  prefetch={false}
                   href="/dev/json-formatter"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -234,6 +238,7 @@ export default function MimeTypeLookupPage() {
                 </Link>
                 . For OpenAPI specs, open the{" "}
                 <Link
+                  prefetch={false}
                   href="/api-toolbox/openapi-viewer"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -260,6 +265,7 @@ export default function MimeTypeLookupPage() {
             configuration. For rate limits and quotas after you ship the API,
             see the{" "}
             <Link
+              prefetch={false}
               href="/api-toolbox/rate-limit-calculator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -284,6 +290,7 @@ export default function MimeTypeLookupPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
+              prefetch={false}
               href="/#api-developer-toolbox"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -295,6 +302,7 @@ export default function MimeTypeLookupPage() {
             {relatedTools.map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

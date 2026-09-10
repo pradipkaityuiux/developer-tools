@@ -22,7 +22,7 @@ export default function UtmBuilderPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -105,6 +105,7 @@ export default function UtmBuilderPage() {
             <strong className="font-medium text-foreground">Import</strong> to move values
             into the form. For encoding edge cases outside UTMs, the{" "}
             <Link
+              prefetch={false}
               href="/dev/url-encoder"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -129,6 +130,7 @@ export default function UtmBuilderPage() {
             need structured data on the destination page for rich results, pair tagged
             traffic with the{" "}
             <Link
+              prefetch={false}
               href="/seo/schema-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -145,6 +147,7 @@ export default function UtmBuilderPage() {
             the HTML body. If marketing links hop through multiple redirects, attribution
             and crawl budget can suffer—verify chains with the{" "}
             <Link
+              prefetch={false}
               href="/seo/redirect-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -152,6 +155,7 @@ export default function UtmBuilderPage() {
             </Link>{" "}
             or the broader{" "}
             <Link
+              prefetch={false}
               href="/website/redirect-chain-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -160,6 +164,7 @@ export default function UtmBuilderPage() {
             . For social previews of the same landing pages, align Open Graph metadata using
             the{" "}
             <Link
+              prefetch={false}
               href="/seo/og-tag-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -167,6 +172,7 @@ export default function UtmBuilderPage() {
             </Link>{" "}
             or live{" "}
             <Link
+              prefetch={false}
               href="/website/open-graph-preview"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -175,6 +181,7 @@ export default function UtmBuilderPage() {
             so shared UTM links still unfurl with the right title and image. Site-wide
             crawling hygiene complements campaign work: maintain{" "}
             <Link
+              prefetch={false}
               href="/seo/robots-txt-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -182,6 +189,7 @@ export default function UtmBuilderPage() {
             </Link>{" "}
             rules and an{" "}
             <Link
+              prefetch={false}
               href="/seo/sitemap-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -210,6 +218,7 @@ export default function UtmBuilderPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
+              prefetch={false}
               href="/#seo-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -221,6 +230,7 @@ export default function UtmBuilderPage() {
             {relatedTools.slice(0, 12).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

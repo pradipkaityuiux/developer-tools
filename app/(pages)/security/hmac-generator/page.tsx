@@ -24,7 +24,7 @@ export default function HmacGeneratorPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -76,6 +76,7 @@ export default function HmacGeneratorPage() {
             <strong className="font-medium text-foreground">Web Crypto API</strong>
             . When you only need an unkeyed digest of text, use our{" "}
             <Link
+              prefetch={false}
               href="/dev/hash-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -84,6 +85,7 @@ export default function HmacGeneratorPage() {
             for MD5 and SHA-family checksums. For symmetric encryption with a
             passphrase, see{" "}
             <Link
+              prefetch={false}
               href="/security/aes-encrypt-decrypt"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -206,6 +208,7 @@ export default function HmacGeneratorPage() {
                 computation or ticket. If the tag does not match, normalize the
                 payload with our{" "}
                 <Link
+                  prefetch={false}
                   href="/dev/json-formatter"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -225,6 +228,7 @@ export default function HmacGeneratorPage() {
             parties share a secret and need to prove authenticity of a message. Use a
             plain digest from the{" "}
             <Link
+              prefetch={false}
               href="/dev/hash-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -233,6 +237,7 @@ export default function HmacGeneratorPage() {
             for integrity of public content (checksums, cache keys) where no secret is
             involved. For password storage, use dedicated password hashes (see{" "}
             <Link
+              prefetch={false}
               href="/security/password-strength"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -252,6 +257,7 @@ export default function HmacGeneratorPage() {
             with another key order changes the tag. If you transport binary inside
             text, round-trip through{" "}
             <Link
+              prefetch={false}
               href="/dev/base64"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -270,6 +276,7 @@ export default function HmacGeneratorPage() {
             credentials into shared screens. For asymmetric signing and key pairs,
             use the{" "}
             <Link
+              prefetch={false}
               href="/security/rsa-key-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -284,6 +291,7 @@ export default function HmacGeneratorPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
+              prefetch={false}
               href="/#security-encryption-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -295,6 +303,7 @@ export default function HmacGeneratorPage() {
             {relatedTools.slice(0, 14).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

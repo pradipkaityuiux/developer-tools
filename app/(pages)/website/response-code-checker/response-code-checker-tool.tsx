@@ -209,6 +209,7 @@ export function ResponseCodeCheckerTool() {
             <p className="text-sm text-amber-800 dark:text-amber-300">
               Multiple redirects add round trips. Use the{" "}
               <Link
+                prefetch={false}
                 href="/website/redirect-chain-checker"
                 className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
               >
@@ -273,6 +274,7 @@ export function ResponseCodeCheckerTool() {
           <p className="text-sm text-zinc-600 dark:text-zinc-400">
             Inspect response headers on the final URL with our{" "}
             <Link
+              prefetch={false}
               href="/website/http-header-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -280,6 +282,7 @@ export function ResponseCodeCheckerTool() {
             </Link>{" "}
             or scan on-page links with the{" "}
             <Link
+              prefetch={false}
               href="/website/broken-link-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >

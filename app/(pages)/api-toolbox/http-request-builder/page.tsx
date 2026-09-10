@@ -24,7 +24,7 @@ export default function HttpRequestBuilderPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -70,6 +70,7 @@ export default function HttpRequestBuilderPage() {
             <strong className="font-medium text-foreground">curl</strong>{" "}
             equivalents for CI and teammates. Pair it with our{" "}
             <Link
+              prefetch={false}
               href="/dev/json-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -77,6 +78,7 @@ export default function HttpRequestBuilderPage() {
             </Link>
             ,{" "}
             <Link
+              prefetch={false}
               href="/api-toolbox/http-status-codes"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -84,6 +86,7 @@ export default function HttpRequestBuilderPage() {
             </Link>
             , and{" "}
             <Link
+              prefetch={false}
               href="/api-toolbox/mime-type-lookup"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -129,6 +132,7 @@ export default function HttpRequestBuilderPage() {
             </strong>
             . Platform teams pair it with{" "}
             <Link
+              prefetch={false}
               href="/dev/jwt-decoder"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -136,6 +140,7 @@ export default function HttpRequestBuilderPage() {
             </Link>{" "}
             when debugging bearer tokens, and with{" "}
             <Link
+              prefetch={false}
               href="/website/http-header-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -292,6 +297,7 @@ export default function HttpRequestBuilderPage() {
             That is expected: use server-side calls, an API gateway, or a
             development proxy when you control the backend. Our{" "}
             <Link
+              prefetch={false}
               href="/seo/redirect-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -299,6 +305,7 @@ export default function HttpRequestBuilderPage() {
             </Link>{" "}
             and{" "}
             <Link
+              prefetch={false}
               href="/website/response-code-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -322,6 +329,7 @@ export default function HttpRequestBuilderPage() {
             headers before exporting curl snippets to tickets. For structured
             data hygiene after the call, run bodies through the{" "}
             <Link
+              prefetch={false}
               href="/dev/json-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -329,6 +337,7 @@ export default function HttpRequestBuilderPage() {
             </Link>{" "}
             or{" "}
             <Link
+              prefetch={false}
               href="/api-toolbox/api-response-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -343,6 +352,7 @@ export default function HttpRequestBuilderPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
+              prefetch={false}
               href="/#api-developer-toolbox"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -355,6 +365,7 @@ export default function HttpRequestBuilderPage() {
             {relatedTools.map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

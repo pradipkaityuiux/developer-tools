@@ -21,7 +21,7 @@ export default function SchemaGeneratorPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -64,6 +64,7 @@ export default function SchemaGeneratorPage() {
             <strong className="font-medium text-foreground">upload</strong> an
             existing file to refine. Pair output with the{" "}
             <Link
+              prefetch={false}
               href="/seo/og-tag-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -71,6 +72,7 @@ export default function SchemaGeneratorPage() {
             </Link>{" "}
             for social metadata, the{" "}
             <Link
+              prefetch={false}
               href="/seo/meta-length-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -78,6 +80,7 @@ export default function SchemaGeneratorPage() {
             </Link>{" "}
             for SERP snippets, and the{" "}
             <Link
+              prefetch={false}
               href="/seo/sitemap-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -130,6 +133,7 @@ export default function SchemaGeneratorPage() {
             focuses on copy-ready blocks you can paste beside templates generated
             by the{" "}
             <Link
+              prefetch={false}
               href="/seo/robots-txt-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -188,6 +192,7 @@ export default function SchemaGeneratorPage() {
                 </strong>{" "}
                 enhancements. For on-page copy quality, run the{" "}
                 <Link
+                  prefetch={false}
                   href="/seo/readability-checker"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -195,6 +200,7 @@ export default function SchemaGeneratorPage() {
                 </Link>{" "}
                 and{" "}
                 <Link
+                  prefetch={false}
                   href="/seo/keyword-density"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -235,6 +241,7 @@ export default function SchemaGeneratorPage() {
             Structured data works best when titles, descriptions, and URLs are
             consistent. Before launch, verify snippet lengths with the{" "}
             <Link
+              prefetch={false}
               href="/seo/meta-length-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -242,6 +249,7 @@ export default function SchemaGeneratorPage() {
             </Link>
             , generate campaign tracking with the{" "}
             <Link
+              prefetch={false}
               href="/seo/utm-builder"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -249,6 +257,7 @@ export default function SchemaGeneratorPage() {
             </Link>
             , and confirm redirects with the{" "}
             <Link
+              prefetch={false}
               href="/seo/redirect-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -256,6 +265,7 @@ export default function SchemaGeneratorPage() {
             </Link>
             . Multilingual sites can pair JSON-LD with the{" "}
             <Link
+              prefetch={false}
               href="/seo/hreflang-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -270,6 +280,7 @@ export default function SchemaGeneratorPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
+              prefetch={false}
               href="/#seo-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -281,6 +292,7 @@ export default function SchemaGeneratorPage() {
             {relatedTools.slice(0, 14).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

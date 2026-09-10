@@ -480,6 +480,7 @@ export function TintShadeGeneratorTool() {
               </strong>{" "}
               on black—validate real text/background pairs with the{" "}
               <Link
+                prefetch={false}
                 href="/design/contrast-checker"
                 className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
               >

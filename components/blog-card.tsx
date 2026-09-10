@@ -11,6 +11,7 @@ interface BlogCardProps {
 export function BlogCard({ title, description, href, image }: BlogCardProps) {
   return (
     <Link
+      prefetch={false}
       href={href}
       className="group my-6 block !no-underline transition-all duration-200 hover:scale-[1.02] hover:!no-underline"
     >

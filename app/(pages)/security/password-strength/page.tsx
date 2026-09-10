@@ -24,7 +24,7 @@ export default function PasswordStrengthPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -70,6 +70,7 @@ export default function PasswordStrengthPage() {
             <strong className="font-medium text-foreground">in your browser</strong>
             . When you need a fresh random secret, open the{" "}
             <Link
+              prefetch={false}
               href="/dev/password-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -77,6 +78,7 @@ export default function PasswordStrengthPage() {
             </Link>{" "}
             or explore more utilities under{" "}
             <Link
+              prefetch={false}
               href="/#security-encryption-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -126,6 +128,7 @@ export default function PasswordStrengthPage() {
             unique salts, and rate limits on authentication endpoints. When you
             prototype how expensive verification should be, the{" "}
             <Link
+              prefetch={false}
               href="/dev/hash-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -133,6 +136,7 @@ export default function PasswordStrengthPage() {
             </Link>{" "}
             helps compare digests for test vectors, and the catalog&apos;s{" "}
             <Link
+              prefetch={false}
               href="/#security-encryption-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -177,6 +181,7 @@ export default function PasswordStrengthPage() {
               <span className="text-foreground">
                 Address any hardening tips, then regenerate if needed using the{" "}
                 <Link
+                  prefetch={false}
                   href="/dev/password-generator"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -210,6 +215,7 @@ export default function PasswordStrengthPage() {
             After you pick a strong login secret, you might still validate transport
             and metadata: inspect responses with the{" "}
             <Link
+              prefetch={false}
               href="/website/http-header-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -217,6 +223,7 @@ export default function PasswordStrengthPage() {
             </Link>
             , preview social cards with the{" "}
             <Link
+              prefetch={false}
               href="/website/open-graph-preview"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -224,6 +231,7 @@ export default function PasswordStrengthPage() {
             </Link>
             , or extract tags using the{" "}
             <Link
+              prefetch={false}
               href="/website/meta-tags-extractor"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -231,6 +239,7 @@ export default function PasswordStrengthPage() {
             </Link>
             . For file workflows, the{" "}
             <Link
+              prefetch={false}
               href="/files/file-hash"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -245,6 +254,7 @@ export default function PasswordStrengthPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             More from the{" "}
             <Link
+              prefetch={false}
               href="/#security-encryption-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -256,6 +266,7 @@ export default function PasswordStrengthPage() {
             {relatedTools.map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

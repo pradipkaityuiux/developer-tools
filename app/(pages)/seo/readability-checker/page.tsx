@@ -24,7 +24,7 @@ export default function ReadabilityCheckerPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -65,6 +65,7 @@ export default function ReadabilityCheckerPage() {
             for your editorial ticket. Pair numbers with length checks using
             our{" "}
             <Link
+              prefetch={false}
               href="/text/word-counter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -72,6 +73,7 @@ export default function ReadabilityCheckerPage() {
             </Link>{" "}
             and live HTML review with the{" "}
             <Link
+              prefetch={false}
               href="/website/meta-tags-extractor"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -79,6 +81,7 @@ export default function ReadabilityCheckerPage() {
             </Link>
             . Browse more utilities under{" "}
             <Link
+              prefetch={false}
               href="/#seo-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -113,6 +116,7 @@ export default function ReadabilityCheckerPage() {
             expertise. When you tune titles and snippets, validate character
             limits with the{" "}
             <Link
+              prefetch={false}
               href="/website/open-graph-preview"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -178,6 +182,7 @@ export default function ReadabilityCheckerPage() {
               <span className="text-foreground">
                 For repetition and keyword balance, follow up with the{" "}
                 <Link
+                  prefetch={false}
                   href="/text/word-frequency"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -185,6 +190,7 @@ export default function ReadabilityCheckerPage() {
                 </Link>{" "}
                 and, when converting from Markdown, the{" "}
                 <Link
+                  prefetch={false}
                   href="/dev/markdown-to-html"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -219,6 +225,7 @@ export default function ReadabilityCheckerPage() {
             localization or legal review when sentences grow longer. Developers
             drafting in-repo Markdown can paste sections here, then run the{" "}
             <Link
+              prefetch={false}
               href="/dev/html-to-markdown"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -239,6 +246,7 @@ export default function ReadabilityCheckerPage() {
             were designed for prose—not tables of numbers or JSON. For
             structured data QA, use our{" "}
             <Link
+              prefetch={false}
               href="/dev/json-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -253,6 +261,7 @@ export default function ReadabilityCheckerPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             The home page lists the full{" "}
             <Link
+              prefetch={false}
               href="/#seo-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -277,6 +286,7 @@ export default function ReadabilityCheckerPage() {
             As new pages ship, each tool will link from the catalog; for now use
             the list above as a roadmap and rely on the{" "}
             <Link
+              prefetch={false}
               href="/text/word-counter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -284,6 +294,7 @@ export default function ReadabilityCheckerPage() {
             </Link>{" "}
             and{" "}
             <Link
+              prefetch={false}
               href="/website/meta-tags-extractor"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >

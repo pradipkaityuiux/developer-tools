@@ -24,7 +24,7 @@ export default function WebhookPayloadTesterPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -67,6 +67,7 @@ export default function WebhookPayloadTesterPage() {
             , copy any event as JSON for tickets, and cross-check formatting with
             our{" "}
             <Link
+              prefetch={false}
               href="/dev/json-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -75,6 +76,7 @@ export default function WebhookPayloadTesterPage() {
             when you need a full tree view. For outbound API calls and headers,
             see the{" "}
             <Link
+              prefetch={false}
               href="/api-toolbox/http-request-builder"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -143,6 +145,7 @@ export default function WebhookPayloadTesterPage() {
             and export JSON for diffing or documentation. When you need to browse
             large API responses without recording them as webhooks, use the{" "}
             <Link
+              prefetch={false}
               href="/api-toolbox/api-response-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -151,6 +154,7 @@ export default function WebhookPayloadTesterPage() {
             . For OpenAPI contracts that describe both REST paths and webhook
             schemas, open the{" "}
             <Link
+              prefetch={false}
               href="/api-toolbox/openapi-viewer"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -217,6 +221,7 @@ export default function WebhookPayloadTesterPage() {
                 </strong>{" "}
                 with our{" "}
                 <Link
+                  prefetch={false}
                   href="/api-toolbox/http-status-codes"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -224,6 +229,7 @@ export default function WebhookPayloadTesterPage() {
                 </Link>{" "}
                 and tune retry behavior with the{" "}
                 <Link
+                  prefetch={false}
                   href="/api-toolbox/rate-limit-calculator"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -243,6 +249,7 @@ export default function WebhookPayloadTesterPage() {
             <strong className="font-medium text-foreground">HMAC</strong> utilities.
             Experiment on our{" "}
             <Link
+              prefetch={false}
               href="/security/hmac-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -251,6 +258,7 @@ export default function WebhookPayloadTesterPage() {
             with test keys only. If you serialize webhook bodies to Base64 for
             logging pipelines, the{" "}
             <Link
+              prefetch={false}
               href="/dev/base64"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -259,6 +267,7 @@ export default function WebhookPayloadTesterPage() {
             stays client-side. For OAuth-connected APIs that also emit webhooks,
             review flows in the{" "}
             <Link
+              prefetch={false}
               href="/api-toolbox/oauth2-flow-visualizer"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -274,6 +283,7 @@ export default function WebhookPayloadTesterPage() {
             {relatedTools.map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

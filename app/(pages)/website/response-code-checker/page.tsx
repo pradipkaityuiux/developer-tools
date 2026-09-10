@@ -24,7 +24,7 @@ export default function ResponseCodeCheckerPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -83,6 +83,7 @@ export default function ResponseCodeCheckerPage() {
             When the final URL differs from what you entered, compare the two
             addresses and decide whether internal links, sitemap entries, or{" "}
             <Link
+              prefetch={false}
               href="/website/canonical-tag-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -95,6 +96,7 @@ export default function ResponseCodeCheckerPage() {
             <strong className="text-foreground">status and Location</strong> values,
             open our{" "}
             <Link
+              prefetch={false}
               href="/website/redirect-chain-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -106,6 +108,7 @@ export default function ResponseCodeCheckerPage() {
             <strong className="text-foreground">Set-Cookie</strong>, and the rest of
             the header set on the final response, use the{" "}
             <Link
+              prefetch={false}
               href="/website/http-header-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -114,6 +117,7 @@ export default function ResponseCodeCheckerPage() {
             . When you need to validate many links discovered on a single HTML
             page, run the{" "}
             <Link
+              prefetch={false}
               href="/website/broken-link-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -167,6 +171,7 @@ export default function ResponseCodeCheckerPage() {
             redirects or TLS errors in the browser, validate hostname resolution
             with the{" "}
             <Link
+              prefetch={false}
               href="/website/dns-lookup"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -174,6 +179,7 @@ export default function ResponseCodeCheckerPage() {
             </Link>
             , certificate validity with the{" "}
             <Link
+              prefetch={false}
               href="/website/ssl-certificate-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -181,6 +187,7 @@ export default function ResponseCodeCheckerPage() {
             </Link>
             , and registration context with{" "}
             <Link
+              prefetch={false}
               href="/website/whois-lookup"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -188,6 +195,7 @@ export default function ResponseCodeCheckerPage() {
             </Link>{" "}
             or{" "}
             <Link
+              prefetch={false}
               href="/website/domain-age-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -204,6 +212,7 @@ export default function ResponseCodeCheckerPage() {
             or certain geographic regions. Always reconcile this checker with your
             CDN analytics, origin access logs, and{" "}
             <Link
+              prefetch={false}
               href="/website/robots-txt-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -219,6 +228,7 @@ export default function ResponseCodeCheckerPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
+              prefetch={false}
               href="/#website-url-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -230,6 +240,7 @@ export default function ResponseCodeCheckerPage() {
             {relatedTools.slice(0, 10).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

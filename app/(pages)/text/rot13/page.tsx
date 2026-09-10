@@ -22,13 +22,14 @@ export default function Rot13Page() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
               /
             </span>
             <Link
+              prefetch={false}
               href="/#text-string-tools"
               className="hover:text-foreground"
             >
@@ -84,6 +85,7 @@ export default function Rot13Page() {
             </strong>{" "}
             with one click. Pair this page with our{" "}
             <Link
+              prefetch={false}
               href="/text/case-converter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -91,6 +93,7 @@ export default function Rot13Page() {
             </Link>
             ,{" "}
             <Link
+              prefetch={false}
               href="/dev/html-entities"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -98,6 +101,7 @@ export default function Rot13Page() {
             </Link>
             , and{" "}
             <Link
+              prefetch={false}
               href="/dev/regex-tester"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -145,6 +149,7 @@ export default function Rot13Page() {
             Content teams sometimes compare ROT13 to other string utilities: after
             you unwrap a spoiler or puzzle line, you might still need a{" "}
             <Link
+              prefetch={false}
               href="/text/word-counter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -152,6 +157,7 @@ export default function Rot13Page() {
             </Link>{" "}
             for CMS limits, a{" "}
             <Link
+              prefetch={false}
               href="/text/diff-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -159,6 +165,7 @@ export default function Rot13Page() {
             </Link>{" "}
             for comparing drafts, or a{" "}
             <Link
+              prefetch={false}
               href="/text/duplicate-line-remover"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -231,6 +238,7 @@ export default function Rot13Page() {
             decryption coincide on the 26-letter alphabet. A variable-shift
             Caesar tool (see the{" "}
             <Link
+              prefetch={false}
               href="/text/caesar-cipher"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -240,6 +248,7 @@ export default function Rot13Page() {
             offsets for exercises. Neither replaces TLS, disk encryption, or
             modern AEAD schemes. For percent-encoding and URLs, use the{" "}
             <Link
+              prefetch={false}
               href="/dev/url-encoder"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -251,6 +260,7 @@ export default function Rot13Page() {
             If you edit articles that mix prose and markup, run ROT13 only on
             the spoiler fragment, then use the{" "}
             <Link
+              prefetch={false}
               href="/dev/html-entities"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -282,6 +292,7 @@ export default function Rot13Page() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
+              prefetch={false}
               href="/#text-string-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >

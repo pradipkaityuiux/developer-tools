@@ -40,6 +40,7 @@ export default function PrivacyPolicyPage() {
         We may use cookies or local storage for preferences (such as theme) and
         for essential site functionality.         See our{" "}
         <Link
+          prefetch={false}
           href="/cookie-policy"
           className="font-medium text-foreground underline underline-offset-4"
         >

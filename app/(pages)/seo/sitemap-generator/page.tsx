@@ -23,7 +23,7 @@ export default function SitemapGeneratorPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -69,6 +69,7 @@ export default function SitemapGeneratorPage() {
             loads a local <code className="font-mono text-sm">.txt</code> URL
             list—nothing is sent to a server. Pair the output with our{" "}
             <Link
+              prefetch={false}
               href="/seo/robots-txt-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -77,6 +78,7 @@ export default function SitemapGeneratorPage() {
             for a <code className="font-mono text-sm">Sitemap:</code> line, and
             browse{" "}
             <Link
+              prefetch={false}
               href="/#seo-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -184,6 +186,7 @@ export default function SitemapGeneratorPage() {
                 </strong>
                 , open Sitemaps and submit the public URL of the file. Add a{" "}
                 <Link
+                  prefetch={false}
                   href="/seo/robots-txt-generator"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -231,6 +234,7 @@ export default function SitemapGeneratorPage() {
             </strong>
             . For rich results markup, use the{" "}
             <Link
+              prefetch={false}
               href="/seo/schema-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -238,6 +242,7 @@ export default function SitemapGeneratorPage() {
             </Link>
             ; for social previews, see the{" "}
             <Link
+              prefetch={false}
               href="/seo/og-tag-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -265,6 +270,7 @@ export default function SitemapGeneratorPage() {
             truthful when you use it. When you change URL structures, combine this
             workflow with the{" "}
             <Link
+              prefetch={false}
               href="/seo/redirect-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -272,6 +278,7 @@ export default function SitemapGeneratorPage() {
             </Link>{" "}
             so old URLs resolve cleanly. For snippet tuning before launch, the{" "}
             <Link
+              prefetch={false}
               href="/seo/meta-length-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -286,6 +293,7 @@ export default function SitemapGeneratorPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
+              prefetch={false}
               href="/#seo-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -297,6 +305,7 @@ export default function SitemapGeneratorPage() {
             {relatedTools.slice(0, 12).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

@@ -22,7 +22,7 @@ export default function WordCounterPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -67,6 +67,7 @@ export default function WordCounterPage() {
             , so drafts stay private. After you validate length here, confirm
             live HTML fields with our{" "}
             <Link
+              prefetch={false}
               href="/website/meta-tags-extractor"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -74,6 +75,7 @@ export default function WordCounterPage() {
             </Link>{" "}
             and explore more utilities in the{" "}
             <Link
+              prefetch={false}
               href="/#text-string-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -105,6 +107,7 @@ export default function WordCounterPage() {
             </strong>
             , email preheaders, or support macros. Pair raw counts with the{" "}
             <Link
+              prefetch={false}
               href="/text/word-frequency"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -167,6 +170,7 @@ export default function WordCounterPage() {
                 When you need consistent casing or URL slugs after trimming
                 length, chain this page with the{" "}
                 <Link
+                  prefetch={false}
                   href="/text/case-converter"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -174,6 +178,7 @@ export default function WordCounterPage() {
                 </Link>{" "}
                 and{" "}
                 <Link
+                  prefetch={false}
                   href="/text/slug-generator"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -207,6 +212,7 @@ export default function WordCounterPage() {
             before committing changelog prose. Content designers combine counts
             with the{" "}
             <Link
+              prefetch={false}
               href="/website/open-graph-preview"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -225,6 +231,7 @@ export default function WordCounterPage() {
             to the byline so readers know how the number was derived. For bulk
             text surgery—removing duplicates or normalizing whitespace—open the{" "}
             <Link
+              prefetch={false}
               href="/text/duplicate-line-remover"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -232,6 +239,7 @@ export default function WordCounterPage() {
             </Link>{" "}
             or{" "}
             <Link
+              prefetch={false}
               href="/text/whitespace-remover"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -252,6 +260,7 @@ export default function WordCounterPage() {
             privacy, and zero configuration. Need patterned edits across long
             drafts? Use the{" "}
             <Link
+              prefetch={false}
               href="/text/find-replace"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -266,6 +275,7 @@ export default function WordCounterPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full catalog under{" "}
             <Link
+              prefetch={false}
               href="/#text-string-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -277,6 +287,7 @@ export default function WordCounterPage() {
             {relatedTools.slice(0, 14).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -292,6 +303,7 @@ export default function WordCounterPage() {
           <p className="mt-4 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
             For placeholder copy while mocking layouts, the{" "}
             <Link
+              prefetch={false}
               href="/dev/lorem-ipsum"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >

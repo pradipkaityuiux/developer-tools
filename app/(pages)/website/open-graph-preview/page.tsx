@@ -24,7 +24,7 @@ export default function OpenGraphPreviewPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -134,6 +134,7 @@ export default function OpenGraphPreviewPage() {
             help categorization and branding in some clients. Pair this page with
             the{" "}
             <Link
+              prefetch={false}
               href="/website/canonical-tag-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -143,6 +144,7 @@ export default function OpenGraphPreviewPage() {
             <span className="font-mono text-sm">rel=canonical</span> to agree,
             and the{" "}
             <Link
+              prefetch={false}
               href="/website/redirect-chain-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -185,6 +187,7 @@ export default function OpenGraphPreviewPage() {
             </strong>{" "}
             with our{" "}
             <Link
+              prefetch={false}
               href="/website/http-header-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -211,6 +214,7 @@ export default function OpenGraphPreviewPage() {
             <strong className="font-medium text-foreground">HTTPS</strong> with a
             valid certificate—our{" "}
             <Link
+              prefetch={false}
               href="/website/ssl-certificate-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -218,6 +222,7 @@ export default function OpenGraphPreviewPage() {
             </Link>{" "}
             helps before launch—and keep internal links healthy with the{" "}
             <Link
+              prefetch={false}
               href="/website/broken-link-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -226,6 +231,7 @@ export default function OpenGraphPreviewPage() {
             on key templates.             For a broader tag inventory (including robots and viewport),
             pair this page with the{" "}
             <Link
+              prefetch={false}
               href="/website/meta-tags-extractor"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -258,6 +264,7 @@ export default function OpenGraphPreviewPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore every utility in the{" "}
             <Link
+              prefetch={false}
               href="/#website-url-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -269,6 +276,7 @@ export default function OpenGraphPreviewPage() {
             {relatedTools.slice(0, 10).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

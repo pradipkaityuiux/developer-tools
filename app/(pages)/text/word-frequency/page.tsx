@@ -22,7 +22,7 @@ export default function WordFrequencyPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -69,6 +69,7 @@ export default function WordFrequencyPage() {
             —ideal when drafts are confidential. After you tune wording, verify
             length limits with our{" "}
             <Link
+              prefetch={false}
               href="/text/word-counter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -76,6 +77,7 @@ export default function WordFrequencyPage() {
             </Link>{" "}
             and live HTML fields with the{" "}
             <Link
+              prefetch={false}
               href="/website/meta-tags-extractor"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -83,6 +85,7 @@ export default function WordFrequencyPage() {
             </Link>
             . Browse more utilities under{" "}
             <Link
+              prefetch={false}
               href="/#text-string-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -118,6 +121,7 @@ export default function WordFrequencyPage() {
             that complements—not replaces—Search Console and your CMS. Pair
             frequency review with the{" "}
             <Link
+              prefetch={false}
               href="/text/find-replace"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -125,6 +129,7 @@ export default function WordFrequencyPage() {
             </Link>{" "}
             when you want to rewrite phrases in bulk, then recount with the{" "}
             <Link
+              prefetch={false}
               href="/text/word-counter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -177,6 +182,7 @@ export default function WordFrequencyPage() {
               <span className="text-foreground">
                 Clean noisy lists first with the{" "}
                 <Link
+                  prefetch={false}
                   href="/text/whitespace-remover"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -184,6 +190,7 @@ export default function WordFrequencyPage() {
                 </Link>{" "}
                 or{" "}
                 <Link
+                  prefetch={false}
                   href="/text/duplicate-line-remover"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -215,6 +222,7 @@ export default function WordFrequencyPage() {
             phrases; developers paste release notes to see vocabulary skew.
             When you need URL-safe strings after editing, follow with the{" "}
             <Link
+              prefetch={false}
               href="/text/slug-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -222,6 +230,7 @@ export default function WordFrequencyPage() {
             </Link>{" "}
             and{" "}
             <Link
+              prefetch={false}
               href="/text/case-converter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -243,6 +252,7 @@ export default function WordFrequencyPage() {
             drafting aid, then validate with your analytics stack. For patterned
             edits across long files, the{" "}
             <Link
+              prefetch={false}
               href="/text/find-replace"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -257,6 +267,7 @@ export default function WordFrequencyPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full list under{" "}
             <Link
+              prefetch={false}
               href="/#text-string-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -268,6 +279,7 @@ export default function WordFrequencyPage() {
             {relatedTools.slice(0, 14).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -283,6 +295,7 @@ export default function WordFrequencyPage() {
           <p className="mt-4 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
             For share-card copy length, combine editorial passes here with the{" "}
             <Link
+              prefetch={false}
               href="/website/open-graph-preview"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >

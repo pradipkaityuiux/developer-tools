@@ -24,7 +24,7 @@ export default function RobotsTxtCheckerPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -87,6 +87,7 @@ export default function RobotsTxtCheckerPage() {
           <p className="mt-4 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
             Cross-check indexing signals beyond the file: use the{" "}
             <Link
+              prefetch={false}
               href="/website/meta-tags-extractor"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -94,6 +95,7 @@ export default function RobotsTxtCheckerPage() {
             </Link>{" "}
             for robots meta and viewport, the{" "}
             <Link
+              prefetch={false}
               href="/website/canonical-tag-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -101,6 +103,7 @@ export default function RobotsTxtCheckerPage() {
             </Link>{" "}
             for duplicate URL consolidation, and the{" "}
             <Link
+              prefetch={false}
               href="/website/http-header-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -133,6 +136,7 @@ export default function RobotsTxtCheckerPage() {
             stronger removal behavior, and keep marketing parameters under
             control with the{" "}
             <Link
+              prefetch={false}
               href="/website/redirect-chain-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -161,6 +165,7 @@ export default function RobotsTxtCheckerPage() {
               When you add or split <strong>sitemap files</strong>; list them in
               robots.txt and confirm they resolve with the{" "}
               <Link
+                prefetch={false}
                 href="/website/response-code-checker"
                 className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
               >
@@ -177,6 +182,7 @@ export default function RobotsTxtCheckerPage() {
             Crawlers need resolvable DNS, valid TLS, and consistent hostnames.
             Use the{" "}
             <Link
+              prefetch={false}
               href="/website/dns-lookup"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -184,6 +190,7 @@ export default function RobotsTxtCheckerPage() {
             </Link>{" "}
             for A/AAAA/CNAME correctness, the{" "}
             <Link
+              prefetch={false}
               href="/website/ssl-certificate-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -191,6 +198,7 @@ export default function RobotsTxtCheckerPage() {
             </Link>{" "}
             before certificate expiry interrupts fetches, and the{" "}
             <Link
+              prefetch={false}
               href="/website/broken-link-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -206,6 +214,7 @@ export default function RobotsTxtCheckerPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
+              prefetch={false}
               href="/#website-url-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -217,6 +226,7 @@ export default function RobotsTxtCheckerPage() {
             {relatedTools.slice(0, 10).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

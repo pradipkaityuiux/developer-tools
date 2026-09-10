@@ -24,13 +24,14 @@ export default function CsvDeduplicatorPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
               /
             </span>
             <Link
+              prefetch={false}
               href="/#file-data-tools"
               className="hover:text-foreground"
             >
@@ -107,6 +108,7 @@ export default function CsvDeduplicatorPage() {
             keeps feeds consistent for Google Merchant Center and internal PIM
             workflows. Doing this step before you run{" "}
             <Link
+              prefetch={false}
               href="/files/csv-to-sql"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -176,6 +178,7 @@ export default function CsvDeduplicatorPage() {
                 to ignore leading and trailing spaces in keys—recommended for
                 email and phone columns extracted with our{" "}
                 <Link
+                  prefetch={false}
                   href="/text/email-extractor"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -207,6 +210,7 @@ export default function CsvDeduplicatorPage() {
                 </strong>
                 . For JSON pipelines afterward, use our{" "}
                 <Link
+                  prefetch={false}
                   href="/dev/csv-to-json"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -214,6 +218,7 @@ export default function CsvDeduplicatorPage() {
                 </Link>{" "}
                 or round-trip with{" "}
                 <Link
+                  prefetch={false}
                   href="/dev/json-to-csv"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -239,6 +244,7 @@ export default function CsvDeduplicatorPage() {
             the entire padded row as one key, which matches only when the full
             line is the same. For plain text without CSV columns, our{" "}
             <Link
+              prefetch={false}
               href="/text/duplicate-line-remover"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -261,6 +267,7 @@ export default function CsvDeduplicatorPage() {
             deduping, you can normalize line endings or split fields further with
             our{" "}
             <Link
+              prefetch={false}
               href="/text/comma-separator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -287,6 +294,7 @@ export default function CsvDeduplicatorPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
+              prefetch={false}
               href="/#file-data-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -298,6 +306,7 @@ export default function CsvDeduplicatorPage() {
             {relatedTools.map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

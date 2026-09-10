@@ -24,7 +24,7 @@ export default function AesEncryptDecryptPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -74,6 +74,7 @@ export default function AesEncryptDecryptPage() {
             </strong>
             , API mocks, and local experiments. Pair this workflow with the{" "}
             <Link
+              prefetch={false}
               href="/dev/hash-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -81,6 +82,7 @@ export default function AesEncryptDecryptPage() {
             </Link>{" "}
             for checksums, the{" "}
             <Link
+              prefetch={false}
               href="/security/hmac-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -88,6 +90,7 @@ export default function AesEncryptDecryptPage() {
             </Link>{" "}
             for keyed digests, and the{" "}
             <Link
+              prefetch={false}
               href="/security/password-strength"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -95,6 +98,7 @@ export default function AesEncryptDecryptPage() {
             </Link>{" "}
             when you tune passphrases. Browse every{" "}
             <Link
+              prefetch={false}
               href="/#security-encryption-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -226,6 +230,7 @@ export default function AesEncryptDecryptPage() {
                 When something fails, verify the passphrase, ensure the bundle
                 is complete, and cross-check related workflows:{" "}
                 <Link
+                  prefetch={false}
                   href="/dev/base64"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -233,6 +238,7 @@ export default function AesEncryptDecryptPage() {
                 </Link>{" "}
                 if another system wrapped the payload differently, or the{" "}
                 <Link
+                  prefetch={false}
                   href="/security/jwt-encoder"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -262,6 +268,7 @@ export default function AesEncryptDecryptPage() {
             copy-paste workflows, not HTTPS itself. When you evaluate how strong
             a passphrase is before trusting it here, run it through the{" "}
             <Link
+              prefetch={false}
               href="/security/password-strength"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -276,6 +283,7 @@ export default function AesEncryptDecryptPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             More from the{" "}
             <Link
+              prefetch={false}
               href="/#security-encryption-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -287,6 +295,7 @@ export default function AesEncryptDecryptPage() {
             {relatedTools.map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

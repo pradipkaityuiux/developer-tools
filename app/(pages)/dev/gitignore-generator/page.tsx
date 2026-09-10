@@ -24,7 +24,7 @@ export default function GitignoreGeneratorPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -61,6 +61,7 @@ export default function GitignoreGeneratorPage() {
             team, or teach what belongs in version control versus local build
             output. Pair it with the{" "}
             <Link
+              prefetch={false}
               href="/dev/json-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -68,6 +69,7 @@ export default function GitignoreGeneratorPage() {
             </Link>{" "}
             for committed config samples, the{" "}
             <Link
+              prefetch={false}
               href="/dev/uuid-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -75,6 +77,7 @@ export default function GitignoreGeneratorPage() {
             </Link>{" "}
             for fixtures, and the{" "}
             <Link
+              prefetch={false}
               href="/dev/password-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -140,6 +143,7 @@ export default function GitignoreGeneratorPage() {
             <strong className="font-medium text-foreground">copy</strong>. For
             release hygiene, also scan your deployed URLs with the{" "}
             <Link
+              prefetch={false}
               href="/website/redirect-chain-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -147,6 +151,7 @@ export default function GitignoreGeneratorPage() {
             </Link>{" "}
             and{" "}
             <Link
+              prefetch={false}
               href="/website/ssl-certificate-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -258,6 +263,7 @@ export default function GitignoreGeneratorPage() {
             with selective keep rules for shared workspace settings. If you work
             mostly in structured data, round-trip YAML with the{" "}
             <Link
+              prefetch={false}
               href="/dev/yaml-to-json"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -280,6 +286,7 @@ export default function GitignoreGeneratorPage() {
             still avoid pasting production credentials into shared machines.
             For random test passwords, use the{" "}
             <Link
+              prefetch={false}
               href="/dev/password-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -287,6 +294,7 @@ export default function GitignoreGeneratorPage() {
             </Link>{" "}
             and document format expectations with the{" "}
             <Link
+              prefetch={false}
               href="/dev/regex-tester"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -301,6 +309,7 @@ export default function GitignoreGeneratorPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
+              prefetch={false}
               href="/#code-developer-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -312,6 +321,7 @@ export default function GitignoreGeneratorPage() {
             {relatedTools.slice(0, 14).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

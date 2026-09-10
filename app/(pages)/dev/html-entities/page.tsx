@@ -22,7 +22,7 @@ export default function HtmlEntitiesPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -54,6 +54,7 @@ export default function HtmlEntitiesPage() {
             for email templates, static site generators, WordPress or headless CMS fields, and
             quick QA before you paste into a rich editor. Pair encoding with the{" "}
             <Link
+              prefetch={false}
               href="/dev/html-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -61,6 +62,7 @@ export default function HtmlEntitiesPage() {
             </Link>{" "}
             for readable markup, the{" "}
             <Link
+              prefetch={false}
               href="/dev/url-encoder"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -68,6 +70,7 @@ export default function HtmlEntitiesPage() {
             </Link>{" "}
             when hrefs need percent-encoding instead of entities, and the{" "}
             <Link
+              prefetch={false}
               href="/website/meta-tags-extractor"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -93,6 +96,7 @@ export default function HtmlEntitiesPage() {
             company names with ampersands. For SEO, clean rendering avoids broken snippets and layout
             glitches that increase bounce rates; use the{" "}
             <Link
+              prefetch={false}
               href="/website/open-graph-preview"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -168,6 +172,7 @@ export default function HtmlEntitiesPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             When you convert prose with the{" "}
             <Link
+              prefetch={false}
               href="/dev/markdown-to-html"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -177,6 +182,7 @@ export default function HtmlEntitiesPage() {
             template or a CMS field that does not run a full markdown pass. For the opposite
             direction, try{" "}
             <Link
+              prefetch={false}
               href="/dev/html-to-markdown"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -184,6 +190,7 @@ export default function HtmlEntitiesPage() {
             </Link>
             . If an API returns JSON with entity-encoded strings, paste the value into the{" "}
             <Link
+              prefetch={false}
               href="/dev/json-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -211,6 +218,7 @@ export default function HtmlEntitiesPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
+              prefetch={false}
               href="/#code-developer-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -222,6 +230,7 @@ export default function HtmlEntitiesPage() {
             {relatedTools.slice(0, 14).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

@@ -24,7 +24,7 @@ export default function RedirectCheckerPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -67,6 +67,7 @@ export default function RedirectCheckerPage() {
             . Paste one URL for a full trace or load up to eight lines for a
             spreadsheet-style batch. Pair results with our{" "}
             <Link
+              prefetch={false}
               href="/website/redirect-chain-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -74,6 +75,7 @@ export default function RedirectCheckerPage() {
             </Link>{" "}
             when you only need hop counts, or the{" "}
             <Link
+              prefetch={false}
               href="/website/response-code-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -107,6 +109,7 @@ export default function RedirectCheckerPage() {
             <strong className="font-medium text-foreground">HTTP redirects</strong>
             ,{" "}
             <Link
+              prefetch={false}
               href="/website/canonical-tag-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -145,6 +148,7 @@ export default function RedirectCheckerPage() {
             latency. After technical checks, tune how results appear in search
             with the{" "}
             <Link
+              prefetch={false}
               href="/seo/meta-length-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -152,6 +156,7 @@ export default function RedirectCheckerPage() {
             </Link>{" "}
             and structured data flows with the{" "}
             <Link
+              prefetch={false}
               href="/seo/schema-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -198,6 +203,7 @@ export default function RedirectCheckerPage() {
               <span className="text-foreground">
                 Follow up with crawler-facing artifacts: maintain{" "}
                 <Link
+                  prefetch={false}
                   href="/seo/sitemap-generator"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -205,6 +211,7 @@ export default function RedirectCheckerPage() {
                 </Link>
                 ,{" "}
                 <Link
+                  prefetch={false}
                   href="/seo/robots-txt-generator"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -212,6 +219,7 @@ export default function RedirectCheckerPage() {
                 </Link>
                 , and multilingual clusters via the{" "}
                 <Link
+                  prefetch={false}
                   href="/seo/hreflang-generator"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -229,6 +237,7 @@ export default function RedirectCheckerPage() {
             When campaigns need consistent measurement, build tracked URLs with
             the{" "}
             <Link
+              prefetch={false}
               href="/seo/utm-builder"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -237,6 +246,7 @@ export default function RedirectCheckerPage() {
             and then confirm redirects do not strip required parameters at the
             edge. For social previews after URLs stabilize, use the{" "}
             <Link
+              prefetch={false}
               href="/seo/og-tag-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -244,6 +254,7 @@ export default function RedirectCheckerPage() {
             </Link>
             . Apache stacks often centralize rules in our{" "}
             <Link
+              prefetch={false}
               href="/security/htaccess-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -259,6 +270,7 @@ export default function RedirectCheckerPage() {
             {relatedTools.map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

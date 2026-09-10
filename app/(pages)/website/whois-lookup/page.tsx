@@ -24,7 +24,7 @@ export default function WhoisLookupPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -88,6 +88,7 @@ export default function WhoisLookupPage() {
             delegation. When you also need live resolution data, follow up with
             our{" "}
             <Link
+              prefetch={false}
               href="/website/dns-lookup"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -96,6 +97,7 @@ export default function WhoisLookupPage() {
             for A, AAAA, MX, TXT, and other record types as they propagate on
             the public internet. For numeric addresses, use{" "}
             <Link
+              prefetch={false}
               href="/website/ip-lookup"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -137,6 +139,7 @@ export default function WhoisLookupPage() {
             <strong className="text-foreground">link audit</strong> or partner
             review. Use WHOIS/RDAP alongside our{" "}
             <Link
+              prefetch={false}
               href="/website/domain-age-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -145,6 +148,7 @@ export default function WhoisLookupPage() {
             when you want a quick read on how long a name has been registered,
             and our{" "}
             <Link
+              prefetch={false}
               href="/website/ssl-certificate-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -197,6 +201,7 @@ export default function WhoisLookupPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
+              prefetch={false}
               href="/#website-url-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -205,6 +210,7 @@ export default function WhoisLookupPage() {
             section on the home page, or open a focused utility below. Pairing
             WHOIS with{" "}
             <Link
+              prefetch={false}
               href="/website/redirect-chain-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -212,6 +218,7 @@ export default function WhoisLookupPage() {
             </Link>{" "}
             and{" "}
             <Link
+              prefetch={false}
               href="/website/http-header-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -223,6 +230,7 @@ export default function WhoisLookupPage() {
             {relatedTools.slice(0, 10).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

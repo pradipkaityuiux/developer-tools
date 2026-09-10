@@ -24,7 +24,7 @@ export default function FlexboxPlaygroundPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -79,6 +79,7 @@ export default function FlexboxPlaygroundPage() {
             </strong>
             . For two-dimensional templates, continue with the{" "}
             <Link
+              prefetch={false}
               href="/design/css-grid-playground"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -86,6 +87,7 @@ export default function FlexboxPlaygroundPage() {
             </Link>
             ; for accessible color pairs on top of your layout, use the{" "}
             <Link
+              prefetch={false}
               href="/design/contrast-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -93,6 +95,7 @@ export default function FlexboxPlaygroundPage() {
             </Link>
             . Browse the full{" "}
             <Link
+              prefetch={false}
               href="/#design-color-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -142,6 +145,7 @@ export default function FlexboxPlaygroundPage() {
             clear container controls, and a textarea that mirrors what you would
             ship—plus optional cleanup of your broader stylesheet with our{" "}
             <Link
+              prefetch={false}
               href="/dev/css-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -158,6 +162,7 @@ export default function FlexboxPlaygroundPage() {
             centering icons beside text, and building equal-height card
             footers—are all flexbox-shaped problems. Pair this lab with the{" "}
             <Link
+              prefetch={false}
               href="/design/border-radius-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -165,6 +170,7 @@ export default function FlexboxPlaygroundPage() {
             </Link>{" "}
             and{" "}
             <Link
+              prefetch={false}
               href="/design/box-shadow-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -297,6 +303,7 @@ export default function FlexboxPlaygroundPage() {
             Many production pages use Grid for the outer shell and Flexbox inside
             cards and headers. After you settle flex behavior here, open the{" "}
             <Link
+              prefetch={false}
               href="/design/css-grid-playground"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -305,6 +312,7 @@ export default function FlexboxPlaygroundPage() {
             when you need template columns and row spans. For background decoration
             on flex children, the{" "}
             <Link
+              prefetch={false}
               href="/design/gradient-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -323,6 +331,7 @@ export default function FlexboxPlaygroundPage() {
             {relatedTools.map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

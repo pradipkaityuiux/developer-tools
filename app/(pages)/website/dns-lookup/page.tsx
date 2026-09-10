@@ -22,7 +22,7 @@ export default function DnsLookupPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -84,6 +84,7 @@ export default function DnsLookupPage() {
             your zone in one pass. After you run a lookup, compare the answers with
             your DNS provider&apos;s editor and with our{" "}
             <Link
+              prefetch={false}
               href="/website/whois-lookup"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -143,6 +144,7 @@ export default function DnsLookupPage() {
             you <em>how safely</em> it arrives. After MX or A records change, verify
             TLS with our{" "}
             <Link
+              prefetch={false}
               href="/website/ssl-certificate-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -150,6 +152,7 @@ export default function DnsLookupPage() {
             </Link>{" "}
             and confirm HTTP behavior using the{" "}
             <Link
+              prefetch={false}
               href="/website/http-header-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -157,6 +160,7 @@ export default function DnsLookupPage() {
             </Link>{" "}
             or{" "}
             <Link
+              prefetch={false}
               href="/website/response-code-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -164,6 +168,7 @@ export default function DnsLookupPage() {
             </Link>
             . If marketing links redirect through chains, follow hops with the{" "}
             <Link
+              prefetch={false}
               href="/website/redirect-chain-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -171,6 +176,7 @@ export default function DnsLookupPage() {
             </Link>
             . For crawler-facing rules, review{" "}
             <Link
+              prefetch={false}
               href="/website/robots-txt-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -178,6 +184,7 @@ export default function DnsLookupPage() {
             </Link>{" "}
             and HTML metadata via the{" "}
             <Link
+              prefetch={false}
               href="/website/meta-tags-extractor"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -216,6 +223,7 @@ export default function DnsLookupPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
+              prefetch={false}
               href="/#website-url-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -227,6 +235,7 @@ export default function DnsLookupPage() {
             {relatedTools.slice(0, 10).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

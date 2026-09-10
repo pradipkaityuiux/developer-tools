@@ -22,7 +22,7 @@ export default function BrokenLinkCheckerPage() {
         <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
           <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
             <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-              <Link href="/" className="hover:text-foreground">
+              <Link prefetch={false} href="/" className="hover:text-foreground">
                 Home
               </Link>
               <span aria-hidden className="mx-2">
@@ -69,6 +69,7 @@ export default function BrokenLinkCheckerPage() {
               Submit the form to fetch that page and enumerate links. Each row
               shows the original{" "}
               <Link
+                prefetch={false}
                 href="/website/meta-tags-extractor"
                 className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
               >
@@ -79,6 +80,7 @@ export default function BrokenLinkCheckerPage() {
               mentally: prioritize marketing pages, footers, and navigation
               blocks where{" "}
               <Link
+                prefetch={false}
                 href="/website/response-code-checker"
                 className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
               >
@@ -96,6 +98,7 @@ export default function BrokenLinkCheckerPage() {
               <strong>website link scanner</strong> surfaces those regressions
               before users and crawlers hit them. Pair link hygiene with{" "}
               <Link
+                prefetch={false}
                 href="/website/http-header-checker"
                 className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
               >
@@ -103,6 +106,7 @@ export default function BrokenLinkCheckerPage() {
               </Link>{" "}
               when you suspect caching or bot rules, and with our{" "}
               <Link
+                prefetch={false}
                 href="/website/redirect-chain-checker"
                 className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
               >
@@ -117,6 +121,7 @@ export default function BrokenLinkCheckerPage() {
             <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
               Explore more utilities from the same category on our{" "}
               <Link
+                prefetch={false}
                 href="/#website-url-tools"
                 className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
               >
@@ -128,6 +133,7 @@ export default function BrokenLinkCheckerPage() {
               {relatedTools.slice(0, 10).map((tool) => (
                 <li key={tool.href}>
                   <Link
+                    prefetch={false}
                     href={tool.href}
                     className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                   >

@@ -22,13 +22,14 @@ export default function TextDiffCheckerPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
               /
             </span>
             <Link
+              prefetch={false}
               href="/#text-string-tools"
               className="hover:text-foreground"
             >
@@ -83,6 +84,7 @@ export default function TextDiffCheckerPage() {
             </strong>{" "}
             for tickets. For source snippets and configs, the{" "}
             <Link
+              prefetch={false}
               href="/dev/code-diff"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -91,6 +93,7 @@ export default function TextDiffCheckerPage() {
             uses the same line engine with a developer-focused guide. Normalize
             noisy JSON before comparing API payloads with our{" "}
             <Link
+              prefetch={false}
               href="/dev/json-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -127,6 +130,7 @@ export default function TextDiffCheckerPage() {
             Pair diffing with cleanup utilities from the same catalog: remove
             repeated statements using the{" "}
             <Link
+              prefetch={false}
               href="/text/duplicate-line-remover"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -134,6 +138,7 @@ export default function TextDiffCheckerPage() {
             </Link>
             , normalize capitalization with the{" "}
             <Link
+              prefetch={false}
               href="/text/case-converter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -141,6 +146,7 @@ export default function TextDiffCheckerPage() {
             </Link>
             , and check length limits with the{" "}
             <Link
+              prefetch={false}
               href="/text/word-counter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -243,6 +249,7 @@ export default function TextDiffCheckerPage() {
             landing copy; support leads diff macro replies; engineers still
             prefer the{" "}
             <Link
+              prefetch={false}
               href="/dev/code-diff"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -251,6 +258,7 @@ export default function TextDiffCheckerPage() {
             for stack traces and YAML. If wrapping or spaces dominate the noise,
             trim pasted blocks with the{" "}
             <Link
+              prefetch={false}
               href="/text/whitespace-remover"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -287,6 +295,7 @@ export default function TextDiffCheckerPage() {
             screen recordings. For pattern-based rewrites across one document,
             our{" "}
             <Link
+              prefetch={false}
               href="/dev/regex-tester"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -302,6 +311,7 @@ export default function TextDiffCheckerPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
+              prefetch={false}
               href="/#text-string-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -313,6 +323,7 @@ export default function TextDiffCheckerPage() {
             {relatedTools.slice(0, 14).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

@@ -24,7 +24,7 @@ export default function CssGridPlaygroundPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -80,6 +80,7 @@ export default function CssGridPlaygroundPage() {
             </strong>
             . For one-dimensional rows and toolbars, pair this with the{" "}
             <Link
+              prefetch={false}
               href="/design/flexbox-playground"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -87,6 +88,7 @@ export default function CssGridPlaygroundPage() {
             </Link>
             ; for accessible text and UI colors, use the{" "}
             <Link
+              prefetch={false}
               href="/design/contrast-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -94,6 +96,7 @@ export default function CssGridPlaygroundPage() {
             </Link>
             . Browse all{" "}
             <Link
+              prefetch={false}
               href="/#design-color-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -142,6 +145,7 @@ export default function CssGridPlaygroundPage() {
             per-item spans, and copy-ready CSS. When your stylesheet grows, clean
             it up with the{" "}
             <Link
+              prefetch={false}
               href="/dev/css-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -158,6 +162,7 @@ export default function CssGridPlaygroundPage() {
             responsive card grids—map naturally to Grid. After you lock the outer
             grid, polish inner components with the{" "}
             <Link
+              prefetch={false}
               href="/design/border-radius-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -165,6 +170,7 @@ export default function CssGridPlaygroundPage() {
             </Link>{" "}
             and{" "}
             <Link
+              prefetch={false}
               href="/design/box-shadow-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -172,6 +178,7 @@ export default function CssGridPlaygroundPage() {
             </Link>
             , and add depth with the{" "}
             <Link
+              prefetch={false}
               href="/design/gradient-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -321,6 +328,7 @@ export default function CssGridPlaygroundPage() {
             an input, or building a sticky footer inside a card. Ship the outer
             structure here, then open the{" "}
             <Link
+              prefetch={false}
               href="/design/flexbox-playground"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -329,6 +337,7 @@ export default function CssGridPlaygroundPage() {
             for the inner one-dimensional details. For multi-stop backgrounds on
             grid areas, the{" "}
             <Link
+              prefetch={false}
               href="/design/css-gradient"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -347,6 +356,7 @@ export default function CssGridPlaygroundPage() {
             {relatedTools.map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

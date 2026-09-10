@@ -22,7 +22,7 @@ export default function SvgOptimizerPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -60,6 +60,7 @@ export default function SvgOptimizerPage() {
             with DOMParser—your files are not uploaded. After optimization, use
             the{" "}
             <Link
+              prefetch={false}
               href="/files/image-to-base64"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -69,6 +70,7 @@ export default function SvgOptimizerPage() {
             <strong className="font-medium text-foreground">data URI</strong> for
             CSS or email, or open the{" "}
             <Link
+              prefetch={false}
               href="/files/image-compressor"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -76,6 +78,7 @@ export default function SvgOptimizerPage() {
             </Link>{" "}
             for raster PNG and JPEG. Browse every utility in the{" "}
             <Link
+              prefetch={false}
               href="/#file-data-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -106,6 +109,7 @@ export default function SvgOptimizerPage() {
             dozens of inline symbols. This complements raster workflows handled
             by the{" "}
             <Link
+              prefetch={false}
               href="/files/image-resizer"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -113,6 +117,7 @@ export default function SvgOptimizerPage() {
             </Link>{" "}
             and{" "}
             <Link
+              prefetch={false}
               href="/files/image-converter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -140,6 +145,7 @@ export default function SvgOptimizerPage() {
             beside the output (with the standard copy icon). If you need to
             verify binary integrity of any downloaded asset, follow up with the{" "}
             <Link
+              prefetch={false}
               href="/files/file-hash"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -244,6 +250,7 @@ export default function SvgOptimizerPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
+              prefetch={false}
               href="/#file-data-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -255,6 +262,7 @@ export default function SvgOptimizerPage() {
             {relatedTools.map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -268,6 +276,7 @@ export default function SvgOptimizerPage() {
             ))}
             <li>
               <Link
+                prefetch={false}
                 href="/dev/base64"
                 className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
               >

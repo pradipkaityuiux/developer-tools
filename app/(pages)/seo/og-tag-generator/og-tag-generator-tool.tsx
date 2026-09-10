@@ -448,6 +448,7 @@ export function OgTagGeneratorTool() {
               Paste into your layout, CMS custom head, or framework metadata API.
               Validate a live URL afterward with our{" "}
               <Link
+                prefetch={false}
                 href="/website/open-graph-preview"
                 className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
               >

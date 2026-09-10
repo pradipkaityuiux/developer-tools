@@ -24,7 +24,7 @@ export default function HtmlToMarkdownPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -55,6 +55,7 @@ export default function HtmlToMarkdownPage() {
             , so exports from wikis, legacy blogs, and email builders stay
             private. Use it alongside our{" "}
             <Link
+              prefetch={false}
               href="/dev/markdown-to-html"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -90,6 +91,7 @@ export default function HtmlToMarkdownPage() {
             If you are standardizing on JSON or YAML for config while prose stays
             in Markdown, keep our{" "}
             <Link
+              prefetch={false}
               href="/dev/json-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -97,6 +99,7 @@ export default function HtmlToMarkdownPage() {
             </Link>{" "}
             and{" "}
             <Link
+              prefetch={false}
               href="/dev/yaml-to-json"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -115,6 +118,7 @@ export default function HtmlToMarkdownPage() {
             through publishing pipelines or use SSG-native Markdown. When you
             audit live pages, our{" "}
             <Link
+              prefetch={false}
               href="/website/meta-tags-extractor"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -122,6 +126,7 @@ export default function HtmlToMarkdownPage() {
             </Link>{" "}
             and{" "}
             <Link
+              prefetch={false}
               href="/website/canonical-tag-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -206,6 +211,7 @@ export default function HtmlToMarkdownPage() {
             Messy or deeply nested HTML can produce noisy Markdown. Run
             important templates through our{" "}
             <Link
+              prefetch={false}
               href="/dev/html-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -214,6 +220,7 @@ export default function HtmlToMarkdownPage() {
             first to normalize structure, then trim wrapper elements you do not
             need. For strict XML-style documents, validate with the{" "}
             <Link
+              prefetch={false}
               href="/dev/xml-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -251,6 +258,7 @@ export default function HtmlToMarkdownPage() {
             Authors who write in Markdown but need raw markup for email or CMS
             fields can use the{" "}
             <Link
+              prefetch={false}
               href="/dev/markdown-to-html"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -266,6 +274,7 @@ export default function HtmlToMarkdownPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
+              prefetch={false}
               href="/#code-developer-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -277,6 +286,7 @@ export default function HtmlToMarkdownPage() {
             {relatedTools.slice(0, 14).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

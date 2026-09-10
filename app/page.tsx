@@ -59,6 +59,7 @@ export default function Home() {
                 {section.tools.map((tool) => (
                   <li key={tool.href}>
                     <Link
+                      prefetch={false}
                       href={tool.href}
                       className="group relative flex h-full flex-col justify-between rounded-xl border border-zinc-200 bg-white p-4 shadow-sm transition-all duration-200 hover:border-orange-500 hover:bg-zinc-50/50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 dark:border-zinc-800 dark:bg-zinc-950 dark:hover:border-orange-500 dark:hover:bg-zinc-900/80 dark:focus-visible:outline-zinc-100"
                     >

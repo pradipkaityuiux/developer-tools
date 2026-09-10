@@ -22,7 +22,7 @@ export default function SlugGeneratorPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -62,6 +62,7 @@ export default function SlugGeneratorPage() {
             </strong>
             . After you lock a slug, validate surrounding copy length with our{" "}
             <Link
+              prefetch={false}
               href="/text/word-counter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -69,6 +70,7 @@ export default function SlugGeneratorPage() {
             </Link>{" "}
             and browse sibling utilities under{" "}
             <Link
+              prefetch={false}
               href="/#text-string-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -98,6 +100,7 @@ export default function SlugGeneratorPage() {
             technical health matter more—but they are a low-cost signal of clarity
             and professionalism. Teams often pair slug work with the{" "}
             <Link
+              prefetch={false}
               href="/website/meta-tags-extractor"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -167,6 +170,7 @@ export default function SlugGeneratorPage() {
                 </strong>{" "}
                 for variables or config keys, run the same source through the{" "}
                 <Link
+                  prefetch={false}
                   href="/text/case-converter"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -174,6 +178,7 @@ export default function SlugGeneratorPage() {
                 </Link>
                 . For bulk text cleanup before slugging, try the{" "}
                 <Link
+                  prefetch={false}
                   href="/text/whitespace-remover"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -181,6 +186,7 @@ export default function SlugGeneratorPage() {
                 </Link>{" "}
                 or{" "}
                 <Link
+                  prefetch={false}
                   href="/text/find-replace"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -214,6 +220,7 @@ export default function SlugGeneratorPage() {
             and seed data. Marketing teams align slugs with campaign landing copy,
             then confirm share cards using the{" "}
             <Link
+              prefetch={false}
               href="/website/open-graph-preview"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -235,6 +242,7 @@ export default function SlugGeneratorPage() {
             constraints. If you maintain large redirect tables, pair slug batches
             with the{" "}
             <Link
+              prefetch={false}
               href="/text/duplicate-line-remover"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -255,6 +263,7 @@ export default function SlugGeneratorPage() {
             logs for URL changes. When comparing two proposed titles side by side,
             the{" "}
             <Link
+              prefetch={false}
               href="/text/diff-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -269,6 +278,7 @@ export default function SlugGeneratorPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full catalog under{" "}
             <Link
+              prefetch={false}
               href="/#text-string-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -280,6 +290,7 @@ export default function SlugGeneratorPage() {
             {relatedTools.slice(0, 14).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -296,6 +307,7 @@ export default function SlugGeneratorPage() {
             For placeholder paragraphs while mocking article layouts, generate
             draft copy with the{" "}
             <Link
+              prefetch={false}
               href="/dev/lorem-ipsum"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >

@@ -24,7 +24,7 @@ export default function EmailExtractorPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -72,6 +72,7 @@ export default function EmailExtractorPage() {
             . When the same page also contains hyperlinks you need separately,
             follow up with our{" "}
             <Link
+              prefetch={false}
               href="/text/url-extractor"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -79,6 +80,7 @@ export default function EmailExtractorPage() {
             </Link>{" "}
             and explore the full{" "}
             <Link
+              prefetch={false}
               href="/#text-string-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -112,6 +114,7 @@ export default function EmailExtractorPage() {
             </strong>
             . Combine it with the{" "}
             <Link
+              prefetch={false}
               href="/text/duplicate-line-remover"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -178,6 +181,7 @@ export default function EmailExtractorPage() {
               <span className="text-foreground">
                 For line-level cleanup first—extra spaces or blank rows—run the{" "}
                 <Link
+                  prefetch={false}
                   href="/text/whitespace-remover"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -185,6 +189,7 @@ export default function EmailExtractorPage() {
                 </Link>{" "}
                 or{" "}
                 <Link
+                  prefetch={false}
                   href="/text/find-replace"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -220,6 +225,7 @@ export default function EmailExtractorPage() {
             consolidate webinar registrants. After you have a delimiter-heavy
             blob, the{" "}
             <Link
+              prefetch={false}
               href="/text/comma-separator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -260,6 +266,7 @@ export default function EmailExtractorPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Continue in{" "}
             <Link
+              prefetch={false}
               href="/#text-string-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -271,6 +278,7 @@ export default function EmailExtractorPage() {
             {relatedTools.slice(0, 14).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -286,6 +294,7 @@ export default function EmailExtractorPage() {
           <p className="mt-4 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
             For tabular exports, open the{" "}
             <Link
+              prefetch={false}
               href="/files/csv-viewer"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -293,6 +302,7 @@ export default function EmailExtractorPage() {
             </Link>{" "}
             or{" "}
             <Link
+              prefetch={false}
               href="/files/csv-deduplicator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >

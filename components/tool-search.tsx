@@ -129,6 +129,7 @@ export function ToolSearchPanel({
           {results.map((tool, index) => (
             <li key={tool.href} role="presentation">
               <Link
+                prefetch={false}
                 href={tool.href}
                 role="option"
                 aria-selected={index === activeIndex}

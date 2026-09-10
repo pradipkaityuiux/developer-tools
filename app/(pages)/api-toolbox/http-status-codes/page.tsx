@@ -24,7 +24,7 @@ export default function HttpStatusCodesPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
@@ -145,6 +145,7 @@ export default function HttpStatusCodesPage() {
             the target; soft or temporary behavior can leave duplicate URLs in
             play. When you audit a live URL, use our{" "}
             <Link
+              prefetch={false}
               href="/website/response-code-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -152,6 +153,7 @@ export default function HttpStatusCodesPage() {
             </Link>{" "}
             for the final status after redirects, the{" "}
             <Link
+              prefetch={false}
               href="/website/redirect-chain-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -159,6 +161,7 @@ export default function HttpStatusCodesPage() {
             </Link>{" "}
             for every hop, and the{" "}
             <Link
+              prefetch={false}
               href="/seo/redirect-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -175,6 +178,7 @@ export default function HttpStatusCodesPage() {
             when dependencies fail—pair status codes with structured error bodies so
             clients can act. When you document APIs, align status codes with{" "}
             <Link
+              prefetch={false}
               href="/api-toolbox/openapi-viewer"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -182,6 +186,7 @@ export default function HttpStatusCodesPage() {
             </Link>{" "}
             definitions and validate payloads with the{" "}
             <Link
+              prefetch={false}
               href="/dev/json-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -189,6 +194,7 @@ export default function HttpStatusCodesPage() {
             </Link>{" "}
             before publishing examples. For raw HTTP experiments, the{" "}
             <Link
+              prefetch={false}
               href="/api-toolbox/http-request-builder"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -206,6 +212,7 @@ export default function HttpStatusCodesPage() {
             <strong className="text-foreground">Set-Cookie</strong>, or security
             headers on the final response, use the{" "}
             <Link
+              prefetch={false}
               href="/website/http-header-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -214,6 +221,7 @@ export default function HttpStatusCodesPage() {
             . For certificate issues that surface as TLS or handshake errors before
             a clean HTTP status is visible, validate the host with the{" "}
             <Link
+              prefetch={false}
               href="/website/ssl-certificate-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -228,6 +236,7 @@ export default function HttpStatusCodesPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
+              prefetch={false}
               href="/#api-developer-toolbox"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -239,6 +248,7 @@ export default function HttpStatusCodesPage() {
             {relatedTools.map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

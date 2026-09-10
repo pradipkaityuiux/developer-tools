@@ -30,13 +30,14 @@ export default function MetaLengthCheckerPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
               /
             </span>
             <Link
+              prefetch={false}
               href="/#seo-tools"
               className="hover:text-foreground"
             >
@@ -161,6 +162,7 @@ export default function MetaLengthCheckerPage() {
             get, and why click. After you stabilize lengths here, validate keyword
             usage and repetition with our{" "}
             <Link
+              prefetch={false}
               href="/seo/keyword-density"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -168,6 +170,7 @@ export default function MetaLengthCheckerPage() {
             </Link>{" "}
             and readability with the{" "}
             <Link
+              prefetch={false}
               href="/seo/readability-checker"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -194,6 +197,7 @@ export default function MetaLengthCheckerPage() {
             . For a live URL audit that lists the full head, pair this workflow with
             the{" "}
             <Link
+              prefetch={false}
               href="/website/meta-tags-extractor"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -201,6 +205,7 @@ export default function MetaLengthCheckerPage() {
             </Link>{" "}
             and the{" "}
             <Link
+              prefetch={false}
               href="/website/open-graph-preview"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -244,6 +249,7 @@ export default function MetaLengthCheckerPage() {
                 <strong className="font-medium text-foreground">Copy</strong> buttons to
                 move the final strings into your CMS, framework head component, or{" "}
                 <Link
+                  prefetch={false}
                   href="/seo/og-tag-generator"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -256,6 +262,7 @@ export default function MetaLengthCheckerPage() {
               <span className="text-foreground">
                 After launch, continue technical SEO coverage: ship a{" "}
                 <Link
+                  prefetch={false}
                   href="/seo/sitemap-generator"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -263,6 +270,7 @@ export default function MetaLengthCheckerPage() {
                 </Link>
                 , maintain{" "}
                 <Link
+                  prefetch={false}
                   href="/seo/robots-txt-generator"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -270,6 +278,7 @@ export default function MetaLengthCheckerPage() {
                 </Link>
                 , add structured data with the{" "}
                 <Link
+                  prefetch={false}
                   href="/seo/schema-generator"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -277,6 +286,7 @@ export default function MetaLengthCheckerPage() {
                 </Link>
                 , and verify redirects with the{" "}
                 <Link
+                  prefetch={false}
                   href="/seo/redirect-checker"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -295,6 +305,7 @@ export default function MetaLengthCheckerPage() {
             language and script. Re-run this checker per locale, then wire hreflang
             clusters with the{" "}
             <Link
+              prefetch={false}
               href="/seo/hreflang-generator"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -302,6 +313,7 @@ export default function MetaLengthCheckerPage() {
             </Link>
             . For paid and email campaigns, keep UTM links consistent using the{" "}
             <Link
+              prefetch={false}
               href="/seo/utm-builder"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -316,6 +328,7 @@ export default function MetaLengthCheckerPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Browse the full{" "}
             <Link
+              prefetch={false}
               href="/#seo-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -327,6 +340,7 @@ export default function MetaLengthCheckerPage() {
             {relatedSeoTools.map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >

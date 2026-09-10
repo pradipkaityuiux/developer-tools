@@ -22,13 +22,14 @@ export default function YamlToJsonPage() {
       <div className="border-b border-zinc-200/80 bg-zinc-50/80 dark:border-zinc-800/80 dark:bg-zinc-950/50">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           <nav className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/" className="hover:text-foreground">
+            <Link prefetch={false} href="/" className="hover:text-foreground">
               Home
             </Link>
             <span aria-hidden className="mx-2">
               /
             </span>
             <Link
+              prefetch={false}
               href="/#code-developer-tools"
               className="hover:text-foreground"
             >
@@ -84,6 +85,7 @@ export default function YamlToJsonPage() {
             <strong className="font-medium text-foreground">download</strong>{" "}
             of the JSON result—ideal before dropping data into APIs, tests, or a{" "}
             <Link
+              prefetch={false}
               href="/dev/json-formatter"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -125,6 +127,7 @@ export default function YamlToJsonPage() {
             preview without installing a CLI. When you need the reverse path,
             open our{" "}
             <Link
+              prefetch={false}
               href="/dev/json-to-yaml"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -229,6 +232,7 @@ export default function YamlToJsonPage() {
                 for your next step. If you need tabular export from JSON arrays,
                 follow with the{" "}
                 <Link
+                  prefetch={false}
                   href="/dev/json-to-csv"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -241,6 +245,7 @@ export default function YamlToJsonPage() {
               <span className="text-foreground">
                 For large configs, validate readability using the{" "}
                 <Link
+                  prefetch={false}
                   href="/dev/json-formatter"
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
@@ -283,6 +288,7 @@ export default function YamlToJsonPage() {
           <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
             Explore the full{" "}
             <Link
+              prefetch={false}
               href="/#code-developer-tools"
               className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
             >
@@ -294,6 +300,7 @@ export default function YamlToJsonPage() {
             {relatedTools.slice(0, 14).map((tool) => (
               <li key={tool.href}>
                 <Link
+                  prefetch={false}
                   href={tool.href}
                   className="font-medium text-foreground underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-500"
                 >
