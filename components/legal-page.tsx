@@ -1,12 +1,18 @@
 export function LegalPage({
   title,
   children,
+  className,
 }: {
   title: string;
   children: React.ReactNode;
+  className?: string;
 }) {
   return (
-    <div className="mx-auto max-w-3xl flex-1 px-4 py-12 sm:px-6">
+    <div
+      className={`mx-auto flex-1 px-4 py-12 sm:px-6 ${
+        className ?? "max-w-3xl"
+      }`}
+    >
       <h1 className="text-3xl font-semibold tracking-tight text-foreground">
         {title}
       </h1>

@@ -4,6 +4,7 @@ const footerLinks = [
   { href: "/blog", label: "Blog" },
   { href: "/about", label: "About Us" },
   { href: "/privacy-policy", label: "Privacy Policy" },
+  { href: "/extension-privacy", label: "Extension Privacy" },
   { href: "/terms", label: "Terms & Conditions" },
   { href: "/cookie-policy", label: "Cookie Policy" },
   { href: "/disclaimer", label: "Disclaimer" },
