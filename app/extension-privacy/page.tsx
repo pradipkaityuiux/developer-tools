@@ -35,16 +35,94 @@ const permissions = [
   },
   {
     name: "Optional Host Permissions (http://*/*, https://*/*)",
-    scope: "Per-Origin On-Demand",
+    scope: "Per-Origin or All-Sites On-Demand",
     justification: (
       <>
-        Not granted by default. When you use tools requiring page analysis (such
-        as reading HTTP headers or analyzing page fonts), ZeroSnippet prompts
-        you to grant access{" "}
-        <em>specifically for the current site origin</em>. You can grant or
-        revoke this access at any time in Chrome&apos;s extension settings.
+        Not granted at installation. ZeroSnippet declares optional host patterns
+        so you can inspect webpages without granting broad permissions upfront.
+        When using page-analysis tools (e.g. CSS Inspector, HTTP Headers, Page
+        Color Picker), ZeroSnippet prompts you to grant access for the current
+        site origin, or optionally for all sites if you prefer seamless tab
+        switching. You can grant, modify, or revoke this access at any time in
+        Chrome&apos;s extension permissions settings.
       </>
     ),
+  },
+];
+
+const pageReadingTools = [
+  {
+    title: "Element Inspector",
+    description: "Inspects DOM element tags, classes, and geometry.",
+  },
+  {
+    title: "CSS Inspector",
+    description: "Reads computed CSS styles and layout properties.",
+  },
+  {
+    title: "Font Inspector",
+    description:
+      "Analyzes fonts, font weights, and rendered typography on the page.",
+  },
+  {
+    title: "Dimensions (Box Model)",
+    description: "Measures element width, height, padding, and margins.",
+  },
+  {
+    title: "CSS Selector Tool",
+    description: "Tests and validates CSS selectors against the active DOM.",
+  },
+  {
+    title: "XPath Tool",
+    description: "Evaluates XPath expressions against the active document.",
+  },
+  {
+    title: "Page Color Picker",
+    description:
+      "Samples colors and builds color palettes from the active page.",
+  },
+  {
+    title: "Extract Images",
+    description:
+      "Discovers and previews image assets embedded in the active tab.",
+  },
+  {
+    title: "Image Inspector",
+    description: "Analyzes image dimensions, natural sizes, and formats.",
+  },
+  {
+    title: "Page SEO Inspector",
+    description:
+      "Inspects title tags, meta descriptions, OpenGraph tags, and canonical URLs.",
+  },
+  {
+    title: "HTTP Headers",
+    description: (
+      <>
+        Fetches and inspects response headers (
+        <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-xs dark:bg-zinc-800">
+          HEAD
+        </code>
+        /
+        <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-xs dark:bg-zinc-800">
+          GET
+        </code>{" "}
+        with{" "}
+        <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-xs dark:bg-zinc-800">
+          credentials: &quot;omit&quot;
+        </code>
+        ).
+      </>
+    ),
+  },
+  {
+    title: "Response Status",
+    description: "Checks HTTP response status codes and timing indicators.",
+  },
+  {
+    title: "Technology Detector",
+    description:
+      "Scans page meta tags, script signatures, and headers locally to detect web frameworks.",
   },
 ];
 
@@ -74,6 +152,12 @@ export default function ExtensionPrivacyPolicyPage() {
           <strong>No Personal Data Collected:</strong> We do not collect, log,
           store, or transmit your name, email address, IP address, browsing
           history, or any other personally identifiable information.
+        </li>
+        <li>
+          <strong>No Sale or Commercial Transfer of Data:</strong> We do not
+          sell, rent, monetize, trade, or transfer any user data, personal
+          information, or browsing activity to third parties, data brokers, or
+          advertising networks under any circumstances.
         </li>
         <li>
           <strong>No Remote Servers or APIs:</strong> All formatting, decoding,
@@ -157,7 +241,9 @@ export default function ExtensionPrivacyPolicyPage() {
       </div>
 
       <p>
-        ZeroSnippet <strong>does not</strong> request or use{" "}
+        ZeroSnippet <strong>does not</strong> request broad host permissions at
+        installation time, nor does it request or use sensitive permissions such
+        as{" "}
         <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-xs dark:bg-zinc-800">
           tabs
         </code>
@@ -181,11 +267,11 @@ export default function ExtensionPrivacyPolicyPage() {
         <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-xs dark:bg-zinc-800">
           downloads
         </code>
-        ,{" "}
+        , or{" "}
         <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-xs dark:bg-zinc-800">
           declarativeNetRequest
         </code>
-        , or broad host permissions.
+        .
       </p>
 
       <hr className="my-6 border-zinc-200 dark:border-zinc-800" />
@@ -193,51 +279,66 @@ export default function ExtensionPrivacyPolicyPage() {
       <h2 className="pt-2 text-xl font-semibold text-foreground">
         3. How Specific Features Operate
       </h2>
-      <ul className="list-disc space-y-3 pl-5">
+
+      <h3 className="pt-2 text-base font-semibold text-foreground">
+        A. Page-Reading Tools
+      </h3>
+      <p>
+        The following 13 tools interact with the active webpage locally inside
+        your browser only upon your explicit request:
+      </p>
+      <ul className="list-disc space-y-2 pl-5">
+        {pageReadingTools.map((tool) => (
+          <li key={tool.title}>
+            <strong>{tool.title}:</strong> {tool.description}
+          </li>
+        ))}
+      </ul>
+      <p>
+        All page data retrieved by these tools is strictly kept in temporary
+        browser memory. ZeroSnippet never stores, transmits, logs, or exports
+        page contents or DOM data externally.
+      </p>
+
+      <h3 className="pt-3 text-base font-semibold text-foreground">
+        B. Offline Utilities (Code, Text, and Design)
+      </h3>
+      <p>
+        Utilities such as JSON Formatter, Base64 Encoder/Decoder, Regex Tester,
+        JWT Decoder, Code Diff, Case Converter, Color Converter, Gradient
+        Generator, Box Shadow Generator, Border Radius Generator, and SVG
+        Optimizer execute 100% locally using bundled JavaScript without needing
+        any network connection or site access.
+      </p>
+
+      <hr className="my-6 border-zinc-200 dark:border-zinc-800" />
+
+      <h2 className="pt-2 text-xl font-semibold text-foreground">
+        4. Chrome Web Store Policy Compliance &amp; Limited Use Disclosure
+      </h2>
+      <p>
+        ZeroSnippet adheres strictly to Google Chrome Web Store Single Purpose
+        and User Data policies:
+      </p>
+      <ul className="list-disc space-y-2 pl-5">
         <li>
-          <strong>
-            Inspect Tools (CSS Inspector, Element Inspector, Dimensions, XPath,
-            Selector):
-          </strong>{" "}
-          When you click &quot;Pick element&quot;, a local script runs in the
-          active tab to calculate element geometry and computed styles. This
-          data is transferred only to the extension&apos;s side panel and is
-          never transmitted externally.
+          <strong>No Sale:</strong> We do not sell, rent, or monetize user data.
         </li>
         <li>
-          <strong>HTTP Headers &amp; Response Status:</strong> These tools issue
-          a fresh{" "}
-          <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-xs dark:bg-zinc-800">
-            HEAD
-          </code>
-          /
-          <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-xs dark:bg-zinc-800">
-            GET
-          </code>{" "}
-          request using standard browser{" "}
-          <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-xs dark:bg-zinc-800">
-            fetch()
-          </code>{" "}
-          directly from the extension to the active tab&apos;s URL. Requests
-          omit credentials (
-          <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-xs dark:bg-zinc-800">
-            credentials: &quot;omit&quot;
-          </code>
-          ), cookies, and authentication headers.
+          <strong>No Unrelated Transfers:</strong> We do not transfer user data
+          to third parties for purposes unrelated to the extension&apos;s stated
+          single purpose (developer and designer productivity).
         </li>
         <li>
-          <strong>Offline Code, Text, &amp; Design Utilities:</strong> Utilities
-          such as JSON Formatter, Base64, Regex Tester, JWT Decoder, Code Diff,
-          Case Converter, Color Converter, Gradient Generator, and SVG Optimizer
-          execute 100% locally using bundled JavaScript without needing any
-          network connection or site access.
+          <strong>No Credit or Lending Uses:</strong> We do not use or transfer
+          user data to determine creditworthiness or for lending purposes.
         </li>
       </ul>
 
       <hr className="my-6 border-zinc-200 dark:border-zinc-800" />
 
       <h2 className="pt-2 text-xl font-semibold text-foreground">
-        4. Local Storage &amp; Data Deletion
+        5. Local Storage &amp; Data Deletion
       </h2>
       <p>
         The only data persisted by ZeroSnippet is stored locally on your device
@@ -272,7 +373,7 @@ export default function ExtensionPrivacyPolicyPage() {
       <hr className="my-6 border-zinc-200 dark:border-zinc-800" />
 
       <h2 className="pt-2 text-xl font-semibold text-foreground">
-        5. Third-Party Services and External Resources
+        6. Third-Party Services and External Resources
       </h2>
       <p>
         ZeroSnippet does not load remote scripts, remote fonts, or remote
@@ -283,7 +384,7 @@ export default function ExtensionPrivacyPolicyPage() {
       <hr className="my-6 border-zinc-200 dark:border-zinc-800" />
 
       <h2 className="pt-2 text-xl font-semibold text-foreground">
-        6. Changes to This Policy
+        7. Changes to This Policy
       </h2>
       <p>
         If we update this policy, any changes will be reflected in this document
@@ -294,7 +395,7 @@ export default function ExtensionPrivacyPolicyPage() {
       <hr className="my-6 border-zinc-200 dark:border-zinc-800" />
 
       <h2 className="pt-2 text-xl font-semibold text-foreground">
-        7. Contact Information
+        8. Contact Information
       </h2>
       <p>
         If you have questions, feedback, or concerns regarding this privacy
@@ -307,10 +408,10 @@ export default function ExtensionPrivacyPolicyPage() {
         <li>
           <strong>Email:</strong>{" "}
           <a
-            href="mailto:pradipforofficial@gmail.com"
+            href="mailto:support@zerosnippet.com"
             className="font-medium text-foreground underline underline-offset-4 hover:text-zinc-600 dark:hover:text-zinc-300"
           >
-            pradipforofficial@gmail.com
+            support@zerosnippet.com
           </a>
         </li>
         <li>
@@ -322,6 +423,15 @@ export default function ExtensionPrivacyPolicyPage() {
             className="font-medium text-foreground underline underline-offset-4 hover:text-zinc-600 dark:hover:text-zinc-300"
           >
             https://zerosnippet.com
+          </Link>
+        </li>
+        <li>
+          <strong>Privacy Page:</strong>{" "}
+          <Link
+            href="https://zerosnippet.com/extension-privacy"
+            className="font-medium text-foreground underline underline-offset-4 hover:text-zinc-600 dark:hover:text-zinc-300"
+          >
+            https://zerosnippet.com/extension-privacy
           </Link>
         </li>
       </ul>
