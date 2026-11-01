@@ -25,7 +25,7 @@ const permissions = [
     name: "scripting",
     scope: "Page Inspection",
     justification:
-      'Used solely to inject on-demand inspection overlays when you click "Pick element" in inspect tools (Element Inspector, CSS Inspector, Font Inspector, Dimensions, Selector/XPath tools). Script execution only occurs upon explicit user interaction.',
+      "Used solely to run on-demand inspection and page analysis scripts in the active tab when you use a page tool (Element Inspector, CSS Inspector, Font Inspector, Dimensions, Selector/XPath, Page Color Picker, Image Inspector, Extract Images, Page SEO Inspector, Technology Detector). Scripts only run after you explicitly use a tool.",
   },
   {
     name: "activeTab",
@@ -47,82 +47,6 @@ const permissions = [
         Chrome&apos;s extension permissions settings.
       </>
     ),
-  },
-];
-
-const pageReadingTools = [
-  {
-    title: "Element Inspector",
-    description: "Inspects DOM element tags, classes, and geometry.",
-  },
-  {
-    title: "CSS Inspector",
-    description: "Reads computed CSS styles and layout properties.",
-  },
-  {
-    title: "Font Inspector",
-    description:
-      "Analyzes fonts, font weights, and rendered typography on the page.",
-  },
-  {
-    title: "Dimensions (Box Model)",
-    description: "Measures element width, height, padding, and margins.",
-  },
-  {
-    title: "CSS Selector Tool",
-    description: "Tests and validates CSS selectors against the active DOM.",
-  },
-  {
-    title: "XPath Tool",
-    description: "Evaluates XPath expressions against the active document.",
-  },
-  {
-    title: "Page Color Picker",
-    description:
-      "Samples colors and builds color palettes from the active page.",
-  },
-  {
-    title: "Extract Images",
-    description:
-      "Discovers and previews image assets embedded in the active tab.",
-  },
-  {
-    title: "Image Inspector",
-    description: "Analyzes image dimensions, natural sizes, and formats.",
-  },
-  {
-    title: "Page SEO Inspector",
-    description:
-      "Inspects title tags, meta descriptions, OpenGraph tags, and canonical URLs.",
-  },
-  {
-    title: "HTTP Headers",
-    description: (
-      <>
-        Fetches and inspects response headers (
-        <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-xs dark:bg-zinc-800">
-          HEAD
-        </code>
-        /
-        <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-xs dark:bg-zinc-800">
-          GET
-        </code>{" "}
-        with{" "}
-        <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-xs dark:bg-zinc-800">
-          credentials: &quot;omit&quot;
-        </code>
-        ).
-      </>
-    ),
-  },
-  {
-    title: "Response Status",
-    description: "Checks HTTP response status codes and timing indicators.",
-  },
-  {
-    title: "Technology Detector",
-    description:
-      "Scans page meta tags, script signatures, and headers locally to detect web frameworks.",
   },
 ];
 
@@ -154,12 +78,6 @@ export default function ExtensionPrivacyPolicyPage() {
           history, or any other personally identifiable information.
         </li>
         <li>
-          <strong>No Sale or Commercial Transfer of Data:</strong> We do not
-          sell, rent, monetize, trade, or transfer any user data, personal
-          information, or browsing activity to third parties, data brokers, or
-          advertising networks under any circumstances.
-        </li>
-        <li>
           <strong>No Remote Servers or APIs:</strong> All formatting, decoding,
           conversion, and inspection utilities run locally on your device. We
           do not operate backend servers that receive your inputs.
@@ -175,6 +93,12 @@ export default function ExtensionPrivacyPolicyPage() {
           snippets, tokens, or images you paste or upload into ZeroSnippet are
           processed purely in local memory and are discarded when you navigate
           away or close the side panel.
+        </li>
+        <li>
+          <strong>No Sale or Sharing of Data:</strong> We do not sell, rent, or
+          share user data with third parties, and we do not use data for
+          advertising, creditworthiness, or any purpose unrelated to the
+          extension&apos;s features.
         </li>
       </ul>
 
@@ -241,9 +165,8 @@ export default function ExtensionPrivacyPolicyPage() {
       </div>
 
       <p>
-        ZeroSnippet <strong>does not</strong> request broad host permissions at
-        installation time, nor does it request or use sensitive permissions such
-        as{" "}
+        ZeroSnippet does not request any host permissions at install time, and
+        does not use{" "}
         <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-xs dark:bg-zinc-800">
           tabs
         </code>
@@ -280,65 +203,67 @@ export default function ExtensionPrivacyPolicyPage() {
         3. How Specific Features Operate
       </h2>
 
-      <h3 className="pt-2 text-base font-semibold text-foreground">
-        A. Page-Reading Tools
-      </h3>
-      <p>
-        The following 13 tools interact with the active webpage locally inside
-        your browser only upon your explicit request:
-      </p>
-      <ul className="list-disc space-y-2 pl-5">
-        {pageReadingTools.map((tool) => (
-          <li key={tool.title}>
-            <strong>{tool.title}:</strong> {tool.description}
-          </li>
-        ))}
+      <ul className="list-disc space-y-3 pl-5">
+        <li>
+          <strong>
+            Inspect Tools (CSS Inspector, Element Inspector, Font Inspector,
+            Dimensions, XPath, Selector):
+          </strong>{" "}
+          When you click &quot;Pick element&quot;, a local script runs in the
+          active tab to calculate element geometry and computed styles. This
+          data is transferred only to the extension&apos;s side panel and is
+          never transmitted externally.
+        </li>
+        <li>
+          <strong>
+            Page Analysis Tools (Page Color Picker, Image Inspector, Extract
+            Images, Page SEO Inspector, Technology Detector):
+          </strong>{" "}
+          These read the content of the page you are viewing, only after you
+          grant access to that site and use the tool. Results are shown in the
+          side panel and are never transmitted anywhere.
+        </li>
+        <li>
+          <strong>HTTP Headers &amp; Response Status:</strong> These tools issue
+          a fresh{" "}
+          <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-xs dark:bg-zinc-800">
+            HEAD
+          </code>
+          /
+          <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-xs dark:bg-zinc-800">
+            GET
+          </code>{" "}
+          request using standard browser{" "}
+          <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-xs dark:bg-zinc-800">
+            fetch()
+          </code>{" "}
+          directly from the extension to the active tab&apos;s URL. Requests
+          omit credentials (
+          <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-xs dark:bg-zinc-800">
+            credentials: &quot;omit&quot;
+          </code>
+          ), cookies, and authentication headers.
+        </li>
+        <li>
+          <strong>Offline Utilities (Code, Text, and Design):</strong> Utilities
+          such as JSON Formatter, Base64 Encoder/Decoder, Regex Tester, JWT
+          Decoder, Code Diff, Case Converter, Color Converter, Gradient
+          Generator, Box Shadow Generator, Border Radius Generator, and SVG
+          Optimizer execute 100% locally using bundled JavaScript without
+          needing any network connection or site access.
+        </li>
       </ul>
+
       <p>
         All page data retrieved by these tools is strictly kept in temporary
         browser memory. ZeroSnippet never stores, transmits, logs, or exports
         page contents or DOM data externally.
       </p>
 
-      <h3 className="pt-3 text-base font-semibold text-foreground">
-        B. Offline Utilities (Code, Text, and Design)
-      </h3>
-      <p>
-        Utilities such as JSON Formatter, Base64 Encoder/Decoder, Regex Tester,
-        JWT Decoder, Code Diff, Case Converter, Color Converter, Gradient
-        Generator, Box Shadow Generator, Border Radius Generator, and SVG
-        Optimizer execute 100% locally using bundled JavaScript without needing
-        any network connection or site access.
-      </p>
-
       <hr className="my-6 border-zinc-200 dark:border-zinc-800" />
 
       <h2 className="pt-2 text-xl font-semibold text-foreground">
-        4. Chrome Web Store Policy Compliance &amp; Limited Use Disclosure
-      </h2>
-      <p>
-        ZeroSnippet adheres strictly to Google Chrome Web Store Single Purpose
-        and User Data policies:
-      </p>
-      <ul className="list-disc space-y-2 pl-5">
-        <li>
-          <strong>No Sale:</strong> We do not sell, rent, or monetize user data.
-        </li>
-        <li>
-          <strong>No Unrelated Transfers:</strong> We do not transfer user data
-          to third parties for purposes unrelated to the extension&apos;s stated
-          single purpose (developer and designer productivity).
-        </li>
-        <li>
-          <strong>No Credit or Lending Uses:</strong> We do not use or transfer
-          user data to determine creditworthiness or for lending purposes.
-        </li>
-      </ul>
-
-      <hr className="my-6 border-zinc-200 dark:border-zinc-800" />
-
-      <h2 className="pt-2 text-xl font-semibold text-foreground">
-        5. Local Storage &amp; Data Deletion
+        4. Local Storage &amp; Data Deletion
       </h2>
       <p>
         The only data persisted by ZeroSnippet is stored locally on your device
@@ -365,10 +290,34 @@ export default function ExtensionPrivacyPolicyPage() {
       </ul>
       <p>
         You can delete all stored data at any time by clicking{" "}
-        <strong>&quot;Clear Stored Data&quot;</strong> in the
+        <strong>Clear Stored Data</strong> in the
         extension&apos;s <strong>Settings &gt; About &amp; Privacy</strong>{" "}
         screen, or by uninstalling the extension.
       </p>
+
+      <hr className="my-6 border-zinc-200 dark:border-zinc-800" />
+
+      <h2 className="pt-2 text-xl font-semibold text-foreground">
+        5. Chrome Web Store Policy Compliance &amp; Limited Use Disclosure
+      </h2>
+      <p>
+        ZeroSnippet adheres strictly to Google Chrome Web Store Single Purpose
+        and User Data policies:
+      </p>
+      <ul className="list-disc space-y-2 pl-5">
+        <li>
+          <strong>No Sale:</strong> We do not sell, rent, or monetize user data.
+        </li>
+        <li>
+          <strong>No Unrelated Transfers:</strong> We do not transfer user data
+          to third parties for purposes unrelated to the extension&apos;s stated
+          single purpose (developer and designer productivity).
+        </li>
+        <li>
+          <strong>No Credit or Lending Uses:</strong> We do not use or transfer
+          user data to determine creditworthiness or for lending purposes.
+        </li>
+      </ul>
 
       <hr className="my-6 border-zinc-200 dark:border-zinc-800" />
 
